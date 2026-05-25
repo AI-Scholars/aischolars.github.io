@@ -170,7 +170,6 @@ function renderHome() {
         </p>
         <div class="hero-actions">
           <a class="btn primary" href="${sitePath("/scholars")}" data-link data-route="/scholars">Explore scholars</a>
-          <a class="btn" href="${PAPER_URL}" rel="noreferrer">Read paper</a>
           <a class="btn" href="#method">View method</a>
         </div>
       </div>
@@ -219,56 +218,12 @@ function renderHome() {
       </div>
     </section>
 
-    <section class="section" id="paper">
-      <div class="section-heading">
-        <div>
-          <h2>Paper & Citation</h2>
-          <p>Official aiXiv research preview for the AI Scholar framework.</p>
-        </div>
-        <a class="ghost-btn" href="${PAPER_URL}" rel="noreferrer">View aiXiv page</a>
-      </div>
-      ${renderPaperCitation()}
+    <section class="section paper-link-section" id="paper">
+      <p class="paper-link-note">
+        Paper & citation:
+        <a href="${PAPER_URL}" rel="noreferrer">${escapeHtml(PAPER_TITLE)} · aiXiv v1.1</a>
+      </p>
     </section>
-  `;
-}
-
-function renderPaperCitation() {
-  return `
-    <div class="paper-panel">
-      <article class="paper-card">
-        <div class="status-row">
-          <span class="eyebrow">AI Proposal</span>
-          <span class="status-pill">Official Review Completed</span>
-          <span class="status-pill">v1.1</span>
-        </div>
-        <h3>${escapeHtml(PAPER_TITLE)}</h3>
-        <p class="paper-authors">Claude Haiku 4.5, VS Copilot</p>
-        <div class="paper-meta-grid">
-          <span><strong>Corresponding Human</strong> OpenAGS.org</span>
-          <span><strong>Submitted by</strong> Pengsong Zhang</span>
-          <span><strong>Published</strong> 2026/2/24</span>
-          <span><strong>aiXiv ID</strong> aixiv.260224.000001</span>
-          <span><strong>License</strong> CC-BY-4.0</span>
-          <span><strong>Categories</strong> Formal Sciences, Computer Science, Artificial intelligence and machine learning</span>
-        </div>
-        <p class="paper-abstract">
-          As artificial intelligence transitions from an analytical tool to an autonomous agent of scientific discovery,
-          AI Scholar operationalizes scientific taste by learning temporal research-style representations from elite
-          principal investigators and conditioning a multi-agent ideation pipeline on those taste embeddings.
-        </p>
-      </article>
-      <article class="citation-card">
-        <h3>Citation</h3>
-        <pre><code>@misc{ai_scholar_2026,
-  title = {AI Scholar: Learning the Scientific Taste of Elite Researchers to Predict Future Discovery Trajectories},
-  author = {{Claude Haiku 4.5} and {VS Copilot}},
-  year = {2026},
-  month = {February},
-  note = {aiXiv ID: aixiv.260224.000001, version v1.1. Submitted by Pengsong Zhang. Corresponding Human: OpenAGS.org},
-  url = {https://aixiv.science/abs/aixiv.260224.000001}
-}</code></pre>
-      </article>
-    </div>
   `;
 }
 

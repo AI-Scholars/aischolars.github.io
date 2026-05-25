@@ -4,9 +4,9 @@ Static GitHub Pages site for the AI Scholar research preview.
 
 Live URL:
 
-- `https://ai-scholars.github.io/aischolars.github.io/`
+- `https://aischolars.org/`
 
-The frontend also supports root-path hosting if this repository is later moved or renamed to a root GitHub Pages site.
+GitHub Pages is served with the custom domain declared in `CNAME`.
 
 ## Data Layout
 

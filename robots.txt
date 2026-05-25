@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ai-scholars.github.io/aischolars.github.io/sitemap.xml
+Sitemap: https://aischolars.org/sitemap.xml

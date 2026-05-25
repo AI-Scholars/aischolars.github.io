@@ -4,7 +4,7 @@ import path from "node:path";
 const root = process.cwd();
 const indexPath = path.join(root, "index.html");
 const scholarsIndexPath = path.join(root, "data", "scholars-index.json");
-const baseUrl = "https://ai-scholars.github.io/aischolars.github.io";
+const baseUrl = "https://aischolars.org";
 
 if (!fs.existsSync(indexPath)) {
   throw new Error("index.html is required before route generation.");

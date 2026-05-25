@@ -300,97 +300,20 @@ h1 {
   content: "";
 }
 
-.paper-panel {
-  display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
-  gap: 16px;
+.paper-link-section {
+  padding-top: 18px;
 }
 
-.paper-card,
-.citation-card {
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: #fff;
-  box-shadow: 0 8px 22px rgba(18, 35, 39, 0.04);
-  padding: 20px;
-}
-
-.status-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-  margin-bottom: 18px;
-}
-
-.status-row .eyebrow {
-  border-radius: 7px;
-}
-
-.status-pill {
-  display: inline-flex;
-  min-height: 28px;
-  align-items: center;
-  border: 1px solid var(--line);
-  border-radius: 7px;
-  background: var(--soft);
-  padding: 0 9px;
+.paper-link-note {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
   color: var(--muted);
-  font-size: 11px;
-  font-weight: 800;
-  text-transform: uppercase;
+  font-size: 14px;
 }
 
-.paper-card h3,
-.citation-card h3 {
-  font-size: clamp(22px, 3vw, 30px);
-  line-height: 1.18;
-}
-
-.paper-authors {
-  margin-top: 10px;
+.paper-link-note a {
   color: var(--blue);
   font-weight: 800;
-}
-
-.paper-meta-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-  margin-top: 18px;
-}
-
-.paper-meta-grid span {
-  display: grid;
-  gap: 2px;
-  border: 1px solid var(--line);
-  border-radius: 7px;
-  background: var(--soft);
-  padding: 10px;
-  color: var(--muted);
-  font-size: 12px;
-}
-
-.paper-meta-grid strong {
-  color: var(--ink);
-  font-size: 11px;
-  text-transform: uppercase;
-}
-
-.paper-abstract {
-  margin-top: 18px;
-  color: #3f4a4b;
-}
-
-.citation-card pre {
-  overflow-x: auto;
-  margin: 16px 0 0;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: #111;
-  padding: 16px;
-  color: #fbfcfc;
-  font: 600 12px/1.55 "JetBrains Mono", ui-monospace, monospace;
 }
 
 .metric-grid {
@@ -848,8 +771,7 @@ select:focus {
   }
 
   .scholar-grid,
-  .idea-grid,
-  .paper-panel {
+  .idea-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -906,9 +828,7 @@ select:focus {
   .metric-grid,
   .scholar-grid,
   .step-grid,
-  .idea-grid,
-  .paper-panel,
-  .paper-meta-grid {
+  .idea-grid {
     grid-template-columns: 1fr;
   }
 
