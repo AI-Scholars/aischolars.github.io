@@ -1,0 +1,13 @@
+{
+  "totalScholars": 347,
+  "totalProposals": 18052,
+  "totalIdeas": 72813,
+  "topScholar": "Yoshua Bengio",
+  "fields": [
+    "NLP",
+    "Computer Vision",
+    "Robotics",
+    "ML Theory",
+    "Reinforcement Learning"
+  ]
+}

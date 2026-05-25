@@ -1,0 +1,1350 @@
+{
+  "slug": "2370763439_alex-b-mcbratney",
+  "displaySlug": "alex-b-mcbratney",
+  "name": "Alex B. McBratney",
+  "authorId": "2370763439",
+  "affiliations": [],
+  "hIndex": 0,
+  "citationCount": 0,
+  "paperCount": 0,
+  "proposalCount": 50,
+  "ideaCount": 97,
+  "proposals": [
+    {
+      "id": "172d8dcf5856ad1dc22ed08c235f8ae66d342077_ac_001_prop",
+      "title": "Dynamic Soil Security: A Spatio-Temporal Deep Learning Framework to Quantify the Decay of Static Soil-Landscape Relationships",
+      "motivation": "Digital Soil Mapping (DSM) and assessments of soil security rely heavily on static landscape covariates (e.g., terrain, parent material) to predict soil properties. This assumes time-invariant relationships, which is increasingly untenable under accelerated land use change, climate extremes, and intensive management. For effective global soil security, we must move beyond static maps to models that can diagnose when and where these foundational relationships break down, threatening predictive capacity and management efficacy.",
+      "hypothesis": "The predictive power of static soil-landscape models decays non-linearly over time in response to anthropogenic and climatic forcings, and this decay can be quantified and forecast using a spatio-temporal deep learning framework that integrates dynamic environmental data streams.",
+      "method": "We will develop a hybrid deep learning architecture combining a Convolutional Neural Network (CNN) to process static covariates with a Long Short-Term Memory (LSTM) network to ingest time-series data (e.g., MODIS/ Sentinel-2 vegetation indices, climate reanalysis, land use records). This model will be trained on legacy soil data and subsequent resampled time-slices from long-term monitoring sites. We will implement an attention mechanism to identify periods and drivers where the static model's residuals increase significantly, formally defining 'relationship breakdown'. The framework will be tested across the Australian DSMA network and other global security-relevant transects.",
+      "contribution": "This work will provide the first quantitative, generalizable method to diagnose the temporal stability of DSM models, a critical step for dynamic soil security assessment. It will produce a new 'soil relationship decay' metric for inclusion in soil condition reporting and directly inform the 'Aroura' think tank on the limits of current static paradigms for global security policy.",
+      "novelty": "While time-series are used in soil moisture prediction, applying deep temporal models to explicitly test and quantify the decay of the core DSM paradigm—the static soil-landscape model—is a novel, critical shift. It leverages McBratney's DSM expertise and recent mobile-sensing work to address soil security's temporal dimension.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "172d8dcf5856ad1dc22ed08c235f8ae66d342077_fw_003_prop",
+      "title": "A Digital Soil Mapping and Assessment (DSMA) Framework for Developing Functional Soil-Landscape Digital Twins",
+      "motivation": "Soil security is a critical global challenge, requiring new tools for sustainable management. Digital twins offer a paradigm for simulating complex systems, but their application to soil and landscapes remains nascent and fragmented. Grounding this effort in the established DSMA paradigm, which integrates soil science, digital mapping, and assessment, provides a scientifically robust foundation to move beyond static maps towards dynamic, functional models.",
+      "hypothesis": "That a DSMA-based architecture can successfully integrate multi-source, multi-scale data into a functional digital twin, enabling the simulation of key soil processes (e.g., aggregation dynamics, carbon flux) and their response to management or climate scenarios with greater fidelity than current static models.",
+      "method": "The method builds on the DSMART algorithm for disaggregating existing soil maps and incorporates proximal (mobile phone-based aggregate stability) and remote sensing data. A modular, process-based architecture will be designed, where core soil attributes from DSMA serve as initial conditions for process modules (e.g., using the RothC model for carbon). The digital twin will be implemented within an open-source cyber-infrastructure (e.g., using Docker containers and API endpoints) to enable scenario testing and capacity building through accessible interfaces.",
+      "contribution": "This work will contribute a formalized, open framework for soil-landscape digital twins, advancing the field from concept to operational prototype. It will demonstrate how DSMA can evolve from representing soil condition to simulating its dynamics, directly supporting land management decisions and the assessment of soil security under global change.",
+      "novelty": "The novelty lies in the explicit fusion of the mature DSMA paradigm with the emerging digital twin concept, creating a structured pathway from soil mapping to process simulation that is currently lacking. It moves beyond visualization to embed measurable soil security functions, like aggregate stability, into a dynamic modelling environment.",
+      "dimension": "Future Work"
+    },
+    {
+      "id": "172d8dcf5856ad1dc22ed08c235f8ae66d342077_mt_001_prop",
+      "title": "Physics-Informed Neural Networks for Robust Digital Soil Mapping and Assessment: Integrating Process Models to Enhance Soil Security Predictions",
+      "motivation": "Digital Soil Mapping and Assessment (DSMA) is critical for global soil security, but purely data-driven models often lack physical realism, fail in data-sparse regions, and produce unreliable extrapolations. This limits their utility for robust management decisions under novel conditions, such as climate change. Integrating established physical laws of soil water flow, solute transport, and aggregate stability can anchor predictions in known science, improving model trustworthiness and capacity for scenario analysis.",
+      "hypothesis": "Incorporating physical soil process equations as soft constraints within a neural network architecture will produce DSMA models with superior predictive accuracy, reduced bias in data-limited contexts, and greater physical interpretability compared to conventional statistical or purely data-driven machine learning approaches.",
+      "method": "We will develop a Physics-Informed Neural Network (PINN) framework where loss functions combine data misfit with residuals of partial differential equations governing key soil processes (e.g., Richards' equation for water, advection-dispersion for solutes). The architecture will use multi-task learning to predict core soil properties (e.g., aggregate stability, carbon content) from digital covariates, while simultaneously satisfying the embedded physics. We will leverage transfer learning from global soil databases and validate using high-resolution local datasets, including mobile phone-derived aggregate stability measurements.",
+      "contribution": "This work will deliver a novel, open-source PINN framework specifically tailored for soil science, advancing the methodological toolkit for DSMA. It will demonstrate how hybrid models can improve prediction for soil security indicators, directly supporting the goals of the Soil Security concept. The resulting models will provide more reliable 'what-if' scenarios for land managers and policymakers.",
+      "novelty": "While PINNs are emerging in fluid dynamics, their application to soil science and DSMA is nascent. This proposal uniquely integrates domain-specific soil physics with state-of-the-art machine learning to address the 'Peak Soil' challenge of prediction under uncertainty, moving beyond black-box models toward scientifically grounded digital soil assessment.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "172d8dcf5856ad1dc22ed08c235f8ae66d342077_mt_002_prop",
+      "title": "DeepSoilVis: A deep learning framework for automated soil horizon delineation and property estimation from digital profile images",
+      "motivation": "Soil security requires rapid, scalable assessment of soil condition, but traditional profile description is expert-dependent and slow. Digital soil morphometrics, using images from pits or cores, offers a solution but lacks robust, automated tools for global application. This gap hinders the capacity for large-scale monitoring essential for understanding soil's role in global food and environmental security.",
+      "hypothesis": "Convolutional Neural Networks (CNNs) can be trained to accurately delineate soil horizons and estimate key properties (e.g., texture, structure, colour) from two-dimensional RGB images of soil profiles, providing a repeatable, quantitative alternative to manual description.",
+      "method": "We will compile a globally diverse dataset of geo-referenced soil profile images with expert-labelled horizon boundaries and associated laboratory data. A multi-task CNN architecture (e.g., based on a U-Net or DeepLabv3+ backbone) will be developed for simultaneous semantic segmentation of horizons and regression of properties. Transfer learning from pre-trained models (e.g., on ImageNet) will be employed, with model performance validated against independent expert descriptions and analytical data.",
+      "contribution": "This work will produce an open-source software tool that standardizes and accelerates soil profile analysis, directly supporting digital soil assessment. It will advance the field of digital soil morphometrics by providing a scalable method to quantify soil condition, enhancing capacity for global soil monitoring and security frameworks like the DSM agenda.",
+      "novelty": "While CNNs are used in proximal soil sensing, their application for holistic, in-situ profile analysis—integrating horizon detection and multi-property estimation into a single framework—remains underdeveloped. This approach moves beyond simple image classification to provide a comprehensive digital description analogous to a field pedologist's report.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "172d8dcf5856ad1dc22ed08c235f8ae66d342077_mt_003_prop",
+      "title": "Ensemble Soil Forecasting: A Digital Soil Mapping and Assessment Framework for Quantifying Predictive Uncertainty",
+      "motivation": "Soil security requires reliable forecasts of soil properties (e.g., carbon, moisture, aggregate stability) under global change and management. Current digital soil mapping (DSM) often provides single-point predictions, lacking the uncertainty quantification essential for robust decision-making. Ensemble forecasting, a cornerstone of modern meteorology for decades, offers a proven paradigm to address this gap, directly supporting the 'condition' and 'role' dimensions of soil security.",
+      "hypothesis": "That ensemble modeling techniques, adapted from numerical weather prediction, can generate spatially explicit, probabilistic soil property forecasts with quantifiable uncertainty, significantly improving the reliability of digital soil assessments for management.",
+      "method": "We will adapt the Ensemble Kalman Filter (EnKF) and multi-model ensemble (MME) approaches. The framework will integrate diverse DSM models (e.g., random forests, neural networks, geostatistical kriging) as ensemble members, each perturbed via bootstrapping and covariate uncertainty. Soil sensor networks and mobile phone-derived aggregate stability data will provide 'observations' for data assimilation, updating the ensemble states. Uncertainty will be quantified via the ensemble spread and communicated through probability maps.",
+      "contribution": "This will deliver a novel operational framework for probabilistic digital soil mapping and assessment (DSMA), advancing soil security science by explicitly quantifying forecast confidence. It will provide land managers with risk-aware decision tools and establish a methodological bridge between meteorological and pedological forecasting sciences.",
+      "novelty": "While ensemble methods are mature in meteorology, their systematic application to spatial soil property forecasting, complete with data assimilation for soil 'state' updates, represents a significant and non-trivial cross-disciplinary innovation in pedology.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "3a0b0c078bcf2352ea758857cc2529c55a32072e_ac_001_prop",
+      "title": "Beyond the Anthropocene: A Global Historical Audit of Pre-Industrial Soil Degradation Episodes and Their Socio-Ecological Legacies",
+      "motivation": "The dominant 'peak soil' and soil security narrative often frames soil degradation as a uniquely modern crisis of the past century, driven by industrial agriculture. This risks a deterministic and ahistorical view that overlooks the deep-time capacity of pre-industrial societies to induce severe, long-lasting soil decline. Contextualizing modern degradation within a longer historical arc is essential for robust soil security policy, separating truly novel Anthropocene pressures from recurrent human-environment failures.",
+      "hypothesis": "Pre-industrial societies, across diverse global regions and agro-ecosystems, repeatedly induced soil degradation episodes of comparable severity and spatial extent to modern cases, and these historical 'soil shocks' had determinative roles in socio-ecological collapse or transformation.",
+      "method": "The research employs a digital humanities-informed, evidence-synthesis approach. We will construct a spatially explicit global database (using GIS) of documented pre-1900 soil degradation episodes from published historical, archaeological, and paleoenvironmental literature. Each entry will be coded for variables including: degradation driver (e.g., salinization, erosion), temporal span, spatial scale inferred, and associated socio-ecological outcome. We will apply a systematic review protocol (PRISMA) to ensure rigor. The analysis will use quantitative text mining (topic modeling via Latent Dirichlet Allocation) on the corpus to identify recurrent thematic clusters of cause and consequence, and network analysis to map the connectivity between degradation types and civilizational outcomes.",
+      "contribution": "This work will provide the first systematic, global audit of pre-industrial soil degradation, directly challenging the temporally narrow framing of the soil security debate. It will contribute a crucial 'longue durée' perspective to the 'Aroura' think tank's work, enriching the concepts of soil condition and role. The resulting open-access database will be a key digital resource for interdisciplinary research on soil and civilizational resilience.",
+      "novelty": "While case studies (e.g., Mesopotamian salinization) are well-known, a systematic global synthesis testing the *prevalence* and *pattern* of pre-industrial soil degradation as a counter-narrative to modern exceptionalism is lacking. The novel integration of historical analysis with digital methods (text mining, network analysis) applied to soil security questions moves beyond traditional, qualitative historical review.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "3a0b0d078bcf2352ea758857cc2529c55a32072e_mt_002_prop",
+      "title": "Negotiating Soil Security: A Framework for Mediating Competing Land Use Claims Using Principles of International Conflict Resolution",
+      "motivation": "Soil security is a global challenge, yet policy disputes over competing soil uses (e.g., agriculture, urban development, carbon sequestration) are often adversarial and gridlocked, undermining sustainable management. Pre-2026, frameworks like the UN Sustainable Development Goals highlight the need for integrated solutions, but formal mechanisms to resolve soil-related conflicts are underdeveloped, risking irreversible degradation and food system instability.",
+      "hypothesis": "Structured mediation frameworks, adapted from international law and diplomacy (e.g., interest-based negotiation, principled negotiation), can systematically de-escalate soil policy disputes and lead to more equitable, scientifically grounded, and durable agreements than conventional top-down or litigation-based approaches.",
+      "method": "The research will employ a mixed-methods, case-study approach. First, we will codify key conflict resolution models (e.g., Harvard Negotiation Project framework, UN mediation guidelines) into a structured analytical schema. This schema will be applied to 3-5 documented pre-2026 soil policy conflicts (e.g., peatland drainage regulations, urban sprawl on prime farmland) via process-tracing and stakeholder interview analysis. A digital platform prototype, building on McBratney's prior mobile-aggregate work, will be designed to visually map stakeholder positions, underlying interests, and soil condition data (using DSMART-like digital soil mapping outputs) to facilitate scenario testing in simulated negotiations.",
+      "contribution": "This work will contribute a novel, transdisciplinary framework for soil governance, directly operationalizing the 'soil security' concept in policy practice. It will provide a tested methodology for conflict de-escalation and a proof-of-concept digital tool to support mediators and policymakers, thereby building capacity for more resilient land-use decision-making.",
+      "novelty": "While conflict resolution is established in environmental diplomacy (e.g., water treaties), its systematic application to subsurface soil policy disputes—which involve complex property rights, scientific uncertainty, and intergenerational equity—is novel. It merges diplomatic theory with digital soil science in a way not previously attempted in the soil security literature.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "3a0b0d078bcf2352ea758857cc2529c55a32072e_mt_004_prop",
+      "title": "Quantifying National and Global Soil Nutrient Security: A Material Flow Analysis of Phosphorus and Nitrogen Cycles",
+      "motivation": "Global soil security is threatened by unsustainable nutrient management, leading to depletion, pollution, and geopolitical risks. Pre-2026, while nutrient budgets exist, they are often fragmented or static, lacking a systemic, flow-based perspective that connects agricultural, industrial, and waste management sectors. Applying Industrial Ecology's rigorous material flow analysis (MFA) framework can provide a dynamic, mass-balanced account of nutrient stocks and flows, directly addressing the 'condition' and 'security' dimensions of soil within a 'global' and 'dsma' (digital soil morphometric assessment) context.",
+      "hypothesis": "That a high-resolution MFA will reveal critical, previously underestimated leakage points and accumulation hotspots in national phosphorus and nitrogen cycles, and that the quantified inefficiencies will correlate strongly with indices of soil degradation and agricultural input dependency.",
+      "method": "The research will construct Substance Flow Analysis (SFA) models for P and N, adhering to ISO-standard MFA protocols. National-scale analysis will use data from FAOSTAT, national statistics, and trade databases, structured within the STAN (subSTance flow ANalysis) software or similar algorithms to ensure mass balance. The method integrates 'digital' soil condition data (e.g., aggregate stability trends) to validate model outputs against observed soil health indicators. Global flows will be modeled by linking national MFAs through bilateral trade data, creating a network model of nutrient redistribution.",
+      "contribution": "This work will produce the first fully integrated, mass-balanced MFA of soil nutrients explicitly framed within the soil security paradigm. It will deliver a 'digital' tool for policymakers to simulate intervention impacts on nutrient use efficiency and security. The project will build 'scientific capacity' by providing a transferable methodology and establish a foundational 'role' for Industrial Ecology in systemic soil management.",
+      "novelty": "The novelty lies in the explicit fusion of the soil security conceptual framework (McBratney et al.) with the rigorous, standardized quantification methods of Industrial Ecology's MFA, moving beyond simple budgets to a dynamic, systems-based diagnosis of nutrient-related soil insecurity at multiple scales.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "3a0b0d078bcf2352ea758857cc2529c55a32072e_sd_003_prop",
+      "title": "Inverse Policy Design for Managed Soil Degradation: A Digital Soil Security Framework for Urban Development",
+      "motivation": "The global tension between soil security and urban expansion is intensifying, yet policy frameworks remain reactive. Pre-2026 concepts like 'Peak Soil' and the soil security framework highlight the need for proactive management of soil's multi-dimensional contributions. This research addresses the critical gap in designing policies that explicitly manage, rather than merely prevent, soil degradation for societal benefit, requiring robust compensation mechanisms.",
+      "hypothesis": "Optimal, socially acceptable policies for managed soil degradation can be identified by inverting a digital soil security model, where the target output is a defined urban development outcome and the inputs are the required policy levers and compensation packages.",
+      "method": "We will develop a digital twin framework using a Bayesian Belief Network (BBN) architecture. The BBN will integrate nodes representing soil condition (e.g., carbon, aggregate stability measured via mobile sensing), security dimensions (capability, condition, capital, connectivity, codification), urban development value, and policy instruments (zoning, taxes, offset markets). The inverse problem will be solved using Markov Chain Monte Carlo (MCMC) sampling to identify the most probable policy configurations that achieve a target development benefit while meeting minimum soil security thresholds elsewhere.",
+      "contribution": "This work will provide a novel, quantitative tool for policymakers to navigate soil-urban trade-offs, moving from prohibition to strategic management. It will operationalize the soil security concept within a digital decision-support system, explicitly linking soil condition metrics to economic and governance mechanisms.",
+      "novelty": "While soil security assessment is established, inverting the model to design policies for *managed degradation* is a non-obvious, systems-engineering approach to a traditionally preservation-focused field. It integrates McBratney's DSMA (Digital Soil Mapping and Assessment) with economic policy design in a single computational framework.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "7493839c7327a2efac2bc3d9dfc16acd0ac9f4c4_ac_001_adversarial_prop",
+      "title": "A Mechanistic Framework for Predicting Nonlinear Soil Regeneration Thresholds: Integrating Digital Soil Mapping, Microbial Function, and System Resilience",
+      "motivation": "Soil degradation threatens global food security and ecosystem function, yet restoration efforts often fail due to an empirical gap in predicting when and how soils can shift to a regenerated state. Current models, largely linear, cannot capture critical transitions or 'peak soil' dynamics, limiting our capacity to manage soil security. This research addresses the urgent need for a predictive, mechanistic understanding of soil recovery pathways.",
+      "hypothesis": "Nonlinear soil regeneration is triggered when specific, quantifiable combinations of microbial functional diversity, organic matter quality, and plant-derived carbon inputs exceed context-dependent thresholds, shifting the soil system from a degraded to a resilient state.",
+      "method": "We will combine long-term field monitoring of recovering agroecosystems with controlled mesocosm experiments manipulating microbial inoculants, organic inputs, and plant communities. Digital Soil Mapping and Assessment (DSMA) will be used to spatially model soil condition and security. Time-series analysis of soil aggregate stability (measured via a validated mobile phone method), microbial metagenomics, and soil organic carbon fractions will be integrated using structural equation modelling and non-linear state-space models to identify tipping points and regeneration pathways.",
+      "contribution": "This work will produce a falsifiable, mechanistic framework for predicting soil regeneration, moving beyond general advocacy to provide a rigorous scientific basis for targeted restoration. It will deliver validated, context-sensitive models that define the probabilistic conditions for nonlinear recovery, directly informing global soil security management strategies.",
+      "novelty": "While the concept of nonlinear recovery is discussed, a predictive, mechanistic framework grounded in quantifiable microbial and biogeochemical thresholds is absent. This proposal uniquely integrates DSMA, controlled perturbation experiments, and digital soil assessment tools to model and validate these critical transitions.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "7493839c7327a2efac2bc3d9dfc16acd0ac9f4c4_ac_001_prop",
+      "title": "Beyond Peak Soil: Quantifying Nonlinear Recovery and Regenerative Tipping Points in Degraded Agroecosystems",
+      "motivation": "The 'Peak Soil' concept frames soil degradation as an inevitable, linear decline, potentially fostering a narrative of resignation that undermines soil security. This is problematic as it may overlook the capacity for recovery through targeted management, a critical oversight for global food security and climate change mitigation. A framework to identify and quantify nonlinear, regenerative pathways is urgently needed to inform proactive land stewardship.",
+      "hypothesis": "That degraded agricultural soils exhibit nonlinear recovery dynamics, where specific combinations of management interventions can trigger regenerative tipping points, leading to rapid improvements in soil condition and function beyond baseline expectations.",
+      "method": "We will analyze long-term soil monitoring datasets (e.g., from LTSE networks) and targeted field trials using nonlinear time-series analysis and state-space modeling. The core technical approach involves applying Generalized Additive Models (GAMs) and Breakpoint Detection algorithms (e.g., segmented regression, Bayesian changepoint models) to identify inflection points in key soil health indicators (e.g., aggregate stability, SOC, microbial biomass). We will then use Classification and Regression Trees (CART) and Random Forest algorithms to map the specific combinations of management practices, soil types, and climatic conditions that predict these regenerative transitions.",
+      "contribution": "This research will provide a quantitative, evidence-based challenge to deterministic 'peak soil' narratives by demonstrating and mapping pathways for recovery. It will contribute a novel 'regenerative tipping point' framework to the soil security discourse, shifting focus from managing decline to enabling recovery. The outputs will offer a practical, data-driven tool for land managers and policymakers to prioritize interventions with the highest regenerative potential.",
+      "novelty": "While soil degradation is well-studied, the explicit search for and quantification of nonlinear recovery dynamics and tipping points represents a significant inversion of the dominant analytical paradigm. The integration of digital soil assessment concepts (e.g., mobile-measured aggregate stability) with advanced time-series and machine learning methods to model regenerative transitions is a novel methodological synthesis.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "7493839c7327a2efac2bc3d9dfc16acd0ac9f4c4_ac_002_prop",
+      "title": "Beyond a Singular Peak: A Spatially-Explicit, Condition-Dependent Framework for Global Soil Productivity Transitions",
+      "motivation": "The concept of a single global 'peak soil' point, analogous to peak oil, is a compelling but potentially misleading narrative for soil security. It risks obscuring the profound spatial heterogeneity of soil degradation and the complex, non-linear interactions between soil condition, management, and climate. A more nuanced framework is needed to guide targeted, effective policy and management interventions at regional and global scales.",
+      "hypothesis": "Global soil productivity transitions are not defined by a singular tipping point but by a spatially and temporally distributed set of critical transitions, where the timing and severity of decline are conditional on local soil properties, land use history, and socio-economic drivers.",
+      "method": "We will develop a digital soil assessment framework using a global, spatially-explicit database of soil condition indicators (e.g., SOC, aggregate stability, nutrient balances). A machine learning architecture, specifically an ensemble of gradient-boosted regression trees (XGBoost/LightGBM), will model the non-linear relationships between soil state, management pressure, and productivity proxies. This model will be used to run Monte Carlo simulations under different climate and management scenarios to identify probabilistic 'transition zones' where key soil functions are likely to degrade beyond critical thresholds, moving beyond a deterministic global peak.",
+      "contribution": "This work will provide a rigorous, data-driven alternative to the monolithic peak soil narrative, advancing the field of soil security by offering a diagnostic tool to identify regionally-specific vulnerabilities. It will directly inform the 'management' and 'capacity' pillars of soil security by highlighting where and under what conditions intervention is most critical.",
+      "novelty": "The novelty lies in explicitly rejecting the search for a single global peak and instead applying a conditional, probabilistic, and spatially-explicit modeling approach—common in climate tipping point research—to the socio-ecological system of global soil productivity.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "7493839c7327a2efac2bc3d9dfc16acd0ac9f4c4_mt_003_prop",
+      "title": "A Soil Security Integrated Assessment Model (SS-IAM): Quantifying the Impact of Socio-Economic Pathways on Soil Condition, Capability, and Capital",
+      "motivation": "The concept of 'soil security' provides a vital framework linking soil condition to global challenges like food and water security, yet it lacks quantitative, forward-looking models to evaluate policy and management decisions. Integrated Assessment Models (IAMs) are central to climate policy for exploring socio-economic pathways, but they treat soil as a static or highly simplified component. Adapting the IAM architecture to soil security is critical for moving beyond 'peak soil' narratives to actionable, scenario-based analysis for sustainable land management.",
+      "hypothesis": "That a modified IAM structure, integrating biophysical soil functions with socio-economic drivers, can quantify trade-offs and synergies between development pathways (e.g., SSPs) and the five dimensions of soil security (capability, condition, capital, connectivity, codification).",
+      "method": "We will adapt the open-source MESSAGEix framework, a widely-used IAM platform. The core innovation is a novel 'Soil Module' that quantifies soil functions (e.g., carbon storage, water regulation, productivity) as dynamic stocks influenced by land-use, management intensity, and climate inputs from the IAM. The module will be parameterized using global soil databases (SoilGrids, WoSIS) and process-based relationships (e.g., RothC for carbon). We will implement a multi-objective optimization routine to explore pathways that balance economic output (GDP) against soil security indicators, using the concept of 'soil debt' as a critical constraint.",
+      "contribution": "This work will produce the first functional IAM explicitly designed for soil security, providing a quantitative tool to assess long-term soil outcomes under different global scenarios. It will advance the field of digital soil assessment by moving from static condition mapping to dynamic, policy-relevant forecasting, directly supporting the mission of think tanks like Aroura to inform high-level strategy.",
+      "novelty": "While IAMs exist for climate and energy, their application to the multi-dimensional, spatially-explicit framework of soil security is novel. The integration of mobile-collected aggregate stability data (from prior work) as a model calibration/validation metric for soil condition represents a unique bridge between field-scale measurement and global scenario modeling.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "7493839c7327a2efac2bc3d9dfc16acd0ac9f4c4_sd_001_adversarial_prop",
+      "title": "Defining Dynamic Soil Resilience Boundaries: A Network-Based Framework for Cross-Scale Soil Security",
+      "motivation": "Current soil health thresholds are often static and defined at the farm scale, ignoring critical cross-boundary flows and socio-economic teleconnections. This limits their operational utility for managing soil security in a globally connected world where local degradation can cascade through landscapes and markets. A framework is needed to define actionable, context-dependent boundaries that account for these network interactions and feedback loops.",
+      "hypothesis": "Operational soil resilience boundaries are emergent properties of coupled biophysical and socio-economic networks, not fixed properties of individual fields. We hypothesize that modeling farms as nodes within these networks will reveal system-wide tipping points and more robust, scalable thresholds for sustainable management.",
+      "method": "We will develop an integrated modeling platform coupling a soil process model (e.g., APSIM) for biophysical dynamics with an agent-based model (ABM) for socio-economic decisions. Network analysis will explicitly map nodes (farms, markets) and edges (water/nutrient flows, economic pressures). We will use sensitivity analysis and scenario testing to identify critical leverage points and define dynamic operational boundaries. The framework will be parameterized and tested using existing soil security datasets and digital soil mapping outputs.",
+      "contribution": "This work will provide a novel, network-based methodology for defining dynamic, cross-scale soil resilience thresholds, directly advancing the conceptual and operational goals of soil security. It will deliver a practical framework for land managers and policymakers to assess how local decisions interact with landscape and global drivers, moving beyond the limitations of the 'peak soil' concept.",
+      "novelty": "The novelty lies in explicitly framing soil resilience boundaries as a network problem, integrating biophysical and agent-based models to capture teleconnections. This moves beyond isolated condition assessments to model the systemic role of soils within interacting security domains.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "7493839c7327a2efac2bc3d9dfc16acd0ac9f4c4_sd_002_analogy_prop",
+      "title": "Defining Recovery Thresholds for Soil Security: An Inverse Critical Transition Framework for Post-Peak Soil Management",
+      "motivation": "The concept of 'Peak Soil' frames soil degradation as a systemic, non-linear decline threatening global food and environmental security. While regime shift theory from ecology describes transitions to degraded states, the inverse problem—defining the precise conditions to trigger recovery—remains a critical knowledge gap for soil management. This research addresses the urgent need to move beyond merely slowing degradation to providing a blueprint for actively reversing it at landscape scales.",
+      "hypothesis": "Soil recovery from a degraded state is a critical transition governed by identifiable, multi-variable thresholds in management and policy conditions, exhibiting hysteresis distinct from the degradation pathway. We hypothesize that these 'recovery thresholds' can be quantified by integrating soil condition, management history, and socio-economic drivers.",
+      "method": "We will adapt ecological regime shift models (e.g., potential analysis, early warning signals) to soil systems using longitudinal datasets on soil organic carbon, aggregate stability, and land use. The core technical approach involves applying machine learning (Random Forest and Gradient Boosting models) to identify key predictors of recovery, followed by structural equation modeling to define causal pathways and potential tipping points. A key innovation will be the use of mobile phone-derived aggregate stability data, aligned with McBratney's prior work, to create high-resolution, crowd-sourced time series for model calibration and validation across diverse agro-ecosystems.",
+      "contribution": "This work will provide the first quantitative framework for defining soil recovery thresholds, directly informing targeted Payment for Ecosystem Services (PES) schemes and land management policy. It will advance the theoretical basis of soil security by formally integrating concepts of hysteresis and critical transitions, moving the field from monitoring decline to enabling designed recovery.",
+      "novelty": "The novelty lies in explicitly framing soil recovery as an inverse critical transition problem, a conceptual shift from equilibrium-based soil science. Methodologically, it uniquely combines crowd-sourced digital soil assessment with regime shift theory to define actionable, multi-factor recovery thresholds for practitioners and policymakers.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "7493839c7327a2efac2bc3d9dfc16acd0ac9f4c4_sd_002_fusion_prop",
+      "title": "Inverse Diagnostics for Soil Security: Mapping Real-World Recovery Pathways from Uncontrolled Aggregate Stability Networks",
+      "motivation": "Achieving soil security requires actionable, context-specific pathways for soil recovery, yet these are poorly defined because controlled experiments cannot capture the complexity of real-world management and policy interactions. The 'Peak Soil' concept highlights the urgency of identifying effective recovery strategies, but current digital soil assessment remains largely diagnostic rather than prescriptive. This creates a critical gap between measuring soil condition and implementing effective management and policy.",
+      "hypothesis": "That high-resolution, uncontrolled field measurements of aggregate stability can be inverted through causal inference and pattern mining to identify the specific sequences of management practices and policy conditions that empirically lead to soil recovery in different socio-ecological contexts.",
+      "method": "We will deploy a scalable network of low-cost, image-based aggregate stability sensors on mobile platforms across diverse working landscapes, generating continuous spatiotemporal data. This uncontrolled dataset will be fused with farmer-reported management logs and policy databases (e.g., subsidy schedules, compliance records). We will apply a two-stage analytical framework: first, using Bayesian structural time-series models to infer causal impacts of interventions from the observational data, and second, employing temporal association rule mining to identify frequent and effective sequences of practices leading to stability gains.",
+      "contribution": "This work will produce the first empirically derived, context-specific 'recovery roadmaps' linking management and policy to soil health outcomes at landscape scales. It will advance the digital soil assessment paradigm from condition monitoring to causal diagnosis, directly informing the operational and policy levers for achieving soil security as framed by initiatives like Aroura.",
+      "novelty": "It inverts the standard controlled-experiment approach by using uncontrolled field networks as the primary data source for causal discovery, and explicitly couples biophysical recovery trajectories with the temporal sequences of both farm management and policy interventions.",
+      "dimension": "Fusion"
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_ac_001_adversarial_prop",
+      "title": "Beyond the Surface: A Direct 3D Microstructural Benchmark Reveals the Quantitative Insufficiency of 2D Image Analysis for Soil Aggregate Stability",
+      "motivation": "Soil aggregate stability is a cornerstone property for soil security, governing erosion resistance, carbon sequestration, and water dynamics. Current digital soil assessment methods, including those using mobile phone imagery, predominantly rely on 2D image analysis of aggregate breakdown, a practical but potentially reductive approach. This creates a critical knowledge gap, as the internal 3D microstructure—which dictates failure mechanics—remains unquantified, risking misinformed management decisions for global soil condition.",
+      "hypothesis": "We hypothesize that 2D image-derived indices of soil aggregate stability systematically misrepresent the true mechanical breakdown process because they fail to capture critical 3D microstructural features, such as internal pore connectivity and volumetric fragment distribution, leading to statistically significant and soil-type-dependent errors in stability classification.",
+      "method": "We will subject identical, replicated aggregates from contrasting soil types (e.g., Vertisol, Ferralsol, Andosol) to a standardized wet-sieving procedure. Each aggregate will be scanned pre- and post-breakdown using high-resolution laboratory-based X-ray μCT. Concurrent high-resolution 2D surface imaging will mimic standard protocols. 3D image analysis will use the SoilJ plugin for ImageJ for segmentation and the Pore Network Model (PNM) in Avizo software to quantify pore connectivity and crack propagation. We will directly benchmark common 2D indices (e.g., mean weight diameter from 2D projections) against 3D ground-truth metrics using regression and Bland-Altman analysis.",
+      "contribution": "This work will provide the first empirical, quantitative framework defining when 2D analysis is sufficient and when 3D μCT is non-negotiable for accurate stability assessment. It will deliver actionable guidance for refining digital soil measurement protocols, thereby strengthening the scientific capacity to diagnose soil condition and manage for long-term soil security.",
+      "novelty": "While 3D μCT is known to be superior, this study moves beyond qualitative demonstration by establishing a controlled, direct benchmarking experiment that fuses 2D and 3D datasets from identical samples to produce statistically robust, quantitative error bounds for 2D methods, a critical step not yet taken in pedometrics.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_ac_001_fusion_prop",
+      "title": "A Tiered, Sensor-Fusion Protocol for the Global Validation of Digital Soil Aggregate Stability Assessment",
+      "motivation": "Digital soil assessment, particularly using 2D imaging via mobile phones, offers transformative potential for large-scale, participatory soil security monitoring. However, its global adoption is hindered by an unvalidated assumption that 2D image analysis is universally sufficient across diverse soil types and management conditions. A scientifically defensible standard must acknowledge and address the inherent limitations of 2D proxies for complex 3D structural processes like slaking and differential swelling.",
+      "hypothesis": "We hypothesize that the failure modes of 2D image-based aggregate stability assessment can be systematically predicted by soil properties (e.g., clay mineralogy, organic carbon) and that integrating low-cost, supplementary sensor data (3D structure, vibration) for these specific cases will create a robust, tiered protocol with global applicability.",
+      "method": "We will conduct a controlled laboratory and field validation across a global network of benchmark sites representing key soil types. The core method involves parallel testing: standardized wet-sieving and rainfall simulation versus the 2D mobile phone app. For soils where 2D image metrics (e.g., projected area change) diverge from reference stability indices, we will deploy and benchmark supplementary sensors. This includes 3D reconstruction via smartphone-based structure-from-motion photogrammetry to quantify volume loss and internal porosity, and simple accelerometers to capture vibration signatures during breakdown. Machine learning (e.g., Random Forest or Gradient Boosting) will be used to classify soils into protocol tiers based on their pedological predictors.",
+      "contribution": "This work will move beyond validating a single tool to establishing an adaptive methodological standard for digital soil assessment. It will produce a globally relevant decision framework that specifies when 2D imaging is sufficient and defines integrated multi-modal protocols for problematic soils. This directly builds scientific capacity for reliable, large-scale soil condition monitoring, a core pillar of soil security.",
+      "novelty": "The novelty lies in explicitly designing a validation study to *identify the limits* of a promising digital method, rather than merely affirming its average performance, and in proactively fusing disparate, low-cost sensor streams to create a context-aware standard, not a one-size-fits-all app.",
+      "dimension": "Fusion"
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_ac_001_prop",
+      "title": "Beyond the Pixel: A Multi-Modal Digital Framework to Quantify Soil Aggregate Stability Dynamics Inaccessible to 2D Image Analysis",
+      "motivation": "Soil aggregate stability is a cornerstone condition for soil security, influencing carbon storage, water infiltration, and erosion resistance. Current digital soil assessment, including mobile phone image recognition, predominantly relies on 2D visual proxies (e.g., mean weight diameter from images), which may fail to capture critical 3D structural dynamics, internal binding mechanisms, and the role of organic matter and clay mineralogy in breakdown processes for diverse global soils. This limitation challenges the capacity for robust, universally applicable digital soil management.",
+      "hypothesis": "For key soil types (e.g., sodic soils, highly aggregated Oxisols, or sandy soils with transient stability), the dominant physical and chemical mechanisms of aggregate breakdown are poorly correlated with metrics derived solely from 2D image analysis, leading to significant errors in stability prediction.",
+      "method": "We will develop a multi-modal digital sensing framework. For a globally representative soil set, we will synchronize 2D video capture (using mobile phones) with 3D micro-erosion monitoring via low-cost depth sensors and active acoustic emission sensing during standardized wet-sieving. Time-series data streams will be fused using a sensor fusion algorithm (e.g., Kalman filter variant) and analyzed with a multivariate regression model (e.g., Partial Least Squares Regression) and a simple recurrent neural network (RNN) to identify which stability dynamics (slaking, dispersion, mechanical breakdown) are captured or missed by 2D imagery alone.",
+      "contribution": "This work will produce a validated diagnostic framework to identify when and why 2D image analysis is insufficient for aggregate stability assessment. It will advance the scientific rigor of digital soil measurement by defining the necessary supplementary sensors for different soil security contexts, directly informing the next generation of field-deployable tools for the Global Soil Partnership's capacity-building goals.",
+      "novelty": "While mobile phone imaging for soil aggregates is established, this proposal systematically challenges its universal sufficiency by integrating complementary, low-cost physical sensors (acoustic, 3D depth) to decode the 'black box' of aggregate failure, a non-obvious step given the field's current focus on improving image analysis alone.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_ac_002_adversarial_prop",
+      "title": "A Field-Deployable Standardized Stress Protocol (FD-SSP) for Geospatially Comparable Assessment of Soil Aggregate Stability",
+      "motivation": "Soil aggregate stability is a critical indicator of soil condition and security, directly linked to erosion resistance, carbon sequestration, and water infiltration. Current lab-based methods (e.g., wet sieving, rainfall simulation) are location-specific and decouple soil from its in-situ ecological context, while field assessments lack standardization, hindering global comparison and modeling. A method to assess stability directly in the field under a controlled, repeatable stress is needed to build comparable, large-scale datasets for monitoring land degradation and management efficacy.",
+      "hypothesis": "That a portable, mechanized device applying a precise, sequential wetting and kinetic energy protocol to a prepared soil surface in-situ can generate a stability index that is (a) strongly correlated with established lab indices, and (b) significantly more reproducible across operators and field conditions than current qualitative field tests.",
+      "method": "We will develop a handheld tool with an integrated microcontroller to administer a defined stress sequence: first, a controlled misting phase to a set moisture potential, followed by a calibrated mechanical agitation (e.g., via a rotating impeller or controlled droplet impact). The response will be quantified by capturing runoff turbidity with an in-line optical sensor and/or via smartphone image analysis of the disturbed surface using a pre-trained convolutional neural network (CNN) model to classify detachment severity. The index will be derived from the turbidity integral and image-based fragmentation score.",
+      "contribution": "This work will deliver a novel, operational protocol for digital soil assessment that bridges the gap between lab precision and field relevance. It will provide the methodological foundation for globally comparable, high-frequency soil stability monitoring, directly supporting the goals of the DSMA (Digital Soil Morphometric Assessment) paradigm and initiatives like Aroura by generating standardized 'soil security' metrics.",
+      "novelty": "While mobile phone imaging for aggregate stability is being explored, the core novelty is the design and validation of a *standardized adversarial stress* applied in-situ. This moves beyond passive measurement to an active, controlled interrogation of soil structure, isolating the property from variable ambient conditions for true comparability.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_fw_002_adversarial_prop",
+      "title": "Operationalising Soil Security: A Framework for a Dynamic, Continuously Validated Global Digital Soil Assessment Network",
+      "motivation": "Digital soil assessment apps, while promising for global soil security, risk becoming obsolete as soil conditions and climate change. Current validation is typically static, region-specific, and published in one-off studies, failing to provide ongoing assurance of performance for users and policymakers. This creates a critical gap in the reliable, long-term monitoring and management required for soil security, a core concept in McBratney's work.",
+      "hypothesis": "That a globally distributed network of instrumented validation sites, integrated with a real-time analytics pipeline for anonymized user data, can create a continuously learning system that maintains and improves the predictive accuracy of digital soil assessment tools over time and space.",
+      "method": "We will establish a pilot network of 50 geo-referenced validation sites across major soil-climate zones, instrumented for continuous soil property monitoring (e.g., moisture, temperature). This ground-truth data stream will be integrated into a cloud-based platform alongside quality-checked, anonymized user data from partner apps (e.g., aggregate stability from mobile phone analyses). The platform will employ a microservices architecture to host region-specific predictive models (e.g., for soil carbon, aggregate stability). An automated validation dashboard will trigger model retraining using incremental learning algorithms when performance drifts beyond a defined threshold, enabling scheduled, adaptive updates.",
+      "contribution": "This work will provide the first operational framework for the continuous validation and adaptation of digital soil assessment tools, moving the field from static snapshots to dynamic assurance. It will deliver a prototype global accuracy dashboard for soil security indicators and establish a scalable technical architecture for embedding new soil-crop-climate modules, enhancing the long-term utility and trust in digital soil management.",
+      "novelty": "The novelty lies in shifting the paradigm from discrete validation research to a permanent, operational cyber-physical infrastructure for soil assessment. It uniquely combines a fixed ground-truth network with a live user-data feedback loop within an automated model governance system, creating a continuously evolving standard rather than a static tool.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_001_adversarial_prop",
+      "title": "A Probabilistic and Reputation-Based Validation Pipeline for Crowdsourced Soil Security Data",
+      "motivation": "Crowdsourcing soil data via mobile phones offers unprecedented scale for global soil security monitoring but introduces severe quality challenges. Existing ecological data validation frameworks fail to address the high spatial heterogeneity of soil properties and the skill-dependent nature of sampling. A robust, context-specific quality assurance system is therefore critical to transform crowdsourced data into a reliable resource for soil management and security decision-making.",
+      "hypothesis": "A validation pipeline that integrates probabilistic geospatial models of expected soil property ranges with a dynamic contributor reputation system, underpinned by mandatory in-app competency training, will significantly improve the reliability and utility of crowdsourced soil data for security assessments.",
+      "method": "The pipeline will be built as a modular digital system. First, a probabilistic model (e.g., Bayesian kriging) will generate expected value ranges and uncertainties for key soil properties (e.g., aggregate stability) using legacy soil maps and trusted ground-truth data. Second, a reputation score for each contributor will be dynamically updated via Bayesian inference, weighting their submissions against local ground-truth. Third, an interactive in-app training module, based on standardized protocols (e.g., for measuring aggregate stability), will be mandatory, with knowledge checks required before data submission is enabled.",
+      "contribution": "This work will provide a novel, operational framework for assuring crowdsourced soil data quality, directly addressing the 'condition' and 'capacity' pillars of soil security. It will advance the field of digital soil assessment by creating a reproducible method to integrate heterogeneous data sources of varying trustworthiness into robust spatial models for management.",
+      "novelty": "It moves beyond applying generic crowdsourcing models by explicitly fusing soil-specific probabilistic geostatistics with a dynamic reputation engine, and it innovates by mandating and verifying procedural competency at the source, a step not integrated into prior soil crowdsourcing studies.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_001_prop",
+      "title": "A Data Quality Assurance Framework for Crowdsourced Soil Security Monitoring: Adapting Ecological Citizen Science Protocols for Digital Soil Assessment",
+      "motivation": "Digital soil assessment via mobile apps, such as for aggregate stability, generates vast crowdsourced data with potential for global soil security monitoring. However, the variable skill of contributors and uncontrolled sampling conditions introduce significant data quality and uncertainty issues, limiting scientific and policy utility. Robust, scalable frameworks for validating and curating such heterogeneous data are urgently needed to realize the promise of citizen science for soil security, a pre-2026 grand challenge.",
+      "hypothesis": "By adapting and implementing established data quality assurance (QA) protocols from ecological citizen science (e.g., data validation tiers, expert review workflows, spatial-temporal anomaly detection), we can significantly improve the reliability and fitness-for-use of crowdsourced soil property data for security indicators.",
+      "method": "We will design a modular QA pipeline integrating: 1) automated pre-submission checks (e.g., GPS plausibility, photo clarity via edge detection algorithms), 2) a post-submission validation engine applying rule-based filters (e.g., value ranges, internal consistency) adapted from platforms like iNaturalist and eBird, and 3) a hybrid human-machine curation layer where flagged data is routed to a tiered network of trained volunteers and soil scientists. The framework will be prototyped and tested using existing datasets from soil aggregate stability apps.",
+      "contribution": "This work will produce a transferable methodological framework for soil citizen science data QA, directly enhancing the 'condition' and 'capacity' dimensions of soil security assessment. It will provide concrete protocols for the 'digital' soil science community to manage crowdsourced data, strengthening the role of participatory monitoring in global soil management.",
+      "novelty": "While citizen science QA is mature in ecology, its systematic application to soil security data, particularly for physical properties like aggregate stability measured via mobile phones, is novel. This bridges a critical gap between digital soil science methods and established participatory science data governance models.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_002_adversarial_prop",
+      "title": "Bridging the Domain Gap: A Physics-Informed Simulation-to-Real Pipeline for 3D Soil Aggregate Tracking and Stability Assessment",
+      "motivation": "Soil aggregate stability is a critical indicator of soil condition, directly linked to soil security, carbon sequestration, and erosion resistance. Current methods, like wet sieving, are destructive and provide only a static, bulk measure. While digital methods using mobile phone imagery offer promise for in-situ assessment, they lack the 3D, dynamic quantification needed to understand dispersion processes, and are bottlenecked by the scarcity of large, annotated real-world datasets for training robust machine learning models.",
+      "hypothesis": "A deep learning model pre-trained on a large, physics-informed synthetic dataset, generated by a granular physics simulation engine, will learn robust, generalizable features for 3D segmentation and tracking of soil aggregates, enabling accurate quantification of dispersion dynamics after efficient domain adaptation with a small set of real multi-view images.",
+      "method": "We will develop a hybrid pipeline using the Blender-based physics engine (e.g., Bullet) to simulate soil aggregates with realistic optical and material properties under controlled fluid dynamics, generating vast synthetic video sequences with perfect 3D annotations. A core 3D convolutional neural network (e.g., a variant of VoxelNet or a 3D U-Net) will be pre-trained on this synthetic data for instance segmentation and optical flow estimation. This model will then be fine-tuned using a limited real dataset collected via a calibrated multi-camera rig, employing domain adaptation techniques like adversarial training (using a Gradient Reversal Layer) or style transfer to align feature distributions between synthetic and real domains.",
+      "contribution": "This work will deliver a novel, generalizable digital tool for non-destructive, dynamic 3D soil aggregate stability analysis, moving beyond static 2D measures. It will provide a validated framework for using physics-based synthetic data to overcome annotation bottlenecks in pedometrics, contributing directly to the digital soil assessment capacity needed for global soil security management.",
+      "novelty": "While synthetic data is used in computer vision, its application in soil science, specifically using granular physics simulations to generate training data for 3D particle tracking under wetting conditions, is novel. The integration of a physics-based simulation engine with adversarial domain adaptation for this specific pedometric task represents a significant methodological advance beyond current mobile phone image analysis.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_002_analogy_prop",
+      "title": "Quantifying Soil Aggregate Detachment Dynamics: A Novel Application of Particle Image Velocimetry for Soil Security",
+      "motivation": "Soil aggregate stability is a fundamental indicator of soil condition and a critical determinant of soil security, directly impacting erosion resistance, carbon sequestration, and agricultural productivity. Current methods, like wet sieving or laser diffraction, provide aggregate size distributions but fail to capture the dynamic, spatio-temporal processes of detachment and initial transport during erosive events. This gap limits our mechanistic understanding of soil degradation, a key global challenge for sustainable land management.",
+      "hypothesis": "We hypothesize that Particle Image Velocimetry (PIV), adapted from fluid dynamics, can successfully track the dispersion of soil aggregates in video data, generating quantitative, high-resolution velocity vector fields that accurately map the dynamics of soil detachment under simulated rainfall or runoff.",
+      "method": "We will conduct controlled laboratory erosion experiments using a rainfall simulator, capturing high-speed video of soil surface dynamics. The core technical approach involves implementing a standard PIV algorithm (e.g., using the open-source OpenPIV library in Python) to perform cross-correlation analysis on sequential video frames. Soil aggregates and detached particles will act as natural tracers. The algorithm will be optimized for soil science by adjusting interrogation window sizes and filtering to handle the non-uniform particle sizes and shapes, outputting 2D vector fields of particle displacement and velocity.",
+      "contribution": "This work will provide a novel, quantitative method for visualizing and measuring the fundamental process of soil aggregate dispersion, moving beyond static stability indices. It will contribute a new digital tool to the DSMa (Digital Soil Morphometric Assessment) toolkit, enhancing scientific capacity to diagnose soil condition and model erosion mechanics with greater precision for improved land management.",
+      "novelty": "While PIV is a mature technique in fluid dynamics, its application to directly track soil particle motion during detachment is novel. This represents a significant, non-obvious cross-disciplinary analogy, moving beyond using mobile phones for static aggregate measurement to a dynamic, process-based computer vision analysis.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_002_fusion_prop",
+      "title": "A Global Soil Health Biopsy: Standardizing Degradation Diagnosis via Medical Image Analysis of Aggregate Dynamics",
+      "motivation": "Global soil security is threatened by physical degradation processes like slaking and crusting, yet current assessment frameworks lack standardized, high-resolution, and universally comparable physical indicators. This gap hinders consistent global monitoring and early intervention. Inspired by the standardization and diagnostic precision of medical biopsies, this research proposes to adapt proven medical imaging techniques to create an objective, image-based 'biopsy' for soil physical health.",
+      "hypothesis": "That algorithms developed for segmenting and tracking biological cells in time-lapse microscopy can be robustly adapted to automatically quantify the morphological evolution and dispersal dynamics of soil aggregates in standardized wetting assays, providing core, comparable metrics for a global soil degradation framework.",
+      "method": "We will adapt established medical image analysis architectures, specifically U-Net for semantic segmentation and TrackMate or similar particle tracking algorithms, to process time-lapse imagery of standardized soil aggregate stability tests (e.g., single-drop or capillary rise). The pipeline will segment individual aggregates and pores across time series, extracting metrics like aggregate dispersal rate, size distribution shift, and pore network evolution. These algorithms will be validated against traditional manual measurements (e.g., wet-sieving) and integrated into a digital workflow accessible via mobile phone applications, building on prior proof-of-concept work.",
+      "contribution": "This work will deliver a novel, standardized protocol for quantifying fundamental soil physical degradation processes, providing the core data layer for an objective global soil health monitoring framework. It will advance digital soil assessment by creating a bridge between high-resolution medical imaging science and field-deployable soil security diagnostics, enhancing global capacity for consistent soil condition evaluation.",
+      "novelty": "The fusion of medical cell tracking algorithms with soil aggregate stability assessment to create a diagnostic 'biopsy' protocol is a novel cross-disciplinary innovation. It moves beyond static aggregate indices to dynamic, process-based metrics derived from automated image analysis, offering a new paradigm for global soil physical health benchmarking.",
+      "dimension": "Fusion"
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_002_prop",
+      "title": "Quantifying Soil Aggregate Dynamics via Medical Imaging Algorithms: A Digital Approach to Soil Structural Stability",
+      "motivation": "Soil aggregate stability is a fundamental indicator of soil condition, directly linked to soil security, carbon sequestration, and erosion resistance. Current methods, like wet sieving, are labor-intensive and provide limited temporal resolution on the dynamics of aggregate dispersion. A digital, high-throughput method is needed to understand the real-time processes of soil degradation and resilience, a core challenge in global soil management.",
+      "hypothesis": "We hypothesize that semantic segmentation and multi-object tracking algorithms, developed for analyzing dynamic cellular and tissue processes in medical imaging, can be successfully adapted to accurately segment, classify, and track individual soil aggregates during wetting events, providing a quantitative, dynamic stability metric.",
+      "method": "We will adapt the U-Net architecture, proven for biomedical image segmentation, to segment aggregates from video captured using a standardized mobile phone setup. For tracking aggregate dispersion over time, we will implement and test algorithms such as TrackMate (used for particle tracking in biology) or SORT (Simple Online and Realtime Tracking). The pipeline will process time-lapse videos of slaking tests to output trajectories, size distributions, and disintegration rates for hundreds of aggregates simultaneously.",
+      "contribution": "This work will deliver a novel, open-source digital tool for dynamic soil aggregate analysis, moving beyond static indices. It will create a new 'digital soil morphometrics' capacity, providing data-rich insights into soil structural behavior directly relevant to the DSMa (Digital Soil Morphometrics and Assessment) community. This contributes to the scientific foundation for monitoring soil security.",
+      "novelty": "While mobile phone imaging of aggregates has been explored, applying dynamic cell-tracking paradigms to model soil aggregates as evolving biological entities is a novel cross-disciplinary leap. This approach captures the *process* of dispersion, not just the endpoint, which is unexplored in soil science.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_003_fusion_prop",
+      "title": "Beyond Linear Decline: A Co-Designed Digital Framework for Visualising and Navigating Nonlinear Soil Recovery Pathways",
+      "motivation": "Dominant narratives of soil degradation are often linear and deterministic, fostering a sense of inevitable decline that undermines soil security. This overlooks the potential for nonlinear recovery and positive tipping points in soil systems, a critical gap in digital soil assessment and management (DSMA) tools. Integrating diverse knowledge systems is essential to develop actionable, context-specific pathways for regeneration.",
+      "hypothesis": "That a participatory co-design process, integrating scientific, farmer, and indigenous knowledge, can produce a novel digital framework capable of modeling and visualizing context-specific, nonlinear soil recovery pathways, thereby shifting user engagement from passive degradation tracking to active regenerative planning.",
+      "method": "We will conduct iterative co-design workshops with farmers, indigenous knowledge holders, and soil ecologists in three contrasting agro-ecological zones. Using participatory modeling and scenario-building techniques, we will define key soil state variables and potential regenerative levers. These will inform the development of a prototype mobile app framework employing a directed graph data structure to represent possible soil states and transitions. The visualization layer will use dynamic, node-link diagrams to allow users to explore and contribute recovery pathways, building on prior work using phone cameras for aggregate stability assessment.",
+      "contribution": "This research will contribute a new participatory methodology for DSMA tool development that challenges linear degradation narratives. It will yield a prototype digital framework that visualizes soil recovery as a branching network of possibilities, directly supporting the 'condition' and 'capacity' dimensions of soil security. The work will advance the role of digital tools in fostering collective, place-based knowledge creation for regeneration.",
+      "novelty": "The fusion of participatory design (HCI) with nonlinear systems thinking to reframe the core purpose of soil health apps from diagnostic surveillance to participatory pathway discovery is novel. It moves beyond quantifying degradation to co-designing visual narratives of recovery, leveraging but fundamentally reorienting mobile-based assessment methods.",
+      "dimension": "Fusion"
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_004_fusion_prop",
+      "title": "Co-designing Spatial Interpolation: A Participatory Geostatistical Framework for Community-Calibrated Soil Health Mapping",
+      "motivation": "Soil security requires actionable, spatially explicit information for land managers, yet conventional digital soil mapping often fails to incorporate local experiential knowledge, leading to maps that are statistically sound but practically misaligned. This disconnect is acute in data-sparse regions where model uncertainty is high and expert validation scarce. Fusing participatory design with geostatistics addresses a core challenge in soil security: creating maps that are both scientifically robust and trusted by the end-users whose decisions they must inform.",
+      "hypothesis": "That formally integrating farmer and land manager knowledge as priors or soft data within a geostatistical kriging framework will produce soil health maps with improved local accuracy and greater perceived utility for decision-making compared to models based on sparse instrumental data alone.",
+      "method": "We will employ a sequential mixed-methods design. First, participatory workshops will co-define key soil health indicators (e.g., aggregate stability, organic carbon), mapping scales, and uncertainty visualization preferences. Local knowledge on spatial patterns will be elicited and encoded as probabilistic priors. Second, a Bayesian kriging framework (e.g., Regression Kriging with Bayesian priors) will be developed to statistically fuse these priors with sparse, direct measurements (including from mobile phone-based aggregate stability tests). Model performance will be validated against independent, high-density soil sampling in selected sub-areas.",
+      "contribution": "This work will contribute a novel methodological framework for participatory digital soil mapping that formally bridges local and scientific knowledge systems. It will advance the field of soil security by producing a prototype 'community-calibrated' mapping tool and provide new evidence on how integrated knowledge improves model accuracy in data-limited contexts, strengthening the role of digital tools in sustainable land management.",
+      "novelty": "While participatory GIS and geostatistics exist in parallel, their deep fusion—where local knowledge directly informs the spatial covariance structure and prior distributions within a formal kriging model—is novel. This moves beyond using local data only for validation, instead making community input a core, generative component of the interpolation algorithm itself.",
+      "dimension": "Fusion"
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_004_prop",
+      "title": "Kriging for Crowdsourcing: A Geostatistical Framework for Continuous Soil Security Mapping from Citizen Science Smartphone Data",
+      "motivation": "The global challenge of soil security demands scalable, low-cost monitoring. While mobile phone apps for measuring soil properties like aggregate stability show promise for citizen science, their data remains point-based and sparse. To inform management, these discrete observations must be transformed into continuous spatial maps, a core challenge in digital soil mapping (DSM) that has not been robustly solved for noisy, crowdsourced data streams.",
+      "hypothesis": "Geostatistical kriging techniques, foundational to DSM, can be directly adapted and validated to produce accurate, uncertainty-quantified continuous maps of key soil condition indicators from spatially irregular, crowdsourced point measurements collected via smartphone applications.",
+      "method": "We will adapt ordinary kriging and regression kriging, using variogram modeling to characterize spatial autocorrelation in crowdsourced soil aggregate stability data. The method will explicitly model and filter measurement error inherent in smartphone-based methods. A case study will use existing datasets from projects like 'Measuring soil aggregate stability with mobile phones', comparing kriged surfaces from app data against maps derived from traditional, lab-validated sampling to assess accuracy. Computational implementation will leverage open-source R packages (e.g., gstat, geoR) to ensure capacity building and accessibility.",
+      "contribution": "This work will provide a validated, open-source methodological pipeline for generating continuous soil security maps from citizen science, directly supporting the 'Aroura' think tank's mission. It will advance the role of digital tools in soil assessment by moving from data collection to actionable spatial intelligence, enhancing global soil condition monitoring capacity.",
+      "novelty": "While kriging is standard in DSM, its direct application to calibrate and spatialize inherently noisy, citizen-collected smartphone sensor data for soil security indicators is novel, bridging a critical gap between high-volume, low-cost data acquisition and rigorous, spatially explicit analysis.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_sd_003_prop",
+      "title": "Inverting the Soil Stability Relationship: A Digital Soil Morphometry Approach to Infer Historical Land Management",
+      "motivation": "Soil aggregate stability is a key indicator of soil condition and security, known to be strongly influenced by management practices. However, the ability to retrospectively diagnose past management from current soil condition is a critical, unresolved inverse problem in pedology and land assessment. Solving it would provide a powerful forensic tool for evaluating land degradation, verifying sustainable practices, and understanding legacy effects on global soil resources, directly addressing the 'Peak Soil' and soil security agenda.",
+      "hypothesis": "That distinct, long-term land management regimes (e.g., conventional tillage, no-till, organic amendments, pasture) impart unique, quantifiable signatures on soil aggregate stability and its associated digital morphometric features, enabling their probabilistic reconstruction from contemporary soil measurements.",
+      "method": "We will leverage a global dataset of soil aggregate stability, measured via the established mobile phone method, paired with documented management histories. Digital morphometric features (size distribution, shape, porosity) will be extracted from aggregate images. The inverse problem will be framed as a multi-class classification and inference task, implemented using ensemble machine learning algorithms (Random Forest, Gradient Boosting) and probabilistic graphical models. These models will be trained to predict the most likely historical management class from the stability and morphometric feature vector.",
+      "contribution": "This work will deliver a novel, empirically grounded framework for the digital forensic diagnosis of land use history, advancing the field of digital soil morphometry. It will provide a new tool for assessing soil security by linking current condition to past causality, enhancing capacity for global soil monitoring and management evaluation. The models will serve as a foundational component for a future digital 'soil management inference engine'.",
+      "novelty": "While soil stability is used to *assess* management outcomes, directly inverting the relationship to *predict* management is a novel conceptual and analytical shift. It moves beyond correlation to develop a diagnostic causal inference tool, integrating digital soil assessment with historical land-use science in a new way.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "cdbb4398ff88658d1997fd95eda11a81e678a085_ac_002_prop",
+      "title": "Integrating Dynamic Biotic Interactions into Digital Soil Microbiome Models for Improved Soil Security",
+      "motivation": "Current digital soil mapping (DSM) and predictive models for soil microbial communities rely heavily on static environmental covariates (e.g., pH, texture, climate), which fail to capture the dynamic biotic interactions that fundamentally structure microbial assemblages. This gap limits our ability to predict soil functional resilience and health, a critical component of global soil security. Addressing this is essential for proactive soil management in the face of climate change and land-use intensification.",
+      "hypothesis": "Explicitly modeling key biotic interactions, specifically competition and predation, within a digital soil mapping framework will significantly improve the predictive accuracy of bacterial community composition and functional potential across landscapes, beyond what is achievable with static environmental factors alone.",
+      "method": "We will leverage pre-existing continental-scale soil microbiome and environmental datasets (e.g., from the Earth Microbiome Project). A hybrid modeling architecture will be developed, combining a base geostatistical model (e.g., Regression Kriging) for static factors with an interaction network module. This module will use generalized Lotka-Volterra (gLV) equations, parameterized via sparse inverse covariance estimation (e.g., SPIEC-EASI) from co-occurrence data, to simulate dynamic biotic forces. Model performance will be validated against held-out microbial community data, comparing predictions from the hybrid model to a static-factor-only baseline.",
+      "contribution": "This work will produce a novel digital soil mapping framework that integrates biotic dynamics, advancing the field of pedometrics. It will provide a more mechanistic understanding of soil microbiome assembly rules, directly contributing to the 'condition' and 'function' dimensions of soil security. The resulting open-source tools will enhance scientific capacity for predicting soil microbial responses to environmental change.",
+      "novelty": "While digital soil mapping is well-established for physico-chemical properties, its application to the microbiome has remained largely correlative. This proposal moves beyond static snapshots by dynamically coupling geospatial prediction with ecological interaction models, a non-obvious synthesis of pedometrics, microbial ecology, and network science.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "cdbb4398ff88658d1997fd95eda11a81e678a085_ac_004_prop",
+      "title": "Land Use Intensity and Soil Type as Buffers Against Microbial Homogenization: A Global Soil Security Perspective",
+      "motivation": "Land use intensification is a primary driver of global soil degradation and a threat to soil security, which encompasses the maintenance of soil condition, capability, and capital. Pre-2026 research indicates that agricultural intensification homogenizes soil bacterial communities, potentially reducing ecosystem resilience and functional redundancy. However, it is unknown whether certain land management practices or inherent soil properties can buffer this biotic homogenization, a critical knowledge gap for developing strategies to safeguard soil's biological dimension.",
+      "hypothesis": "We hypothesize that the homogenization of soil bacterial communities under land use change is not uniform, but is significantly buffered by (1) specific land use types that maintain higher organic inputs and structural complexity (e.g., perennial systems, organic amendments) and (2) inherent soil properties, particularly clay content and mineralogy, which stabilize microhabitats and resources.",
+      "method": "We will analyze a global meta-dataset of 16S rRNA gene amplicon sequences from soils under contrasting land uses (e.g., native vegetation, cropland, pasture) paired with standardized soil property data. Community homogenization will be quantified using multivariate dispersion (PERMDISP) and beta-diversity metrics (Bray-Curtis, UniFrac). The buffering capacity of land use and soil type will be tested using linear mixed-effects models, with homogenization metrics as the response variable and land use intensity, soil texture class, and their interaction as fixed effects, while controlling for geographic region. Digital soil mapping (DSM) techniques will be used to spatially extrapolate identified buffering capacities at a continental scale.",
+      "contribution": "This work will directly contribute to the operationalization of soil security by identifying concrete land management and soil types that preserve microbial diversity, a key component of soil condition. It will provide a spatially explicit, evidence-based framework for prioritizing land use planning and soil management interventions to mitigate biological homogenization. The findings will advance the concept of 'soil security buffering capacity' as a measurable ecosystem service.",
+      "novelty": "While biotic homogenization is recognized, this study uniquely tests the *buffering* capacity of management and soil type as moderating variables, moving beyond documentation of the pattern to identification of solutions. It innovatively integrates high-throughput molecular ecology with DSM principles to scale microbial community dynamics for global soil security assessment.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "cdbb4398ff88658d1997fd95eda11a81e678a085_fw_001_prop",
+      "title": "Ground-truthing the digital soil genus: A continental-scale validation of high-resolution DSMART maps across Australian bioregions",
+      "motivation": "The development of high-resolution digital soil maps, such as those produced by the DSMART (Disaggregation and Harmonisation of Soil Map Units Through Resampled Classification Trees) algorithm, promises a revolution in soil security and land management by providing genus-level predictions at continental scales. However, their operational utility for critical decisions in agriculture, environmental conservation, and climate adaptation depends entirely on their accuracy, which remains largely untested with independent, spatially representative field data. This validation gap undermines confidence in these foundational digital public goods for global soil security.",
+      "hypothesis": "We hypothesize that the predicted soil genus classes from continental-scale DSMART maps will demonstrate statistically significant agreement (>70% accuracy at the genus level) with independent field observations, but that accuracy will vary systematically with landscape complexity, legacy soil map quality, and the density of the original point data used for disaggregation.",
+      "method": "We will design a stratified random sampling campaign across 50 key Australian bioregions, targeting areas of high and low prediction uncertainty from the DSMART model. At each of 500 new, independent sites, soil will be described and classified to family and genus level according to the Australian Soil Classification. These observations will form a validation dataset completely independent of the model's training data. Accuracy will be quantified using error matrices, Cohen's Kappa, and spatial analysis of error clusters. We will then use Random Forest regression to model validation accuracy as a function of environmental covariates (terrain, climate, legacy map scale) to diagnose systematic error sources.",
+      "contribution": "This work will provide the first rigorous, continental-scale 'fitness-for-purpose' assessment of high-resolution digital soil genus maps for Australia. It will directly inform the Global Soil Partnership's efforts towards digital soil mapping capacity building by establishing benchmark validation protocols. The results will critically advance the field of pedometrics by quantifying the real-world limits of disaggregation techniques and providing a transparent error model for end-users in policy and management.",
+      "novelty": "While DSMART and similar algorithms are widely used, their validation typically relies on internal cross-validation or limited, non-representative field checks. This proposal is novel in its commitment to a major, independent field campaign designed explicitly for statistical validation across the full range of mapped conditions, moving beyond computational performance to assess actual ground-truth accuracy at the management-relevant genus scale.",
+      "dimension": "Future Work"
+    },
+    {
+      "id": "cdbb4398ff88658d1997fd95eda11a81e678a085_fw_005_prop",
+      "title": "Evaluating the Efficacy of Genus-Level Digital Soil Maps for Targeting Precision Soil Security Interventions",
+      "motivation": "Achieving soil security requires management strategies that are both globally scalable and locally precise. Pre-2026 digital soil mapping (DSM) has advanced to create high-resolution maps of soil properties, but translating these maps into actionable, field-scale interventions remains a significant challenge. This gap limits our ability to implement the 'DSMA' (Digital Soil Mapping and Assessment) paradigm effectively for tangible improvements in soil condition and global food security.",
+      "hypothesis": "That management interventions (e.g., specific organic amendments or tillage practices) targeted using genus-level soil distribution maps will yield significantly greater improvements in key soil security indicators (e.g., aggregate stability, carbon content) compared to conventional, non-targeted management.",
+      "method": "We will design a multi-continent field trial across sites representing distinct soil genera. For each site, genus maps derived from legacy soil data and covariates (e.g., DEM, Landsat) will guide the placement of paired treatment and control plots. Interventions will be selected based on the diagnosed constraints of each soil genus (e.g., compost addition for Arenosols). Soil response will be quantified using pre-2026 accessible digital methods, including the mobile phone-based aggregate stability measurement protocol developed by the team. Statistical analysis will employ linear mixed-effects models to isolate the effect of map-targeted intervention.",
+      "contribution": "This work will provide the first empirical, field-validated framework for operationalizing digital soil genus maps into precision land management. It will advance the scientific basis for 'Peak Soil' mitigation by demonstrating a pathway to enhance soil condition efficiently. The project will also build global capacity by providing a tested protocol for using ubiquitous digital tools (phones, open-source maps) to implement and monitor soil security actions.",
+      "novelty": "While genus maps exist, their use as direct blueprints for prescribing and testing specific physical soil interventions is novel. The research uniquely bridges the digital (maps) and physical (field management) realms of soil security, moving beyond correlation to causation in DSM application.",
+      "dimension": "Future Work"
+    },
+    {
+      "id": "cdbb4398ff88658d1997fd95eda11a81e678a085_mt_001_prop",
+      "title": "Mapping the Soil Microbiome Niche: A Species Distribution Modeling Approach to Predict Bacterial Genus Suitability for Soil Security",
+      "motivation": "Soil security requires understanding the functional condition of the soil microbiome, a key determinant of ecosystem services and agricultural productivity. Pre-2026, macroecology has successfully used Species Distribution Models (SDMs) to predict plant and animal ranges from environmental covariates, but their application to soil bacteria at a global scale remains nascent. This gap limits our ability to forecast microbial responses to land management and climate change, hindering proactive soil management strategies.",
+      "hypothesis": "We hypothesize that the environmental niches of key bacterial genera, defined by soil properties (e.g., pH, texture, organic carbon) and climate variables, can be robustly modeled using SDMs, and that these models will reveal genera-specific suitability patterns critical for soil function and security.",
+      "method": "We will apply the Maximum Entropy (MaxEnt) algorithm, a leading presence-background SDM, to global soil microbiome sequence datasets (e.g., from Earth Microbiome Project) linked with spatial environmental layers from SoilGrids and WorldClim. For target bacterial genera, we will use genus presence/relative abundance data as the response variable against a suite of pedological, climatic, and land-use predictors. Model performance will be evaluated via spatial cross-validation and AUC metrics. The final output will be global, high-resolution (250m) predictive maps of niche suitability for each target genus.",
+      "contribution": "This work will produce the first globally consistent, pedologically-informed suitability maps for soil bacterial genera, directly contributing to the digital soil assessment framework. It will establish a novel methodological bridge between macroecology and soil microbiology, providing a predictive tool to assess microbial community condition and its role in soil functions under global change scenarios.",
+      "novelty": "While SDMs are standard in macroecology, their systematic application to model the distribution of soil bacterial genera based on *in-situ* soil properties (rather than just climate) at a global scale is a novel synthesis. This directly operationalizes the 'Peak Soil' and soil security concepts by providing a quantifiable, spatial method to assess a core component of soil biological capital.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "cdbb4398ff88658d1997fd95eda11a81e678a085_sd_004_prop",
+      "title": "Mapping the Global Distributions of Key Soil Fungal and Archaeal Genera: A Digital Soil Mapping Approach for Soil Biological Security",
+      "motivation": "Soil security requires understanding not just physical and chemical properties, but also the biological condition underpinning soil functions like carbon sequestration and nutrient cycling. Pre-2026, global digital soil mapping (DSM) efforts have focused predominantly on abiotic factors, leaving a critical gap in predictive, spatially explicit knowledge of soil microbial biogeography at management-relevant scales. This gap hinders our capacity to assess the vulnerability of soil biological communities to global change and manage for soil health.",
+      "hypothesis": "That the distribution of dominant soil fungal and archaeal genera can be robustly predicted at continental to global scales using a DSM framework that integrates environmental covariates (climate, terrain, soil properties) with legacy microbial community data. We hypothesize that fungal distributions will be more strongly linked to organic matter and vegetation, while archaeal distributions will correlate more with soil pH and mineralogy.",
+      "method": "We will adapt a proven DSM machine learning pipeline, such as Random Forest or Gradient Boosting, previously used for soil properties. The pipeline will be applied to a global compilation of soil amplicon sequencing data (e.g., from Earth Microbiome Project, NCBI) to model the relative abundance or presence/absence of target genera. Key covariates will include WorldClim climate layers, SoilGrids-derived physicochemical properties, remote sensing indices (MODIS), and digital terrain attributes. Model performance will be evaluated via spatial cross-validation to ensure generalizability.",
+      "contribution": "This work will produce the first set of spatially continuous, predictive maps for critical soil fungal and archaeal taxa, directly contributing to the 'biological' dimension of digital soil assessment. It will establish a methodological framework for integrating microbial ecology into soil security science, providing a new tool for monitoring soil biological condition and its role in ecosystem services under global change scenarios.",
+      "novelty": "While DSM is mature for abiotic factors, its application to predict specific microbial taxa at broad scales is novel. The dual focus on both fungi and archaea within the same analytical framework will allow for a comparative analysis of the environmental drivers controlling these key biological components of soil security.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "e085789fdf3764f1cb32b3e3ae8ff44fa196c4c7_ac_002_prop",
+      "title": "Beyond Spectral Activity: A Digital Soil Mapping Framework for Soil Security Using Indirect Proxies and Ensemble Models",
+      "motivation": "Digital soil mapping (DSM) predominantly relies on spectrally active properties, creating a critical gap for key soil security indicators like aggregate stability, soil strength, and specific mineralogy that lack direct spectral signatures. This limitation hinders the global, high-resolution assessment of soil condition and its role in food and environmental security. Addressing this gap is essential for moving beyond 'peak soil' concepts to actionable, management-focused soil intelligence.",
+      "hypothesis": "Soil properties with weak or no direct spectral response can be predicted with acceptable accuracy by leveraging their functional relationships with spectrally active 'surrogate' properties within a spatially explicit, ensemble modelling framework.",
+      "method": "We will develop a hybrid modelling architecture combining geostatistics, machine learning, and pedotransfer rules. Core spectrally active properties (e.g., clay, iron oxides, organic carbon) will be mapped from legacy and new mobile phone-based vis-NIR data. These will serve as inputs into: 1) a Random Forest model trained on a global soil spectral library with measured 'target' properties, and 2) a rule-based pedotransfer function layer encoding known physico-chemical relationships (e.g., clay mineralogy and organic matter influencing aggregate stability). A Bayesian model averaging ensemble will integrate these predictions with spatial covariates (terrain, climate) to produce final maps with uncertainty estimates.",
+      "contribution": "This work will provide a methodological blueprint for expanding the scope of DSM to critical, spectrally inactive soil attributes, directly enhancing global soil security assessment capacity. It will yield a scalable, digital framework that integrates scientific pedological knowledge with data-driven models, moving soil condition monitoring beyond direct spectral proxies.",
+      "novelty": "The approach explicitly relaxes the foundational DSM assumption of direct spectral activity, systematically formalizing the use of indirect proxies within an ensemble digital mapping workflow, which is a significant departure from conventional correlative spectral modelling.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "e085789fdf3764f1cb32b3e3ae8ff44fa196c4c7_mt_002_prop",
+      "title": "Calibrating Soil Security: Adapting Pharmaceutical Chemometrics for Robust Spectral Analysis of Complex Soil Mixtures",
+      "motivation": "Soil security requires rapid, accurate, and globally scalable digital soil assessments. Current chemometric models for soil spectral libraries (e.g., using Vis-NIR-MIR) often struggle with the extreme heterogeneity and complex matrix effects inherent in global soil systems, leading to calibration transfer problems and reduced predictive capacity for new sites. Advanced chemometric techniques developed for pharmaceutical quality control, where precision for complex mixtures is paramount, offer a potential solution to this critical bottleneck in digital soil mapping.",
+      "hypothesis": "That chemometric models specifically designed for pharmaceutical analysis—such as Orthogonal Partial Least Squares (O-PLS) and Independent Component Analysis (ICA)—can be adapted to significantly improve the robustness and transferability of spectral calibrations for predicting key soil condition attributes (e.g., organic carbon, clay content) across diverse global landscapes.",
+      "method": "We will adapt and test two pharmaceutical chemometric frameworks. First, O-PLS will be used to separate structured soil spectral variance from orthogonal noise arising from variable moisture, particle size, and mineralogy. Second, ICA will be employed to deconvolute spectral signatures from overlapping soil constituents, treating them as independent sources. These methods will be applied to a pre-existing global Vis-NIR spectral library, benchmarking their predictive performance and transferability against standard PLSR and machine learning models for core soil properties.",
+      "contribution": "This work will provide a novel methodological bridge between pharmaceutical and pedometric sciences, delivering more robust calibration protocols for global digital soil mapping. It will directly enhance the capacity for reliable, large-scale soil condition monitoring, a cornerstone for informed soil management and security. The project will yield open-source code and validation datasets to support the wider soil security community.",
+      "novelty": "While chemometrics is used in soil science, the direct adaptation of sophisticated pharmaceutical models like O-PLS and ICA, which are explicitly designed for complex mixture analysis and signal deconvolution, to address soil spectral complexity and calibration transfer is a novel and non-obvious cross-disciplinary innovation.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "e085789fdf3764f1cb32b3e3ae8ff44fa196c4c7_sd_003_prop",
+      "title": "Inverting the Soil Paradigm: A Generative Model to Derive Theoretical Spectral Signatures for Optimal Soil Condition and Capacity",
+      "motivation": "Digital soil assessment, particularly via proximal and remote sensing, relies on correlating spectral data to soil properties and functions. This forward approach is limited by the empirical spectra of existing, often degraded, soils. To guide soil management towards achieving the goals of soil security—such as optimal condition for defined capacities—we need a theoretical target. This proposal addresses the inverse problem: defining the spectral signature a soil *should* have to fulfill its optimal functional role, providing a quantifiable benchmark for restoration and management.",
+      "hypothesis": "A soil's optimal functional state, defined by quantifiable capacity and condition parameters (e.g., water holding capacity, aggregate stability, carbon content), corresponds to a theoretically derivable and spectrally unique signature across the visible-near-infrared-shortwave infrared (VNIR-SWIR) range. This signature can be modeled by inverting established pedotransfer and radiative transfer relationships.",
+      "method": "We will develop a generative model using a physics-informed neural network (PINN) architecture. First, we will define a multi-dimensional 'optimal soil state vector' for key functions (e.g., productivity, filtration) based on pre-2026 soil security frameworks. Core pedotransfer functions and Mie scattering/radiative transfer models (e.g., Hapke model) will be embedded as physical constraints within the network. The PINN will be trained to invert these relationships, learning the mapping from the optimal state vector to a corresponding synthetic reflectance spectrum (350-2500 nm). Validation will involve comparing model outputs against spectra from high-quality benchmark soils and using the derived spectra to predict functional parameters in independent datasets via standard chemometric models (e.g., PLSR).",
+      "contribution": "This work will provide the first quantitative, spectrally-defined target for 'good' soil, moving beyond relative assessments. It will contribute a novel generative tool to the digital soil assessment toolkit, enabling the setting of spectral benchmarks for soil security. The theoretical spectra will offer a new reference for calibrating remote sensing platforms and designing sensor networks aimed at monitoring soil condition against an optimal standard.",
+      "novelty": "While vast literature uses spectra to predict soil properties, inverting the process to generate a target spectrum from a defined functional optimum is a fundamentally novel direction. It integrates the conceptual frameworks of soil security and capacity with the technical rigor of radiative transfer modeling and modern generative AI in a way not previously attempted.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_ac_001_prop",
+      "title": "A Digital Soil Security Framework: Quantifying the Impact of Structural Heterogeneity and Preferential Flow on Contaminant Fate and Transport",
+      "motivation": "The assumption of a homogeneous soil column is a critical simplification in many models of solute and contaminant transport, yet real-world soil security is threatened by the movement of pollutants, nutrients, and agrochemicals through structured, heterogeneous profiles. Pre-2026, the digital soil assessment revolution provides new tools to characterize this complexity, but its integration into predictive, management-ready models for soil security remains underdeveloped. This gap limits our capacity to accurately assess risks to soil condition, water quality, and global food systems.",
+      "hypothesis": "Explicitly modelling soil profile heterogeneity and preferential flow paths derived from digital soil morphometrics will significantly improve the prediction of reactant transport dynamics compared to homogeneous column models, thereby providing a more secure basis for land management decisions.",
+      "method": "The research will employ a coupled digital and physical modelling approach. First, soil structural data (aggregate size distribution, porosity, visible macropores) will be captured non-destructively using smartphone-based photogrammetry and image analysis, building on McBratney's prior work. This digital soil morphometric data will inform the parameterization of a 2D/3D dual-permeability model (e.g., using HYDRUS-2D/3D with the mobile-immobile water or macroporosity modules). The model will be validated against laboratory and field tracer experiments on soils with contrasting structural conditions. Sensitivity analysis will identify the key digital metrics most critical for predicting preferential flow.",
+      "contribution": "This work will contribute a practical, digitally-enabled framework for moving beyond the homogeneous column paradigm in soil security science. It will deliver a validated methodology linking in-situ digital assessment to improved transport predictions, directly enhancing the capacity for managing soil pollution and nutrient use efficiency. The outcomes will strengthen the scientific role of digital soil assessment in addressing global soil security challenges.",
+      "novelty": "The novelty lies in the direct integration of low-cost, field-deployable digital soil morphometric techniques (e.g., mobile phone-based aggregate stability and structure analysis) into mechanistic transport models, creating a feedback loop between rapid condition assessment and predictive security modelling that was not standard practice pre-2026.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_ac_004_prop",
+      "title": "A Digital Soil Mapping Approach to Quantify and Predict Reactive Mineral Surface Area Dynamics for Soil Security",
+      "motivation": "Soil security requires understanding the fundamental chemical and physical processes governing nutrient cycling, carbon sequestration, and contaminant binding. Pre-2026 models often treat soil mineral reactivity as static, ignoring how management, erosion, and aggregation dynamically alter the reactive surface area of clays and oxides. This gap limits our ability to predict soil function and resilience under global change, a core concern of the soil security framework.",
+      "hypothesis": "The reactive surface area of key soil minerals can be predicted at landscape scales by integrating proximal sensor data (e.g., vis-NIR, XRF) with pedotransfer functions and temporal land management data, and that incorporating this dynamic property will significantly improve digital soil models for cation exchange capacity and phosphorus sorption.",
+      "method": "We will develop a hybrid DSMa (Digital Soil Mapping and Assessment) workflow. First, we will establish a reference dataset of mineral-specific surface area (via BET-N2 and EGME) for diverse soil samples. Using pre-2026 machine learning architectures (specifically, Cubist regression trees and Random Forests), we will model surface area as a function of spectroscopic data and conventional soil properties. This model will be applied to spatially exhaustive sensor data. Temporal change will be incorporated by linking surface area predictions to land management history and aggregate stability indices, the latter potentially derived from the researcher's prior work on mobile phone-based aggregate stability measurement.",
+      "contribution": "This work will produce the first spatially explicit, time-integrated maps of a key soil intrinsic property—reactive surface area—directly supporting the 'condition' and 'capability' dimensions of soil security. It will provide a new, quantifiable state variable for global soil health assessments and improve the mechanistic basis of digital soil function models.",
+      "novelty": "While DSMa predicts static properties like clay content, dynamically modelling the reactive *interface* of those minerals over time is novel. It moves beyond composition to functional geometry, directly linking the researcher's themes of digital capacity, soil condition, and global security.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_ac_005_prop",
+      "title": "Re-framing soil security: A global assessment of calcium limitation on soil organic carbon stabilization and aggregate dynamics",
+      "motivation": "Soil security frameworks have long focused on nitrogen and phosphorus as primary limiting nutrients for productivity and carbon sequestration. However, in calcareous, highly weathered, or acidic soils amended with high carbon inputs, calcium availability can become the critical constraint for forming stable organo-mineral associations and aggregates. This overlooked limitation has direct implications for global carbon models and management strategies aimed at soil-based climate mitigation.",
+      "hypothesis": "We hypothesize that in key global soil regions, calcium availability, not carbon or nitrogen, is the primary limiting factor for the formation of calcium-mediated soil organic matter (SOM) complexes and water-stable aggregates, thereby controlling medium-term soil carbon stabilization capacity.",
+      "method": "We will employ a digital soil mapping (DSM) approach, integrating global spatial databases (SoilGrids, ISRIC) of soil calcium forms, pH, and texture. A conditional random forest algorithm will model regions of potential calcium limitation. For validation, we will develop a standardized, low-cost field assay using mobile phone image analysis of aggregate stability (building on prior work) paired with calcium saturation tests on soil samples from predicted hotspots. Controlled incubation experiments will quantify the carbon sequestration response to calcium addition versus nitrogen/phosphorus.",
+      "contribution": "This work will produce the first global spatial framework identifying soils where carbon management is constrained by calcium, directly informing the 'condition' dimension of soil security. It will advance the concept of 'Peak Soil' by defining a new biogeochemical limit. The method contributes to digital soil assessment capacity by providing a new diagnostic tool for extension services.",
+      "novelty": "It inverts the classic nutrient limitation paradigm in soil carbon science by positioning calcium as a primary limiting element, moving beyond agronomic yield to focus on carbon stabilization mechanisms. The integration of predictive DSM with accessible phone-based phenotyping creates a novel, scalable scientific workflow for testing this hypothesis.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_fw_002_prop",
+      "title": "A Digital Soil Security Framework: Integrating Multi-Pathway Microbial Carbonate Dynamics for Global Soil Condition Management",
+      "motivation": "Soil security is a global challenge, with soil degradation threatening food production and ecosystem services. Microbial Induced Carbonate Precipitation (MICP) is a promising bio-mediated soil improvement technique, but its current conceptualization is overly narrow, focusing primarily on ureolysis. This limits its predictive power and practical application for managing soil condition at scale. A more comprehensive digital framework is needed to account for the full suite of microbial metabolic pathways (e.g., denitrification, sulfate reduction, photosynthesis) that influence carbonate dynamics and soil structure.",
+      "hypothesis": "Integrating multiple, interacting microbial metabolic pathways into a digital reaction network model will significantly improve the prediction and management of soil aggregate stability and carbonate cementation under diverse environmental conditions. This expanded model will provide a more robust scientific basis for using microbial processes as a lever for soil security.",
+      "method": "We will develop a process-based, agent-informed digital model using a hybrid architecture. The core will be a biogeochemical reaction network (using stoichiometric matrix methods, pre-2026) that incorporates kinetic rates for urea hydrolysis, denitrification, sulfate reduction, and aerobic respiration as they influence pH and carbonate saturation. This will be coupled with a simplified agent-based layer to simulate microbial community dynamics. The model will be parameterized and validated using existing global soil biogeochemical datasets and new, low-cost measurements of aggregate stability derived from the mobile phone method previously developed by the team.",
+      "contribution": "This work will contribute a novel digital soil management tool that moves beyond single-pathway MICP, providing a systems-level understanding of microbially mediated soil strengthening. It will establish a scientific framework for 'next-generation' bio-cementation strategies tailored to specific soil conditions and security goals. The project will also demonstrate the role of digital technology and capacity building in making advanced soil condition assessment globally accessible.",
+      "novelty": "While MICP is well-studied, no pre-2026 digital management framework exists that integrates the competitive and synergistic effects of multiple microbial metabolic pathways on carbonate precipitation for soil security. The novelty lies in merging detailed biogeochemical network modeling with the practical, global-scale application ethos of digital soil assessment.",
+      "dimension": "Future Work"
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_fw_004_prop",
+      "title": "A coupled model of soil inorganic and organic carbon dynamics for assessing soil security under global change",
+      "motivation": "Soil security requires managing the entire soil carbon pool, yet inorganic carbon (SIC) and organic carbon (SOC) are typically modelled in isolation. This is a critical gap, as pre-2026 research highlights strong geochemical and biological interactions between these pools (e.g., via acidification, carbonate dissolution, and priming effects). A unified model is essential for predicting the net soil carbon response to climate change, land management, and carbon sequestration strategies, which is fundamental for global soil security.",
+      "hypothesis": "Explicitly coupling the dynamics of soil inorganic and organic carbon will significantly improve the prediction of total soil carbon stocks and their vulnerability to environmental change, compared to models treating each pool independently. We hypothesize that the coupling will reveal non-linear feedbacks, particularly in calcareous and semi-arid soils, that alter projected carbon trajectories.",
+      "method": "We will develop a process-based model by integrating a mechanistic SIC module (handling dissolution-precipitation, CO2 exchange) with an established SOC turnover model (e.g., a modified RothC or CENTURY architecture). The coupling will be implemented through shared state variables: soil pH, partial pressure of CO2, and dissolved inorganic carbon. Numerical integration will use a daily time-step ODE solver. The model will be parameterized and validated using global datasets (e.g., ISRIC, ICOS) and tested across a DSMa (Digital Soil Mapping and Assessment) framework to produce spatially explicit vulnerability maps.",
+      "contribution": "This work will provide the first open-source, process-based model framework that dynamically couples SIC and SOC. It will deliver new insights into the role of SIC as a buffer or source in the global carbon cycle, directly informing soil management for security. The resulting digital tool will enhance capacity for assessing soil condition and its role in climate mitigation.",
+      "novelty": "While SOC models are mature and SIC models exist, their integration into a single, interacting system for global soil security assessment is novel. This moves beyond the prevailing paradigm of treating these major carbon pools as separate, non-communicating entities.",
+      "dimension": "Future Work"
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_fw_005_prop",
+      "title": "Quantifying the Sensitivity of Soil Security Outcomes to Initial Geochemical Conditions: A Global Digital Soil Mapping Approach",
+      "motivation": "Soil security, a pre-2026 framework championed by McBratney, links soil condition to global challenges like food and water security. However, predictive models for soil management often treat initial geochemistry as a fixed input, neglecting its inherent spatial variability and uncertainty. This gap limits our ability to forecast the robustness of soil security interventions under different starting conditions, a critical knowledge deficit for sustainable land management.",
+      "hypothesis": "We hypothesize that the long-term trajectories of key soil security indicators (e.g., carbon sequestration potential, nutrient cycling resilience) are non-linearly sensitive to variations in initial soil geochemistry, and that this sensitivity varies systematically across major global soil groups and land uses.",
+      "method": "We will leverage global digital soil mapping (DSM) products (e.g., SoilGrids) to define probabilistic distributions of initial geochemical properties (pH, CEC, SOC, major cations). Using a structured variance-based global sensitivity analysis (Sobol' indices), we will propagate these distributions through a process-based soil model (e.g., RothC or a simplified nutrient cycling model). The analysis will be conducted across a stratified global sample of pixels representing key DSMAs (Digital Soil Mapping Areas), with model outputs focused on 20-year projections of soil functions.",
+      "contribution": "This work will produce the first global-scale sensitivity maps identifying where soil security forecasts are most vulnerable to uncertainty in initial conditions. It will provide a formal methodology for integrating uncertainty from legacy data into soil security planning. The results will directly inform the 'condition' and 'capability' dimensions of soil security by highlighting critical data needs for robust management.",
+      "novelty": "While sensitivity analysis is common in modeling, its systematic application to the 'initial condition problem' in a global soil security context is novel. It uniquely combines the DSM paradigm with variance-based sensitivity methods to address a core, yet under-explored, uncertainty in predicting soil's role in global sustainability.",
+      "dimension": "Future Work"
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_mt_002_prop",
+      "title": "Agent-Based Modeling of Soil Microbial Dynamics: A Digital Framework for Quantifying Soil Condition and Security",
+      "motivation": "Soil security, a core concept in McBratney's work, depends critically on the biological condition of soil, with microbial communities driving key functions like carbon cycling and aggregate stability. However, pre-2026 soil management models often treat microbes as homogeneous pools, failing to capture the individual-scale interactions that govern system-level resilience. This gap limits our ability to predict soil's response to global stressors, a central concern of the 'Peak Soil' discourse.",
+      "hypothesis": "We hypothesize that an agent-based model (ABM) simulating individual microbial cells and their interactions with soil mineral surfaces and organic matter will reveal emergent properties of soil aggregate stability and carbon sequestration that are not predictable from bulk-scale models.",
+      "method": "We will develop a spatially explicit ABM using the NetLogo platform, informed by empirical data on microbial physiology and soil structure. Agents (microbial cells) will be programmed with traits for growth, motility, and extracellular polymeric substance (EPS) production, interacting within a 3D digital soil matrix representing pore spaces and mineral particles. The model will integrate algorithms for nutrient diffusion, cell-cell communication, and attachment/detachment dynamics to simulate the formation and disintegration of micro-aggregates under varying moisture and carbon input scenarios.",
+      "contribution": "This work will contribute a novel digital tool for quantifying the biological mechanisms underpinning soil condition, directly supporting the 'dsma' (digital soil morphometric assessment) paradigm. It will provide a mechanistic, process-based link between microbial ecology and soil physical security, offering a new capacity to model soil's role in global carbon and water cycles under changing management.",
+      "novelty": "While ABMs are established in ecology, their application to simulate individual microbial cells within a physically explicit soil architecture to predict macro-scale soil security indicators (like aggregate stability) is novel. This moves beyond correlative 'black-box' models to a mechanistic, individual-based digital representation of soil biology.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_sd_002_prop",
+      "title": "A Digital Soil Mapping Framework for Landscape-Scale Prediction of Soil Inorganic Carbon Stocks: Integrating Mechanistic Pedogenesis and Machine Learning",
+      "motivation": "Soil inorganic carbon (SIC) is a critical but poorly quantified component of the global carbon cycle, especially in arid and semi-arid regions. Its stock at landscape and watershed scales is a key indicator for soil security, influencing soil condition, agricultural productivity, and climate feedbacks. Current regional SIC estimates are often based on coarse spatial data or simple statistical models, lacking the mechanistic understanding needed for robust prediction under changing management and climate.",
+      "hypothesis": "That a hybrid model integrating a mechanistic pedogenic model for SIC formation (e.g., based on carbonate solubility and leaching regimes) with a machine learning-based digital soil mapping (DSM) framework can significantly improve the accuracy and spatial resolution of regional SIC stock predictions compared to purely data-driven or purely process-based approaches.",
+      "method": "We will employ a DSM framework using Quantile Regression Forest or Cubist algorithms, trained on legacy and newly collected SIC profile data. Key environmental covariates (pre-2026) will include high-resolution climate data (aridity index, temperature), digital elevation models (topographic wetness index), parent material maps, and satellite-derived vegetation/land use indices. The mechanistic component will be embedded by using outputs from a simplified, parameter-sparse geochemical model (simulating carbonate precipitation/dissolution) as an additional, informative covariate in the machine learning model, creating a hybrid architecture.",
+      "contribution": "This work will produce the first high-resolution, mechanistic-informed map of SIC stocks for a target watershed, directly contributing to national carbon accounting and land management. It will advance the field of digital soil assessment by demonstrating a scalable method to integrate pedogenic theory into landscape-scale prediction, strengthening the scientific basis for soil security decisions.",
+      "novelty": "The novelty lies in the explicit coupling of a process-based model of SIC dynamics with a state-of-the-art DSM workflow, moving beyond simple statistical correlation. This addresses a core challenge in upscaling soil security science by embedding mechanistic understanding of soil condition into a digital, capacity-building mapping tool.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_sd_003_prop",
+      "title": "Inverting Pedogenic Models: A Digital Soil Mapping Approach to Estimate Historical Microbial Respiration from Secondary Carbonate Patterns",
+      "motivation": "Soil security requires understanding the historical drivers of soil condition, including the role of soil biota in carbon cycling and mineral weathering. Microbial respiration is a key process influencing carbonate precipitation, but its historical rates are difficult to quantify. This creates a critical knowledge gap for managing soil health and predicting its response to global change.",
+      "hypothesis": "That spatial patterns of pedogenic carbonate (e.g., depth, morphology, abundance) recorded in soil profiles can be inverted using a process-based model to produce quantitative, spatially explicit estimates of historical microbial respiration rates.",
+      "method": "We will develop an inverse modeling framework coupling a 1D reactive transport model for carbonate precipitation (e.g., based on the PHREEQC geochemical engine) with a Bayesian inversion algorithm. The approach will be applied within a Digital Soil Mapping (DSM) context, using spatially referenced soil profile data (e.g., from global databases like SoilGrids) describing carbonate distribution. The inversion will use Markov Chain Monte Carlo (MCMC) sampling to estimate posterior probability distributions for microbial respiration rate parameters, conditioned on the observed carbonate data and prior knowledge.",
+      "contribution": "This work will provide a novel methodology to reconstruct a key biological soil function from widely available geomorphic and geochemical archives. It will contribute to the 'Peak Soil' and soil security discourse by offering a quantitative tool to assess the historical capacity of soils to sustain microbial life and sequester carbon, informing management strategies for soil condition.",
+      "novelty": "While forward models of carbonate formation exist, inverting them to solve for biological rate parameters is a non-trivial, ill-posed problem rarely attempted in pedology. The integration of this inverse approach within a DSM framework to produce spatial estimates of historical microbial activity represents a significant methodological advance.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_sd_005_prop",
+      "title": "A Digital Twin Framework for Optimizing Engineered Soil Carbon Sequestration via Nutrient Management",
+      "motivation": "Soil security is critical for global food and climate security. Engineered soil carbon sequestration (SCS) through practices like enhanced weathering or biochar amendment offers a scalable negative emissions technology, but its efficiency is limited by suboptimal soil biological and chemical conditions. A digital, model-driven approach is needed to dynamically manage these conditions to maximize carbon capture and permanence, moving beyond static, one-size-fits-all application strategies.",
+      "hypothesis": "That a process-based digital twin of a soil system, calibrated with proximal sensor data, can be used to design and iteratively optimize site-specific nutrient injection regimes that maximize microbial-mediated carbon stabilization while minimizing losses.",
+      "method": "We will develop a mechanistic soil digital twin integrating the 3D Soil Architecture Model (3DSAM) with the Microbial-ENzyme Decomposition (MEND) model to simulate carbon dynamics. The twin will be calibrated using time-series data from in-situ sensors (e.g., CO2, moisture, temperature) and mobile phone-based aggregate stability measurements. A Bayesian optimization algorithm will be deployed on the calibrated twin to identify optimal spatio-temporal schedules for liquid nutrient injections (e.g., N, P) that maximize predicted long-term carbon storage, subject to economic and environmental constraints.",
+      "contribution": "This work will provide a novel, adaptive management framework for engineered SCS, translating digital soil mapping into dynamic soil management (DSM2). It will deliver a validated, open-source protocol for optimizing carbon capture interventions, directly contributing to the operational goals of soil security. The project will also advance the role of digital twins in soil science beyond monitoring into predictive control.",
+      "novelty": "While digital twins exist for industrial processes, their application to optimize *in-situ* biological soil processes for carbon capture is nascent. The integration of a mechanistic biogeochemical model with a Bayesian optimization loop for real-world nutrient management represents a significant, non-obvious advance over current empirical or static modeling approaches in soil carbon research.",
+      "dimension": "Scaling & Dual"
+    }
+  ],
+  "ideas": [
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_sd_002",
+      "title": "Scale up to landscape or watershed level",
+      "description": "Upscale the mechanistic model to predict regional soil inorganic carbon stocks.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Mechanistic Modeling of Soil Inorganic Carbon Dynamics in Controlled Experiments",
+      "sourceYear": 2025
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_fw_004",
+      "title": "Couple with organic carbon decomposition models",
+      "description": "Integrate the inorganic carbon model with existing models of soil organic matter turnover.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Mechanistic Modeling of Soil Inorganic Carbon Dynamics in Controlled Experiments",
+      "sourceYear": 2025
+    },
+    {
+      "id": "7493839c7327a2efac2bc3d9dfc16acd0ac9f4c4_ac_001_adversarial",
+      "title": "Mechanistic Framework for Predicting Nonlinear Soil Regeneration Thresholds and Pathways",
+      "description": "This research moves beyond general advocacy for nonlinear recovery by developing a falsifiable, mechanistic framework to predict it. It combines long-term field monitoring of recovering agroecosystems with controlled mesocosm experiments to identify the precise combinations of microbial inoculants, organic inputs, and plant communities that shift soil systems past degradation thresholds. The core output is a set of validated, context-sensitive models that define the conditions under which nonlinear regeneration is probable, providing a rigorous scientific basis for targeted restoration strategies.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_sd_003",
+      "title": "Inverse problem: estimate microbial rates from precipitates",
+      "description": "Invert the model to estimate historical microbial activity from observed carbonate distribution patterns.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Mechanistic Modeling of Soil Inorganic Carbon Dynamics in Controlled Experiments",
+      "sourceYear": 2025
+    },
+    {
+      "id": "7493839c7327a2efac2bc3d9dfc16acd0ac9f4c4_ac_001",
+      "title": "Challenge that soil degradation is irreversible or linear",
+      "description": "Invert the peak soil assumption of inevitable decline by focusing on nonlinear recovery and regenerative pathways.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Peak Soil: Is It a Useful Concept?",
+      "sourceYear": 2025
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_fw_002",
+      "title": "Incorporate additional microbial metabolic pathways",
+      "description": "Expand the MICP reaction network to include other microbial processes influencing carbonate dynamics.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Mechanistic Modeling of Soil Inorganic Carbon Dynamics in Controlled Experiments",
+      "sourceYear": 2025
+    },
+    {
+      "id": "cdbb4398ff88658d1997fd95eda11a81e678a085_fw_005",
+      "title": "Test precision soil interventions using genus maps",
+      "description": "Design and evaluate land management practices targeted using the genus-level distribution blueprints.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Soil Microbial Blueprint: Predicting Soil Dominant Bacterial Genera Distribution Across Australia",
+      "sourceYear": 2025
+    },
+    {
+      "id": "cdbb4398ff88658d1997fd95eda11a81e678a085_ac_004",
+      "title": "Land use homogenizes all microbial communities similarly",
+      "description": "Test if certain land use types or soil types buffer against bacterial homogenization.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Soil Microbial Blueprint: Predicting Soil Dominant Bacterial Genera Distribution Across Australia",
+      "sourceYear": 2025
+    },
+    {
+      "id": "7493839c7327a2efac2bc3d9dfc16acd0ac9f4c4_ac_002",
+      "title": "Assume a single global peak soil point is meaningful",
+      "description": "Relax the assumption of a singular global tipping point for soil productivity decline.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Peak Soil: Is It a Useful Concept?",
+      "sourceYear": 2025
+    },
+    {
+      "id": "172d8dcf5856ad1dc22ed08c235f8ae66d342077_ac_001",
+      "title": "Challenge static soil-landscape relationship assumption",
+      "description": "Model soil dynamics where relationships with static landscape covariates break down over time.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Digital soil mapping and assessment for Australia and beyond: A propitious future",
+      "sourceYear": 2021
+    },
+    {
+      "id": "7493839c7327a2efac2bc3d9dfc16acd0ac9f4c4_sd_002_analogy",
+      "title": "Inverse Problem: Defining the Critical Transition Conditions for Peak Soil Recovery",
+      "description": "This research seed expands via analogy to ecosystem ecology's regime shift theory. The original idea—defining conditions to reverse peak soil decline—parallels the inverse problem in systems like lakes or coral reefs: identifying the precise interventions needed to trigger recovery from a degraded state, not just halt decline. The analogous solution from ecology involves modeling hysteresis and defining the multi-variable thresholds (tipping points) for a critical transition back to health. Adapted to soil science, the research would frame soil recovery as a non-linear, state-transition process. It would seek to identify the combined and potentially sequential management (e.g., minimum perennial cover duration, organic amendment thresholds) and policy (e.g., payment for ecosystem service levels that change farmer risk calculus) conditions that constitute a 'recovery threshold,' providing a targeted blueprint for reversing systemic soil degradation.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_fw_005",
+      "title": "Sensitivity analysis on initial soil conditions",
+      "description": "Perform systematic sensitivity analysis on the impact of varying initial soil geochemistry.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Mechanistic Modeling of Soil Inorganic Carbon Dynamics in Controlled Experiments",
+      "sourceYear": 2025
+    },
+    {
+      "id": "3a0b0d078bcf2352ea758857cc2529c55a32072e_mt_004",
+      "title": "Apply material flow analysis to soil nutrient budgets",
+      "description": "Use Industrial Ecology's material flow analysis to track national and global flows of key soil nutrients like phosphorus and nitrogen.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Aroura – the soil and soil security think tank",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_004_fusion",
+      "title": "Participatory Geostatistical Mapping for Community-Driven Soil Health",
+      "description": "This research fuses geostatistical kriging with participatory design to develop a novel soil health app framework. Farmers and land managers are engaged as co-designers in workshops to define which soil parameters are mapped, how uncertainty is visualized, and what spatial scales are most useful for decision-making. Their local knowledge and on-ground observations are formally integrated as priors or validation data within the kriging process, improving model accuracy in data-sparse regions. The outcome is a community-calibrated spatial interpolation tool that produces maps which are both statistically robust and deeply aligned with the practical needs and experiential wisdom of the end-users.",
+      "dimension": "Fusion",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "172d8dcf5856ad1dc22ed08c235f8ae66d342077_mt_002",
+      "title": "Use computer vision for soil profile analysis",
+      "description": "Apply deep learning image analysis to extract soil data from pit images or core scans.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Digital soil mapping and assessment for Australia and beyond: A propitious future",
+      "sourceYear": 2021
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_sd_005",
+      "title": "Optimize treatment for engineered carbon sequestration",
+      "description": "Use the model as a digital twin to design optimal nutrient injections for maximum carbon capture.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Mechanistic Modeling of Soil Inorganic Carbon Dynamics in Controlled Experiments",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_002_fusion",
+      "title": "A Global Soil Health Biopsy: Standardized, High-Resolution Degradation Tracking via Medical Imaging-Inspired Vision",
+      "description": "This research fuses medical imaging techniques with standardization goals to create a 'soil health biopsy' protocol. It adapts algorithms for segmenting and tracking cells in time-lapse microscopy to automatically quantify the dispersion, stability, and morphological evolution of soil aggregates in standardized lab or field image assays. These algorithm-derived metrics—such as aggregate dispersal rates, size distribution shifts, and pore network changes—become the core, universally comparable physical indicators for a new global soil degradation framework. Consequently, the framework gains objective, high-resolution data on fundamental degradation processes (like slaking and crusting), enabling consistent, early-stage diagnosis of soil physical degradation anywhere in the world.",
+      "dimension": "Fusion",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_ac_001",
+      "title": "Assume image recognition is insufficient for all soils",
+      "description": "Challenge the assumption that 2D image analysis captures all relevant aggregate breakdown dynamics for every soil type.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Measuring soil aggregate stability with mobile phones, lessons, challenges, and future work",
+      "sourceYear": 2025
+    },
+    {
+      "id": "cdbb4398ff88658d1997fd95eda11a81e678a085_ac_002",
+      "title": "Static environmental factors insufficient for prediction",
+      "description": "Model bacterial distributions using dynamic biotic interactions like competition or predation.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Soil Microbial Blueprint: Predicting Soil Dominant Bacterial Genera Distribution Across Australia",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_sd_003",
+      "title": "Create the inverse problem: predict management from stability",
+      "description": "Develop models that infer historical land management practices from measured soil aggregate stability data.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Measuring soil aggregate stability with mobile phones, lessons, challenges, and future work",
+      "sourceYear": 2025
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_mt_002",
+      "title": "Use agent-based modeling for microbial dynamics",
+      "description": "Incorporate agent-based modeling approaches from ecology to simulate individual microbial cells.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Mechanistic Modeling of Soil Inorganic Carbon Dynamics in Controlled Experiments",
+      "sourceYear": 2025
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_ac_001",
+      "title": "Relax homogeneous soil column assumption",
+      "description": "Model soil with heterogeneous layers and preferential flow paths affecting reactant transport.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Mechanistic Modeling of Soil Inorganic Carbon Dynamics in Controlled Experiments",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_002_adversarial",
+      "title": "Physics-Informed Synthetic Data Generation for Robust 3D Soil Aggregate Tracking",
+      "description": "This approach overcomes the domain gap by using a physics-based simulation engine to generate vast, annotated datasets of soil aggregate dispersion under controlled virtual conditions that mimic real-world optics and material properties. A core deep learning model is first pre-trained on this synthetic data to learn robust features for segmentation and tracking in 3D. The system is then domain-adapted and validated using a strategically collected, smaller set of multi-view experimental imagery, ensuring practical accuracy. This hybrid simulation-to-real pipeline creates a generalizable tool for quantifying soil dynamics without the prohibitive cost of manually labeling thousands of real-world samples.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "cdbb4398ff88658d1997fd95eda11a81e678a085_mt_001",
+      "title": "Apply species distribution modeling from macroecology",
+      "description": "Use advanced SDM techniques like MaxEnt to model niche suitability for bacterial genera.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Soil Microbial Blueprint: Predicting Soil Dominant Bacterial Genera Distribution Across Australia",
+      "sourceYear": 2025
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_ac_005",
+      "title": "Invert nutrient limitation assumption",
+      "description": "Study carbonate dynamics under conditions where calcium, not carbon/nitrogen, is the limiting factor.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Mechanistic Modeling of Soil Inorganic Carbon Dynamics in Controlled Experiments",
+      "sourceYear": 2025
+    },
+    {
+      "id": "e085789fdf3764f1cb32b3e3ae8ff44fa196c4c7_mt_002",
+      "title": "Use chemometrics from pharmaceutical analysis",
+      "description": "Adapt advanced chemometric models used in drug quality control to improve spectral calibration for complex soil mixtures.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Advancing Soil Security with Soil Spectroscopy: The efficient estimation of indicators",
+      "sourceYear": 2025
+    },
+    {
+      "id": "7493839c7327a2efac2bc3d9dfc16acd0ac9f4c4_mt_003",
+      "title": "Transfer integrated assessment modeling from climate science",
+      "description": "Adapt integrated assessment models to evaluate socio-economic pathways impacting soil security dimensions.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Peak Soil: Is It a Useful Concept?",
+      "sourceYear": 2025
+    },
+    {
+      "id": "7493839c7327a2efac2bc3d9dfc16acd0ac9f4c4_sd_002_fusion",
+      "title": "Inverse Field Diagnostics: Defining Recovery Pathways via Uncontrolled Aggregate Stability Networks",
+      "description": "This research inverts the traditional soil health assessment paradigm by deploying a scalable, field-based network for continuous aggregate stability monitoring across working landscapes under entirely uncontrolled conditions. The resulting high-resolution, spatiotemporal dataset is then used as the input for an inverse modeling problem: to identify the precise sequences and combinations of management practices (e.g., cover cropping, grazing regimes, amendments) and policy interventions (e.g., subsidy timing, enforcement thresholds) that are empirically linked to measured recovery trajectories. The approach bypasses the limitations of controlled experiments to directly diagnose the causes of recovery from real-world complexity, generating evidence-based, context-specific roadmaps for achieving peak soil recovery.",
+      "dimension": "Fusion",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "172d8dcf5856ad1dc22ed08c235f8ae66d342077_mt_003",
+      "title": "Transfer ensemble weather forecasting to soil",
+      "description": "Adapt ensemble modeling and uncertainty quantification methods from meteorology for soil property forecasts.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Digital soil mapping and assessment for Australia and beyond: A propitious future",
+      "sourceYear": 2021
+    },
+    {
+      "id": "172d8dcf5856ad1dc22ed08c235f8ae66d342077_fw_003",
+      "title": "Build soil and landscape digital twins",
+      "description": "Use DSMA as the foundation for creating comprehensive digital twins of soil and landscapes.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Digital soil mapping and assessment for Australia and beyond: A propitious future",
+      "sourceYear": 2021
+    },
+    {
+      "id": "cdbb4398ff88658d1997fd95eda11a81e678a085_sd_004",
+      "title": "Dual: Model fungal or archaeal genus distributions",
+      "description": "Apply the same machine learning pipeline to map dominant fungal or archaeal genera.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Soil Microbial Blueprint: Predicting Soil Dominant Bacterial Genera Distribution Across Australia",
+      "sourceYear": 2025
+    },
+    {
+      "id": "172d8dcf5856ad1dc22ed08c235f8ae66d342077_mt_001",
+      "title": "Apply physics-informed neural networks to DSMA",
+      "description": "Incorporate physical soil process equations into machine learning models for more robust predictions.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Digital soil mapping and assessment for Australia and beyond: A propitious future",
+      "sourceYear": 2021
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_ac_004",
+      "title": "Account for mineral surface area effects",
+      "description": "Incorporate variable reactive surface area of soil minerals and precipitates over time.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Mechanistic Modeling of Soil Inorganic Carbon Dynamics in Controlled Experiments",
+      "sourceYear": 2025
+    },
+    {
+      "id": "7493839c7327a2efac2bc3d9dfc16acd0ac9f4c4_sd_001_adversarial",
+      "title": "A network-based Soil Resilience Boundary Framework for defining cross-scale operational thresholds",
+      "description": "This research develops a framework to define actionable soil health thresholds for farms and landscapes by explicitly modeling them as nodes within biophysical and socio-economic networks. It combines soil process modeling with agent-based simulations to identify how local management decisions interact with cross-boundary flows of water, nutrients, and economic pressures to create system-wide tipping points. The output is a set of context-dependent, dynamic operational boundaries that account for teleconnections and feedback loops, moving beyond static, isolated farm-scale definitions of 'peak soil.'",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "e085789fdf3764f1cb32b3e3ae8ff44fa196c4c7_sd_003",
+      "title": "Inverse problem: derive spectra from soil function",
+      "description": "Model the theoretical spectral signature expected for a soil achieving optimal capacity or condition.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Advancing Soil Security with Soil Spectroscopy: The efficient estimation of indicators",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_003_fusion",
+      "title": "Co-Designing for Nonlinear Soil Recovery: A Participatory Framework for Regenerative Pathways",
+      "description": "This research fuses participatory design (HCI) with the challenge to linear soil degradation narratives to develop a new generation of soil health technology. It engages farmers, indigenous knowledge holders, and ecologists in co-design workshops to model and visualize nonlinear, context-specific soil recovery pathways, challenging assumptions of inevitable decline. The resulting app framework prioritizes the discovery and sharing of regenerative practices that trigger positive tipping points, rather than merely tracking degradation. This transforms the app from a diagnostic tool into a participatory platform for collectively building and validating narratives of ecological regeneration.",
+      "dimension": "Fusion",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "cdbb4398ff88658d1997fd95eda11a81e678a085_fw_001",
+      "title": "Validate genus-level maps with independent field sampling",
+      "description": "Test the accuracy of the predicted high-resolution digital maps across diverse Australian landscapes.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Soil Microbial Blueprint: Predicting Soil Dominant Bacterial Genera Distribution Across Australia",
+      "sourceYear": 2025
+    },
+    {
+      "id": "e085789fdf3764f1cb32b3e3ae8ff44fa196c4c7_ac_002",
+      "title": "Relax assumption that key properties are spectrally active",
+      "description": "Explore indirect proxies or combined models for soil properties with weak or no direct spectral response.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Advancing Soil Security with Soil Spectroscopy: The efficient estimation of indicators",
+      "sourceYear": 2025
+    },
+    {
+      "id": "3a0b0d078bcf2352ea758857cc2529c55a32072e_ac_001",
+      "title": "Challenge that soil degradation is primarily a modern problem",
+      "description": "Investigate historical and pre-industrial precedents of severe soil degradation to contextualize the 'past century' narrative.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Aroura – the soil and soil security think tank",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_001",
+      "title": "Apply citizen science data quality frameworks",
+      "description": "Use data validation and curation methods from ecology citizen science to manage crowdsourced soil app data.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Measuring soil aggregate stability with mobile phones, lessons, challenges, and future work",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_ac_001_fusion",
+      "title": "Multi-modal soil aggregate stability protocol: Validating a sensor-fusion standard beyond 2D imaging",
+      "description": "This research fuses the critical examination of 2D imaging's limitations with the goal of large-scale, multi-country validation. Instead of validating the app's current image-based method as universally sufficient, the study is designed to systematically identify soil types and conditions where 2D image analysis fails to capture key breakdown dynamics (e.g., internal porosity changes, specific fracture modes). For these identified cases, the validation protocol actively incorporates and benchmarks supplementary, low-cost sensor data (such as 3D structure-from-motion, vibration, or simple mechanical probes) to fill the information gap. The outcome is the establishment of a tiered, adaptive standard method: a core 2D image protocol for suitable soils, augmented by defined multi-modal protocols for soils where imaging alone is insufficient, ensuring reliable and scientifically defensible adoption across truly diverse global pedological contexts.",
+      "dimension": "Fusion",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_001_adversarial",
+      "title": "A Context-Specific Probabilistic and Reputation-Based Validation Pipeline for Crowdsourced Soil Data",
+      "description": "This research designs a novel data quality system specifically for the challenges of crowdsourced soil data, moving beyond the direct application of ecological frameworks. It combines probabilistic geospatial models to establish expected value ranges and flag anomalous submissions with a dynamic contributor reputation system that weights data based on validation against trusted local ground-truth sources. The system also mandates and verifies participant competency through interactive, in-app training on standardized sampling procedures, thereby addressing the fundamental heterogeneity and skill-dependent nature of soil data collection at its source.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_ac_002_adversarial",
+      "title": "Field-Deployable Standardized Stress Protocol (FD-SSP) for Comparable Aggregate Stability Assessment",
+      "description": "This method enables field-based aggregate stability assessment by applying a controlled, standardized disturbance to soil in its natural setting. A portable tool delivers a precise sequence of wetting and kinetic energy to a prepared soil surface, simulating a defined erosive or slaking stress. The soil's response (e.g., particle detachment quantified by image analysis or turbidity of runoff) is measured to generate a stability index. This approach isolates the soil property from transient field conditions, producing data comparable across different locations, seasons, and operators while maintaining the ecological relevance of testing in-situ structure.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_002_analogy",
+      "title": "Adapting Particle Image Velocimetry from Fluid Dynamics to Track Soil Aggregate Dispersion",
+      "description": "This idea expands the original seed by drawing an analogy from Experimental Fluid Dynamics. The analogous problem is tracking complex fluid motion, which is solved using Particle Image Velocimetry (PIV)—a computer vision technique that calculates velocity fields by cross-correlating the positions of tracer particles across image sequences. The adapted research idea applies this solution to soil science by treating dispersing soil aggregates as the analogous particles. By implementing PIV algorithms on video footage of soil erosion experiments, we can generate quantitative, high-resolution vector fields that map the dispersion dynamics of aggregates, offering a novel method to visualize and measure the fundamental processes of soil detachment and transport.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_004",
+      "title": "Transfer geostatistical kriging from digital soil mapping",
+      "description": "Directly apply spatial interpolation techniques to create continuous maps from point-based app measurements.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Measuring soil aggregate stability with mobile phones, lessons, challenges, and future work",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_ac_001_adversarial",
+      "title": "Quantifying the insufficiency of 2D image analysis for soil aggregate stability via direct 3D microstructure benchmarking",
+      "description": "This research directly tests the assumption that 2D image analysis is sufficient by developing a controlled experiment where identical soil aggregates from diverse types (e.g., clay-rich, sandy, organic) undergo standardized wetting. Each aggregate is analyzed pre- and post-breakdown using both high-resolution 2D surface imaging and 3D X-ray micro-computed tomography (μCT). The system then fuses these datasets to quantify critical breakdown features—such as internal pore connectivity, crack propagation paths, and volumetric fragment distribution—that are inaccessible in 2D. By establishing statistically significant discrepancies between 2D and 3D-derived stability indices, the research provides an empirical foundation for when 3D analysis is non-negotiable, moving beyond qualitative critique to actionable, quantitative guidance.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_fw_002_adversarial",
+      "title": "A Dynamic, Continuously Validated Global Soil App Network with Embedded Adaptation",
+      "description": "This initiative moves beyond single validation studies to create a permanent, operational infrastructure for ongoing performance monitoring and algorithmic adaptation. It deploys a globally distributed network of instrumented validation sites that continuously feed ground-truth data, which is combined with anonymized, quality-checked user data to create a real-time accuracy dashboard. This system triggers scheduled, region-specific model updates and allows for the rapid integration of new soil-crop-climate modules, ensuring the app remains a reliable, evolving standard rather than a static tool validated for a past condition.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "3a0b0d078bcf2352ea758857cc2529c55a32072e_mt_002",
+      "title": "Use conflict resolution models for soil policy disputes",
+      "description": "Apply mediation and negotiation frameworks from international law to resolve conflicts over competing soil uses and rights.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Aroura – the soil and soil security think tank",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_002",
+      "title": "Use computer vision techniques from medical imaging",
+      "description": "Adapt segmentation and tracking algorithms from analyzing cell or tissue dynamics to track soil aggregate dispersion.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Measuring soil aggregate stability with mobile phones, lessons, challenges, and future work",
+      "sourceYear": 2025
+    },
+    {
+      "id": "3a0b0d078bcf2352ea758857cc2529c55a32072e_sd_003",
+      "title": "Inverse problem: Design policies for managed soil degradation",
+      "description": "Identify policy conditions where controlled soil degradation for urban development is optimal, requiring compensation mechanisms.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Aroura – the soil and soil security think tank",
+      "sourceYear": 2025
+    },
+    {
+      "id": "7493839c7327a2efac2bc3d9dfc16acd0ac9f4c4_mt_002_analogy",
+      "title": "Adapting Financial Stress Testing for Soil Resilience Assessment",
+      "description": "This idea adapts the solution to a parallel problem in financial economics—assessing systemic resilience through stress testing—to the context of soil condition assessment. In finance, stress tests model the impact of severe scenarios on institutions to find failure thresholds and recovery capacity. The adapted research idea applies this framework to soil systems by developing a protocol to model soil responses to defined stress scenarios (e.g., drought, compaction). By simulating impacts on key state variables, the method aims to identify soil system thresholds, quantify pre-threshold buffering capacity, and assess regenerative potential, providing a structured, scenario-based analytical method grounded in resilience theory for soil health diagnosis and management.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "e085789fdf3764f1cb32b3e3ae8ff44fa196c4c7_mt_001",
+      "title": "Apply hyperspectral imaging from remote sensing",
+      "description": "Use airborne or satellite hyperspectral imaging techniques to upscale soil spectroscopy from point to landscape scale.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Advancing Soil Security with Soil Spectroscopy: The efficient estimation of indicators",
+      "sourceYear": 2025
+    },
+    {
+      "id": "e085789fdf3764f1cb32b3e3ae8ff44fa196c4c7_ac_004",
+      "title": "Challenge that condition equals current soil health",
+      "description": "Decouple the concept of soil Condition from health to include non-health related states like contamination or physical disturbance.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Advancing Soil Security with Soil Spectroscopy: The efficient estimation of indicators",
+      "sourceYear": 2025
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_ac_003",
+      "title": "Model dynamic gas phase interactions",
+      "description": "Incorporate CO2 gas exchange with the atmosphere and its effect on carbonate equilibria.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Mechanistic Modeling of Soil Inorganic Carbon Dynamics in Controlled Experiments",
+      "sourceYear": 2025
+    },
+    {
+      "id": "e085789fdf3764f1cb32b3e3ae8ff44fa196c4c7_mt_004",
+      "title": "Transfer time-series analysis from econometrics",
+      "description": "Apply econometric time-series models to decompose and forecast temporal trends in spectral soil health data.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Advancing Soil Security with Soil Spectroscopy: The efficient estimation of indicators",
+      "sourceYear": 2025
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_mt_004",
+      "title": "Incorporate stable isotope tracking methods",
+      "description": "Integrate methods from isotope geochemistry to trace carbon and calcium sources and sinks.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Mechanistic Modeling of Soil Inorganic Carbon Dynamics in Controlled Experiments",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_ac_004_analogy",
+      "title": "A Multi-Platform Sensor Network for Ubiquitous Soil Measurement, Inspired by Oceanographic Observing Systems",
+      "description": "This research seed challenges the assumption that the mobile phone is the only viable ubiquitous platform for soil measurement by drawing an analogy from oceanography. Oceanographers solved the analogous problem of limited single-platform data (e.g., from ships) by creating integrated observing systems that combine fixed buoys, seafloor sensors, autonomous vehicles, and satellites. Adapting this solution, the research will investigate a tiered, multi-platform network for soil: fixed smart sensors for long-term temporal data, drones for on-demand spatial mapping, and satellite imagery for large-area context. The core investigation will be designing the data architecture and cost-benefit framework for this heterogeneous system, determining how to optimally blend these platforms to achieve ubiquitous, scalable soil measurement beyond the smartphone.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "cdbb4398ff88658d1997fd95eda11a81e678a085_sd_001",
+      "title": "Scale down to farm or plot-level management",
+      "description": "Downscale the modeling approach to guide precision agriculture practices at the field scale.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Soil Microbial Blueprint: Predicting Soil Dominant Bacterial Genera Distribution Across Australia",
+      "sourceYear": 2025
+    },
+    {
+      "id": "cdbb4398ff88658d1997fd95eda11a81e678a085_ac_003",
+      "title": "Genus-level resolution is optimal for all applications",
+      "description": "Determine if species- or strain-level resolution is needed for predicting specific functional traits.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Soil Microbial Blueprint: Predicting Soil Dominant Bacterial Genera Distribution Across Australia",
+      "sourceYear": 2025
+    },
+    {
+      "id": "cdbb4398ff88658d1997fd95eda11a81e678a085_mt_004",
+      "title": "Apply community assembly null models",
+      "description": "Use ecological null models to disentangle deterministic vs. stochastic processes in genus distributions.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Soil Microbial Blueprint: Predicting Soil Dominant Bacterial Genera Distribution Across Australia",
+      "sourceYear": 2025
+    },
+    {
+      "id": "172d8dcf5856ad1dc22ed08c235f8ae66d342077_sd_001",
+      "title": "Scale down to hyper-resolution farm management",
+      "description": "Apply DSMA at centimeter resolution for precision agriculture and micro-variability assessment.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Digital soil mapping and assessment for Australia and beyond: A propitious future",
+      "sourceYear": 2021
+    },
+    {
+      "id": "e085789fdf3764f1cb32b3e3ae8ff44fa196c4c7_sd_001",
+      "title": "Downscale to handheld sensor networks for farmers",
+      "description": "Develop low-cost, networked handheld spectrometers for real-time, field-scale soil management decisions by individual farmers.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Advancing Soil Security with Soil Spectroscopy: The efficient estimation of indicators",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_003_analogy",
+      "title": "Apply Community-Based Participatory Research from Public Health to Soil App Design",
+      "description": "This idea adapts the Community-Based Participatory Research (CBPR) method from Public Health to the development of a soil health app. In CBPR, researchers and community members are equal partners throughout the entire research and intervention design process to ensure cultural relevance and adoption. By formally applying this framework, the project would establish a long-term co-design partnership with a specific farming community (e.g., a regional cooperative). The farmers would be engaged as equal partners in an iterative cycle to define the app's core problems, prototype features like data entry and visualization, and field-test the tool's utility on their own operations. This moves beyond standard participatory design workshops to create a soil health app that is deeply actionable, contextually appropriate, and trusted by its end-users.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "3a0b0d078bcf2352ea758857cc2529c55a32072e_sd_005",
+      "title": "Scale across domains: Soil security in financial risk models",
+      "description": "Incorporate soil degradation as a material financial risk factor into corporate ESG ratings and sovereign credit assessments.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Aroura – the soil and soil security think tank",
+      "sourceYear": 2025
+    },
+    {
+      "id": "3a0b0d078bcf2352ea758857cc2529c55a32072e_mt_003",
+      "title": "Transfer behavioral nudge theory to soil management",
+      "description": "Design and test behavioral 'nudges' from behavioral economics to encourage sustainable soil practices among land managers.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Aroura – the soil and soil security think tank",
+      "sourceYear": 2025
+    },
+    {
+      "id": "cdbb4398ff88658d1997fd95eda11a81e678a085_ac_005",
+      "title": "Australian patterns generalize globally",
+      "description": "Replicate the study on other continents to test the universality of the four distribution patterns.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Soil Microbial Blueprint: Predicting Soil Dominant Bacterial Genera Distribution Across Australia",
+      "sourceYear": 2025
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_fw_001",
+      "title": "Model validation in natural field conditions",
+      "description": "Test the BRTSim-MICPv1 model in uncontrolled field environments beyond controlled column experiments.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Mechanistic Modeling of Soil Inorganic Carbon Dynamics in Controlled Experiments",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_sd_001_analogy",
+      "title": "Adapting Microfluidic Droplet Analysis for Phone-Based Micro-Aggregate Stability",
+      "description": "This idea adapts a solution from microfluidics and soft matter physics, where the stability of microscopic droplets is assessed using camera-based imaging under stress. The analogous method uses high-speed imaging through microscopes to track droplet deformation and critical breakup points. We adapt this by scaling down the phone-based macro-aggregate analysis method. A smartphone is fitted with a clip-on macro/micro lens to image soil micro-aggregates suspended in a shallow, transparent flow cell. By controlling fluid flow rate to apply precise shear stress, the phone records video of the aggregates. Adapted image analysis software, based on microfluidic droplet tracking algorithms, then quantifies micro-aggregate stability by measuring the flow conditions or shear stress at which they begin to disperse or break apart.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_ac_001_analogy",
+      "title": "Adapting Seismic Tomography for 3D Soil Aggregate Characterization",
+      "description": "This idea challenges the core assumption that 2D image analysis captures all relevant aggregate breakdown dynamics for every soil type by drawing an analogy from geophysics. In seismology, 2D surface maps are insufficient for subsurface modeling, leading to the development of seismic tomography, which uses multi-angle wave propagation data to reconstruct 3D internal structures. Adapting this solution, the proposed research would develop a soil analysis method where controlled acoustic/ultrasonic pulses are transmitted through a soil sample from various angles. The measured wave properties (velocity, attenuation) would be fused with surface image data in a computational inversion model to reconstruct the critical 3D internal architecture and mechanical connectivity of aggregates, providing a dynamic physical understanding that pure 2D visual analysis misses.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_004_analogy",
+      "title": "Adapting Seismic Tomography's Velocity Field Interpolation for App-Based Spatial Data",
+      "description": "This idea adapts the solution from geophysical seismic tomography, where sparse, indirect measurements are inverted to create continuous 3D models of subsurface properties. The analogous solution uses an inverse modeling framework with spatial covariance constraints to interpolate between discrete data points. Adapted to the original context, we propose applying this inverse problem framework to point-based app measurements. The region is discretized into a grid, and the app data, potentially unevenly sampled, are treated as observations. By defining a forward model based on spatial interpolation (e.g., using a variogram model) and solving the inverse problem (e.g., via Bayesian inversion or least-squares with regularization), we can generate a robust, continuous map that optimally fits the sparse measurements while respecting the spatial structure learned from geostatistics, offering a potentially more flexible and statistically rigorous alternative to direct kriging for digital soil mapping or similar applications.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "7493839c7327a2efac2bc3d9dfc16acd0ac9f4c4_ac_004",
+      "title": "Metaphors are sufficient for scientific assessment",
+      "description": "Invert the reliance on metaphor by demanding quantitative, multidimensional assessment frameworks for policy.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Peak Soil: Is It a Useful Concept?",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_ac_002_analogy",
+      "title": "Field-Based Soil Aggregate Stability via Passive Acoustic Sensing",
+      "description": "This idea inverts the need for a controlled laboratory setting by adapting a solution from Structural Health Monitoring in Civil Engineering. In that field, passive acoustic emission sensors are used to assess material integrity (like bridge concrete) under real-world, uncontrolled loads by detecting and classifying stress-induced acoustic signatures. The adapted research idea involves deploying field-hardened acoustic sensors within soil to passively record the sounds of aggregate breakdown during natural environmental cycles (rain, drought, frost). By applying machine learning pattern recognition to these acoustic emissions, the method would correlate specific sound signatures—such as pops, cracks, or shifts—with different stages and severities of aggregate disintegration, enabling continuous, quantitative stability assessment directly in uncontrolled field conditions.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "e085789fdf3764f1cb32b3e3ae8ff44fa196c4c7_mt_003",
+      "title": "Apply federated learning for data privacy",
+      "description": "Use federated machine learning to build spectral models across institutions without sharing sensitive soil data.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Advancing Soil Security with Soil Spectroscopy: The efficient estimation of indicators",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_ac_002",
+      "title": "Invert the need for a controlled laboratory setting",
+      "description": "Design a method that leverages completely field-based, uncontrolled conditions for aggregate stability assessment.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Measuring soil aggregate stability with mobile phones, lessons, challenges, and future work",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_003",
+      "title": "Apply participatory design from human-computer interaction",
+      "description": "Formally use HCI participatory design methods to build the next iteration of the soil health app.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Measuring soil aggregate stability with mobile phones, lessons, challenges, and future work",
+      "sourceYear": 2025
+    },
+    {
+      "id": "cdbb4398ff88658d1997fd95eda11a81e678a085_mt_002",
+      "title": "Incorporate geostatistical kriging for spatial prediction",
+      "description": "Combine machine learning with spatial interpolation to improve map accuracy at unsampled locations.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Soil Microbial Blueprint: Predicting Soil Dominant Bacterial Genera Distribution Across Australia",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_ac_003",
+      "title": "Relax the assumption of expert-only method creation",
+      "description": "Explore methods co-designed from the start by scientists and non-scientific end-users like farmers.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Measuring soil aggregate stability with mobile phones, lessons, challenges, and future work",
+      "sourceYear": 2025
+    },
+    {
+      "id": "e085789fdf3764f1cb32b3e3ae8ff44fa196c4c7_fw_005",
+      "title": "Optimize combined use of spectroscopy and lab analysis",
+      "description": "Determine the most cost-effective sampling strategy blending spectral sensing with traditional lab measurements for accuracy.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Advancing Soil Security with Soil Spectroscopy: The efficient estimation of indicators",
+      "sourceYear": 2025
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_mt_005",
+      "title": "Use machine learning for parameter estimation",
+      "description": "Apply machine learning emulators to accelerate model calibration and uncertainty quantification.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Mechanistic Modeling of Soil Inorganic Carbon Dynamics in Controlled Experiments",
+      "sourceYear": 2025
+    },
+    {
+      "id": "172d8dcf5856ad1dc22ed08c235f8ae66d342077_ac_004",
+      "title": "Challenge top-down global mapping necessity",
+      "description": "Explore federated or bottom-up DSMA where local models aggregate without a central global framework.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Digital soil mapping and assessment for Australia and beyond: A propitious future",
+      "sourceYear": 2021
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_fw_003_adversarial",
+      "title": "Quantifying and Balancing Expert Efficiency and Novice Learnability in Scientific App Interfaces",
+      "description": "This research develops a framework to systematically evaluate and design interfaces for scientific mobile apps by explicitly measuring the tension between expert user productivity and novice user accessibility. Instead of iterating based on aggregated feedback, the system employs controlled experiments comparing interface variants against objective metrics: task completion time and error rate for domain experts, versus time-to-competence and success rate for first-time users from the non-scientific community. The outcome is a set of evidence-based design principles and, where possible, adaptive interface mechanisms that optimize for both cohorts without compromising the application's core scientific utility.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_fw_004",
+      "title": "Study the role of institutions in tech implementation",
+      "description": "Analyze how public and private institutions facilitate the adoption of scientific tools by wider communities.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Measuring soil aggregate stability with mobile phones, lessons, challenges, and future work",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_sd_001",
+      "title": "Scale down to micro-aggregate stability analysis",
+      "description": "Adapt the phone-based imaging method to assess the stability of micro-aggregates, not just macro-aggregates.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Measuring soil aggregate stability with mobile phones, lessons, challenges, and future work",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_mt_004_adversarial",
+      "title": "Deconfounded Spatial Field Estimation for Behavioral Sensor Networks",
+      "description": "This research develops a framework to separate behavioral confounding from genuine spatial signal in crowdsourced point data before interpolation. A hierarchical model first estimates a latent spatial field jointly with parameters for non-spatial confounders like user density and time-of-day effects. Geostatistical kriging is then applied rigorously to the posterior distribution of this purified spatial field, not the raw measurements. The output is a continuous map with associated uncertainty that accurately represents the spatial structure of the target phenomenon, robust to the sampling biases inherent in opportunistic mobile sensing.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "cdbb4398ff88658d1997fd95eda11a81e678a085_mt_003",
+      "title": "Use causal inference from epidemiology",
+      "description": "Apply methods like propensity score matching to estimate causal effects of land use on genera.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Soil Microbial Blueprint: Predicting Soil Dominant Bacterial Genera Distribution Across Australia",
+      "sourceYear": 2025
+    },
+    {
+      "id": "e085789fdf3764f1cb32b3e3ae8ff44fa196c4c7_ac_001",
+      "title": "Challenge that spectroscopy is always cost-effective",
+      "description": "Investigate scenarios where the initial cost of spectroscopy equipment outweighs benefits for small-scale or one-time assessments.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Advancing Soil Security with Soil Spectroscopy: The efficient estimation of indicators",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_fw_003",
+      "title": "Further improve app user-friendliness and interface design",
+      "description": "Iteratively refine the mobile app interface based on continued user feedback from scientific and non-scientific communities.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Measuring soil aggregate stability with mobile phones, lessons, challenges, and future work",
+      "sourceYear": 2025
+    },
+    {
+      "id": "3a0b0d078bcf2352ea758857cc2529c55a32072e_ac_002",
+      "title": "Invert the assumption that expert consensus drives policy change",
+      "description": "Explore whether grassroots, non-expert movements are more effective than think tanks at elevating soil on political agendas.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Aroura – the soil and soil security think tank",
+      "sourceYear": 2025
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_mt_001",
+      "title": "Apply reactive transport lattice Boltzmann methods",
+      "description": "Use lattice Boltzmann methods from porous media flow to simulate MICP at pore scale.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Mechanistic Modeling of Soil Inorganic Carbon Dynamics in Controlled Experiments",
+      "sourceYear": 2025
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_sd_001",
+      "title": "Scale down to microfluidic chip experiments",
+      "description": "Apply the model to design and interpret MICP experiments in transparent microfluidic devices.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Mechanistic Modeling of Soil Inorganic Carbon Dynamics in Controlled Experiments",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_ac_003_adversarial",
+      "title": "Structured Knowledge Sovereignty Protocols for Equitable Method Co-Creation",
+      "description": "This research designs and tests a formal protocol for method co-creation that structurally prevents the capture or dilution of non-expert knowledge. It begins by facilitating separate, in-context knowledge articulation sessions with specific end-user cohorts to document their needs, metrics of success, and tacit practices without scientific framing. These distinct knowledge systems are then brought into a structured negotiation and integration phase with scientists, using transparent deliberative mapping to track the provenance and integration of all design inputs. The resulting co-designed method is validated not just by outcome, but by the integrity of the knowledge-integration process itself, ensuring the method is robustly grounded in equitable, practical expertise.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "172d8dcf5856ad1dc22ed08c235f8ae66d342077_ac_002",
+      "title": "Invert assumption of data-rich future",
+      "description": "Develop DSMA methods that function effectively in data-poor regions or scenarios.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Digital soil mapping and assessment for Australia and beyond: A propitious future",
+      "sourceYear": 2021
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_fw_003_analogy",
+      "title": "Adaptive Interface Refinement via Co-Design with Diverse User Personas",
+      "description": "This research idea adapts the participatory co-design methodology from urban planning to the problem of refining a scientific app's user-friendliness for diverse communities. Instead of merely collecting separate feedback streams, the project would implement structured, facilitated co-design workshops where representative users from scientific and non-scientific backgrounds simultaneously engage with interactive app prototypes. This analogous solution forces the direct confrontation of jargon, workflow, and interface complexity conflicts in real-time, guiding an iterative design process toward universally intuitive interfaces that are scientifically rigorous yet accessible, much like a public space designed for multiple concurrent user groups.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "7493839c7327a2efac2bc3d9dfc16acd0ac9f4c4_ac_004_adversarial",
+      "title": "Adversarial Deliberation Frameworks for Policy Assessment",
+      "description": "This approach develops structured assessment systems that force the explicit translation between metaphors/narratives and quantitative indicators through adversarial processes. Competing stakeholder groups must defend their preferred policy metaphors by linking them to specific, measurable multidimensional outcomes, while opposing groups attempt to falsify these links or propose superior metaphorical-quantitative pairings. The framework outputs not a single score but a contested map of evidence linking qualitative understandings to quantitative data, making value conflicts and measurement uncertainties central to the assessment. This moves beyond merely demanding quantification to rigorously testing how different conceptualizations of a problem hold up against evidence and competing interpretations.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_fw_004_analogy",
+      "title": "Institutional Frameworks as 'Clinical Pathways' for Technology Adoption",
+      "description": "Drawing an analogy from Evidence-Based Medicine, this study analyzes how institutions facilitate tech adoption by adapting the solution of 'clinical pathways.' In healthcare, institutions standardize the adoption of new practices via multidisciplinary care protocols that translate evidence into localized workflows. Similarly, this research will investigate how public and private institutions can create and implement structured 'technology adoption pathways' for scientific tools. These pathways would act as institutional frameworks that codify implementation steps, define stakeholder roles, mandate necessary training, and align incentives to systematically bridge the gap between cutting-edge tool development and their broad, reliable utilization by wider scientific and technical communities.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "e4821090f316dd49bf06e24b4c03b29087767767_mt_003",
+      "title": "Apply geophysical inversion techniques",
+      "description": "Use electrical resistivity or seismic tomography inversion to non-invasively constrain model states.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Mechanistic Modeling of Soil Inorganic Carbon Dynamics in Controlled Experiments",
+      "sourceYear": 2025
+    },
+    {
+      "id": "a918595423767f2218a6c899ebea99239afe0814_fw_004_adversarial",
+      "title": "Mechanisms of Equitable Adoption: A Comparative Study of Institutional Configurations for Overcoming Specific Tech Implementation Barriers",
+      "description": "This research moves beyond describing institutional roles to explicitly testing how different institutional configurations causally impact equitable adoption outcomes. It begins by identifying concrete, high-priority barriers to equitable access (e.g., proprietary data lock-in, infrastructure cost distribution). The core methodology then involves selecting matched pairs or sets of implementation cases facing similar barriers but involving different institutional setups (e.g., public-private partnership vs. community-led coalition). Through in-depth comparative process-tracing, the study isolates the specific operational mechanisms within successful institutions that directly overcome the barrier, generating actionable design principles for building more effective adoption pathways.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    }
+  ],
+  "papers": [
+    {
+      "title": "Digital soil mapping and assessment for Australia and beyond: A propitious future",
+      "year": 2021,
+      "venue": "",
+      "citations": 52,
+      "abstract": "Abstract Digital Soil Mapping and Assessment (DSMA) has progressed from challenging traditional soil science paradigms, through small scale prototyping, to large-scale implementation capturing quantitative measures of soil attributes and functions. This paper considers the future for DSMA in the con"
+    },
+    {
+      "title": "Measuring soil aggregate stability with mobile phones, lessons, challenges, and future work",
+      "year": 2025,
+      "venue": "Scientific Reports",
+      "citations": 3,
+      "abstract": "A method for assessing soil aggregate stability which uses image-recognition was created and presented in the form of a mobile phone app. The app was adopted, used, criticized, adjusted and updated by the scientific and non-scientific community worldwide. Results from Australia showed how the adopti"
+    },
+    {
+      "title": "Soil Microbial Blueprint: Predicting Soil Dominant Bacterial Genera Distribution Across Australia",
+      "year": 2025,
+      "venue": "Molecular Ecology",
+      "citations": 2,
+      "abstract": "Soil bacteria play a crucial role in soil processes, such as carbon sequestration and nutrient cycling. While soil bacterial communities and their interactions with pedo‐climatic factors have been well documented, most studies typically focus on broad taxonomic levels, leaving distribution and respo"
+    },
+    {
+      "title": "Advancing Soil Security with Soil Spectroscopy: The efficient estimation of indicators",
+      "year": 2025,
+      "venue": "Soil Security",
+      "citations": 1,
+      "abstract": "Soil security is fundamental to addressing global existential challenges, as it encompasses the sustainable management of soils for future generations. The soil security assessment framework consists of five dimensions, which reflect the roles of soil in supporting ecosystems and human livelihoods: "
+    },
+    {
+      "title": "Aroura – the soil and soil security think tank",
+      "year": 2025,
+      "venue": "Frontiers in Environmental Science",
+      "citations": 0,
+      "abstract": "Soil, a fundamental resource for life on Earth, has faced increasing degradation, particularly over the past century, with its ability to support ecosystems and human wellbeing rapidly deteriorating. Despite its critical role, soil remains largely neglected in global policy agendas. In response to t"
+    },
+    {
+      "title": "Peak Soil: Is It a Useful Concept?",
+      "year": 2025,
+      "venue": "International Soil and Water Conservation Research",
+      "citations": 0,
+      "abstract": "The concept of peak soil, the hypothetical point at which global soil productivity enters a sustained decline, has emerged as a metaphor for soil degradation. However, there is currently no globally accepted framework for assessing and communicating the status of soil degradation. In addition, the p"
+    },
+    {
+      "title": "Soil security: The missing piece in climate, food, and water agenda at COP30",
+      "year": 2025,
+      "venue": "The Innovation Geoscience",
+      "citations": 0,
+      "abstract": null
+    },
+    {
+      "title": "Mechanistic Modeling of Soil Inorganic Carbon Dynamics in Controlled Experiments",
+      "year": 2025,
+      "venue": "Journal of Geophysical Research: Biogeosciences",
+      "citations": 0,
+      "abstract": "We introduce here the development and testing of a mechanistic model accounting for inorganic carbon dynamics in soil. We designed a microbially induced carbonate precipitation version 1 (MICPv1) reaction network to describe the transport, precipitation, and dissolution of calcium carbonate under th"
+    }
+  ]
+}

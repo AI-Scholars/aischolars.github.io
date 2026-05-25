@@ -1,0 +1,912 @@
+{
+  "slug": "144116630_beth-levine",
+  "displaySlug": "beth-levine",
+  "name": "Beth Levine",
+  "authorId": "144116630",
+  "affiliations": [],
+  "hIndex": 0,
+  "citationCount": 0,
+  "paperCount": 0,
+  "proposalCount": 38,
+  "ideaCount": 38,
+  "proposals": [
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_ac_001_prop",
+      "title": "Mapping the Continuum: A Multi-Omic Network Model of Autophagy-Apoptosis Crosstalk Reveals Cell Death as a Continuous Mechanistic Spectrum",
+      "motivation": "Cell death has traditionally been classified into discrete categories—apoptosis, autophagy-dependent death, necroptosis, ferroptosis—yet mounting evidence shows extensive molecular crosstalk, particularly through dual-function proteins like BECN1 that regulate both autophagy and apoptosis. Beth Levine's work on BECN1 interactors such as GRB2 and on Beclin 1-mediated autophagy regulation highlights how shared signaling nodes blur categorical boundaries. Understanding cell death as a spectrum rather than a set of binary switches could transform therapeutic strategies for cancer, neurodegeneration, and infectious disease.",
+      "hypothesis": "Cell death subroutines are not discrete programs but occupy positions along a continuous mechanistic spectrum defined by shared protein interaction networks, and the death outcome can be predicted by quantifying the activation state of key hub proteins including BECN1, caspases, and RIPK1/3 along this continuum.",
+      "method": "We will construct a unified protein-protein interaction network integrating autophagy, apoptosis, and necroptosis pathways using curated databases (BioGRID, STRING) and Levine lab interactome data for BECN1. Using single-cell RNA-seq and phosphoproteomics in HeLa and MEF cells treated with graded doses of staurosporine, rapamycin, and TNF-alpha, we will capture intermediate cell states. Dimensionality reduction (UMAP and diffusion maps) will be applied to map cells onto a continuous death-state manifold. We will then train a graph neural network on the protein interaction topology to predict cell fate positioning along the spectrum from measured molecular features, validating predictions with live-cell imaging of fluorescent reporters for caspase-3 activation, LC3 puncta, and MLKL translocation.",
+      "contribution": "This work will provide the first quantitative framework for modeling cell death as a continuum rather than discrete categories, yielding a predictive computational tool that maps molecular states to death outcomes. It will identify critical bifurcation points where pathway crosstalk determines fate, offering new pharmacological targets for selectively steering cells toward or away from specific death modalities. The approach will directly extend Levine's foundational work on BECN1-mediated autophagy into a systems-level understanding of death pathway integration.",
+      "novelty": "While individual crosstalk events between death pathways have been documented, no study has systematically modeled the full landscape as a continuous manifold using multi-omic single-cell data combined with graph neural network prediction. This reframes the field's taxonomic approach to cell death classification as a quantitative, topology-driven continuum model.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_ac_002_prop",
+      "title": "Autophagic Flux and mTORC1 Dynamics Define a Reversibility Threshold in Early Apoptotic Commitment",
+      "motivation": "The classical definition of cell death hinges on irreversibility, yet phenomena like anastasis demonstrate that cells can recover from profound apoptotic stress. This challenges fundamental concepts in cell biology and has implications for understanding developmental plasticity, tissue repair, and cancer treatment resistance. The precise molecular checkpoint that separates reversible stress adaptation from irreversible commitment remains undefined, creating a critical gap in our understanding of cellular fate decisions.",
+      "hypothesis": "We hypothesize that the collapse of specific pro-survival pathways, particularly regulated autophagy and mTORC1 signaling, defines a molecular point-of-no-return during apoptotic initiation, and that manipulating these pathways can extend the window for cellular recovery.",
+      "method": "We will use live-cell imaging of HeLa and MEF cells expressing fluorescent reporters for caspase-3 activity (DEVD cleavage), mitochondrial outer membrane permeabilization (MOMP), and autophagic flux (mRFP-GFP-LC3). Cells will be subjected to time-controlled pulses of staurosporine or etoposide, followed by washout to induce anastasis. Using the GRB2-BECN1 interaction as a known regulatory node, we will genetically or pharmacologically modulate autophagy (via Becn1 mutants or Tat-Beclin 1 peptide) and mTORC1 activity during the stress and recovery phases. We will correlate the dynamics of these pathways with long-term cell survival versus death using clonogenic assays.",
+      "contribution": "This work will identify specific molecular determinants, rather than morphological stages, that govern the reversibility of cell death. It will establish a functional link between the autophagy machinery, nutrient-sensing pathways, and the anastasis process. The findings will provide a new framework for classifying cell death based on molecular commitment rather than late-stage hallmarks.",
+      "novelty": "While anastasis is recognized, no study has systematically interrogated the role of autophagy and mTORC1 dynamics as a potential gating mechanism for irreversibility, leveraging Dr. Levine's expertise in BECN1 interactors and protein surveillance systems to define this threshold.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_ac_004_prop",
+      "title": "Systematic Phylogenetic Analysis of Autophagy-Dependent Cell Death Pathways Reveals Non-Conserved Regulatory Hubs",
+      "motivation": "The conservation of core autophagy machinery from yeast to humans is well-established, but the conservation of its role in regulated cell death (e.g., autophagic cell death) is assumed rather than proven. Given the critical role of autophagy in development, cancer, and neurodegeneration, understanding the evolutionary plasticity of its death-promoting functions is essential. This project directly challenges a key assumption in the field by testing whether the molecular mechanisms linking autophagy to cell death are universally conserved or have diverged.",
+      "hypothesis": "We hypothesize that while core autophagy proteins (e.g., ATG8/LC3) are conserved, the specific protein-protein interaction networks and regulatory nodes (e.g., BECN1 interactors) that convert autophagy from a survival to a death mechanism are not universally conserved across major eukaryotic lineages.",
+      "method": "We will employ a comparative interactomics approach, focusing on the BECN1/Beclin 1 complex as a central regulatory node. Using affinity purification-mass spectrometry (AP-MS) in evolutionarily distant model cells (human, Drosophila S2, C. elegans, and Dictyostelium), we will map the BECN1 interactome under pro-death stimuli (e.g., cocaine exposure, known to induce autophagic cell death). Bioinformatic analysis using STRING and custom phylogenetic profiling algorithms will identify conserved vs. lineage-specific interaction partners. Functional validation will involve CRISPR/Cas9 knockout of candidate lineage-specific interactors and assessment of cell death phenotypes via live-cell imaging and flow cytometry.",
+      "contribution": "This work will generate the first phylogenetically broad map of autophagy-dependent death networks, identifying both ancient core components and evolutionarily recent adaptations. It will clarify whether models of autophagic cell death derived from mammals are universally applicable, impacting translational research in neurotoxicity and cancer. The dataset will serve as a resource for discovering novel death regulators.",
+      "novelty": "This study moves beyond cataloging conserved autophagy genes to functionally testing the conservation of their context-specific, death-promoting networks—a question largely unaddressed. It uniquely integrates Dr. Levine's expertise in BECN1 interactors (GRB2) with evolutionary cell biology and toxicology (cocaine) to challenge a fundamental paradigm.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_fw_002_prop",
+      "title": "A BECN1-centric interactome screen identifies distinct autophagic signatures for discriminating regulated necrosis subtypes in vivo",
+      "motivation": "Pre-2026 research has established that distinct forms of regulated necrosis (necroptosis, ferroptosis, pyroptosis, parthanatos) contribute to diverse pathologies, but their specific roles are obscured by a lack of reliable in vivo biomarkers. This impedes the development of targeted therapies. Dr. Levine's prior work on BECN1 and autophagy, a process intricately linked to cell death and survival, provides a unique entry point to discover discriminatory markers.",
+      "hypothesis": "We hypothesize that specific, autophagy-related signaling complexes, particularly those nucleated by BECN1, are differentially engaged during distinct forms of regulated necrosis, and that these interactions yield unique molecular signatures detectable in tissue samples.",
+      "method": "We will employ a two-pronged approach. First, we will use proximity-dependent biotinylation (BioID) with BECN1 as bait in cell models of each necrosis subtype to map subtype-specific interactomes. Second, we will apply machine learning (specifically, a Random Forest classifier) to integrate this interactome data with pre-2026 known markers (e.g., pMLKL, 4-HNE, cleaved gasdermins, PAR polymer) and high-throughput tissue imaging data from disease models. The algorithm will be trained to identify minimal, high-confidence biomarker panels that distinguish necrosis subtypes in fixed tissue sections.",
+      "contribution": "This work will deliver a validated, multiplex biomarker toolkit for in vivo necrotyping, enabling precise histological diagnosis of cell death pathways in human and animal tissues. It will also reveal novel mechanistic links between autophagy machinery and specific necrosis execution pathways, expanding the functional understanding of BECN1 complexes beyond canonical autophagy.",
+      "novelty": "While markers for individual pathways exist, a systematic, autophagy-focused approach to find discriminatory in vivo signatures is novel. Leveraging BECN1 interactome dynamics as a sensor for death pathway activation moves beyond static endpoint markers to capture pathway-specific regulatory states.",
+      "dimension": "Future Work"
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_fw_003_prop",
+      "title": "Defining the Autophagy-Dependent Molecular Determinants of Immunogenic Cell Death in Cancer Therapy",
+      "motivation": "Immunogenic cell death (ICD) is crucial for the efficacy of many anti-cancer therapies, as it stimulates an adaptive immune response against tumors. However, the specific molecular determinants that distinguish immunogenic from non-immunogenic cell death remain poorly defined, particularly the role of autophagy, which can both promote and suppress immune recognition. Understanding these context-specific regulators is essential for rationally designing combination therapies that enhance ICD and overcome resistance.",
+      "hypothesis": "We hypothesize that specific autophagy-related proteins, particularly those interacting with BECN1/Beclin 1, are essential molecular determinants that govern the immunogenicity of therapy-induced cell death by regulating the release of damage-associated molecular patterns (DAMPs).",
+      "method": "We will use CRISPR-Cas9 screening in murine cancer cell lines to systematically knockout candidate genes (e.g., BECN1, GRB2, ATG proteins, mTORC1 regulators) and assess ICD hallmarks (calreticulin exposure, ATP/HMGB1 release) following treatment with known ICD inducers (e.g., oxaliplatin) versus non-ICD inducers. The functional immunogenicity of cell death will be validated in vivo using vaccinated mouse models. Mechanistic studies will employ co-immunoprecipitation and fluorescence microscopy to define protein complexes, like GRB2-BECN1, and their role in DAMP trafficking.",
+      "contribution": "This work will establish a functional hierarchy of autophagy-related proteins in ICD, distinguishing essential regulators from dispensable ones. It will provide a mechanistic link between specific autophagy complexes and DAMP secretion, offering new targets for pharmacological modulation to enhance cancer immunotherapy.",
+      "novelty": "While autophagy is broadly implicated in cell death, this proposal uniquely focuses on defining the specific protein interactors of BECN1 that act as molecular switches for immunogenicity, moving beyond correlative studies to establish essential causative factors.",
+      "dimension": "Future Work"
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_fw_004_prop",
+      "title": "Identification and Functional Validation of BECN1/GRB2 Complex Modulators as Selective Inhibitors of Mitochondrial Permeability Transition-Driven Necrosis",
+      "motivation": "Mitochondrial permeability transition (MPT)-driven necrosis is a critical pathological event in ischemia-reperfusion injury (e.g., heart attack, stroke) and neurodegenerative diseases, contributing to irreversible cell loss. Pre-2026, while cyclosporine A targets the MPT pore component cyclophilin D, it lacks specificity and has significant off-target effects, highlighting an urgent need for novel, selective therapeutic strategies. The molecular links between core autophagy machinery, cellular stress signaling, and the MPT pore remain poorly defined, representing a key knowledge gap.",
+      "hypothesis": "We hypothesize that the BECN1/GRB2 protein complex, which integrates growth factor and stress signaling, serves as a novel upstream regulatory node controlling MPT pore susceptibility, and that pharmacological disruption of this complex will selectively inhibit MPT-driven necrosis without impairing essential autophagy.",
+      "method": "We will employ a structure-guided approach, using pre-2026 AlphaFold2 models and molecular dynamics simulations to map the BECN1/GRB2 interaction interface and design peptide disruptors. High-throughput screening of small-molecule libraries using a FRET-based BECN1/GRB2 binding assay will identify chemical probes. Candidate inhibitors will be functionally validated in primary neuronal and cardiomyocyte models of oxidative stress, assessing MPT (via calcein-cobalt quenching and cytochrome c release), cell death (PI/Annexin V), and autophagic flux (LC3-II/p62 turnover). Specificity will be confirmed in BECN1- or GRB2-deficient cells generated via CRISPR-Cas9.",
+      "contribution": "This work will identify the first pharmacological agents targeting the BECN1/GRB2 complex, establishing it as a novel regulatory axis for MPT. It will provide critical proof-of-concept that necrosis can be selectively inhibited upstream of the pore, offering a new therapeutic strategy for ischemia-reperfusion injury and neurodegeneration with a potentially superior safety profile compared to direct pore blockers.",
+      "novelty": "This proposal moves beyond direct MPT pore targeting to instead modulate a newly identified upstream signaling complex (BECN1/GRB2) linked to autophagy and stress adaptation, a strategy not explored pre-2026. It uniquely leverages Dr. Levine's expertise in BECN1 interactomes to address a fundamental problem in cell death.",
+      "dimension": "Future Work"
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_mt_001_prop",
+      "title": "Single-Cell Multi-Omics Classification of Autophagy-Dependent and Autophagy-Independent Cell Death Modalities via Integrated Transcriptomic-Proteomic Profiling",
+      "motivation": "Cell death is not a monolithic process but encompasses autophagy-dependent death, apoptosis, necroptosis, ferroptosis, and pyroptosis, each with distinct molecular signatures and physiological consequences. Current bulk assays obscure the heterogeneity of death modalities within a population, making it impossible to determine whether individual cells die through BECN1-dependent autophagy or alternative pathways. Resolving this heterogeneity at single-cell resolution is critical for understanding how autophagy interfaces with other death programs, a central question in Beth Levine's research on Beclin 1 and autophagy regulation.",
+      "hypothesis": "We hypothesize that integrated single-cell RNA sequencing and mass cytometry proteomic profiling can identify distinct molecular signatures that classify individual cells into specific death modalities, revealing that BECN1-interacting protein networks—including GRB2-BECN1 complexes—define a transcriptionally and proteomically separable autophagy-dependent death subpopulation.",
+      "method": "We will treat HeLa and MCF7 cells with established death-inducing stimuli (starvation for autophagy, staurosporine for apoptosis, TNF-alpha plus zVAD for necroptosis, erastin for ferroptosis) and harvest cells at multiple timepoints. Single-cell transcriptomes will be captured using 10x Genomics Chromium, while parallel CITE-seq antibody panels targeting BECN1, GRB2, cleaved caspase-3, MLKL phosphorylation, and GPX4 will provide matched protein-level readouts. We will apply a variational autoencoder framework to learn a joint latent embedding of transcriptomic and proteomic features, then use Leiden clustering and supervised random forest classifiers trained on ground-truth stimulus labels to assign death modality to each cell. Differential expression analysis between autophagy-dependent death clusters and other modalities will identify candidate regulatory genes downstream of the GRB2-BECN1 axis.",
+      "contribution": "This work will produce the first single-cell multi-omics atlas of cell death modalities, providing a reference classification framework for the field. It will delineate the molecular boundary between autophagy-dependent cell death and apoptosis at unprecedented resolution, identifying new markers and potential therapeutic targets within BECN1 interaction networks. The computational pipeline and annotated dataset will serve as a community resource for studying death pathway crosstalk.",
+      "novelty": "While single-cell transcriptomics has been applied to apoptosis studies, no existing work integrates simultaneous proteomic profiling to classify multiple death modalities within a unified framework. Connecting GRB2-BECN1 interaction biology to single-cell death classification is a non-obvious synthesis that bridges Levine's autophagy interactome discoveries with cutting-edge single-cell multi-omics technology.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_mt_002_prop",
+      "title": "AutoDeathNet: A Deep Transfer Learning Framework for Automated Morphological Classification of Autophagic, Apoptotic, and Necrotic Cell Death in Fluorescence Microscopy",
+      "motivation": "Distinguishing between autophagy-dependent cell death, apoptosis, and necrosis is critical for understanding disease mechanisms and evaluating therapeutic interventions, yet current classification relies on labor-intensive manual scoring by trained experts. Morphological features such as autophagic vacuolization, chromatin condensation, and membrane integrity differ across death modalities but overlap substantially, leading to high inter-observer variability. An automated, reproducible classifier would accelerate research in the Bhatt-Levine laboratory's core focus on Beclin 1-mediated autophagy and its crosstalk with other cell death pathways.",
+      "hypothesis": "A convolutional neural network pre-trained on histopathological images and fine-tuned on fluorescence microscopy datasets can classify autophagic cell death, apoptosis, and necrosis with accuracy exceeding 90%, outperforming expert manual scoring in both speed and inter-rater consistency.",
+      "method": "We will assemble a curated dataset of >50,000 single-cell fluorescence microscopy images from GFP-LC3-expressing cell lines treated with rapamycin (autophagy), staurosporine (apoptosis), and hydrogen peroxide (necrosis), with ground-truth labels confirmed by biochemical markers (LC3-II/p62 flux, caspase-3 cleavage, and LDH release). A ResNet-50 backbone pre-trained on the PatchCamelyon histopathology benchmark will be fine-tuned using a two-stage transfer learning strategy: first freezing convolutional layers and training a new classification head, then unfreezing deeper layers with a discriminative learning rate schedule. We will incorporate Grad-CAM attention maps to identify which subcellular morphological features drive classification, enabling biological interpretability. Model performance will be benchmarked against three independent expert annotators using Cohen's kappa and validated on BECN1-knockout and BCL-2-overexpressing lines to test generalization across genetically altered autophagy states.",
+      "contribution": "This work will deliver an open-source, validated deep learning tool that standardizes cell death classification across laboratories studying autophagy, reducing subjectivity and enabling high-throughput phenotypic screening. The interpretable attention maps will reveal morphological signatures that distinguish Beclin 1-dependent autophagic death from canonical apoptosis, providing new biological insight into death-mode switching. The framework will be directly applicable to drug screens targeting the autophagy-apoptosis interface in cancer and neurodegenerative disease models.",
+      "novelty": "While deep learning has been applied extensively to histopathology slide classification, systematic transfer of these models to live-cell fluorescence microscopy for multi-modal cell death discrimination has not been attempted. Coupling Grad-CAM interpretability with genetic perturbations of the Beclin 1-BCL-2 axis provides a uniquely mechanistic validation strategy absent from prior computational pathology approaches.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_mt_003_prop",
+      "title": "Systematic CRISPR-Cas9 Screening Identifies Essential Genetic Nodes for Apoptosis, Autophagy, and Ferroptosis in Mammalian Cells",
+      "motivation": "Cell death is not a single process but a collection of subroutines (e.g., apoptosis, autophagy-dependent death, ferroptosis) critical for development, homeostasis, and disease. However, a systematic, unbiased genetic map of essential versus dispensable genes for each death pathway is lacking. This gap limits our ability to selectively manipulate specific death modalities for therapeutic benefit, such as in cancer or neurodegenerative disorders.",
+      "hypothesis": "We hypothesize that each major cell death subroutine (apoptosis, autophagy-dependent death, ferroptosis) is governed by a unique and non-overlapping set of genetically essential core components, which can be revealed through comparative genome-wide CRISPR knockout screens under selective death induction.",
+      "method": "We will perform parallel genome-wide CRISPR-Cas9 knockout screens in human HeLa and MEF cell lines using the Brunello sgRNA library. Cells will be subjected to specific death inducers: staurosporine (apoptosis), mTORC1 inhibition combined with BECN1 activation (autophagy-dependent death), and erastin (ferroptosis). Essential genes for each pathway will be identified by sgRNA depletion in surviving cells, analyzed using the MAGeCK algorithm to calculate robust rank aggregation (RRA) scores and false discovery rates. Hits will be validated via individual sgRNA knockout and rescue experiments.",
+      "contribution": "This work will generate the first comprehensive genetic interaction map for major cell death pathways, defining core essential genes specific to each subroutine. It will reveal novel therapeutic targets for diseases characterized by dysregulated cell death and clarify the functional hierarchy within death signaling networks, particularly at the intersection of autophagy and apoptosis regulation.",
+      "novelty": "While CRISPR screens have identified genes for specific phenotypes, a direct, systematic comparison of genetic essentials across multiple death pathways in isogenic backgrounds is novel. This approach leverages Dr. Levine's expertise in BECN1/autophagy mechanisms to dissect autophagy's role in cell death versus survival with unprecedented genetic precision.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_mt_004_prop",
+      "title": "BECN1-Centered Network Pharmacology for Designing Multi-Pathway Modulators of Autophagy and Apoptosis",
+      "motivation": "Cell death pathways—autophagy, apoptosis, and necroptosis—are extensively interconnected through shared regulatory nodes such as BECN1, BCL-2, and mTORC1, yet most therapeutic compounds target only a single pathway. This single-target strategy often fails because compensatory death or survival pathways are activated, leading to drug resistance in cancer and neurodegeneration. A systematic network pharmacology framework that maps and exploits cross-pathway interactions could yield compounds with superior efficacy by simultaneously modulating multiple cell death axes.",
+      "hypothesis": "We hypothesize that computational network pharmacology, anchored on the BECN1 interactome as a multi-pathway hub, can identify druggable polypharmacological targets whose simultaneous modulation synergistically promotes cancer cell death while sparing normal cells, outperforming single-pathway inhibitors.",
+      "method": "We will first construct a comprehensive protein-protein interaction network integrating BECN1 binding partners (including GRB2, as characterized in Levine's recent work), BCL-2 family members, mTORC1 signaling components, and necroptosis regulators (RIPK1/RIPK3/MLKL) using STRING, BioGRID, and curated literature data. Network topology analysis—betweenness centrality, module detection via Louvain clustering, and pathway crosstalk scoring—will identify multi-pathway hub nodes amenable to pharmacological intervention. We will then apply a multi-objective molecular docking and machine-learning pipeline (using Random Forest and graph neural network architectures trained on ChEMBL bioactivity data) to screen compound libraries for molecules predicted to bind two or more hub targets simultaneously. Top candidates will be validated in vitro using CRISPR-modified HeLa and MCF-7 cell lines, measuring autophagy flux (LC3-II/LC3-I ratio, BECN1 complex formation), apoptotic markers (caspase-3/7 activity, Annexin V), and cell viability dose-response curves.",
+      "contribution": "This work will deliver a validated network pharmacology pipeline specifically tailored to cell death pathway crosstalk, producing a ranked list of multi-target compound candidates with experimentally confirmed dual-pathway activity. It will also generate the first BECN1-centered multi-death-pathway interaction map, providing a reusable resource for the autophagy and cell death research communities. The framework generalizes beyond cancer to any disease context where coordinated death pathway modulation is therapeutically relevant.",
+      "novelty": "While network pharmacology has been applied broadly in traditional medicine and single-disease contexts, no study has systematically leveraged the BECN1 interactome—particularly its recently discovered GRB2 interaction—as the anchor node for designing polypharmacological modulators spanning autophagy, apoptosis, and necroptosis simultaneously. This BECN1-hub-centric strategy exploits unique biological insight from the Levine lab to constrain the combinatorial search space in a non-obvious way.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_mt_005_prop",
+      "title": "OptoBAX and OptoBECN1: Optogenetic Dissection of Apoptosis-Autophagy Crosstalk Through Precise Spatiotemporal Activation of Cell Death Effectors",
+      "motivation": "The interplay between autophagy and apoptosis determines cell fate under stress, yet existing pharmacological and genetic tools lack the temporal precision needed to disentangle cause from consequence. BECN1, a core autophagy regulator, is cleaved by caspases during apoptosis, converting it from a pro-survival to a pro-death signal, but the kinetics and spatial requirements of this switch remain poorly understood. Achieving millisecond-to-minute control over death pathway initiation would reveal the critical decision windows that govern autophagy-apoptosis transitions in individual cells.",
+      "hypothesis": "Light-inducible activation of BECN1-dependent autophagy or BAX-dependent apoptosis at defined subcellular locations and timepoints will reveal a temporal threshold (on the order of minutes) within which autophagy commitment becomes irreversible and resistant to apoptotic override, and that this threshold is governed by the BECN1-BCL-2 dissociation rate at the endoplasmic reticulum.",
+      "method": "We will engineer two optogenetic constructs: (1) OptoBECN1, a CRY2-BECN1 fusion that oligomerizes upon blue light exposure to nucleate phagophore assembly independent of upstream mTORC1 signaling, and (2) OptoBAX, an iLID-BAX chimera that translocates to mitochondria upon illumination to initiate MOMP. Both constructs will be expressed in HeLa and MCF7 cells with endogenous BECN1 or BAX knocked out via CRISPR-Cas9 to eliminate background activity. Using structured illumination on a spinning-disk confocal microscope, we will activate each pathway at precise subcellular regions and measure downstream markers—LC3 puncta formation for autophagy, cytochrome c release for apoptosis—via live-cell fluorescent reporters. Systematic variation of light pulse timing (0.5–30 min intervals) and sequential activation order will map the decision landscape, with single-cell trajectory analysis quantifying commitment points using information-theoretic metrics.",
+      "contribution": "This work will provide the first temporally resolved map of the autophagy-apoptosis decision boundary at single-cell resolution, identifying the molecular timer that locks cells into one fate. The optogenetic toolkit itself—OptoBECN1 and OptoBAX—will be broadly useful for the cell death community, enabling experiments that pharmacological inhibitors and constitutive knockouts cannot achieve. These findings may inform therapeutic strategies for cancer, where shifting the autophagy-apoptosis balance is a longstanding clinical goal.",
+      "novelty": "While optogenetic approaches have been applied to signaling pathways such as Raf-ERK and PI3K, no system exists for direct, light-controlled activation of core autophagy or intrinsic apoptosis machinery. Coupling BECN1 oligomerization-driven autophagy initiation with spatially targeted BAX activation in the same cell is a non-obvious integration that bypasses the confounding upstream signals inherent in starvation or drug-based induction paradigms.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_sd_001_prop",
+      "title": "Mapping Tissue-Level Emergent Patterns of Heterogeneous Cell Death Mode Activation via Spatial Multiplexed Profiling and Agent-Based Modeling",
+      "motivation": "Individual cells within a tissue can undergo apoptosis, necroptosis, ferroptosis, or autophagic cell death, yet how the spatial distribution and co-occurrence of these distinct death modes generate emergent tissue-level phenotypes remains poorly understood. Prior work, including studies on Beclin 1-mediated autophagy regulation, has largely characterized cell death pathways in isolation or in homogeneous culture systems. Understanding how mixed death mode landscapes arise in intact tissues is critical for explaining divergent outcomes in tumor regression, ischemic injury, and inflammatory pathology.",
+      "hypothesis": "Heterogeneous activation of autophagy-dependent and autophagy-independent cell death pathways produces spatially organized, non-random tissue-level patterns whose emergent geometry predicts downstream inflammatory signaling and tissue remodeling outcomes.",
+      "method": "We will employ cyclic immunofluorescence (CyCIF) and CODEX spatial proteomics on murine tissue sections from Becn1-heterozygous and wild-type mice subjected to hepatic ischemia-reperfusion injury, staining for markers of apoptosis (cleaved caspase-3), necroptosis (pMLKL), ferroptosis (GPX4 loss, 4-HNE), and autophagic death (LC3-II, BECN1). Single-cell segmentation will classify each cell's death mode, and spatial point-process statistics (Ripley's K, cross-type L-functions) will quantify co-localization and clustering of death modes. We will then build agent-based computational models incorporating paracrine signaling rules (DAMP release, cytokine diffusion) calibrated to the spatial data, testing whether local autophagy status in BECN1-interacting networks drives neighboring cells toward specific alternative death fates. Model predictions will be validated by perturbing GRB2-BECN1 interaction using structure-guided point mutants.",
+      "contribution": "This work will provide the first spatially resolved atlas of mixed cell death mode activation in tissue and establish quantitative metrics for emergent death-mode patterning. It will link BECN1-dependent autophagy regulation to non-cell-autonomous determination of neighboring cell fate, offering new therapeutic angles for controlling tissue damage by modulating death mode heterogeneity rather than blocking individual pathways.",
+      "novelty": "While existing studies classify cell death mechanisms individually, no framework currently integrates spatial multiplexed profiling with agent-based modeling to capture how intercellular communication through autophagy-related networks generates tissue-scale death mode organization, bridging molecular regulation of BECN1 with emergent tissue pathology.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_sd_003_prop",
+      "title": "A Proteomic and Lipidomic Signature-Based Classifier for the Retrospective Inference of Cell Death Pathways from Cellular Debris",
+      "motivation": "Distinct cell death pathways (e.g., apoptosis, necrosis, autophagic cell death) produce unique cellular debris, but current methods require live-cell imaging or specific pathway markers, limiting analysis to pre-mortem events. In pathological contexts like neurodegeneration or cocaine-induced neurotoxicity, only post-mortem debris is available, creating a critical diagnostic gap. A method to infer the death mechanism from debris alone would revolutionize the pathological assessment of tissue damage.",
+      "hypothesis": "We hypothesize that the proteomic and lipidomic composition of cellular debris retains a specific molecular signature that can be computationally deconvoluted to accurately infer the upstream cell death pathway, including autophagy-dependent death regulated by mTORC1 and BECN1.",
+      "method": "We will induce specific death pathways (apoptosis, necrosis, autophagic cell death) in HeLa and primary neuronal cells using well-characterized agents (e.g., staurosporine, H2O2, cocaine) and pathway-specific inhibitors. Debris from conditioned media will be analyzed by tandem mass spectrometry for proteomics and lipidomics. The resulting high-dimensional data will be used to train a supervised machine learning classifier (a Random Forest or Support Vector Machine model) to identify signature molecular features (e.g., specific caspase-cleaved peptides, lipid peroxidation products, or autophagy-related proteins like LC3-II) predictive of each death mode.",
+      "contribution": "This work will establish the first proof-of-concept, debris-based diagnostic framework for cell death, moving the field from observational to inferential pathology. It will provide a novel tool to re-evaluate tissue damage in diseases where autophagy is implicated, such as in cocaine-induced synaptic pruning or neurodegenerative proteinopathies, by analyzing post-mortem samples.",
+      "novelty": "While debris is traditionally viewed as an uninformative endpoint, we propose it is a rich information source. The application of a proteomic/lipidomic 'inverse problem' approach to classify death pathways is a fundamentally new strategy, distinct from live-cell reporter assays or single-marker immunohistochemistry prevalent in pre-2026 research.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_sd_005_prop",
+      "title": "A Multi-Omic Cell Death Pathway Atlas Across Human Disease Contexts: Integrating Transcriptomic, Proteomic, and Functional Autophagy Signatures at Organism Scale",
+      "motivation": "Cell death pathways—including autophagy, apoptosis, necroptosis, ferroptosis, and pyroptosis—are dysregulated across nearly every major human disease, yet no systematic resource maps the predominant death modality across disease contexts at organism scale. Existing studies focus on individual pathways in isolated diseases, preventing cross-disease comparisons that could reveal shared therapeutic vulnerabilities. Building on Beth Levine's foundational work linking BECN1-mediated autophagy to cancer, neurodegeneration, and infection, an integrated atlas would transform our understanding of how death pathway selection varies across tissues and pathologies.",
+      "hypothesis": "We hypothesize that each major human disease context exhibits a characteristic, tissue-specific cell death pathway signature that can be computationally resolved from multi-omic data, and that diseases sharing similar death signatures will respond to overlapping therapeutic interventions targeting autophagy and related pathways.",
+      "method": "We will systematically mine publicly available transcriptomic (GTEx, TCGA, GEO) and proteomic (CPTAC, Human Protein Atlas) datasets spanning over 50 disease contexts across all major organ systems. For each dataset, we will compute pathway activity scores using gene set variation analysis (GSVA) applied to curated gene sets for autophagy (including BECN1, ATG5, ATG7, mTORC1 regulators), apoptosis, necroptosis, ferroptosis, and pyroptosis. We will integrate these scores using similarity network fusion (SNF) to build a unified disease-by-death-pathway matrix. Hierarchical clustering and UMAP embedding will identify disease groupings sharing death pathway profiles. Functional validation will employ CRISPR screens in representative cell lines from distinct disease clusters, measuring cell viability upon perturbation of key pathway nodes including BECN1 and its interactors such as GRB2.",
+      "contribution": "This work will produce the first organism-scale atlas of cell death pathway predominance across human diseases, freely available as an interactive resource. It will identify previously unrecognized disease groupings based on shared death mechanisms, enabling rational repurposing of autophagy-modulating therapies across disease boundaries. The atlas will serve as a foundational reference for the cell death research community analogous to what the Human Cell Atlas provides for cell types.",
+      "novelty": "While individual cell death pathways have been profiled in specific diseases, no prior effort has systematically compared all major regulated death modalities across the full landscape of human disease using integrated multi-omic signatures. The combination of computational atlas construction with CRISPR-based functional validation of cross-disease death pathway clusters is unprecedented.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "345617d72ec440570517f06f825c10e9a961bdb4_sd_001_prop",
+      "title": "Single-cell profiling of BECN1 interactome and autophagic flux reveals functional heterogeneity in tissue-resident macrophages",
+      "motivation": "Autophagy is a critical regulator of immune cell function, differentiation, and survival, but its study has been largely confined to bulk populations, masking cell-to-cell variability. Pre-2026 work, including Dr. Levine's identification of GRB2 as a BECN1 interactor, suggests autophagy regulation is highly context-dependent. Understanding this heterogeneity at single-cell resolution is essential to decipher how differential autophagic activity dictates immune subset-specific functions in homeostasis and disease.",
+      "hypothesis": "We hypothesize that distinct immune cell subsets, particularly tissue-resident macrophages, exhibit intrinsic heterogeneity in their core autophagy machinery (e.g., BECN1 complexes) and flux, which is regulated by subset-specific signaling networks (e.g., mTORC1, GPCR pathways) and dictates functional specialization.",
+      "method": "We will employ single-cell RNA sequencing (scRNA-seq) coupled with a novel, fluorescence-based single-cell autophagic flux reporter (mRFP-GFP-LC3) in sorted immune cells from murine spleen and peritoneum. To probe the BECN1 interactome, we will use single-cell western blotting (scWestern) and a targeted mass cytometry (CyTOF) panel for phospho-proteins (e.g., ULK1, mTORC1 substrates) and autophagy components. Data integration will utilize the Seurat pipeline for clustering and correlation of autophagic flux with transcriptional states.",
+      "contribution": "This work will generate the first high-resolution map linking autophagic activity and core machinery states to immune cell identity. It will identify novel, subset-specific regulators of autophagy, potentially revealing new BECN1-interacting proteins akin to GRB2. This will fundamentally advance our understanding of how autophagy differentially tunes immune responses.",
+      "novelty": "While bulk autophagy in immune cells is studied, single-cell resolution of both flux and the BECN1 interactome state is unexplored. Integrating scRNA-seq with functional proteomic readouts of autophagy specifically in immune subsets is a novel approach to deconvolute heterogeneity.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "3d121410702ab9c1efe10b083110d364eb272b20_mt_004_prop",
+      "title": "Structural Elucidation of the Atg8 and Atg12 Conjugation Machinery by Integrative Cryo-EM and X-ray Crystallography",
+      "motivation": "The Atg8 and Atg12 ubiquitin-like conjugation systems are indispensable for autophagosome biogenesis, yet high-resolution structures of intact E1-E2-E3-like complexes (Atg7–Atg3–Atg8 and Atg7–Atg10–Atg12–Atg5) remain incomplete. Filling these structural gaps is critical for understanding how autophagy is executed at the molecular level and for designing therapeutic modulators relevant to cancer, neurodegeneration, and infection. Beth Levine's foundational work linking Beclin 1 and autophagy regulators to disease provides a compelling biological framework within which atomic-resolution structural data would be transformative.",
+      "hypothesis": "We hypothesize that the Atg8 and Atg12 conjugation cascades adopt multi-subunit architectures with transient E1–E2 interfaces and substrate-induced conformational rearrangements analogous to, but mechanistically distinct from, canonical ubiquitin E1–E2–E3 cascades, and that solving these structures will reveal druggable allosteric sites at subunit interfaces.",
+      "method": "We will reconstitute recombinant yeast and human Atg conjugation complexes (Atg7–Atg3–Atg8/LC3 and Atg7–Atg10–Atg12–Atg5–Atg16L1) using baculovirus co-expression, trapping catalytic intermediates with active-site cysteine-to-serine mutations and chemical crosslinking. Single-particle cryo-EM at sub-3 Å resolution will be performed on a Titan Krios with a Falcon IV detector, processing data through cryoSPARC and RELION 4.0 with 3D variability analysis to resolve conformational heterogeneity. Flexibly docked atomic models will be built using AlphaFold2-predicted subunit structures as initial templates, refined against cryo-EM density in Phenix, and validated by X-ray crystallography of individual subcomplexes at synchrotron sources. Hydrogen-deuterium exchange mass spectrometry (HDX-MS) will orthogonally map dynamic interfaces and confirm allosteric coupling between catalytic and substrate-binding sites.",
+      "contribution": "This work will deliver the first near-atomic models of fully assembled Atg conjugation cascades, establishing a structural blueprint for the autophagy lipidation machinery. The identified allosteric pockets will provide starting points for structure-based drug design aimed at modulating autophagy flux, directly extending the Levine laboratory's long-standing goal of therapeutic autophagy manipulation.",
+      "novelty": "While individual Atg protein structures and partial binary complexes exist, no study has combined cryo-EM conformational landscape analysis with trapped catalytic intermediates to resolve the complete, multi-step conjugation assemblies. Integrating AlphaFold2 predictions with experimental density and HDX-MS dynamics represents a methodological advance over prior purely crystallographic or computational approaches to autophagy structural biology.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "3d121410702ab9c1efe10b083110d364eb272b20_sd_004_prop",
+      "title": "Functional Scaling of Conserved Yeast Atg Genes in Human Disease Models of Neurodegeneration, Cancer, and Infection",
+      "motivation": "The core autophagy machinery, defined by Atg genes, is highly conserved from yeast to humans, but the functional scaling of yeast genetic findings into complex human disease contexts remains incomplete. Pre-2026 work has linked autophagy dysfunction to major diseases, including neurodegeneration (e.g., protein aggregation), cancer (e.g., tumor suppression vs. survival), and infectious disease (e.g., xenophagy), yet a systematic, comparative analysis across these contexts is lacking. This gap limits our ability to translate fundamental mechanistic insights into targeted therapies.",
+      "hypothesis": "We hypothesize that conserved yeast Atg genes, particularly those involved in core complex formation and regulation (e.g., Atg1/ULK1, Atg6/BECN1, Atg8/LC3), will exhibit context-dependent and disease-specific functional adaptations in human models, revealing novel regulatory nodes and therapeutic vulnerabilities.",
+      "method": "We will employ CRISPR-Cas9 knockout and knockdown strategies in human cell lines (neuronal, cancer, macrophage) to systematically target human orthologs of conserved yeast Atg genes. Autophagic activity will be quantified via established assays (LC3-II flux, p62 degradation, and GFP-LC3 puncta formation). Functional readouts will include: 1) clearance of aggregation-prone proteins (neurodegeneration), 2) cell survival and mTORC1 activity under nutrient stress (cancer), and 3) bacterial (e.g., Salmonella) survival assays (infection). We will integrate these datasets to identify genes with pan-contextual vs. disease-specific roles, followed by mechanistic studies on hits (e.g., co-IP for novel interactors like GRB2) to define altered regulatory networks.",
+      "contribution": "This work will generate a comprehensive functional map of conserved autophagy genes across three major human disease paradigms, directly scaling yeast genetics to human pathophysiology. It will identify which core autophagy mechanisms are universally essential and which have evolved specialized, context-dependent functions, providing a rational basis for designing context-specific autophagy modulators.",
+      "novelty": "While individual Atg genes have been studied in isolated disease models, a parallel, systematic functional screen across neurodegeneration, cancer, and infection using conserved yeast genetics as a blueprint is novel. This comparative approach will uniquely reveal whether disease-specific autophagy dysregulation stems from core machinery alterations or from divergent regulation of conserved components.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "3debe65157b7b1fdc4c00bc3ffd365bd36921290_fw_001_analogy_prop",
+      "title": "Mapping Differential Binding Hotspots at the Bcl-2/Beclin 1 Interface for the Selective Activation of Autophagy",
+      "motivation": "Bcl-2 inhibits both apoptosis and autophagy by binding pro-apoptotic proteins (e.g., Bax) and the autophagy protein Beclin 1. Current BH3 mimetics disrupt all Bcl-2 interactions, potentially causing apoptotic side effects. A method to selectively disrupt Bcl-2/Beclin 1 binding would enable precise autophagy activation, a key therapeutic goal in cancer and neurodegenerative diseases where restoring autophagy is beneficial.",
+      "hypothesis": "The Bcl-2 hydrophobic groove contains distinct, differential energetic hotspots for binding Beclin 1 versus pro-apoptotic effectors like Bax and Bak; targeting these hotspots will allow for the selective liberation of Beclin 1 to activate autophagy without inducing apoptosis.",
+      "method": "We will perform systematic alanine scanning mutagenesis of Bcl-2 residues in its BH3-binding groove. Binding affinities for Beclin 1, Bax, and Bak BH3 domains will be quantified via isothermal titration calorimetry. In parallel, computational free energy perturbation (FEP) calculations using the Schrödinger FEP+ module will predict ΔΔG values for each mutation. Machine learning-based hotspot mapping (e.g., using the Robetta or FoldX algorithms) will integrate experimental and computational data to identify differential hotspots.",
+      "contribution": "This work will produce the first high-resolution energetic map of the Bcl-2/Beclin 1 interface and define the residues critical for selectivity. It will provide a blueprint for designing next-generation, autophagy-specific Bcl-2 inhibitors (e.g., stapled peptides) and advance the fundamental understanding of how Bcl-2 differentially engages client proteins.",
+      "novelty": "While alanine scanning of Bcl-2 exists, a direct, quantitative comparison of its binding landscapes for Beclin 1 versus apoptotic effectors has not been performed. The approach is novel in applying an integrin-RGD mapping strategy to solve a long-standing selectivity problem in autophagy-apoptosis crosstalk.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "3debe65157b7b1fdc4c00bc3ffd365bd36921290_fw_004_prop",
+      "title": "Phosphorylation and Stress-Specific Signaling Networks that Dynamically Regulate the Bcl-2-Beclin 1 Complex in Autophagy Initiation",
+      "motivation": "The Bcl-2-Beclin 1 interaction is a critical rheostat for autophagy initiation, where Bcl-2 binding inhibits Beclin 1's pro-autophagic activity. While dissociation of this complex is known to be essential for stress-induced autophagy, the precise upstream signals and post-translational modifications (PTMs) that trigger this dissociation in response to specific cellular stresses (e.g., nutrient deprivation, ER stress, metabolic perturbation) remain poorly characterized. Elucidating this regulatory layer is fundamental to understanding how autophagy is precisely tuned in health and disease, including in conditions like cancer and neurodegeneration where this pathway is dysregulated.",
+      "hypothesis": "We hypothesize that distinct cellular stresses activate specific kinase or phosphatase pathways that phosphorylate or dephosphorylate key residues on Bcl-2 and/or Beclin 1, thereby dynamically regulating complex dissociation and autophagy induction.",
+      "method": "We will employ a multi-pronged approach: 1) Use quantitative immunoprecipitation and proximity ligation assays in cells subjected to specific stresses (starvation, thapsigargin, cocaine) to correlate Bcl-2-Beclin 1 binding with autophagy flux. 2) Conduct systematic mutagenesis of known and predicted phosphorylation sites on both proteins, followed by binding assays and functional autophagy readouts (LC3-II flux, p62 degradation). 3) Utilize phospho-proteomic mass spectrometry to identify stress-induced PTMs on the complex. 4) Employ specific pharmacological inhibitors and siRNA against candidate upstream kinases (e.g., JNK1, DAPK, AMPK) and phosphatases to establish causal signaling pathways.",
+      "contribution": "This work will define the specific signaling logic that transduces diverse stress signals into the mechanical dissociation of the Bcl-2-Beclin 1 complex. It will identify novel regulatory PTMs and upstream kinases/phosphatases, providing a more detailed map of the autophagy initiation network. These findings could reveal new therapeutic targets for modulating autophagy in human diseases.",
+      "novelty": "While the Bcl-2-Beclin 1 interaction is well-established, this proposal focuses on the dynamic, signal-dependent regulation of the complex, moving beyond a static inhibitor model to a stress-sensor model. It systematically integrates specific upstream stresses with PTM mapping and functional validation, a comprehensive approach not yet fully applied to this complex.",
+      "dimension": "Future Work"
+    },
+    {
+      "id": "3debe65157b7b1fdc4c00bc3ffd365bd36921290_mt_001_prop",
+      "title": "Real-time monitoring of Bcl-2-Beclin 1 interaction dynamics in living cells using FRET biosensors reveals context-specific regulation of autophagy initiation.",
+      "motivation": "The Bcl-2-Beclin 1 interaction is a critical regulatory node for autophagy initiation, integrating stress and survival signals. While known to be modulated by phosphorylation and disrupted by BH3 mimetics, the real-time kinetics and subcellular compartment-specific dynamics of this complex in living cells remain poorly understood. This gap limits our ability to decipher how upstream signals, such as mTORC1 inhibition or cocaine exposure, are precisely translated into autophagic responses.",
+      "hypothesis": "We hypothesize that the Bcl-2-Beclin 1 interaction is not a static binary switch but exhibits dynamic, stimulus-specific fluctuations in distinct subcellular locales, and that these dynamics directly predict subsequent autophagic activity.",
+      "method": "We will construct genetically encoded FRET biosensors by fusing monomeric Cerulean (CFP) and Venus (YFP) fluorescent proteins to Bcl-2 and Beclin 1, respectively, using flexible linkers. These constructs will be expressed in HEK293T and MEF cells. Live-cell FRET imaging will be performed using confocal microscopy with acceptor photobleaching and ratiometric analysis. We will quantify FRET efficiency changes in real-time following specific perturbations: mTORC1 inhibition (rapamycin), ER stress (tunicamycin), and cocaine exposure. Data will be analyzed using custom algorithms in ImageJ/Fiji for background subtraction, pixel-by-pixel FRET efficiency calculation, and time-series correlation with autophagy markers like LC3 lipidation.",
+      "contribution": "This work will provide the first direct, quantitative measurements of the Bcl-2-Beclin 1 interaction kinetics in living cells under defined physiological and pathological conditions. It will establish a causal link between complex dynamics and autophagic flux, offering a new biosensor tool for the autophagy community. The findings may reveal novel, context-specific regulatory mechanisms that could be targeted for therapeutic intervention.",
+      "novelty": "While the interaction is well-studied biochemically, applying live-cell FRET to monitor its real-time dynamics in response to autophagy-modulating stimuli is novel. This approach moves beyond static co-IP assays to capture the temporal and spatial regulation of this key complex, directly building on Dr. Levine's prior work identifying GRB2 as a BECN1 interactor.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "3debe65157b7b1fdc4c00bc3ffd365bd36921290_mt_003_prop",
+      "title": "Systematic Identification and Functional Validation of Novel Beclin 1-Interacting Proteins Regulating Autophagy and mTORC1 Signaling",
+      "motivation": "Beclin 1 (BECN1) is a core autophagy protein whose activity is regulated by a complex network of protein-protein interactions, influencing diverse processes from tumor suppression to neurodegeneration. While key partners like VPS34, UVRAG, and GRB2 are known, the full interactome governing its context-specific regulation remains incomplete. A comprehensive, unbiased screen is needed to discover novel regulatory nodes that could reveal new mechanisms linking autophagy to mTORC1 signaling and cellular homeostasis.",
+      "hypothesis": "We hypothesize that systematic yeast two-hybrid screening will identify novel, high-confidence Beclin 1-interacting proteins that modulate its function, potentially revealing new upstream regulators or downstream effectors that integrate autophagy with mTORC1 activity and other signaling pathways.",
+      "method": "We will perform a high-throughput yeast two-hybrid (Y2H) screen using full-length human BECN1 as bait against a normalized human cDNA library (prey). Positive clones will be sequenced and validated by co-immunoprecipitation and immunofluorescence in mammalian cells (e.g., HEK293, MEFs). Candidate interactions will be prioritized based on bioinformatic analysis for links to mTOR, trafficking, or stress signaling. Functional impact will be assessed by measuring autophagy flux (LC3-II turnover, p62 degradation) and mTORC1 activity (p-S6K, p-4EBP1) upon candidate gene knockdown or overexpression.",
+      "contribution": "This work will generate a validated, expanded map of the Beclin 1 interactome, providing a resource for the autophagy field. It will identify specific novel partners that either promote or inhibit autophagy, potentially uncovering new regulatory circuits that connect nutrient sensing (mTORC1) to autophagosome formation. This could reveal new therapeutic targets for diseases involving autophagy dysregulation.",
+      "novelty": "While previous studies identified individual Beclin 1 partners, a systematic, unbiased Y2H screen focused on discovering novel regulators, rather than characterizing known complexes, is lacking. This approach is poised to reveal unexpected interactors that modulate Beclin 1 function outside the canonical VPS34 complex.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "410bdf34d35dc10ece102c2a6511c12ce52e9217_mt_003_prop",
+      "title": "High-Throughput Microfluidic Analysis of Single-Cell Autophagic Flux Dynamics in Response to mTORC1 Inhibition and Cocaine Exposure",
+      "motivation": "Autophagy is a critical, heterogeneous cellular process regulated by mTORC1 and implicated in responses to drugs of abuse like cocaine. However, population-level assays mask cell-to-cell variability in autophagic flux dynamics, limiting our understanding of how regulatory proteins like BECN1 and GRB2 function in individual cells. A method to track autophagy in real-time across hundreds of single cells is needed to dissect this heterogeneity and its functional consequences.",
+      "hypothesis": "We hypothesize that single-cell microfluidic analysis will reveal distinct, heritable patterns of autophagic flux dynamics in response to mTORC1 inhibition and cocaine, and that these patterns correlate with the subcellular localization and interaction of core autophagy machinery components like BECN1.",
+      "method": "We will adapt a pre-2026 microfluidic single-cell trapping platform (e.g., a modified CellASIC ONIX or custom PDMS device) for long-term live-cell imaging. Cells stably expressing the tandem mRFP-GFP-LC3 reporter will be loaded, treated with pulses of Torin1 or cocaine, and imaged via automated time-lapse microscopy. We will develop an image analysis pipeline using CellProfiler for single-cell segmentation and tracking, and custom algorithms in MATLAB to quantify the mRFP/GFP signal ratio (autophagic flux) and its derivative (flux dynamics) for each cell over time. These dynamic signatures will be clustered using k-means or hierarchical clustering.",
+      "contribution": "This work will establish a robust platform for quantifying single-cell autophagic flux kinetics, moving beyond static snapshots. It will provide the first kinetic maps of how autophagy induction and resolution vary between individual cells under defined perturbations, directly linking the Levine lab's expertise in BECN1 interactors (e.g., GRB2) and cocaine to a new dimension of cellular heterogeneity.",
+      "novelty": "While microfluidics is used in systems biology for transcriptomics, its application for high-temporal-resolution, long-term kinetic analysis of a specific core cellular process like autophagy in mammalian cells is novel. This approach moves from correlating autophagy with cell fate to defining predictive kinetic signatures of autophagy that precede fate decisions.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "410bdf34d35dc10ece102c2a6511c12ce52e9217_mt_004_prop",
+      "title": "DeepAutophagy: A Convolutional Neural Network Framework for Automated Quantification of Autophagosomes and Autolysosomes in Fluorescence Microscopy",
+      "motivation": "Quantification of autophagosomes in fluorescence microscopy remains a major bottleneck in autophagy research, with manual counting being labor-intensive, subjective, and poorly reproducible across laboratories. Current semi-automated tools such as ImageJ macro-based pipelines rely on fixed intensity thresholds that fail under variable staining conditions and confocal settings, leading to systematic bias in studies of BECN1-dependent and mTORC1-regulated autophagy flux. An unbiased, scalable image classification system would accelerate mechanistic studies of autophagy regulation and drug screening efforts.",
+      "hypothesis": "A deep convolutional neural network trained on expert-annotated autophagosome microscopy datasets can classify and quantify LC3-positive puncta with accuracy exceeding 95%, outperforming threshold-based methods and matching inter-expert agreement, across diverse cell types and imaging conditions.",
+      "method": "We will curate a large annotated dataset of confocal and widefield fluorescence images from GFP-LC3 and mRFP-GFP-LC3 tandem reporter cell lines, including HeLa, MEFs, and primary neurons, under basal, starvation, and pharmacological autophagy modulation conditions. A U-Net-based segmentation architecture with a ResNet-50 encoder backbone, pretrained on ImageNet and fine-tuned on our microscopy corpus, will perform pixel-level detection of autophagosomes and autolysosomes. We will implement a secondary classification head that distinguishes autophagosomes from autolysosomes using the tandem fluorescence signal, enabling automated flux measurement. Data augmentation strategies including elastic deformation, intensity jittering, and synthetic puncta generation will address class imbalance and imaging variability. Model performance will be benchmarked against three expert annotators and existing tools such as CellProfiler and Icy across held-out test sets from unseen cell lines.",
+      "contribution": "This framework will provide the autophagy community with a validated, open-source deep learning tool for reproducible autophagosome quantification, directly applicable to high-throughput screens investigating BECN1 interactors such as GRB2 and mTORC1 pathway modulators. By reducing quantification bias and accelerating analysis throughput by orders of magnitude, it will enable large-scale phenotypic studies previously infeasible with manual methods. The annotated dataset itself will serve as a benchmark resource for the bioimage analysis community.",
+      "novelty": "Unlike existing threshold-based or classical machine learning approaches to puncta counting, this work jointly segments and classifies autophagosomes versus autolysosomes from tandem reporter images in a single end-to-end model, enabling automated flux quantification without manual parameter tuning. The integration of domain-specific data augmentation with transfer learning from natural images addresses the critical challenge of limited expert-annotated training data in subcellular microscopy.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "4af3826564c80d0e09c2c58b4919a6839dd544bc_ac_004_prop",
+      "title": "Divergent mTORC1 Signaling and BECN1-Dependent Autophagic Flux in Caspase-3-Deficient MCF7 Breast Cancer Cells",
+      "motivation": "MCF7 cells are a canonical model for breast cancer research but harbor a homozygous deletion of CASP3, leading to defective intrinsic apoptosis. Given the extensive crosstalk between apoptosis and autophagy, and the central role of autophagy in cancer cell survival and drug response, it is critical to determine if MCF7 cells exhibit representative autophagic biology. Pre-2026 work from our lab and others has established BECN1 as a key autophagy regulator interacting with proteins like GRB2, but its activity may be context-dependent in atypical cancer models.",
+      "hypothesis": "We hypothesize that the caspase-3 deficiency in MCF7 cells leads to compensatory alterations in mTORC1 signaling dynamics and BECN1 interactome stability, resulting in an autophagic flux profile that is not representative of most caspase-3-proficient breast cancers.",
+      "method": "We will use CRISPR-Cas9 to restore caspase-3 expression in MCF7 cells and generate isogenic caspase-3 knockout lines in other breast cancer models (e.g., MDA-MB-231). Autophagic flux will be quantified using tandem mRFP-GFP-LC3 reporters and immunoblotting for LC3-II/p62 in the presence of lysosomal inhibitors. mTORC1 activity will be assessed via phosphorylation of S6K and 4EBP1 under nutrient-rich and starved conditions. BECN1 interactome stability will be probed using co-immunoprecipitation and quantitative mass spectrometry, focusing on known partners like GRB2 and UVRAG, following autophagy induction.",
+      "contribution": "This work will directly test the validity of MCF7 as a model for breast cancer autophagy studies, a foundational issue for the field. It will elucidate how a core apoptotic defect rewires proximal regulatory networks like mTORC1 signaling and BECN1 complexes. The findings will provide crucial guidance for model selection in future studies of autophagy-modulating therapies.",
+      "novelty": "While MCF7's apoptotic defect is known, a systematic, mechanistic comparison of its autophagic machinery—specifically mTORC1 gating and BECN1 complex integrity—against other models has not been performed. Linking caspase-3 status directly to these specific autophagy regulatory nodes is a novel approach.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "6737c2627bcad064410a48f8077e3ca455fa0639_mt_004_prop",
+      "title": "Resolving Native Autophagosome Membrane Architecture and Cargo Organization by Cryo-Electron Tomography",
+      "motivation": "Autophagy is a fundamental cellular degradation pathway implicated in cancer, neurodegeneration, and infectious disease, yet the three-dimensional ultrastructure of autophagosomes in their native state remains poorly understood. Conventional electron microscopy requires chemical fixation and heavy-metal staining that distort membrane morphology and obscure cargo spatial relationships. Cryo-electron tomography (cryo-ET) preserves samples in vitreous ice, offering the opportunity to visualize autophagosomal membranes and their contents at nanometer resolution under near-physiological conditions.",
+      "hypothesis": "Cryo-ET of mammalian autophagosomes will reveal a stereotyped double-membrane architecture with distinct lipid-domain organization and non-random spatial patterning of cargo receptors such as p62/SQSTM1, and that BECN1 complex activity modulates membrane curvature and inter-membrane spacing in a quantifiable manner.",
+      "method": "We will culture HeLa and U2OS cells on EM grids, induce autophagy via mTORC1 inhibition with Torin-1, and vitrify samples by plunge-freezing. Focused ion beam (FIB) milling will be used to produce lamellae of 150-200 nm thickness suitable for cryo-ET tilt-series acquisition on a 300 kV Titan Krios equipped with a direct electron detector. Tomograms will be reconstructed using weighted back-projection and SIRT algorithms in IMOD, followed by sub-tomogram averaging of recurring membrane-associated densities to achieve sub-nanometer resolution of protein complexes at the autophagosomal membrane. To assess BECN1-dependent structural changes, we will compare wild-type cells with BECN1-knockdown and GRB2-knockdown lines, quantifying inter-membrane distance, membrane curvature, and cargo density distributions using automated segmentation pipelines built on convolutional neural networks trained with manually annotated ground truth.",
+      "contribution": "This work will provide the first comprehensive three-dimensional structural atlas of native mammalian autophagosomes at nanometer resolution, establishing quantitative relationships between BECN1-complex composition and membrane architectural parameters. The resulting structural framework will inform mechanistic models of autophagosome biogenesis and selective cargo engulfment, and serve as a reference for future studies linking autophagy defects to disease phenotypes.",
+      "novelty": "While cryo-ET has been applied to reconstituted vesicles and bacterial systems, systematic in-cell cryo-ET characterization of mammalian autophagosomes with correlated genetic perturbation of the BECN1-GRB2 regulatory axis has not been performed, bridging a critical gap between autophagy signaling biochemistry and native membrane ultrastructure.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "b02adcacc02548a347fdf5f7be958680d7a52e65_ac_004_analogy_prop",
+      "title": "Resolving the Passenger vs. Driver Status of BECN1 Deletions in Cancer via Statistical Fine-Mapping of Somatic Copy-Number Alterations",
+      "motivation": "Heterozygous deletion of the autophagy gene BECN1 is frequent in human cancers, but its role as a driver remains controversial due to its co-deletion with the established tumor suppressor BRCA1 on chromosome 17q21. This ambiguity impedes our understanding of autophagy's role in tumor suppression. Resolving whether BECN1 loss is a selected driver or a passenger event is a critical, unresolved question in cancer genetics with implications for therapeutic targeting of autophagy pathways.",
+      "hypothesis": "We hypothesize that the frequent monoallelic deletion of BECN1 in cancer is a passenger event, statistically explained by its linkage disequilibrium (LD)-like co-deletion with the true driver gene BRCA1, and that this can be rigorously demonstrated by adapting population genetics fine-mapping methods to somatic copy-number data.",
+      "method": "We will adapt Bayesian fine-mapping algorithms (e.g., FINEMAP, CAVIAR) to model somatic deletions across the 17q21 region in pan-cancer cohorts (TCGA, PCAWG). Each gene in the minimally deleted region will be treated as a candidate causal variant. The model will estimate posterior inclusion probabilities (PIPs) for each gene's contribution to tumor fitness, conditional on the correlation structure of deletions (analogous to LD) and incorporating functional priors from DepMap CRISPR essentiality scores, somatic mutation frequencies, and known pathway involvement (e.g., autophagy, DNA repair).",
+      "contribution": "This work will provide a statistically rigorous resolution to the long-standing debate on BECN1's role in cancer. It will establish a novel computational framework for distinguishing driver from passenger copy-number alterations, directly applicable to other genomic regions with co-deleted genes. The findings will clarify the tumor-suppressive relevance of autophagy gene haploinsufficiency.",
+      "novelty": "The novelty lies in the cross-disciplinary transfer of sophisticated statistical genetics fine-mapping methods, developed for GWAS, to the distinct problem of somatic structural variation in cancer, creating a new analytical paradigm for interpreting co-deletion patterns.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "b02adcacc02548a347fdf5f7be958680d7a52e65_ac_004_prop",
+      "title": "Re-evaluating BECN1 monoallelic deletion in cancer: A passenger event linked to co-deletion of adjacent 17q21 driver genes",
+      "motivation": "Monoallelic deletion of BECN1 (encoding beclin 1) is frequently reported in human cancers and is widely interpreted as a driver event that promotes tumorigenesis by reducing autophagy. However, BECN1 is located in a fragile region of chromosome 17q21, adjacent to established tumor suppressors like BRCA1. This raises a critical, unresolved question: is BECN1 loss itself a driver, or is it merely a passenger event co-deleted with a neighboring driver? Resolving this is essential for accurate interpretation of cancer genomics and for understanding the true role of autophagy in cancer suppression.",
+      "hypothesis": "We hypothesize that monoallelic BECN1 deletion in human cancers is a passenger event, not a driver, and its frequent occurrence is primarily due to its co-deletion with adjacent, bona fide driver genes on chromosome 17q21.",
+      "method": "We will analyze large-scale cancer genomic datasets (TCGA, ICGC) to map precise deletion boundaries and allelic status of BECN1 and neighboring genes (e.g., BRCA1, PHB, NEUROD2) across multiple cancer types. We will employ statistical analyses (e.g., GISTIC2.0, mutual exclusivity/co-occurrence tests) to determine if BECN1 deletions are independent events or linked to deletions of adjacent drivers. In parallel, we will use CRISPR/Cas9 in isogenic cell lines to generate monoallelic deletions of BECN1 alone versus co-deletions with adjacent genes, assessing tumor-relevant phenotypes (proliferation, soft agar growth, autophagy flux via LC3-II turnover) to isolate the functional contribution of BECN1 loss.",
+      "contribution": "This work will provide a definitive genomic and functional reassessment of a canonical 'autophagy tumor suppressor,' clarifying whether BECN1 haploinsufficiency is a genuine driver. It will refine the interpretation of cancer genome alterations and could shift the focus of therapeutic targeting from BECN1 itself to its co-deleted neighbors. The findings will significantly impact the autophagy and cancer biology fields.",
+      "novelty": "While BECN1's role in autophagy is well-established, this proposal directly challenges the long-held assumption that its frequent monoallelic deletion is tumorigenic, offering a novel, location-based 'passenger' explanation that has not been rigorously tested in large genomic cohorts with functional validation.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "b02adcacc02548a347fdf5f7be958680d7a52e65_fw_002_analogy_prop",
+      "title": "Tissue-Specific Autophagy Thresholds and Tumor Susceptibility: A Cis-Regulatory and Dosage-Sensitivity Framework for BECN1 Haploinsufficiency",
+      "motivation": "Heterozygous loss of BECN1 predisposes to specific cancers (breast, ovarian, prostate) but spares other tissues, a paradox mirroring tissue-specific haploinsufficiency in developmental signaling. The mechanistic basis for this selective vulnerability remains unknown, limiting our understanding of autophagy in tumor suppression. Resolving this requires moving beyond cataloging BECN1 interactors to defining the tissue-specific regulatory and homeostatic contexts that determine sensitivity to reduced dosage.",
+      "hypothesis": "Tissues susceptible to BECN1 haploinsufficiency operate near a critical basal autophagy flux threshold and possess a cis-regulatory landscape and gene network architecture that lacks the buffering capacity to compensate for a 50% reduction in beclin 1 levels.",
+      "method": "We will map the BECN1 cis-regulatory landscape via ATAC-seq and H3K27ac ChIP-seq in human and mouse cell lines from susceptible (breast, ovarian, prostate) and non-susceptible tissues. Basal autophagy flux thresholds will be quantified using doxycycline-inducible shRNA titrated to varying BECN1 levels, correlating flux with tumorigenic phenotypes. RNA-seq across these tissues will profile compensatory autophagy genes (e.g., ATG14, UVRAG). Data will be integrated into a quantitative model using LASSO regression to predict tissue susceptibility based on enhancer activity, flux demand, and network redundancy.",
+      "contribution": "This work will establish a predictive, mechanistic framework for tissue-specific cancer susceptibility in autophagy-deficiency syndromes, directly linking cis-regulatory architecture to cellular homeostasis. It will identify key buffering factors and regulatory elements that could be targeted to modulate autophagy thresholds therapeutically.",
+      "novelty": "It applies a conceptual framework from developmental genetics (enhancer-driven dosage sensitivity) to solve a long-standing puzzle in autophagy and cancer biology, shifting focus from the core autophagy machinery to the tissue-specific regulatory and systems-level contexts that govern its tumor-suppressive function.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "b02adcacc02548a347fdf5f7be958680d7a52e65_mt_001_analogy_prop",
+      "title": "Intersectional Genetic Control of Autophagy: A Dual-Recombinase System for Spatiotemporally Precise Deletion of Beclin 1 In Vivo",
+      "motivation": "Autophagy is a fundamental cellular process implicated in development, metabolism, and disease, yet its tissue- and stage-specific functions remain poorly defined. Conventional single-recombinase knockout models suffer from promoter leakiness, broad expression windows, and compensatory mechanisms, confounding the interpretation of autophagy's role in specific cell populations at defined times. This lack of precision mirrors challenges previously overcome in neuroscience for circuit analysis, necessitating an analogous leap in autophagy research tools.",
+      "hypothesis": "We hypothesize that implementing an intersectional dual-recombinase strategy for conditional Beclin 1 deletion will enable high-fidelity, spatiotemporally controlled autophagy manipulation, thereby revealing precise, non-redundant roles for autophagy in specific tissues and developmental stages that are masked by conventional knockout approaches.",
+      "method": "We will generate a novel dual-recombinase conditional Beclin 1 (Becn1) mouse allele where a critical exon is flanked by loxP sites (for Cre) and preceded by an FRT-flanked transcriptional STOP cassette. Deletion will require both Flp (for tissue-specificity) and CreERT2 (for tamoxifen-inducible timing) activity. This allele will be crossed with established tissue-specific Flp driver lines (e.g., Alb-Flp for hepatocytes) and ubiquitous or tissue-restricted CreERT2 lines. Autophagy flux, mTORC1 activity, and phenotypic consequences will be assessed in target tissues following tamoxifen-induced recombination, using biochemical assays (LC3-II/p62 immunoblotting), immunohistochemistry, and metabolic profiling.",
+      "contribution": "This work will provide the autophagy field with a robust, next-generation genetic toolkit for precise mechanistic dissection, moving beyond systemic or broadly tissue-specific models. It will establish definitive causal links between autophagy loss in defined cell types at specific times and physiological outcomes, clarifying its roles in tissue homeostasis, stress adaptation, and disease pathogenesis with unprecedented specificity.",
+      "novelty": "While dual-recombinase systems are established in neuroscience, their application to core autophagy machinery like Beclin 1 is novel. This strategy directly addresses the unique challenge of dissecting a ubiquitous, dynamically regulated process like autophagy, where traditional single-driver models are insufficient to isolate specific functions.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "b02adcacc02548a347fdf5f7be958680d7a52e65_mt_003_analogy_prop",
+      "title": "Longitudinal in vivo quantification of autophagy flux dynamics in beclin 1-deficient tumors using intravital ratiometric imaging",
+      "motivation": "Autophagy is a critical cellular degradation pathway implicated in tumor suppression and progression, yet current methods (e.g., static IHC, immunoblotting) provide only snapshots, failing to capture its dynamic flux in living organisms. This gap is particularly acute for understanding how mutations in key regulators like beclin 1, which interacts with BECN1, alter autophagic activity over time during tumorigenesis and therapy. A method for longitudinal, quantitative in vivo measurement of autophagy flux is urgently needed to resolve these dynamics.",
+      "hypothesis": "We hypothesize that adapting intravital two-photon imaging of a tumor-targeted, ratiometric tandem-fluorescent LC3 reporter (mCherry-GFP-LC3) will enable quantitative, longitudinal tracking of autophagy flux in live mice, and that this approach will reveal that beclin 1 loss in tumors leads to spatially and temporally heterogeneous defects in autophagosome maturation that correlate with disease progression.",
+      "method": "We will generate AAV vectors encoding mCherry-GFP-LC3 under the control of a tumor-conditional promoter (e.g., Survivin) and deliver them to autochthonous or transplanted tumors in beclin 1 heterozygous or conditional knockout mice. A surgically implanted dorsal skinfold chamber or abdominal imaging window will provide chronic optical access. Intravital two-photon microscopy will be performed serially to collect ratiometric (mCherry/GFP) image data, where a decreasing GFP/mCherry ratio indicates autolysosome acidification and flux. Image analysis will use custom algorithms to segment tumors, identify puncta, and calculate flux ratios, calibrated against lysosomal inhibitors (chloroquine) and activators (rapamycin/TORC1 inhibition).",
+      "contribution": "This work will establish a novel platform for the quantitative, longitudinal measurement of autophagy flux in vivo, directly in the tumor microenvironment. It will provide the first dynamic, spatiotemporal map of how beclin 1 deficiency alters autophagic activity during tumor progression and in response to standard therapies (e.g., chemotherapy) or mTORC1 inhibitors, linking specific flux defects to phenotypic outcomes.",
+      "novelty": "While tandem-fluorescent LC3 reporters are used in vitro, their adaptation for calibrated, ratiometric intravital imaging in tumors, inspired by the quantitative rigor of neuroscience calcium imaging, is novel. This approach moves beyond endpoint assays to provide a continuous, functional readout of autophagy dynamics in a living, disease-relevant context.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "b02adcacc02548a347fdf5f7be958680d7a52e65_mt_004_analogy_prop",
+      "title": "Network-based identification of compensatory transcriptional programs in beclin 1 haploinsufficient tumors reveals conserved stress-adaptation modules",
+      "motivation": "Beth Levine's lab established that beclin 1 (BECN1) is a haploinsufficient tumor suppressor, but the precise molecular adaptations that enable tumorigenesis in the context of partial autophagy impairment remain unclear. Standard differential expression analyses in such haploinsufficient contexts often fail to capture the subtle, systems-level rewiring of cellular pathways. Insights from plant stress biology, where network analysis of autophagy-deficient mutants revealed coherent compensatory programs, suggest a powerful, untapped approach to understand how mammalian tumors adapt to autophagy loss.",
+      "hypothesis": "Tumors with beclin 1 haploinsufficiency activate specific, coordinated transcriptional modules—involving alternative degradation pathways, ER stress, and metabolic reprogramming—that compensate for reduced autophagy, and these modules share network properties with evolutionarily conserved stress-response programs.",
+      "method": "We will apply Weighted Gene Co-expression Network Analysis (WGCNA) to existing microarray datasets from beclin 1 haploinsufficient tumor models and autophagy-competent controls. This will involve constructing signed co-expression networks, identifying modules of highly correlated genes, and correlating module eigengenes with the autophagy-deficient phenotype. Hub genes within significant modules will be identified via intramodular connectivity (kME), and their regulatory networks will be analyzed using pre-2026 tools like TRANSFAC or ENCODE data to pinpoint key transcription factors.",
+      "contribution": "This work will move beyond gene lists to define the active transcriptional programs that sustain tumors with compromised autophagy, identifying novel hub regulators as potential therapeutic targets. It will also test the cross-kingdom conservation of stress-adaptation network logic, bridging plant cell biology and cancer biology.",
+      "novelty": "The proposal innovatively adapts a network-analytic framework from plant stress biology to a cancer autophagy context, a direct cross-kingdom analogy not previously explored. It focuses on detecting systems-level compensation in a haploinsufficient setting, where effects are distributed and not easily captured by conventional differential expression.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "b02adcacc02548a347fdf5f7be958680d7a52e65_sd_001_adversarial_prop",
+      "title": "A Functional Dependency Framework to Distinguish Driver from Passenger Alterations in Autophagy Genes Across Human Cancers",
+      "motivation": "Pan-cancer genomic studies have cataloged frequent alterations in autophagy-related genes, but these events are often dismissed as passengers of widespread chromosomal instability. This conflation obscures the identification of true cancer-relevant autophagy drivers, hindering the development of targeted therapies. A systematic, functionally informed classification is urgently needed to separate biologically impactful alterations from genomic noise.",
+      "hypothesis": "Integrating genomic alteration patterns with functional dependency data from CRISPR screens and autophagy flux signatures will enable the robust classification of autophagy gene alterations as drivers or passengers, revealing context-specific cancer dependencies.",
+      "method": "We will integrate TCGA pan-cancer genomic data (mutations, CNVs) with DepMap CRISPR/RNAi essentiality scores and transcriptomic autophagy flux signatures. A random forest classifier will be trained to rank alterations using features including mutation frequency, co-occurrence with CIN markers, essentiality scores, and survival associations. Top-ranked candidate driver genes (e.g., BECN1, ATG genes) will be validated in isogenic cell line panels using CRISPR-Cas9, measuring autophagy flux (LC3-II turnover), proliferation, and sensitivity to mTORC1 inhibitors.",
+      "contribution": "This work will produce the first functionally annotated atlas of autophagy gene drivers in cancer, moving beyond descriptive catalogs. It will identify high-confidence, context-specific therapeutic targets within the autophagy pathway and provide a generalizable framework for classifying alterations in other complex biological processes.",
+      "novelty": "This study moves beyond correlative genomic surveys by directly integrating functional dependency data to infer causality. The machine learning model is uniquely designed to deconvolute the signal of specific autophagy gene alterations from the background of chromosomal instability, a major confounder in prior analyses.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "b02adcacc02548a347fdf5f7be958680d7a52e65_sd_003_analogy_prop",
+      "title": "Single-Cell and Spatial Mapping of Autophagy Heterogeneity in Beclin 1 Haploinsufficient Tumors",
+      "motivation": "BECN1 is a haploinsufficient tumor suppressor, but how its partial loss shapes intratumoral heterogeneity in autophagy activity remains unknown. This gap limits our understanding of how autophagy modulation contributes to tumor evolution and therapy resistance. The field currently lacks tools to resolve autophagy states at single-cell resolution within the tumor microenvironment.",
+      "hypothesis": "BECN1 haploinsufficiency generates a functional mosaic of tumor cells with distinct autophagy competencies, and these autophagy-defined subpopulations occupy specific spatial niches that influence tumor progression.",
+      "method": "We will perform scRNA-seq on BECN1+/- tumor models (e.g., MCF7, MDA-MB-231) and deconvolve autophagy states using curated gene modules (core ATG proteins, lysosomal genes, TFEB targets). We will apply RNA velocity (scVelo) to infer dynamic transitions between autophagy states. Spatial validation will be performed using 10x Genomics Visium and high-plex MERFISH for key autophagy markers to map state distributions relative to vasculature (CD31) and hypoxia (CA9).",
+      "contribution": "This will provide the first high-resolution atlas of autophagy heterogeneity within a tumor, linking BECN1 status to cell state diversity. It will identify whether autophagy-low and -high subclones cooperate metabolically and establish a spatial framework for understanding autophagy in tumor microecology.",
+      "novelty": "This adapts the deconvolution and spatial mapping paradigm from immunology to the autophagy field, a novel application. It moves beyond bulk measurements of autophagy flux to resolve single-cell states and their spatial organization, which has not been done.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "b02adcacc02548a347fdf5f7be958680d7a52e65_sd_004_analogy_prop",
+      "title": "Systematic Forward Genetic Mapping of Autophagy-Dependent Tumor Suppressor Networks in Drosophila and Zebrafish",
+      "motivation": "Autophagy is a critical tumor-suppressive mechanism, but its regulatory network and interactions with oncogenic pathways remain incompletely defined. The field lacks a comprehensive, unbiased map of the genetic landscape governing how autophagy constrains tumorigenesis, analogous to the incomplete understanding of developmental signaling pathways prior to saturation mutagenesis screens. This gap limits our ability to predict which tumors are autophagy-dependent and to design targeted therapies.",
+      "hypothesis": "Unbiased forward genetic screens in genetically tractable, non-mammalian tumor models will identify a conserved set of genes that functionally modulate autophagy-dependent tumor suppression, revealing novel nodes and pathways within this network.",
+      "method": "We will perform EMS-based saturation mutagenesis in a Drosophila epithelial tumor model (e.g., RasV12, scribble-/- clones in the eye imaginal disc) and screen for modifiers of autophagy-dependent tumor phenotypes using established GFP-LC3 reporters and tissue overgrowth assays. In parallel, we will conduct CRISPR-Cas9-based loss-of-function screens in zebrafish models of BRAFV600E-driven melanoma or tp53-mutant tumors, using automated imaging to quantify tumor burden and autophagy flux (via transgenic mCherry-GFP-LC3). Conserved hits from both systems will be validated in mammalian cells (e.g., MEFs or cancer cell lines) using siRNA knockdown and assays for autophagy activity (LC3 lipidation, p62 degradation) and oncogenic transformation.",
+      "contribution": "This work will generate the first comprehensive genetic interaction map for autophagy in tumor suppression across two evolutionarily distant model organisms, identifying novel conserved regulators. It will establish a foundational resource for the field, prioritizing genes for mechanistic study in mammalian systems and potentially revealing new therapeutic targets for cancers reliant on autophagy for survival.",
+      "novelty": "While genetic screens for autophagy regulators exist, none have been performed as saturation-level, forward genetic screens in the specific context of established in vivo tumor models, an approach that mirrors the transformative developmental biology screens of the past. The parallel use of invertebrate and vertebrate genetic systems for this specific question is unprecedented.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "d7ea336922250ee7c7af24f42f6c24a27b495b25_ac_002_prop",
+      "title": "Systematic Validation of GFP-LC3 Puncta as Specific Markers of Functional Autophagosomes",
+      "motivation": "GFP-LC3 puncta formation is the most widely used assay for monitoring autophagy in cells. However, pre-2026 literature suggests LC3 can be recruited to protein aggregates (e.g., in aggresomes) and that certain conditions (e.g., proteasome inhibition, expression artifacts) can induce LC3-positive structures independent of canonical autophagy. This fundamental ambiguity undermines the interpretation of countless studies in autophagy, cancer, and neurodegeneration.",
+      "hypothesis": "We hypothesize that a significant fraction of GFP-LC3 puncta observed under standard experimental conditions, including stress and pharmacological modulation, are not functional autophagosomes but represent LC3-decorated protein aggregates or other non-degradative structures.",
+      "method": "We will use live-cell imaging of GFP-LC3 in tandem with specific fluorescent probes: 1) mCherry-SQSTM1/p62 to distinguish aggregates, 2) DQ-BSA to label functional lysosomal proteolysis, and 3) LysoTracker for lysosomal acidity. Using high-content imaging and custom image analysis algorithms (CellProfiler pipelines for colocalization and puncta kinetics), we will quantify the proportion of GFP-LC3 puncta that colocalize with aggregates versus those that progress through an acidic, degradative pathway. Key perturbations will include mTORC inhibition (rapamycin), proteasome inhibition (MG132), and cocaine exposure (known from Levine's work to affect BECN1 and autophagy).",
+      "contribution": "This work will establish a rigorous, multi-parametric framework to validate GFP-LC3 puncta as true autophagosomes. It will provide the field with essential criteria and controls to prevent misinterpretation of autophagy flux. The findings will directly impact studies linking autophagy to substance abuse, neurodegeneration, and cancer where protein aggregation is co-morbid.",
+      "novelty": "While concerns about LC3 specificity exist, no systematic, quantitative study has dissected the contribution of aggregates to the LC3 puncta assay under diverse pharmacological and stress conditions relevant to Dr. Levine's research themes (e.g., mTORC, cocaine). Integrating BECN1-interacting protein biology (GRB2) with this imaging validation is a novel angle.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "d7ea336922250ee7c7af24f42f6c24a27b495b25_ac_004_prop",
+      "title": "Systematic Deconvolution of Off-Target Effects for Widely Used Autophagy Inhibitors 3-MA and Bafilomycin A1",
+      "motivation": "The pharmacological inhibitors 3-methyladenine (3-MA) and bafilomycin A1 are foundational tools in autophagy research, used to block autophagosome formation and degradation, respectively. However, pre-2026 evidence suggests these compounds have significant off-target effects; 3-MA inhibits class I PI3K signaling and bafilomycin A1 disrupts lysosomal pH and other vesicular trafficking pathways. The continued reliance on these non-specific inhibitors risks misinterpretation of autophagy's role in cellular physiology and disease, including in contexts like addiction neuroscience where mTORC1 and protein homeostasis are implicated.",
+      "hypothesis": "We hypothesize that the cellular phenotypes commonly attributed to autophagy inhibition by 3-MA and bafilomycin A1 are, in significant part, mediated by their off-target effects on specific signaling nodes and vesicular trafficking pathways independent of the core autophagy machinery.",
+      "method": "We will employ a multi-pronged, mechanism-based approach in relevant cell lines (including neuronal models). First, we will use CRISPR/Cas9 to generate stable knockouts of core autophagy genes (e.g., ATG5, ATG7, BECN1) as genetic controls. We will treat these cells with 3-MA or bafilomycin A1 and perform comparative phospho-proteomic and interactomic analyses (using affinity purification-mass spectrometry) to map inhibitor-specific signaling perturbations distinct from genetic autophagy blockade. Key off-target pathways will be validated by monitoring activity of related proteins like GRB2 (a BECN1 interactor) and mTORC1. Finally, we will assay established autophagy markers (LC3-II flux, p62 degradation) alongside orthogonal readouts of the identified off-target pathways (e.g., endocytosis, primary ciliogenesis) to deconvolve their contributions.",
+      "contribution": "This work will provide a definitive, high-resolution map of the specific and off-target effects of 3-MA and bafilomycin A1, establishing essential guidelines for their use and interpretation in autophagy experiments. It will clarify the true autophagy-dependent components of cellular processes studied with these tools and may identify novel regulatory nodes where autophagy intersects with other vesicular trafficking and signaling systems.",
+      "novelty": "While the non-specificity of these drugs is acknowledged, a systematic, head-to-head comparison against precise genetic autophagy ablation to definitively partition their effects has not been comprehensively performed, particularly leveraging modern proteomic and genetic tools within the conceptual framework of Beth Levine's work on BECN1 interactors and regulatory mechanisms.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "e32ad6586854e69af86fd3250f7c3091957fdc3d_mt_001_prop",
+      "title": "Super-resolution live-cell imaging reveals the nanoscale spatiotemporal dynamics of autophagosome formation and mTORC1 regulation",
+      "motivation": "Autophagosome biogenesis is a fundamental but poorly resolved cellular process, with key steps like phagophore nucleation and expansion occurring below the diffraction limit. Pre-2026, the field relies heavily on static electron microscopy or diffraction-limited live imaging, missing critical nanoscale dynamics. Applying advanced super-resolution techniques from neuroscience could transform our mechanistic understanding of autophagy regulation by mTORC1 and BECN1-interacting proteins like GRB2.",
+      "hypothesis": "We hypothesize that live-cell super-resolution microscopy will reveal distinct, ordered nanoscale assembly and disassembly dynamics of core autophagy machinery (e.g., ATG proteins, BECN1 complexes) at the phagophore, and that mTORC1 inhibition triggers specific, rapid changes in this spatial choreography.",
+      "method": "We will employ lattice light-sheet microscopy (LLSM) and stimulated emission depletion (STED) microscopy for live-cell imaging. Cells (WT and autophagy-deficient) will express endogenously tagged autophagy proteins (e.g., LC3, ATG13, WIPI2) using CRISPR-Cas9 gene editing. For LLSM, we will use a lattice pattern generated by an optical spatial light modulator and image reconstruction via iterative deconvolution algorithms. For STED, a 592 nm depletion laser will be used with time-gated detection to enhance resolution. Dynamics will be quantified via single-particle tracking and correlation analysis algorithms.",
+      "contribution": "This work will provide the first nanoscale, real-time visualization of autophagosome formation, defining the precise order of protein recruitment and membrane remodeling. It will directly test models of how mTORC1 signaling and BECN1-interacting proteins like GRB2 mechanistically control the initiation phase, moving the field from static snapshots to a dynamic movie of this critical degradative pathway.",
+      "novelty": "While super-resolution is established in neuroscience for synaptic vesicle dynamics, its application to resolve the fast, sub-diffraction events of autophagosome biogenesis in living cells is novel. This approach uniquely bridges the structural biology of autophagy factors with their functional, real-time activity in a native cellular context.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "e32ad6586854e69af86fd3250f7c3091957fdc3d_sd_002_prop",
+      "title": "Real-Time Nanoscale Tracking of Autophagosome Membrane Nucleation via Correlative iPALM and cryo-ET Imaging",
+      "motivation": "Autophagosome biogenesis begins with the nucleation of a small isolation membrane (phagophore), yet the precise spatial and temporal dynamics of this event remain unresolved because conventional fluorescence microscopy lacks the resolution to visualize individual membrane nucleation sites. Understanding how BECN1-containing complexes, including the recently characterized GRB2-BECN1 interaction, orchestrate the initial membrane curvature at the nanometer scale is critical for deciphering autophagy regulation in health and disease. Resolving these earliest events would transform our mechanistic understanding of selective and bulk autophagy initiation.",
+      "hypothesis": "Individual autophagosome membrane nucleation events occur at spatially defined ER-associated platforms where BECN1-VPS34 complex density exceeds a critical nanoscale threshold, and real-time super-resolution imaging can capture the transition from PI3P-enriched membrane puncta to curved phagophore intermediates with sub-20 nm precision.",
+      "method": "We will combine interferometric photoactivated localization microscopy (iPALM) with correlative cryo-electron tomography (cryo-ET) to track BECN1 and ATG14L tagged with photoconvertible fluorescent proteins (mEos3.2) at ER-mitochondria contact sites in starved U2OS cells. Live iPALM will provide three-dimensional localization of single BECN1 molecules at 10-15 nm axial resolution, while time-lapse acquisition at 2-second intervals will capture nucleation dynamics. Cells will be vitrified at defined post-starvation timepoints and subjected to cryo-ET to resolve the ultrastructure of nascent membrane intermediates at the exact locations identified by iPALM. Quantitative spatial clustering analysis using Ripley's K-function and Voronoi tessellation will determine the critical local density of BECN1 complexes required to initiate membrane curvature, and perturbation of the GRB2-BECN1 interaction via point mutations will test whether GRB2 modulates nucleation site selection.",
+      "contribution": "This work will provide the first direct nanoscale visualization of individual autophagosome membrane nucleation events in mammalian cells, establishing quantitative parameters—molecular density thresholds, curvature kinetics, and spatial relationship to ER subdomains—that currently exist only as theoretical predictions. The resulting framework will enable precise pharmacological targeting of autophagy initiation and clarify how upstream regulators like GRB2 tune the spatial probability of phagophore formation.",
+      "novelty": "While previous studies have used electron microscopy to observe mature autophagosomes or diffraction-limited fluorescence to track LC3 puncta, no existing approach captures the transition from molecular complex assembly to initial membrane deformation in real time at nanometer resolution. The correlative iPALM–cryo-ET pipeline applied specifically to BECN1-mediated nucleation, combined with single-molecule clustering analysis, is a non-obvious integration that bridges the gap between structural biology and live-cell autophagy dynamics.",
+      "dimension": "Scaling & Dual"
+    }
+  ],
+  "ideas": [
+    {
+      "id": "d7ea336922250ee7c7af24f42f6c24a27b495b25_ac_004",
+      "title": "Pharmacological inhibitors have autophagy-specific effects",
+      "description": "Challenge the assumption that 3-MA and bafilomycin A1 act specifically on autophagy without major off-target effects.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Methods in mammalian autophagy research.",
+      "sourceYear": 2010
+    },
+    {
+      "id": "3debe65157b7b1fdc4c00bc3ffd365bd36921290_fw_004",
+      "title": "Identify signals regulating Bcl-2-Beclin 1 dissociation",
+      "description": "Characterize upstream signals or post-translational modifications that dynamically regulate the Bcl-2-Beclin 1 complex under stress.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Bcl-2 antiapoptotic proteins inhibit Beclin 1-dependent autophagy.",
+      "sourceYear": 2005
+    },
+    {
+      "id": "4af3826564c80d0e09c2c58b4919a6839dd544bc_ac_004",
+      "title": "MCF7 cells as atypical cancer model",
+      "description": "Question whether MCF7 cells, which lack caspase-3 and have unusual apoptosis, represent typical breast cancer autophagy biology.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Induction of autophagy and inhibition of tumorigenesis by beclin 1",
+      "sourceYear": 1999
+    },
+    {
+      "id": "b02adcacc02548a347fdf5f7be958680d7a52e65_mt_001_analogy",
+      "title": "Adapting neuroscience optogenetic spatial-temporal control strategies for tissue-specific autophagy gene deletion",
+      "description": "In neuroscience, understanding the function of specific cell types within heterogeneous brain circuits required moving beyond simple knockouts to spatiotemporally precise genetic tools. The field solved this by developing intersectional strategies combining Cre and Flp recombinases under independent promoters, often pairing one constitutive tissue-specific driver with one inducible temporal driver (e.g., CreERT2 activated by tamoxifen). This dual-recombinase approach allowed silencing or activating genes only in cells where both promoters are active, achieving combinatorial specificity. Adapting this to autophagy research, we propose generating a dual-recombinase conditional beclin 1 allele (e.g., frt-flanked STOP cassette upstream of a floxed critical exon) that requires both Flp and Cre activity for gene deletion. By crossing these mice with tissue-specific Flp drivers (e.g., albumin-Flp for hepatocytes, nestin-Flp for neural progenitors) and tamoxifen-inducible CreERT2 lines, beclin 1 can be deleted exclusively in the target tissue and only upon tamoxifen administration at the chosen developmental stage. This intersectional approach overcomes limitations of single-recombinase systems—where promoter leakiness or broad expression windows confound results—and enables systematic dissection of autophagy's roles across tissues and developmental timepoints with the same rigor that neuroscience applies to circuit analysis.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "b02adcacc02548a347fdf5f7be958680d7a52e65_mt_004_analogy",
+      "title": "Adapting drought-stress transcriptomics approaches to profile autophagy-deficient tumor gene expression",
+      "description": "This idea draws an analogy from plant stress biology, where microarray profiling of autophagy-deficient (ATG-knockout) Arabidopsis under stress revealed compensatory transcriptional networks through weighted gene co-expression network analysis (WGCNA). Plant researchers discovered that when autophagy is genetically disrupted, plants activate alternative degradation pathways, ER stress responses, and metabolic reprogramming—identified not through simple differential expression but through network-based module detection that revealed coordinated gene programs and their hub regulators. Adapting this approach, we propose applying WGCNA and co-expression network construction to microarray profiles of beclin 1 haploinsufficient tumors alongside autophagy-competent controls. This would move beyond standard differential expression analysis to identify coherent transcriptional modules that tumors activate to compensate for partial autophagy loss, pinpoint hub transcription factors orchestrating these compensatory programs, and reveal whether tumor adaptations to autophagy deficiency parallel the conserved stress-response rewiring seen across kingdoms. The cross-kingdom analogy suggests that autophagy compensation may involve evolutionarily conserved network motifs, and the network approach is better suited than gene-list methods to capture the systems-level reorganization expected in haploinsufficient contexts where effects are subtle and distributed.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "b02adcacc02548a347fdf5f7be958680d7a52e65_fw_002_analogy",
+      "title": "Tissue-specific haploinsufficiency mapping via enhancer-driven dosage sensitivity frameworks from developmental genetics",
+      "description": "This idea draws an analogy from developmental genetics, where the tissue-specific effects of Shh haploinsufficiency were explained by mapping enhancer landscapes and morphogen concentration thresholds across tissues. In that field, researchers found that certain tissues (e.g., forebrain) operate near critical signaling thresholds with minimal buffering, making them uniquely sensitive to 50% gene dosage reduction, while other tissues possess regulatory elements that compensate for reduced dosage. Adapting this framework to beclin 1 and autophagy, the proposed research would: (1) perform ATAC-seq and ChIP-seq across breast, ovarian, prostate, and non-susceptible tissues to map the BECN1 cis-regulatory landscape and determine tissue-specific transcriptional output at heterozygous dosage; (2) quantify basal autophagy flux thresholds required for tumor suppression in each tissue using inducible knockdown systems titrated to varying beclin 1 levels; (3) profile the expression of compensatory autophagy pathway genes across tissues to identify which organs lack redundant buffering mechanisms; and (4) build a quantitative dosage-sensitivity model predicting tissue-specific tumor susceptibility based on enhancer architecture, basal autophagy demand, and compensatory gene network robustness. This approach reframes the question from 'why does beclin 1 loss cause cancer' to 'why do certain tissues operate near a critical autophagy threshold with insufficient regulatory buffering,' directly paralleling how the Shh field resolved analogous tissue-specificity puzzles.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "b02adcacc02548a347fdf5f7be958680d7a52e65_sd_003_analogy",
+      "title": "Adapting single-cell transcriptomic deconvolution from immunology to map autophagy heterogeneity in beclin 1 haploinsufficient tumors",
+      "description": "This idea draws an analogy from single-cell immunology, where the field transitioned from bulk immune profiling (e.g., flow cytometry panels, bulk RNA-seq of sorted populations) to single-cell multi-omic approaches (scRNA-seq, CITE-seq, spatial transcriptomics) to resolve the enormous functional heterogeneity among immune cells within tumors. That transition revealed previously invisible rare states, transitional phenotypes, and spatially organized niches that govern immune response. We propose adapting this exact analytical framework to the problem of autophagy heterogeneity in beclin 1 (BECN1) haploinsufficient tumors. Specifically, we would perform scRNA-seq on BECN1+/- tumor models and score each cell using curated autophagy gene modules (ATG genes, lysosomal markers, TFEB targets) to place cells on an autophagy activity spectrum. RNA velocity analysis would reveal whether cells are transitioning toward higher or lower autophagy states, identifying dynamic trajectories rather than static snapshots. Spatial transcriptomics (e.g., MERFISH or Visium) would then map these autophagy states onto tumor architecture to test whether autophagy-high cells cluster near hypoxic or nutrient-poor regions, while autophagy-low cells reside in well-vascularized zones. This approach would reveal whether BECN1 haploinsufficiency creates a uniform autophagy deficit or a mosaic of autophagy competencies that may drive intratumoral evolution, therapy resistance, and metabolic cooperation between subclones.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "3debe65157b7b1fdc4c00bc3ffd365bd36921290_fw_001_analogy",
+      "title": "Alanine scanning and computational hotspot mapping of the Bcl-2/Beclin 1 interface inspired by integrin-extracellular matrix interaction mapping",
+      "description": "This idea draws an analogy from structural studies of integrin-extracellular matrix protein interactions, where the challenge of selectively disrupting one protein-protein interaction without perturbing related interfaces was successfully addressed. In integrin biology, researchers used exhaustive alanine scanning mutagenesis combined with computational free energy perturbation (FEP) to identify binding hotspot residues at the integrin αVβ3–RGD interface. They discovered that a small number of residues contributed the majority of binding energy, and these hotspots were leveraged to design selective cyclic peptide inhibitors like cilengitide. Adapting this approach, we propose performing comprehensive alanine scanning across the Bcl-2 hydrophobic groove residues that engage Beclin 1's BH3-like domain, paired with FEP calculations and isothermal titration calorimetry validation. By comparing the energetic landscape of Bcl-2–Beclin 1 binding with that of Bcl-2–Bax and Bcl-2–Bak, we can identify residues that are energetically critical for Beclin 1 binding but dispensable for pro-apoptotic effector sequestration. These differential hotspots would then serve as pharmacophore anchors for designing stapled peptides or small molecules that selectively liberate Beclin 1 to activate autophagy without triggering apoptosis—a key therapeutic goal in cancer and neurodegeneration.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "3d121410702ab9c1efe10b083110d364eb272b20_sd_004",
+      "title": "From yeast genetics to human disease models",
+      "description": "Scale conserved yeast Atg gene findings to human disease contexts including neurodegeneration, cancer, and infectious disease.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Development by self-digestion: molecular mechanisms and biological functions of autophagy.",
+      "sourceYear": 2004
+    },
+    {
+      "id": "410bdf34d35dc10ece102c2a6511c12ce52e9217_mt_003",
+      "title": "Microfluidics for single-cell autophagy dynamics",
+      "description": "Transfer microfluidic single-cell analysis from systems biology to track autophagy dynamics in individual cells over time.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Guidelines for the use and interpretation of assays for monitoring autophagy in higher eukaryotes",
+      "sourceYear": 2008
+    },
+    {
+      "id": "345617d72ec440570517f06f825c10e9a961bdb4_sd_001",
+      "title": "Single-cell autophagy heterogeneity in immune populations",
+      "description": "Scale down from bulk tissue analysis to single-cell resolution to reveal autophagy heterogeneity across immune cell subsets.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Autophagy in immunity and inflammation",
+      "sourceYear": 2011
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_fw_003",
+      "title": "Functional role of immunogenic cell death modulators",
+      "description": "Identify essential versus dispensable molecular determinants that govern the immunogenicity of different cell death modalities in tumors.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018",
+      "sourceYear": 2018
+    },
+    {
+      "id": "b02adcacc02548a347fdf5f7be958680d7a52e65_sd_001_adversarial",
+      "title": "Functional driver classification of autophagy gene alterations across human cancers via integrated genomic-dependency analysis",
+      "description": "This study systematically catalogues all autophagy-related gene alterations across TCGA pan-cancer cohorts but critically layers on functional dependency data from DepMap CRISPR/RNAi screens and transcriptomic autophagy flux signatures to classify each alteration as a likely driver or passenger event. A machine learning framework integrates copy number status, mutation frequency, co-occurrence with chromosomal instability markers, essentiality scores, and patient survival associations to rank autophagy genes by their probability of functional relevance in each cancer context. The top-ranked candidate driver alterations are then validated using isogenic knockout panels in representative cell lines, measuring autophagy flux, proliferation, and drug sensitivity to confirm causal roles. This approach overcomes the central limitation of purely descriptive pan-cancer surveys by ensuring that reported associations reflect genuine biological dependencies rather than genomic noise from widespread chromosomal instability.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_mt_004",
+      "title": "Network pharmacology for multi-pathway death modulation",
+      "description": "Adapt network pharmacology approaches from drug discovery to design compounds simultaneously targeting multiple cell death pathways.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018",
+      "sourceYear": 2018
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_fw_004",
+      "title": "Therapeutic targeting of MPT-driven necrosis",
+      "description": "Develop selective inhibitors of mitochondrial permeability transition-driven necrosis for ischemia-reperfusion injury and neurodegeneration treatment.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018",
+      "sourceYear": 2018
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_mt_005",
+      "title": "Optogenetics for precise temporal death pathway activation",
+      "description": "Transfer optogenetic tools from neuroscience to achieve precise spatiotemporal control of specific cell death pathway initiation.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018",
+      "sourceYear": 2018
+    },
+    {
+      "id": "3debe65157b7b1fdc4c00bc3ffd365bd36921290_mt_003",
+      "title": "Yeast two-hybrid screens for novel Beclin partners",
+      "description": "Use systematic yeast two-hybrid or proteomics approaches from interactomics to discover additional Beclin 1 regulatory partners.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Bcl-2 antiapoptotic proteins inhibit Beclin 1-dependent autophagy.",
+      "sourceYear": 2005
+    },
+    {
+      "id": "3debe65157b7b1fdc4c00bc3ffd365bd36921290_mt_001",
+      "title": "FRET biosensors for Bcl-2-Beclin 1 dynamics",
+      "description": "Apply live-cell FRET imaging from protein interaction studies to monitor Bcl-2-Beclin 1 complex dynamics in real time.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Bcl-2 antiapoptotic proteins inhibit Beclin 1-dependent autophagy.",
+      "sourceYear": 2005
+    },
+    {
+      "id": "b02adcacc02548a347fdf5f7be958680d7a52e65_sd_004_analogy",
+      "title": "Borrowing from developmental genetics: forward genetic screens in simple organisms to dissect autophagy-tumor suppression networks",
+      "description": "This idea draws an analogy from the landmark forward genetic screens in developmental biology, where Drosophila and C. elegans were used to systematically dissect conserved signaling pathways through saturation mutagenesis. Just as Nüsslein-Volhard and Wieschaus identified the core components of Hedgehog, Wnt, and Notch signaling by screening for patterning defects in fly embryos, we propose conducting analogous unbiased genetic screens in non-mammalian tumor models to comprehensively map the autophagy-tumor suppression network. Specifically, EMS-based or transposon-mediated forward screens in Drosophila epithelial tumor models (e.g., RasV12/scribble clones in eye or wing discs) would identify modifiers that enhance or suppress autophagy-dependent tumor suppression. In parallel, CRISPR-based genetic screens in zebrafish BRAF-driven melanoma or tp53-mutant models would provide vertebrate validation. The short generation times, genetic tractability, and live-imaging capabilities of these organisms enable screening at a scale and speed impossible in mice. Conserved hits—genes whose loss shifts the autophagy-tumor interaction—would then be prioritized for mechanistic study in mammalian cell lines and mouse models. This approach leverages the proven power of model organism genetics to transform an incompletely understood process into a systematically mapped pathway, analogous to how developmental screens converted embryonic patterning from phenomenology into molecular mechanism.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_mt_001",
+      "title": "Single-cell multi-omics for death pathway classification",
+      "description": "Apply single-cell transcriptomic and proteomic profiling to classify cell death modalities at individual cell resolution.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018",
+      "sourceYear": 2018
+    },
+    {
+      "id": "b02adcacc02548a347fdf5f7be958680d7a52e65_mt_003_analogy",
+      "title": "Adapting calcium indicator imaging strategies to quantify autophagy flux in vivo",
+      "description": "This idea draws an analogy from neuroscience, where genetically encoded calcium indicators (GCaMP) revolutionized in vivo measurement of neural activity. Neuroscientists overcame the problem of quantifying rapid, transient intracellular signals in deep tissue by combining genetically encoded fluorescent sensors with cell-type-specific expression, surgical optical access (cranial windows), two-photon microscopy, and ratiometric calibration strategies. We adapt this solution to autophagy research by deploying tandem-fluorescent LC3 reporters (mCherry-GFP-LC3) via AAV vectors with tumor-conditional promoters into beclin 1 mutant tumor-bearing mice. Intravital two-photon imaging through surgically implanted dorsal skinfold or abdominal imaging windows enables repeated, non-destructive visualization of autophagosome formation and maturation. The dual-fluorophore ratiometric readout—where GFP fluorescence is quenched upon autolysosome acidification while mCherry remains stable—provides a built-in calibration analogous to ratiometric GCaMP variants, allowing conversion of imaging data into quantitative autophagy flux metrics. This approach enables longitudinal tracking of how beclin 1 loss alters autophagy dynamics during tumor progression and in response to therapy, overcoming the snapshot limitations of traditional immunohistochemistry.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_sd_005",
+      "title": "Organism-scale death pathway atlas across diseases",
+      "description": "Scale up to build a whole-organism atlas mapping predominant cell death pathways across all major human disease contexts.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018",
+      "sourceYear": 2018
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_mt_003",
+      "title": "CRISPR screens mapping essential death pathway genes",
+      "description": "Apply genome-wide CRISPR knockout screens to systematically identify essential versus dispensable genes for each death subroutine.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018",
+      "sourceYear": 2018
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_ac_002",
+      "title": "Irreversibility as defining feature of cell death",
+      "description": "Question whether early committed cell death stages are truly irreversible given emerging evidence of anastasis and recovery.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018",
+      "sourceYear": 2018
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_ac_001",
+      "title": "Cell death pathways as discrete separable categories",
+      "description": "Challenge the assumption that cell death subroutines are discrete by modeling them as a continuous mechanistic spectrum.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018",
+      "sourceYear": 2018
+    },
+    {
+      "id": "d7ea336922250ee7c7af24f42f6c24a27b495b25_ac_002",
+      "title": "GFP-LC3 puncta equal functional autophagosomes assumption",
+      "description": "Question whether all GFP-LC3 puncta represent genuine autophagosomes rather than protein aggregates or artifacts.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Methods in mammalian autophagy research.",
+      "sourceYear": 2010
+    },
+    {
+      "id": "e32ad6586854e69af86fd3250f7c3091957fdc3d_sd_002",
+      "title": "Nanoscale autophagosome membrane formation tracking",
+      "description": "Scale down autophagy monitoring to track individual membrane nucleation events at nanometer resolution.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Guidelines for the use and interpretation of assays for monitoring autophagy",
+      "sourceYear": 2012
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_sd_003",
+      "title": "Inverse problem: inferring death mode from debris",
+      "description": "Solve the inverse problem of determining which cell death pathway occurred by analyzing only the resulting cellular debris composition.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018",
+      "sourceYear": 2018
+    },
+    {
+      "id": "3d121410702ab9c1efe10b083110d364eb272b20_mt_004",
+      "title": "Structural biology of Atg conjugation complexes",
+      "description": "Apply X-ray crystallography and cryo-EM from ubiquitin biology to solve structures of Atg8 and Atg12 conjugation systems.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Development by self-digestion: molecular mechanisms and biological functions of autophagy.",
+      "sourceYear": 2004
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_ac_004",
+      "title": "Universal conservation of death mechanisms across species",
+      "description": "Challenge assumed conservation by systematically comparing cell death pathway components across evolutionarily distant organisms.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018",
+      "sourceYear": 2018
+    },
+    {
+      "id": "6737c2627bcad064410a48f8077e3ca455fa0639_mt_004",
+      "title": "Cryo-ET for autophagosome ultrastructure characterization",
+      "description": "Apply cryo-electron tomography from structural biology to resolve native autophagosome membrane architecture and cargo organization.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Guidelines for the use and interpretation of assays for monitoring autophagy (4th edition)1",
+      "sourceYear": 2021
+    },
+    {
+      "id": "e32ad6586854e69af86fd3250f7c3091957fdc3d_mt_001",
+      "title": "Live-cell super-resolution imaging of autophagosomes",
+      "description": "Apply super-resolution microscopy techniques from neuroscience to resolve autophagosome formation and maturation dynamics in real time.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Guidelines for the use and interpretation of assays for monitoring autophagy",
+      "sourceYear": 2012
+    },
+    {
+      "id": "b02adcacc02548a347fdf5f7be958680d7a52e65_ac_004",
+      "title": "Monoallelic deletion as passenger not driver",
+      "description": "Challenge whether beclin 1 deletion in human cancers is a passenger event linked to adjacent driver gene loss on chromosome 17q21.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Promotion of tumorigenesis by heterozygous disruption of the beclin 1 autophagy gene.",
+      "sourceYear": 2003
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_sd_001",
+      "title": "Tissue-level emergent patterns of mixed cell death",
+      "description": "Scale up from single-cell death classification to characterize emergent tissue-level patterns of heterogeneous death mode activation.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018",
+      "sourceYear": 2018
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_fw_002",
+      "title": "Biomarkers distinguishing regulated necrosis subtypes in vivo",
+      "description": "Develop reliable in vivo biomarkers to distinguish necroptosis, ferroptosis, pyroptosis, and parthanatos in disease tissue samples.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018",
+      "sourceYear": 2018
+    },
+    {
+      "id": "27bba2d44f3e4e552db332b348a2d09a5e96f974_mt_002",
+      "title": "Machine learning for automated death mode identification",
+      "description": "Transfer image-based deep learning classifiers from pathology to automatically distinguish morphological cell death subtypes in microscopy.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018",
+      "sourceYear": 2018
+    },
+    {
+      "id": "b02adcacc02548a347fdf5f7be958680d7a52e65_ac_004_analogy",
+      "title": "Hitchhiker deletion mapping: Borrowing linkage disequilibrium methods from population genetics to distinguish passenger from driver gene losses",
+      "description": "This idea draws a direct analogy between the passenger-versus-driver gene deletion problem in cancer genomics and the causal-variant-versus-LD-proxy problem in population genetics. In GWAS, a statistically significant SNP may simply be co-inherited with a nearby causal variant rather than being functional itself; the field resolved this ambiguity using fine-mapping frameworks that assign posterior inclusion probabilities to each variant in a correlated region by modeling joint effects, leveraging LD structure, and incorporating functional annotations as Bayesian priors. We propose adapting this approach to somatic copy-number alterations on chromosome 17q21. Using pan-cancer datasets (TCGA, ICGC, PCAWG), each gene in the minimally deleted region—BECLIN1, BRCA1, and flanking loci—would be treated as a candidate 'causal deletion' analogous to a candidate causal SNP. A Bayesian fine-mapping model would estimate the posterior probability that loss of each individual gene contributes to tumor fitness, conditional on the losses of all other genes in the segment. Functional priors would include gene essentiality scores from DepMap CRISPR screens, expression-fitness correlations, known roles in autophagy or DNA repair, and somatic mutation frequency. If BECLIN1's posterior inclusion probability is negligible once conditioned on BRCA1 loss—mirroring how a non-causal SNP drops out of a credible set once the true causal variant is accounted for—this would provide rigorous statistical evidence that BECLIN1 monoallelic deletion is a passenger event hitchhiking on BRCA1-driven selection. This cross-disciplinary transfer leverages two decades of sophisticated statistical genetics methodology to resolve a longstanding debate in cancer biology about the role of autophagy gene loss in tumorigenesis.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "410bdf34d35dc10ece102c2a6511c12ce52e9217_mt_004",
+      "title": "Machine learning for autophagosome image classification",
+      "description": "Apply computer vision and deep learning to automate unbiased quantification of autophagosomes in microscopy images.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Guidelines for the use and interpretation of assays for monitoring autophagy in higher eukaryotes",
+      "sourceYear": 2008
+    }
+  ],
+  "papers": [
+    {
+      "title": "Autophagy in the pathogenesis of disease.",
+      "year": 2008,
+      "venue": "Cell",
+      "citations": 7017,
+      "abstract": "Autophagy is a lysosomal degradation pathway that is essential for survival, differentiation, development, and homeostasis. Autophagy principally serves an adaptive role to protect organisms against diverse pathologies, including infections, cancer, neurodegeneration, aging, and heart disease. Howev"
+    },
+    {
+      "title": "Autophagy fights disease through cellular self-digestion",
+      "year": 2008,
+      "venue": "Nature",
+      "citations": 6522,
+      "abstract": "Autophagy, or cellular self-digestion, is a cellular pathway involved in protein and organelle degradation, with an astonishing number of connections to human disease and physiology. For example, autophagic dysfunction is associated with cancer, neurodegeneration, microbial infection and ageing. Par"
+    },
+    {
+      "title": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018",
+      "year": 2018,
+      "venue": "Cell Death and Differentiation",
+      "citations": 5436,
+      "abstract": "Over the past decade, the Nomenclature Committee on Cell Death (NCCD) has formulated guidelines for the definition and interpretation of cell death from morphological, biochemical, and functional perspectives. Since the field continues to expand and novel mechanisms that orchestrate multiple cell de"
+    },
+    {
+      "title": "Methods in mammalian autophagy research.",
+      "year": 2010,
+      "venue": "Cell",
+      "citations": 4392,
+      "abstract": "30 pages, 8 figures, 1 table, supporting information https://doi.org/10.1371/journal.pone.0308461.-- Data Availability: The data underlying the results presented in the study are available through ONC’s Oceans 3.0 data management system (https://data.oceannetworks.ca/home)"
+    },
+    {
+      "title": "Guidelines for the use and interpretation of assays for monitoring autophagy",
+      "year": 2012,
+      "venue": "",
+      "citations": 4370,
+      "abstract": "In 2008, we published the first set of guidelines for standardizing research in autophagy. Since then, this topic has received increasing attention, and many scientists have entered the field. Our knowledge base and relevant new technologies have also been expanding. Thus, it is important to formula"
+    },
+    {
+      "title": "Development by self-digestion: molecular mechanisms and biological functions of autophagy.",
+      "year": 2004,
+      "venue": "Developmental Cell",
+      "citations": 3902,
+      "abstract": "Autophagy is the major cellular pathway for the degradation of long-lived proteins and cytoplasmic organelles. It involves the rearrangement of subcellular membranes to sequester cargo for delivery to the lysosome where the sequestered material is degraded and recycled. For many decades, it has been"
+    },
+    {
+      "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (4th edition)1",
+      "year": 2021,
+      "venue": "Autophagy",
+      "citations": 3734,
+      "abstract": "ABSTRACT In 2008, we published the first set of guidelines for standardizing research in autophagy. Since then, this topic has received increasing attention, and many scientists have entered the field. Our knowledge base and relevant new technologies have also been expanding. Thus, it is important t"
+    },
+    {
+      "title": "Bcl-2 antiapoptotic proteins inhibit Beclin 1-dependent autophagy.",
+      "year": 2005,
+      "venue": "Cell",
+      "citations": 3649,
+      "abstract": "Apoptosis and autophagy are both tightly regulated biological processes that play a central role in tissue homeostasis, development, and disease. The anti-apoptotic protein, Bcl-2, interacts with the evolutionarily conserved autophagy protein, Beclin 1. However, little is known about the functional "
+    },
+    {
+      "title": "Induction of autophagy and inhibition of tumorigenesis by beclin 1",
+      "year": 1999,
+      "venue": "Nature",
+      "citations": 3476,
+      "abstract": "The process of autophagy, or bulk degradation of cellular proteins through an autophagosomic-lysosomal pathway, is important in normal growth control and may be defective in tumour cells. However, little is known about the genetic mediators of autophagy in mammalian cells or their role in tumour dev"
+    },
+    {
+      "title": "Autophagy and the integrated stress response.",
+      "year": 2010,
+      "venue": "Molecules and Cells",
+      "citations": 3365,
+      "abstract": "Autophagy is a tightly regulated pathway involving the lysosomal degradation of cytoplasmic organelles or cytosolic components. This pathway can be stimulated by multiple forms of cellular stress, including nutrient or growth factor deprivation, hypoxia, reactive oxygen species, DNA damage, protein "
+    },
+    {
+      "title": "Autophagy in immunity and inflammation",
+      "year": 2011,
+      "venue": "Nature",
+      "citations": 3134,
+      "abstract": "Autophagy is an essential, homeostatic process by which cells break down their own components. Perhaps the most primordial function of this lysosomal degradation pathway is adaptation to nutrient deprivation. However, in complex multicellular organisms, the core molecular machinery of autophagy — th"
+    },
+    {
+      "title": "Guidelines for the use and interpretation of assays for monitoring autophagy in higher eukaryotes",
+      "year": 2008,
+      "venue": "Autophagy",
+      "citations": 2626,
+      "abstract": "Research in autophagy continues to accelerate,(1) and as a result many new scientists are entering the field. Accordingly, it is important to establish a standard set of criteria for monitoring macroautophagy in different organisms. Recent reviews have described the range of assays that have been us"
+    },
+    {
+      "title": "Biological Functions of Autophagy Genes: A Disease Perspective.",
+      "year": 2019,
+      "venue": "Cell",
+      "citations": 2366,
+      "abstract": "The lysosomal degradation pathway of autophagy plays a fundamental role in cellular, tissue, and organismal homeostasis and is mediated by evolutionarily conserved autophagy-related (ATG) genes. Definitive etiological links exist between mutations in genes that control autophagy and human disease, e"
+    },
+    {
+      "title": "Promotion of tumorigenesis by heterozygous disruption of the beclin 1 autophagy gene.",
+      "year": 2003,
+      "venue": "Journal of Clinical Investigation",
+      "citations": 2325,
+      "abstract": "Malignant cells often display defects in autophagy, an evolutionarily conserved pathway for degrading long-lived proteins and cytoplasmic organelles. However, as yet, there is no genetic evidence for a role of autophagy genes in tumor suppression. The beclin 1 autophagy gene is monoallelically delet"
+    },
+    {
+      "title": "Autophagy in cell death: an innocent convict?",
+      "year": 2005,
+      "venue": "Journal of Clinical Investigation",
+      "citations": 1776,
+      "abstract": "The visualization of autophagosomes in dying cells has led to the belief that autophagy is a nonapoptotic form of programmed cell death. This concept has now been evaluated using cells and organisms deficient in autophagy genes. Most evidence indicates that, at least in cells with intact apoptotic m"
+    },
+    {
+      "title": "Distinct Roles of Autophagy in the Heart During Ischemia and Reperfusion: Roles of AMP-Activated Protein Kinase and Beclin 1 in Mediating Autophagy",
+      "year": 2007,
+      "venue": "Circulation Research",
+      "citations": 1517,
+      "abstract": "Autophagy is an intracellular bulk degradation process for proteins and organelles. In the heart, autophagy is stimulated by myocardial ischemia. However, the causative role of autophagy in the survival of cardiac myocytes and the underlying signaling mechanisms are poorly understood. Glucose depriv"
+    },
+    {
+      "title": "Autophagy in mammalian development and differentiation",
+      "year": 2010,
+      "venue": "Nature Cell Biology",
+      "citations": 1511,
+      "abstract": "It has been known for many decades that autophagy, a conserved lysosomal degradation pathway, is highly active during differentiation and development. However, until the discovery of the autophagy-related (ATG) genes in the 1990s, the functional significance of this activity was unknown. Initially, "
+    },
+    {
+      "title": "Autophagic cell death: the story of a misnomer",
+      "year": 2008,
+      "venue": "Nature reviews. Molecular cell biology",
+      "citations": 1507,
+      "abstract": "Dying cells often display a large-scale accumulation of autophagosomes and hence adopt a morphology called autophagic cell death. In many cases, it is agreed that this autophagic cell death is cell death with autophagy rather than cell death by autophagy. Here, we evaluate the accumulating body of l"
+    },
+    {
+      "title": "Editorial :Guidelines for the use and interpretation of assays for monitoring autophagy (3rd edition). DOI: 10.1080/15548627.2015.1100356;WOS:000373595400001; 2-s2.0-85013763791&;PMID: 26799652",
+      "year": 2016,
+      "venue": "",
+      "citations": 1468,
+      "abstract": "Aging is characterized by the progressive loss of physiological function in all organisms. Remarkably, the aging process can be modulated by environmental modifications, including diet and small molecules. The natural compound nordihydroguaiaretic acid (NDGA) robustly increases lifespan in flies and"
+    },
+    {
+      "title": "Autophagy modulation as a potential therapeutic target for diverse diseases",
+      "year": 2012,
+      "venue": "Nature reviews. Drug discovery",
+      "citations": 1410,
+      "abstract": "Autophagy is an essential, conserved lysosomal degradation pathway that controls the quality of the cytoplasm by eliminating protein aggregates and damaged organelles. It begins when double-membraned autophagosomes engulf portions of the cytoplasm, which is followed by fusion of these vesicles with "
+    },
+    {
+      "title": "Molecular definitions of autophagy and related processes",
+      "year": 2017,
+      "venue": "EMBO Journal",
+      "citations": 1409,
+      "abstract": "Over the past two decades, the molecular machinery that underlies autophagic responses has been characterized with ever increasing precision in multiple model organisms. Moreover, it has become clear that autophagy and autophagy-related processes have profound implications for human pathophysiology."
+    },
+    {
+      "title": "Autophagy Genes Are Essential for Dauer Development and Life-Span Extension in C. elegans",
+      "year": 2003,
+      "venue": "Science",
+      "citations": 1344,
+      "abstract": "Both dauer formation (a stage of developmental arrest) and adult life-span in Caenorhabditis elegans are negatively regulated by insulin-like signaling, but little is known about cellular pathways that mediate these processes. Autophagy, through the sequestration and delivery of cargo to the lysosom"
+    },
+    {
+      "title": "JNK1-mediated phosphorylation of Bcl-2 regulates starvation-induced autophagy.",
+      "year": 2008,
+      "venue": "Molecules and Cells",
+      "citations": 1337,
+      "abstract": "Starvation induces autophagy to preserve cellular homeostasis in virtually all eukaryotic organisms. However, the mechanisms by which starvation induces autophagy are not completely understood. In mammalian cells, the antiapoptotic protein, Bcl-2, binds to Beclin 1 during nonstarvation conditions an"
+    },
+    {
+      "title": "The autophagy-related protein beclin 1 shows reduced expression in early Alzheimer disease and regulates amyloid beta accumulation in mice.",
+      "year": 2008,
+      "venue": "Journal of Clinical Investigation",
+      "citations": 1145,
+      "abstract": "Mammalian cells remove misfolded proteins using various proteolytic systems, including the ubiquitin (Ub)-proteasome system (UPS), chaperone mediated autophagy (CMA) and macroautophagy. The majority of misfolded proteins are degraded by the UPS, in which Ub-conjugated substrates are deubiquitinated,"
+    },
+    {
+      "title": "Autophagy in human health and disease.",
+      "year": 2013,
+      "venue": "New England Journal of Medicine",
+      "citations": 1101,
+      "abstract": "<h4>Significance</h4>In eukaryotes, autophagy represents a highly evolutionary conserved process, through which macromolecules and cytoplasmic material are degraded into lysosomes and recycled for biosynthetic or energetic purposes. Dysfunction of the autophagic process has been associated with the "
+    },
+    {
+      "title": "Autophagy in malignant transformation and cancer progression",
+      "year": 2015,
+      "venue": "EMBO Journal",
+      "citations": 1096,
+      "abstract": "Autophagy plays a key role in the maintenance of cellular homeostasis. In healthy cells, such a homeostatic activity constitutes a robust barrier against malignant transformation. Accordingly, many oncoproteins inhibit, and several oncosuppressor proteins promote, autophagy. Moreover, autophagy is r"
+    },
+    {
+      "title": "Exercise-induced BCL2-regulated autophagy is required for muscle glucose homeostasis",
+      "year": 2012,
+      "venue": "Nature",
+      "citations": 1085,
+      "abstract": "Exercise has beneficial effects on human health, including protection against metabolic disorders such as diabetes. However, the cellular mechanisms underlying these effects are incompletely understood. The lysosomal degradation pathway, autophagy, is an intracellular recycling system that functions"
+    },
+    {
+      "title": "Essential versus accessory aspects of cell death: recommendations of the NCCD 2015",
+      "year": 2014,
+      "venue": "Cell Death and Differentiation",
+      "citations": 955,
+      "abstract": "Cells exposed to extreme physicochemical or mechanical stimuli die in an uncontrollable manner, as a result of their immediate structural breakdown. Such an unavoidable variant of cellular demise is generally referred to as ‘accidental cell death’ (ACD). In most settings, however, cell death is init"
+    },
+    {
+      "title": "Unveiling the roles of autophagy in innate and adaptive immunity",
+      "year": 2007,
+      "venue": "Nature reviews. Immunology",
+      "citations": 940,
+      "abstract": "Cells digest portions of their interiors in a process known as autophagy to recycle nutrients, remodel and dispose of unwanted cytoplasmic constituents. This ancient pathway, conserved from yeast to humans, is now emerging as a central player in the immunological control of bacterial, parasitic and "
+    },
+    {
+      "title": "Autophagy, immunity, and microbial adaptations.",
+      "year": 2009,
+      "venue": "Cell Host and Microbe",
+      "citations": 906,
+      "abstract": "Autophagy adjusts cellular biomass and function in response to diverse stimuli, including infection. Autophagy plays specific roles in shaping immune system development, fueling host innate and adaptive immune responses, and directly controlling intracellular microbes as a cell-autonomous innate def"
+    }
+  ]
+}

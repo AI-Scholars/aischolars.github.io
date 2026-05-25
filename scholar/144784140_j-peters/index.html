@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="AI Scholar learns scientific taste from publication histories and predicts future research trajectories for elite researchers.">
+    <meta name="theme-color" content="#f7f5ef">
+    <title>AI Scholar | Predicting Future Research Trajectories</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <script>
+      window.AI_SCHOLAR_BASE = location.pathname.startsWith("/aischolars.github.io")
+        ? "/aischolars.github.io"
+        : "";
+      document.write('<link rel="stylesheet" href="' + window.AI_SCHOLAR_BASE + '/assets/styles.css">');
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="/" data-link data-route="/">
+          <span class="brand-mark">AI</span>
+          <span>AI Scholar</span>
+        </a>
+        <div class="nav-links">
+          <a href="/scholars" data-link data-route="/scholars">Scholars</a>
+          <a href="/data/stats.json" data-static-path="/data/stats.json">Data</a>
+          <a href="https://github.com/AI-Scholars/aischolars.github.io" rel="noreferrer">GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="app" class="app-shell" tabindex="-1">
+      <section class="loading-screen" aria-live="polite">
+        <div class="loading-mark">AI</div>
+        <p>Loading AI Scholar data...</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>AI Scholar</strong>
+        <span>Learning scientific taste from publication histories.</span>
+      </div>
+      <span>Research preview</span>
+    </footer>
+
+    <script>
+      document.write('<script src="' + window.AI_SCHOLAR_BASE + '/assets/app.js" defer><\/script>');
+    </script>
+  </body>
+</html>

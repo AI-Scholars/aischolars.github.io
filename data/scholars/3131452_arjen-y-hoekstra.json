@@ -1,0 +1,1264 @@
+{
+  "slug": "3131452_arjen-y-hoekstra",
+  "displaySlug": "arjen-y-hoekstra",
+  "name": "Arjen Y. Hoekstra",
+  "authorId": "3131452",
+  "affiliations": [],
+  "hIndex": 0,
+  "citationCount": 0,
+  "paperCount": 0,
+  "proposalCount": 50,
+  "ideaCount": 67,
+  "proposals": [
+    {
+      "id": "10c89457f1374175dc888a690d2a3f6b567da7c3_ac_001_prop",
+      "title": "Spatially Differentiated Gray Water Footprints: Integrating Local Water Quality Standards and Dilution Capacity for Livestock and Crop Production",
+      "motivation": "The standard gray water footprint (GWF) methodology, as defined in the Water Footprint Assessment Manual (2011), assumes uniform ambient water quality standards and unlimited dilution capacity, which misrepresents real-world water pollution impacts. This oversimplification is particularly problematic for agricultural water use assessments, as seen in Hoekstra's prior work on livestock and crop systems in Kenya and the Yellow River Basin, where local environmental conditions vary drastically. A spatially explicit GWF is critical for accurate resource productivity comparisons and for informing sustainable water allocation and pollution mitigation policies.",
+      "hypothesis": "We hypothesize that calculating gray water footprints using spatially variable, locally relevant water quality standards and river-specific dilution capacities will yield significantly different, and more policy-relevant, estimates of water productivity and virtual water flows for key agricultural commodities compared to the standard uniform method.",
+      "method": "The research will extend the existing GWF framework by developing a high-resolution geospatial model. For selected case studies (e.g., Kenyan livestock systems, Yellow River Basin crop production), we will compile spatially explicit data on: (1) pollutant loads from manure and fertilizers using life-cycle inventory data; (2) local ambient water quality standards (e.g., national maximum contaminant concentrations for nitrogen, phosphorus); and (3) natural dilution capacity derived from river discharge data (e.g., from GRDC databases) and catchment characteristics. The model will calculate GWF at the sub-catchment level using the formula GWF = L / (c_max - c_nat), where L is load, c_max is the local standard, and c_nat is the local background concentration, all defined per spatial unit.",
+      "contribution": "This work will provide a major methodological advancement in water footprint accounting by introducing a spatially differentiated GWF. It will deliver more accurate and location-specific assessments of water pollution impacts from agriculture, enabling better comparisons of water and land productivity between regions and production systems. The results will directly inform scenarios for future resource use that account for local assimilation limits, supporting more targeted and effective water quality management.",
+      "novelty": "While previous studies, including Hoekstra's own work, have applied the standard GWF, none have systematically integrated spatially variable legal water quality standards and natural dilution capacities into the core calculation on a catchment scale for agricultural commodities. This moves beyond a simple volume-based assessment to a value-based impact assessment of water pollution.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "10c89457f1374175dc888a690d2a3f6b567da7c3_mt_004_prop",
+      "title": "An Agent-Based Model of Farmer and Consumer Decisions to Simulate Water Footprint Dynamics in Kenyan Mixed Crop-Livestock Systems",
+      "motivation": "Current water footprint and virtual water assessments often rely on static, top-down scenarios, missing the critical feedback between local resource productivity, farmer adaptation, and market signals. Understanding how individual decisions aggregate to shape regional water sustainability is vital for effective policy, especially in water-scarce regions like Kenya where crop and livestock production compete for limited land and water.",
+      "hypothesis": "We hypothesize that simulating heterogeneous agent behaviors—including farmers responding to water productivity and consumers shifting diets—will reveal non-linear thresholds and trade-offs in regional water footprints that are invisible to aggregate scenario analysis.",
+      "method": "We will develop an agent-based model (ABM) using a structure similar to established frameworks like NetLogo or Repast. Farmer agents will make land-use and livestock management decisions based on rules derived from Hoekstra's pre-2026 Kenyan productivity data, optimizing for profit under water constraints. Consumer agents will influence markets through demand elasticity for water-intensive goods. The model will be validated against historical water footprint data from the Yellow River Basin and Kenyan studies.",
+      "contribution": "This work will provide a dynamic, bottom-up simulation tool to explore future resource use, linking micro-level decisions to macro-level water sustainability indicators. It will advance the field by quantifying how behavioral heterogeneity and local adaptation strategies influence the volume and value of virtual water flows in a coupled human-natural system.",
+      "novelty": "While ABMs are used in land-use science, their application to integrate water footprint accounting with empirically grounded decision rules for both production (crop/livestock) and consumption agents represents a novel synthesis of Hoekstra's established footprint methods with complex systems simulation.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "1956d8f3f6d08c0054a3b3c8dc44e390e93944d2_ac_001_prop",
+      "title": "Dynamic Environmental Flow Requirements for Sustainable Water Allocation: A Spatially-Explicit, Ecosystem-Demand Model for River Basins",
+      "motivation": "Current water footprint and allocation assessments, including those for livestock and crop production, often rely on static environmental flow requirement (EFR) thresholds (e.g., the widely used 80% rule). These fixed percentages fail to capture the seasonal variability of river flows and the specific ecological needs of different river reaches, potentially leading to unsustainable water abstractions or inefficient water productivity analyses. Integrating dynamic EFRs is crucial for accurately assessing the water sustainability of agricultural production systems and future resource use scenarios.",
+      "hypothesis": "Replacing fixed EFR thresholds with dynamic, ecosystem-demand models that vary by season and ecological context will yield significantly different and more ecologically sustainable estimates of blue water availability for human activities, including livestock and crop production, within river basins.",
+      "method": "We will develop a spatially-explicit hydrological-ecological model building on pre-2026 methods like the WaterGAP model and the Ecological Limits of Hydrologic Alteration (ELOHA) framework. The model will integrate high-resolution seasonal hydrological data with ecological response curves for key indicator species or ecosystem functions, defined per river reach. Water availability for human use will be calculated as natural runoff minus these dynamic EFRs. We will apply this model to the Yellow River Basin (linking to Hoekstra's prior work) and a major Kenyan river basin (linking to livestock productivity studies), comparing water availability and sustainability indicators against results from static EFR methods under various future climate and land-use scenarios.",
+      "contribution": "This research will provide a novel methodological framework for calculating dynamic environmental flows, directly enhancing the accuracy of water footprint and virtual water flow assessments for agricultural commodities. It will offer basin-specific insights for water allocation planning that better balance ecosystem health and agricultural water productivity, contributing to more robust scenarios for future resource use.",
+      "novelty": "While the concept of variable EFRs exists, this proposal innovates by directly integrating a dynamic, ecosystem-demand-driven EFR model into the water footprint and agricultural productivity assessment framework pioneered by Hoekstra, moving beyond simple hydrological rules-of-thumb to a process-based ecological model.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "1956d8f3f6d08c0054a3b3c8dc44e390e93944d2_ac_002_prop",
+      "title": "Dynamic population mapping for water scarcity assessment: Integrating seasonal migration and urbanization in the Kenyan context",
+      "motivation": "Current water footprint and scarcity assessments, including our own work in Kenya, often rely on static, administrative-level population data. This fails to capture critical intra-annual dynamics, such as pastoralist seasonal migration and rapid urbanization, which redistribute water demand and exposure to scarcity across basins. A static view risks misallocating virtual water flows and misinforming policies on future resource use under climate and demographic change.",
+      "hypothesis": "Accounting for seasonal and long-term population mobility will significantly alter the spatial and temporal mapping of people to water-scarce basins in Kenya, leading to a more accurate assessment of pressure on water resources for both crop and livestock production systems.",
+      "method": "We will develop a spatio-temporal population redistribution model for Kenya, combining high-resolution census data, satellite-derived nighttime lights for urban growth, and movement data from mobile network operators (where available pre-2026) or literature-based migration calendars for pastoralist communities. This dynamic population layer will be integrated into a revised Water Footprint Assessment framework to calculate monthly basin-specific water scarcity indices (WSI) for the period 2010-2025. Scenarios will compare static vs. dynamic population assumptions on water scarcity for people and for key agricultural sectors (e.g., dairy, maize).",
+      "contribution": "This research will provide a novel methodology for integrating human mobility into hydrological sustainability assessments. It will yield more realistic estimates of how many people and which production systems are exposed to water scarcity at different times of the year, directly informing Kenya's national water and agricultural development plans.",
+      "novelty": "While previous studies have noted the importance of dynamics, this work explicitly models and quantifies the impact of both seasonal migration and secular urbanization trends on water footprint and scarcity metrics, moving beyond a correction factor to a integrated spatio-temporal assessment framework.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "1956d8f3f6d08c0054a3b3c8dc44e390e93944d2_ac_003_prop",
+      "title": "Unmasking Scarcity: A Sub-Basin Analysis of Water and Land Productivity Hotspots in Heterogeneous River Basins",
+      "motivation": "Water footprint and resource productivity assessments are often aggregated at the river-basin scale, a practice recommended for water management. However, in large, heterogeneous basins, this averaging may obscure critical local scarcities and unsustainable resource use, leading to policies that are ineffective or even exacerbate local crises. This is particularly relevant for agricultural and livestock systems, where water and land productivity vary dramatically with local agro-ecology and management.",
+      "hypothesis": "River-basin scale aggregation of water and land use metrics significantly masks sub-basin hotspots of water scarcity and low resource productivity, especially for water-intensive crop and livestock production systems. Identifying these hotspots is essential for targeted, sustainable resource management.",
+      "method": "The study will apply the Water Footprint Assessment framework at multiple spatial scales within one or two large, heterogeneous river basins (e.g., the Yellow River Basin, Kenya's Tana River Basin). Using pre-2026 data (e.g., FAO, hydrological models, agricultural statistics), we will first calculate basin-average blue and green water footprints and land/productivity ratios for key crops and livestock, following Hoekstra's established methods. We will then systematically disaggregate these calculations to sub-basin or administrative unit levels. Hotspots will be identified by comparing local water scarcity indices and resource productivities against basin averages and sustainability thresholds, using spatial statistical analysis to quantify the degree of masking.",
+      "contribution": "This research will provide a methodological demonstration of the risks of spatial aggregation in water footprint studies. It will yield concrete, spatially explicit evidence of hidden resource pressures, offering a refined lens for policy targeting. The findings will advance the field of sustainable resource use by strengthening the spatial resolution and policy relevance of footprint indicators.",
+      "novelty": "While water footprint studies exist at various scales, this work explicitly tests the *information loss* caused by basin-level aggregation—a common practice—and quantifies the mismatch between aggregate basin sustainability and local realities for integrated crop-livestock systems.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "1956d8f3f6d08c0054a3b3c8dc44e390e93944d2_mt_003_prop",
+      "title": "Optimizing Basin-Scale Water Productivity: A Network Flow Model for Allocating Scarce Water Among Competing Agricultural Sectors",
+      "motivation": "Growing water scarcity and competing demands from crops and livestock challenge sustainable resource use in river basins. Pre-2026 water footprint and land productivity studies, like those in Kenya and the Yellow River Basin, quantify pressures but lack prescriptive frameworks for optimal allocation. Applying formal optimization from logistics can bridge this gap, moving from descriptive accounting to actionable management.",
+      "hypothesis": "Applying a minimum-cost network flow optimization model to a river basin system will identify water allocation pathways that maximize aggregate economic water productivity (value per unit water) across interconnected crop and livestock production zones, outperforming current or proportional allocation rules.",
+      "method": "We will model the river basin as a directed graph with nodes representing water sources, demand zones (for specific crops and livestock), and sinks. Arcs represent flow possibilities with capacities (e.g., transfer limits) and costs. Building on Hoekstra's water productivity data, the objective function will minimize the total 'cost' of water use, defined as the foregone economic value (inverse of water productivity). We will implement and solve the model using the Simplex algorithm or a dedicated network solver (e.g., the Network Simplex) within an operations research framework, applied to a case study basin like the Yellow River.",
+      "contribution": "This work will provide a novel, optimization-based decision-support tool for basin planners to allocate water where it generates the most economic value. It will advance water footprint analysis from a diagnostic to a prescriptive science, offering concrete scenarios for improving system-wide water productivity while considering physical network constraints.",
+      "novelty": "While network analysis is established in hydrology for physical flow, its application to optimize economic water productivity—synthesizing water footprint data, crop/livestock value, and logistical network optimization—for agricultural water allocation between sectors is a novel interdisciplinary synthesis.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "1956d8f3f6d08c0054a3b3c8dc44e390e93944d2_mt_004_prop",
+      "title": "Diversifying water supply portfolios: A financial risk theory approach to mitigating basin-level scarcity risk",
+      "motivation": "Water scarcity risk in river basins is increasing due to climate variability and demand growth, threatening agricultural and economic productivity. Current water footprint and virtual water flow analyses often assess volumetric use but do not formally quantify the risk exposure of a basin's water supply system to climatic and hydrological shocks. A robust, quantitative framework for managing this risk is urgently needed for sustainable resource planning.",
+      "hypothesis": "We hypothesize that a river basin's exposure to water scarcity risk can be significantly reduced by diversifying its water supply sources, analogous to how financial portfolio diversification reduces investment risk, and that this risk can be quantified using metrics from Modern Portfolio Theory (MPT).",
+      "method": "We will adapt the Mean-Variance Portfolio (MVP) optimization framework from financial theory. Water sources (e.g., surface runoff, groundwater, reservoir storage, virtual water imports via crops/livestock) are treated as assets. Their 'returns' are annual available water volumes, characterized by historical time series (mean yield and variance/covariance). We will construct an 'efficient frontier' of water portfolios that minimize scarcity risk (variance) for a given level of expected water supply, using quadratic programming. The analysis will be applied to the Yellow River Basin, integrating crop and livestock water productivity data from Hoekstra's prior work to assess the risk-mitigation value of different production and trade scenarios.",
+      "contribution": "This work will provide the first formal application of financial portfolio risk theory to physical water resource management at the basin scale. It will deliver a quantitative metric for basin water security and a decision-support tool for optimizing water allocation and virtual water trade strategies under uncertainty. It directly extends the water footprint concept into the domain of risk management.",
+      "novelty": "While water footprint and virtual water studies are established, applying Modern Portfolio Theory to model water sources as a diversified investment portfolio to minimize scarcity risk is a novel methodological crossover. It moves beyond descriptive footprint accounting to prescriptive, risk-averse resource optimization.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "1956d8f3f6d08c0054a3b3c8dc44e390e93944d2_sd_001_prop",
+      "title": "Mapping intra-urban water scarcity: A monthly water footprint and scarcity assessment for Nairobi, Kenya",
+      "motivation": "Global water scarcity assessments, including the water footprint scarcity index, are typically conducted at national or river basin scales, masking critical sub-national heterogeneity. Rapid urbanization, especially in water-stressed regions like Kenya, concentrates demand and creates localized hotspots of water stress and inequitable access within cities. A city-scale, temporally explicit assessment is urgently needed to inform targeted urban water management and infrastructure planning.",
+      "hypothesis": "Applying a monthly water footprint and scarcity framework at high spatial resolution within a major city will reveal significant intra-urban disparities in water stress, driven by the spatial distribution of water-intensive economic activities (e.g., livestock-based industries, crop processing) and residential consumption patterns, which are not captured by aggregate city-level analyses.",
+      "method": "The method adapts Hoekstra's monthly blue water footprint scarcity framework to the city scale. We will delineate Nairobi's water supply catchments and sub-catchments using GIS. Monthly blue water footprints for key sectors (municipal supply, livestock processing, commercial agriculture) will be spatially disaggregated using high-resolution land use, industrial, and population data. These will be compared to locally available monthly blue water flows, derived from hydrological models and gauge data, to calculate a monthly water scarcity index per sub-catchment or district. Scenarios of urban growth and climate variability will be tested.",
+      "contribution": "This work will produce the first high-resolution, sector-specific monthly water scarcity map for a major African city, directly linking local water consumption to available resources. It will advance the water footprint methodology by operationalizing it for intra-urban analysis. The findings will provide a quantitative evidence base for identifying priority areas for water conservation and infrastructure investment to enhance urban water security and equity.",
+      "novelty": "While the water footprint scarcity index is established for larger regions, its application to dissect water stress *within* a single city, integrating spatially explicit data on both production (e.g., from livestock and crop value chains) and municipal supply, represents a significant downscaling and novel integration of the framework with urban geography.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "1956d8f3f6d08c0054a3b3c8dc44e390e93944d2_sd_002_prop",
+      "title": "Mapping Global Water Abundance and Surplus: Identifying Potential Source Basins for Sustainable Water Transfers",
+      "motivation": "Water footprint and scarcity assessments predominantly focus on regions of deficit, framing water as a constraint. This deficit-centric view overlooks the strategic potential of regions with persistent water surplus. Identifying and quantifying these surpluses is crucial for informing long-term, large-scale water security strategies, including the feasibility of virtual water trade reorientation or physical water transfer projects, within planetary boundaries.",
+      "hypothesis": "We hypothesize that a systematic, high-resolution global analysis will reveal specific river basins with significant, reliable, and sustainable water surpluses, defined by consistent positive water yield after accounting for environmental flow requirements and local renewable resource use.",
+      "method": "We will apply and extend the Water Footprint Assessment framework, inverting the typical scarcity analysis. Using pre-2026 global datasets (e.g., WaterGAP, FAO AQUASTAT, and climate reanalysis), we will calculate long-term (1990-2020) monthly blue water availability minus environmental flow requirements and current anthropogenic withdrawals. Surplus will be defined as the reliable, non-damaging excess. The analysis will be conducted at the river basin scale, employing statistical methods to distinguish persistent surplus from inter-annual variability, and will integrate land productivity metrics (inspired by Hoekstra's Kenya work) to assess the opportunity cost of water in surplus regions.",
+      "contribution": "This study will produce the first global, basin-level inventory of sustainable water surplus, shifting the discourse from scarcity management to abundance sourcing. It will provide a quantitative, spatially-explicit evidence base for discussing water transfer potentials and inform scenarios on redirecting virtual water flows from high-surplus, low-productivity regions to high-deficit, high-productivity ones.",
+      "novelty": "While water scarcity is well-mapped, a systematic global inventory of *sustainable surplus* for strategic resource planning is novel. It inverts the standard water footprint problem and integrates surplus quantification with considerations of local land-water productivity, moving beyond purely hydrological metrics.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "2481e9cfbc1211c831d0c18751753142ccddc35f_ac_002_prop",
+      "title": "Mapping and Diagnosing Chronic Water Surplus Basins: A Framework for Flood Risk Mitigation and Strategic Storage",
+      "motivation": "Water footprint and scarcity assessments predominantly focus on deficits, often overlooking basins with persistent water surplus, which represent significant flood risks and lost opportunities for strategic water storage. In the pre-2026 context of increasing hydrological variability and extreme rainfall events, a systematic framework to identify and characterize these surplus basins is critical for integrated water resources management, complementing scarcity-focused analyses.",
+      "hypothesis": "We hypothesize that inverting conventional water scarcity indicators can robustly identify river basins with chronic water surplus, and that cross-analyzing these surpluses with land use (e.g., cropland, pasture) and storage infrastructure data will reveal distinct typologies for flood risk and potential storage development.",
+      "method": "We will apply the water footprint assessment framework, using long-term (e.g., 1990-2020) hydrological data to calculate the blue water footprint of production and available runoff at the basin scale. A 'surplus index' will be defined as the ratio of available blue water to the consumptive water footprint, inverted from standard scarcity indicators. Basins with an index consistently above a defined threshold will be mapped globally. We will then perform a spatial correlation analysis, integrating pre-2026 datasets on land productivity (crop and livestock, following Hoekstra's Kenya study), existing reservoir capacity, and flood occurrence records to classify surplus basins.",
+      "contribution": "This work will provide the first global, spatially explicit inventory and typology of chronic water surplus basins, shifting the discourse from pure scarcity to surplus management. It will offer a diagnostic tool for policymakers to prioritize areas for flood mitigation, managed aquifer recharge, or the strategic development of storage to enhance water and land productivity, thereby linking surplus management to food security.",
+      "novelty": "While water scarcity is well-studied, systematically defining and mapping 'water surplus basins' as a direct conceptual inversion of scarcity indicators is novel. The integration of this surplus framework with agricultural productivity and storage potential analysis moves beyond flood hazard mapping to a resource-oriented perspective on surplus water.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "2481e9cfbc1211c831d0c18751753142ccddc35f_ac_005_prop",
+      "title": "Moving Baselines for Water Footprint Accounting: Quantifying the Impact of Non-Stationary Hydrology on Livestock and Crop Water Productivity Assessments",
+      "motivation": "Water footprint and virtual water flow assessments, foundational to Hoekstra's Water Footprint Network framework, typically rely on long-term average runoff data assuming climatic stationarity. However, observed long-term climate shifts and anthropogenic changes render this 'static baseline' increasingly inaccurate, potentially misrepresenting water scarcity and the true water productivity of agricultural systems. This is critical for informing sustainable resource use in regions like Kenya and the Yellow River Basin, where water for livestock and crops is under pressure.",
+      "hypothesis": "We hypothesize that using a moving baseline for natural runoff, which accounts for decadal climate trends, will significantly alter calculated water footprints and water productivity metrics for key livestock and crop systems compared to static baseline methods, leading to different conclusions for future resource use scenarios.",
+      "method": "We will apply the water footprint assessment framework to case studies in Kenya and the Yellow River Basin, focusing on livestock (e.g., milk production) and major crops. The core innovation is replacing the standard static long-term average (e.g., 1961-1990) with a 30-year moving window baseline (e.g., 1961-1990, 1971-2000, ..., 1991-2020) for calculating blue and green water availability. Water productivity (output per unit water) and land productivity will be recalculated for each moving period. Trends will be analyzed and fed into scenario analyses for future resource use.",
+      "contribution": "This work will provide a methodological advancement for water footprint accounting under climate non-stationarity, yielding more temporally accurate and policy-relevant water productivity indicators. It will directly improve the robustness of scenario-based projections for agricultural water and land use, a core theme in Hoekstra's recent work.",
+      "novelty": "While non-stationarity is acknowledged in climatology, its explicit integration into the operational water footprint accounting framework for agricultural productivity analysis is novel. This moves beyond sensitivity analysis to systematically quantify the bias introduced by the standard static baseline assumption.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "2481e9cfbc1211c831d0c18751753142ccddc35f_fw_005_prop",
+      "title": "Integrating groundwater dynamics into water scarcity footprints: A temporally explicit assessment for livestock and crop production systems",
+      "motivation": "Current water scarcity footprint assessments, including the Water Footprint Network's blue water scarcity indicator, often rely on static or annual average renewable surface water availability. This fails to capture the critical dynamics of groundwater systems, where unsustainable depletion is a major threat to food security and ecosystem health, particularly in arid and semi-arid agricultural regions. A temporally explicit integration of groundwater storage change is essential for accurately attributing water scarcity impacts to specific agricultural commodities, such as those studied in Dr. Hoekstra's work on Kenya and the Yellow River Basin.",
+      "hypothesis": "Incorporating monthly groundwater depletion and recharge dynamics into water scarcity footprint calculations will significantly alter the assessed water scarcity impact of key livestock and crop products, revealing hotspots of unsustainable groundwater use that are masked by annual average assessments.",
+      "method": "We will extend the existing water scarcity footprint methodology by integrating GRACE (Gravity Recovery and Climate Experiment) satellite-derived monthly terrestrial water storage anomaly data (available pre-2026) and groundwater depletion estimates from PCR-GLOBWB or similar global hydrological models. For specific study regions (e.g., key agricultural basins in Kenya and China), we will calculate a revised monthly blue water scarcity indicator that subtracts net groundwater depletion from renewable blue water availability. This dynamic scarcity factor will then be applied to spatially and temporally explicit blue water footprints of livestock (milk, meat) and major crops, using established crop water use models and the MESSAGEix framework for scenario development.",
+      "contribution": "This research will provide a more physically accurate and temporally dynamic water scarcity footprint indicator, directly enhancing the assessment of water productivity for land and livestock. It will yield novel insights into the contribution of groundwater depletion to the virtual water flows of agricultural trade, supporting more robust scenario analysis for sustainable future resource use under climate change.",
+      "novelty": "While groundwater depletion is recognized as a problem, its explicit, temporally resolved integration into product-level water scarcity footprints—bridging satellite-based hydrology with agricultural production analysis—remains a methodological gap. This moves beyond static annual averages to link the timing of groundwater use with the seasonality of crop and livestock production.",
+      "dimension": "Future Work"
+    },
+    {
+      "id": "2481e9cfbc1211c831d0c18751753142ccddc35f_mt_001_prop",
+      "title": "Developing a Standardized Water Scarcity Index (SWSI): A probabilistic framework for assessing water stress across sectors and scales",
+      "motivation": "Current water scarcity assessments, including the water footprint and scarcity indices, often rely on static annual averages of water use versus availability, failing to capture the probabilistic and temporally variable nature of scarcity. This limits the ability to compare scarcity consistently across different regions, time periods, and economic sectors (e.g., crop, livestock). A standardized, probabilistic index is urgently needed to inform robust scenario analysis for future resource use under climate variability.",
+      "hypothesis": "Applying the statistical logic of the Standardized Precipitation Index (SPI) to long-term water footprint and availability data will yield a robust, spatially and temporally comparable Standardized Water Scarcity Index (SWSI). This index will effectively characterize the frequency and intensity of water scarcity events across different sectors.",
+      "method": "The method adapts the SPI algorithm, which fits a long-term precipitation record to a probability distribution (e.g., gamma) and transforms it to a standard normal distribution. Here, the input variable will be a monthly or annual time series of the water scarcity index (WSI), defined as the ratio of total blue water footprint to blue water availability for a given basin. We will compute this for major river basins (e.g., the Yellow River Basin) using pre-2026 global datasets. The resulting SWSI values will categorize scarcity events (e.g., SWSI < -2 for extreme scarcity). The analysis will be applied comparatively between agricultural sectors, specifically disaggregating crop and livestock production water use, building on Hoekstra's prior productivity frameworks.",
+      "contribution": "This research will provide the first standardized, probabilistic metric for water scarcity that enables direct comparison of scarcity severity across different climates and time scales. It will advance water footprint science by moving from static annual averages to a risk-based assessment, offering a more powerful tool for evaluating resource use scenarios and sustainability in water-intensive sectors like agriculture.",
+      "novelty": "While SPI is well-established for meteorological drought, its direct application to create a standardized index for integrated water footprint-based scarcity is novel. This bridges a critical gap between climatological drought indices and socio-economic water use indicators, creating a common statistical language for scarcity.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "2481e9cfbc1211c831d0c18751753142ccddc35f_mt_004_prop",
+      "title": "Integrating satellite-derived soil moisture and groundwater storage into the water footprint accounting framework: A high-resolution assessment for Kenyan livestock systems",
+      "motivation": "Current water footprint assessments, including Hoekstra's own work on livestock in Kenya, often rely on coarse hydrological models or climate data for the 'blue water availability' term, introducing significant uncertainty. This limits the accuracy of water scarcity footprint calculations and the reliability of scenarios for future agricultural resource use. The increasing availability of satellite-based hydrological data (pre-2026) offers a transformative opportunity to directly observe key components of the terrestrial water cycle at relevant spatiotemporal scales.",
+      "hypothesis": "That incorporating direct, spatially explicit remote sensing observations of root-zone soil moisture (from missions like SMAP and SMOS) and terrestrial water storage anomalies (from GRACE/GRACE-FO) into the calculation of monthly blue water availability will yield significantly different, and more physically accurate, water scarcity footprints for livestock production in Kenya compared to conventional modeling approaches.",
+      "method": "We will use a high-resolution (e.g., 1 km) monthly water balance approach for Kenya, integrating SMAP Level-4 root-zone soil moisture data and GRACE-based groundwater storage anomalies from the JPL Mascons solution to estimate monthly blue water availability. This will be compared against availability derived from the WaterGAP model, a standard in water footprint studies. The new availability term will be integrated into the water footprint accounting framework to compute scarcity-adjusted blue water footprints for major livestock systems (dairy, beef, poultry), following the spatial-explicit methodology of Hoekstra's prior Kenya work. Statistical analysis (e.g., paired t-tests, spatial correlation) will quantify differences.",
+      "contribution": "This research will provide a novel, observation-based method for quantifying water availability in environmental footprint assessments, moving the field from reliance on models to direct measurement. It will deliver a more robust, spatially detailed assessment of water scarcity pressures associated with Kenyan livestock, directly informing the 'future resource use' scenarios central to Hoekstra's recent papers. The developed methodology will be a blueprint for applying satellite hydrology to footprint studies globally.",
+      "novelty": "While remote sensing data is used in hydrology, its direct integration into the operational water footprint accounting framework to replace modeled availability is novel. This approach moves beyond using satellites only for land use or crop classification, applying them to dynamically constrain the denominator of the scarcity footprint equation, a critical innovation for the field.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "2481e9cfbc1211c831d0c18751753142ccddc35f_sd_003_prop",
+      "title": "Inverse Water Footprint Allocation: A Spatial Optimization Framework for Sectoral Re-distribution Under Scarcity Constraints",
+      "motivation": "Water footprint accounting has excelled at diagnosing water use but offers limited prescriptive guidance for resource allocation under scarcity. Existing forward models project footprints from given production, but water managers face the inverse problem: given a binding water scarcity constraint, how should water footprints be spatially re-allocated across sectors (e.g., crops, livestock, industry) to maximize economic or nutritional value? This gap hinders the transition from footprint analysis to actionable blueprints for sustainable resource use.",
+      "hypothesis": "We hypothesize that solving the inverse allocation problem—optimizing the spatial distribution of sectoral water footprints against a scarcity constraint—will reveal non-intuitive, high-productivity allocation patterns that significantly improve aggregate water productivity compared to current or projected baseline distributions.",
+      "method": "We will develop a spatial optimization model building on the Multi-Regional Input-Output (MRIO) and footprint accounting frameworks. The model will treat sectoral water footprints in sub-national units (e.g., Kenyan counties or Yellow River basin provinces) as decision variables. Using linear programming, we will minimize total water scarcity impact (using pre-2026 water stress indices) or maximize total economic/nutritional output (value vs. volume, per Hoekstra's work), subject to constraints on total available water, land suitability, and demand for products. The algorithm will be tested with scenarios varying constraints on trade (virtual water flows) and land use, using pre-2026 data on crop/livestock water and land productivity.",
+      "contribution": "This work will provide a novel decision-support tool that inverts the standard footprint perspective, generating optimal spatial blueprints for water use. It will advance water footprint science from descriptive analysis to prescriptive planning. The results will offer concrete, spatially explicit insights for policymakers on how to re-allocate water resources and production patterns to alleviate scarcity.",
+      "novelty": "While footprint studies typically map existing or projected water use, this proposal explicitly solves for the optimal spatial allocation, treating footprints as variables to be optimized—a fundamental shift in perspective. It uniquely integrates the value-versus-volume footprint dichotomy with spatial optimization under joint water-land constraints, a synthesis not yet fully explored in pre-2026 literature.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "33328f85fa67deb4718acc0615e2a2508ab5c3bc_sd_004_prop",
+      "title": "Integrated assessment of virtual water, land, and nitrogen flows in livestock systems: A case study of Kenyan dairy and meat production",
+      "motivation": "Pre-2026 research on virtual water flows has highlighted the role of trade in redistributing water scarcity, but land and nutrient impacts are often assessed in isolation. For livestock systems, which are major drivers of land use change and nitrogen pollution, a singular focus on water may lead to inefficient or unsustainable resource management recommendations. A simultaneous analysis of these three critical footprints is needed to identify potential trade-offs and synergies in agricultural trade and productivity strategies.",
+      "hypothesis": "We hypothesize that for Kenyan livestock production, the spatial patterns and resource efficiency trade-offs between virtual water, land, and nitrogen flows are significant, and that optimizing for one resource (e.g., water productivity) may inadvertently increase pressure on others (e.g., nitrogen leaching or land expansion).",
+      "method": "Building on Hoekstra's prior Kenyan livestock productivity study, we will extend the analysis using a spatially explicit Material Flow Analysis (MFA) framework. For defined livestock systems (dairy, beef, poultry), we will quantify the virtual water, land, and nitrogen footprints per unit of product (milk, meat) across different production zones. Using trade flow data and footprint multipliers, we will map inter-regional virtual flows within Kenya. The analysis will employ scenario-based modeling to compare future development pathways, assessing how shifts in productivity, feed sourcing, and trade alter the balance and coupling of the three resource flows.",
+      "contribution": "This work will provide the first integrated accounting of virtual water, land, and nitrogen flows for a national livestock sector, moving beyond single-footprint studies. It will generate concrete metrics on resource coupling and trade-offs, offering a more holistic evidence base for policies targeting sustainable intensification and circular bioeconomy principles in agriculture.",
+      "novelty": "While virtual water and land studies exist, their concurrent analysis with embedded nutrient flows (particularly nitrogen) in livestock systems is novel. The explicit focus on the 'dual problem'—the potential divergence in optimization pathways for different embedded resources—represents a significant conceptual and methodological advance in footprint and trade analysis.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "456b43b895c97fa4d5f5c4af8e1731c26ef04d65_mt_004_prop",
+      "title": "Advancing Water Footprint Reliability: A Framework for Calibrating and Quantifying Uncertainty in Agricultural Water Balance Models",
+      "motivation": "Water footprint and virtual water flow assessments, such as those for livestock and crops, rely on water balance models that are often applied with fixed, literature-based parameters, lacking formal calibration and uncertainty analysis. This limits the robustness of scenarios for future resource use, particularly in data-scarce regions critical to global food-water-land nexus studies. Integrating established hydrological calibration techniques can significantly improve the credibility of these assessments for policy and management.",
+      "hypothesis": "Applying formal parameter estimation and uncertainty quantification techniques from complex hydrological models (e.g., SWAT, HBV) to the water balance model underlying the Water Footprint Assessment framework will yield more reliable and spatially differentiated estimates of green and blue water consumption for key agricultural commodities.",
+      "method": "We will adapt the Generalized Likelihood Uncertainty Estimation (GLUE) methodology and the Soil and Water Assessment Tool (SWAT) calibration protocol (SWAT-CUP) for use with the crop water requirement and soil water balance calculations central to water footprint accounting. The approach will involve: 1) identifying sensitive parameters (e.g., crop coefficients, soil water holding capacity) in the footprint model; 2) defining likelihood measures based on observed data (e.g., crop yields, evapotranspiration, river basin discharge); and 3) performing Monte Carlo simulations to generate posterior parameter distributions and uncertainty bounds for water footprints of selected livestock (e.g., dairy) and crop systems.",
+      "contribution": "This work will provide a methodological advancement for the Water Footprint Network community, producing the first formally calibrated and uncertainty-aware water footprint estimates for agricultural production. It will directly enhance the scenarios analyzed in Hoekstra's recent work on Kenya and the Yellow River Basin by providing probabilistic ranges for future water and land productivity projections, thereby strengthening the evidence base for sustainable resource use strategies.",
+      "novelty": "While parameter calibration and uncertainty analysis are standard in process-based hydrology, their systematic application to the simpler, but widely used, water balance model of Water Footprint Assessment is novel. This bridges a critical methodological gap between detailed hydrological modeling and applied environmental footprint accounting.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "456b43b895c97fa4d5f5c4af8e1731c26ef04d65_sd_005_prop",
+      "title": "A Near-Real-Time Water Footprint Dashboard for Agricultural Production: Integrating Meteorological Data Streams into the Water Footprint Assessment Framework",
+      "motivation": "Current water footprint assessments are predominantly retrospective, using historical climate and production data. This limits their utility for proactive water resource management and policy-making in the face of increasing hydrological variability. A dynamic, near-real-time monitoring system is needed to translate the foundational Water Footprint concept into an operational tool for stakeholders.",
+      "hypothesis": "Integrating high-frequency meteorological data streams into the crop and livestock water footprint models will enable the creation of a temporally scaled, operational dashboard that provides actionable insights into current water productivity and resource stress, surpassing the informational value of static annual assessments.",
+      "method": "The dashboard will be built on a cloud-based architecture (e.g., AWS or Google Cloud) that ingests daily meteorological data (precipitation, temperature, reference evapotranspiration) from sources like NASA POWER or ERA5. The core algorithm will implement the FAO-56 Penman-Monteith method for crop water requirement calculations, updated daily, and integrate these with spatially explicit data on crop areas and livestock distributions (following Hoekstra's Kenyan study methodology). The system will compute and visualize daily blue and green water footprints for key commodities, presenting trends and anomalies via an interactive web interface.",
+      "contribution": "This work will operationalize the water footprint concept, transitioning it from a accounting metric to a monitoring tool. It will provide a prototype for national or basin-scale water productivity surveillance, offering farmers, policymakers, and supply chain managers timely data to inform irrigation decisions, drought response, and sustainable procurement strategies.",
+      "novelty": "While water footprint modeling is established, its application in a near-real-time, dashboard format using live data feeds is novel. This represents a significant temporal scaling of the assessment framework, moving from annual resolution to sub-seasonal monitoring, which has not been implemented at a systemic level pre-2026.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "4668755db6b75a7c2e907bf11c01e1217373bde5_ac_003_prop",
+      "title": "Spatially Explicit Nitrogen Leaching Fractions for Improved Water Footprint and Land Productivity Assessment in Livestock Systems",
+      "motivation": "Current water footprint and land productivity assessments for livestock and crop systems, as exemplified by Hoekstra's work in Kenya and the Yellow River Basin, often rely on uniform nitrogen leaching fractions. This oversimplification ignores critical spatial heterogeneity in soil properties, climate, and farm management, leading to inaccurate estimates of grey water footprints and misinformed resource use scenarios. A spatially variable approach is essential for robust policy and investment decisions regarding sustainable intensification of agriculture.",
+      "hypothesis": "Incorporating spatially variable nitrogen leaching fractions, derived from soil type, climate, and management practice data, will significantly alter the calculated grey water footprint and land productivity indicators for key livestock and crop systems compared to assessments using a uniform leaching fraction.",
+      "method": "We will apply the Soil and Water Assessment Tool (SWAT) or a similar process-based hydrological model, calibrated with pre-2026 regional data, to simulate nitrate leaching across different soil-climate zones for major feed crops (e.g., maize) and pasture systems. The simulated leaching fractions will be integrated into a revised water footprint calculation framework. This analysis will be conducted for a case study region (e.g., a major agricultural basin in East Africa or China) to create high-resolution maps of livestock and crop water footprints, which will then be compared to results from the standard uniform-fraction method.",
+      "contribution": "This work will provide a methodological advancement for water footprint accounting by demonstrating a practical pathway to spatialize the grey water component. It will yield more accurate and location-specific assessments of water pollution associated with food production, directly enhancing the scenarios used for future resource use planning in livestock-dense regions.",
+      "novelty": "While the importance of spatial detail is acknowledged, pre-2026 water footprint studies have not systematically operationalized variable nitrogen leaching fractions at a basin or national scale for integrated livestock-crop systems, moving from a conceptual critique to a modeled, scenario-based assessment.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "4668755b75a7c2e907bf11c01e1217373bde5_mt_001_prop",
+      "title": "Re-evaluating water and land footprints of derived crop products: A systematic comparison of LCA allocation methods versus mass/economic allocation",
+      "motivation": "Water footprint and virtual water flow assessments for processed crop products (e.g., oil from seeds, flour from grains) commonly rely on mass or economic allocation, which can misrepresent the environmental burden associated with specific co-products. This is a critical gap, as these allocation choices directly influence sustainability metrics for agricultural systems and trade, a core theme in Hoekstra's work. With increasing pressure on water and land resources, more robust and physically grounded allocation methods are needed to inform policy and resource management.",
+      "hypothesis": "Applying ISO-conformant Life Cycle Assessment (LCA) allocation procedures (e.g., system expansion, physical causality-based allocation) to derived crop products will yield significantly different, and more environmentally justified, water and land productivity indicators compared to the standard mass or economic allocation methods currently prevalent in water footprint studies.",
+      "method": "The research will conduct a comparative case study analysis for major crop processing chains (e.g., wheat to flour/bran, soybeans to oil/cake, olives to oil/pomace). For each chain, we will calculate water footprints (blue, green, grey) and land footprints using: (1) mass allocation, (2) economic allocation, and (3) relevant LCA procedures (system expansion/substitution and physical allocation based on causal relationships, such as energy content or biochemical composition). The analysis will utilize existing data on crop water use, yields, and processing efficiencies from pre-2026 literature and databases, applying them within the computational framework of the Water Footprint Assessment manual.",
+      "contribution": "This work will provide a methodological bridge between LCA and water footprint assessment, offering a standardized, reproducible approach for allocating resource use to agricultural co-products. It will deliver a critical evaluation of how allocation choice affects the perceived efficiency and sustainability of crop production systems, thereby improving the accuracy of virtual water flow calculations and scenarios for future resource use.",
+      "novelty": "While LCA allocation is established in carbon footprinting, its systematic application and comparison to standard methods for water and land footprints of derived crop products is novel. This directly extends Hoekstra's recent work on livestock systems in Kenya and crop value in the Yellow River Basin by introducing a more nuanced allocation framework from industrial ecology.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "4668755b75a7c2e907bf11c01e1217373bde5_mt_004_prop",
+      "title": "Dynamic Grey Water Footprint Assessment in River Basins: Integrating Hydrological Models for Pollutant Dilution Capacity Analysis",
+      "motivation": "Current grey water footprint (GWF) accounting, as defined by the Water Footprint Network, uses a static approach based on ambient water quality standards and a generic dilution factor. This fails to capture the spatio-temporal variability of a river's actual assimilation capacity, which depends on dynamic hydrological conditions. In water-scarce and polluted basins, this oversimplification can lead to inaccurate assessments of water sustainability for agricultural and livestock production systems.",
+      "hypothesis": "We hypothesize that integrating dynamic, process-based hydrological models into GWF accounting will yield significantly different and more spatially and temporally resolved estimates of water pollution impacts compared to the current static method, revealing critical periods and locations of unsustainable water use.",
+      "method": "We will employ the Soil and Water Assessment Tool (SWAT), a pre-2026 established river basin-scale model, to simulate daily streamflow and pollutant transport (focusing on nitrogen and phosphorus from fertilizers and livestock waste) for a case study basin (e.g., the Tana River Basin in Kenya). The model's simulated flow volumes will be used to dynamically calculate the dilution capacity required to assimilate pollutant loads from crop and livestock production, following the GWF framework. Scenarios of changing land use and agricultural productivity will be analyzed to project future grey water demands against climate-influenced dilution capacities.",
+      "contribution": "This work will advance the grey water footprint methodology from a static to a dynamic, physically-based assessment tool. It will provide basin planners with high-resolution data on when and where pollutant loads exceed the river's dilution capacity, directly linking agricultural production metrics to tangible water quality constraints. The results will offer more robust evidence for prioritizing pollution mitigation in river basin management.",
+      "novelty": "While SWAT is commonly used for pollution modeling and the GWF is a known indicator, their integration to dynamically quantify the dilution capacity *for the specific purpose of grey water footprinting* represents a novel synthesis. This moves beyond applying a single dilution factor to using the model's simulated hydrology as the direct basis for the footprint calculation.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "64cd2d63ec9363e4fbf6c0c8b3ca37fbe47d882a_mt_004_prop",
+      "title": "An Agent-Based Model of Agricultural Trade Decisions to Simulate Emergent Virtual Water Flows in Kenya Under Climate and Policy Scenarios",
+      "motivation": "Current assessments of virtual water flows often rely on top-down, equilibrium-based models, which may not capture the heterogeneous and adaptive decision-making of farmers and traders. This limits our ability to project how resource use efficiency and water security might evolve under dynamic stressors like climate variability and shifting agricultural policies, particularly in data-scarce regions like Kenya.",
+      "hypothesis": "We hypothesize that simulating the bounded-rational decisions of heterogeneous agents (farmers, traders) will reveal emergent virtual water flow patterns that differ significantly from projections of aggregated, optimization-based models, especially under scenarios of water pricing and climate-induced yield variability.",
+      "method": "We will develop an agent-based model (ABM) using a structure similar to the ODD protocol. Farmer agents, parameterized with data from Hoekstra's prior work on Kenyan livestock and crop water productivity, will make land-use and production decisions based on profit, risk aversion, and local water stress. Trader agents will facilitate inter-regional trade based on price differentials and transaction costs. The model will be implemented in NetLogo or a similar ABM platform, with decision rules informed by behavioral economics. Scenarios will test combinations of climate projections (from IPCC AR5) and policies (e.g., subsidies, water quotas).",
+      "contribution": "This work will provide a novel, bottom-up framework for analyzing the resilience and efficiency of water resource systems through trade. It will generate spatially explicit insights into how micro-level decisions aggregate to shape macro-level virtual water flows, offering policymakers a tool to anticipate unintended consequences of interventions on water and land use.",
+      "novelty": "While Hoekstra's work has quantified water footprints and productivities, applying agent-based modeling to simulate the decision processes driving virtual water trade in an integrated crop-livestock system is a novel methodological advance for the water footprint community.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "64cd2d63ec9363e4fbf6c0c8b3ca37fbe47d882a_sd_002_prop",
+      "title": "A Global Multi-Regional Input-Output Model for Comprehensive Water Footprint Accounting: Integrating Green, Blue, and Grey Water Flows",
+      "motivation": "Current water footprint assessments and virtual water trade studies are often limited to specific regions, single water types, or aggregated sectors, failing to capture the complex, global interdependencies of water use in production and consumption. As water scarcity intensifies globally, policymakers need a consistent, high-resolution tool to trace the embodied water in international supply chains and inform equitable and efficient resource management strategies.",
+      "hypothesis": "Integrating spatially explicit green, blue, and grey water footprint data into a global Multi-Regional Input-Output (MRIO) framework will reveal significantly different patterns of virtual water flows and dependencies compared to analyses using only blue water or single-region models, particularly for water-intensive agricultural and livestock sectors.",
+      "method": "We will construct a global MRIO model using the latest pre-2026 EXIOBASE or GTAP database as the economic core. Country- and sector-specific green, blue, and grey water footprint coefficients (m³/unit output) will be calculated using the Water Footprint Assessment methodology, drawing on FAO and Mekonnen & Hoekstra datasets. These coefficients will be linked to the MRIO structure using Leontief inverse analysis to compute virtual water flows. The model will be validated against known virtual water trade estimates for major crops and livestock products from prior studies.",
+      "contribution": "This research will provide the first globally consistent, sector-detailed MRIO database that fully disaggregates green, blue, and grey water footprints for all countries. It will enable analysis of how international trade redistributes different types of water scarcity and pollution, offering a robust evidence base for evaluating consumption-based water responsibility and sustainable resource use scenarios.",
+      "novelty": "While global MRIOs exist for blue water, the systematic integration of all three water footprint components (green, blue, grey) at a full sectoral and country resolution represents a significant advancement, allowing for a nuanced assessment of land productivity (green water) and pollution (grey water) alongside consumptive use (blue water) in a unified trade model.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "6bd4b2e41ba9076ec23de02b0f1d88593d78e1d4_sd_003_prop",
+      "title": "Optimizing Global Diets for Planetary Water Boundaries: An Inverse Analysis of Nutrition Security under Blue and Grey Water Constraints",
+      "motivation": "Global freshwater scarcity is intensifying, with agriculture accounting for the majority of blue and grey water use. Existing water footprint assessments describe current impacts but do not prescribe forward-looking, sustainable dietary pathways. This research addresses the critical inverse problem: defining nutritionally adequate diets that collectively operate within sustainable global water withdrawal and pollution budgets, a necessity for long-term water and food security.",
+      "hypothesis": "We hypothesize that by applying optimization techniques to global crop and livestock water productivity data, it is possible to derive nutritionally complete human diets that respect defined planetary blue and grey water boundaries, and that these optimal diets will necessitate significant shifts from current global average consumption patterns, particularly for animal-source foods.",
+      "method": "We will employ linear programming to solve the inverse optimization problem. The objective function will minimize the deviation from current global average diets, subject to constraints: 1) meeting nutritional requirements (energy, protein, key micronutrients) for a global population, 2) staying within global blue water availability (considering environmental flow requirements) and assimilative capacity for grey water (nitrogen), and 3) respecting regional production potentials. The model will be built using spatially explicit water footprint databases (e.g., WaterStat, Mekonnen & Hoekstra) and FAO food balance sheets and nutrition data, creating scenarios for different water constraint levels.",
+      "contribution": "This work will provide the first globally comprehensive, quantitative framework for defining water-sustainable dietary targets, moving beyond footprint accounting to solution-oriented planning. It will yield concrete dietary baskets and quantify the required reductions in water-intensive food items, offering a science-based benchmark for policies linking water resource management, agricultural planning, and dietary guidelines.",
+      "novelty": "While Hoekstra's prior work quantified livestock and crop water productivity, this study inverts the logic to solve for the diet given the resource constraint, a novel application of optimization to the water footprint concept. It uniquely integrates both blue and grey water boundaries simultaneously into a global dietary optimization model.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "6bd4b2e41ba9076ec23de02b0f1d88593d78e1d4_sd_004_prop",
+      "title": "Water Footprint Scenarios for Protein Transition Pathways: A Comparative Analysis of Livestock, Crops, and Novel Alternatives",
+      "motivation": "Global dietary shifts towards more plant-based and alternative proteins are proposed to improve food security and reduce environmental impacts. However, the water resource implications of such a transition are not fully quantified at a systemic level, creating a critical knowledge gap for sustainable resource planning. This research addresses this gap by applying the water footprint assessment framework, a core pre-2026 methodology, to model the water consequences of different protein futures.",
+      "hypothesis": "We hypothesize that a transition from animal-based to plant-based and novel alternative proteins will significantly reduce the consumptive blue and green water footprint per unit of dietary protein, but that the magnitude of savings and spatial distribution of water use will vary substantially depending on the specific protein sources and production systems considered.",
+      "method": "We will develop spatially explicit scenarios for protein production in a major river basin (e.g., the Yellow River Basin, building on prior work). The method will calculate and compare the green, blue, and grey water footprints per gram of protein for key livestock (beef, dairy, poultry) and crop (pulses, cereals) products using established Water Footprint Network databases and algorithms. Novel protein sources (e.g., cultured meat precursors, insect meal) will be included based on pre-2026 life cycle inventory data. Scenarios will model different substitution pathways (e.g., beef replaced by legumes vs. poultry vs. alternatives) and aggregate impacts on total water use.",
+      "contribution": "This work will provide the first comprehensive, scenario-based quantification of water footprint trade-offs in the protein transition, moving beyond simple crop-livestock comparisons. It will deliver a robust evidence base for policymakers and agri-food stakeholders to navigate water sustainability in dietary change. The findings will advance the field of footprint scenario analysis by integrating novel protein pathways into established assessment frameworks.",
+      "novelty": "While water footprints of individual foods are known, the novelty lies in modeling complete dietary transition *pathways* and their aggregate water impacts at the basin scale, explicitly incorporating emerging alternative proteins into the scenario framework alongside conventional livestock and crops.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "8f71f7cbcf3d936564c051b57051cdf05404b8d5_ac_001_prop",
+      "title": "Dynamic Sustainability Thresholds for Livestock Systems: Integrating Technological Innovation and Ecosystem Dynamics in Water and Land Use Scenarios",
+      "motivation": "Current water footprint and land productivity assessments, including our own work in Kenya, often rely on static thresholds for sustainable resource use (e.g., maximum water availability per basin). These static benchmarks fail to account for the dynamic interplay of technological improvements in feed crops and livestock management, and potential ecosystem recovery under altered management. This limits the realism of long-term scenarios for sustainable agricultural intensification.",
+      "hypothesis": "We hypothesize that modeling water and land sustainability limits as dynamic functions of technological change rates and ecosystem recovery potentials will yield significantly different, and more attainable, long-term scenarios for livestock production compared to scenarios based on static thresholds.",
+      "method": "We will develop a dynamic system dynamics model, building on our previous livestock productivity frameworks for Kenya. The model will integrate: 1) a technological innovation module altering crop water productivity and feed conversion efficiency over time based on historical diffusion curves; 2) an ecosystem recovery module where land and water regeneration rates are functions of reduced pressure from improved productivity. We will run comparative scenario analyses (e.g., business-as-usual vs. accelerated innovation) to project future water and land footprints, contrasting outcomes from dynamic versus static sustainability ceilings.",
+      "contribution": "This work will provide a novel methodological framework for assessing sustainable production limits that are responsive to human and natural system feedbacks. It will offer more nuanced policy insights for regions like Kenya, showing how investment in technology can effectively 'raise' the ceiling for sustainable livestock production, complementing our earlier work on volume versus value in water footprints.",
+      "novelty": "While scenario analysis is common, explicitly modeling the sustainability threshold itself as an endogenous, dynamic variable—co-evolving with productivity and ecosystem state—represents a significant conceptual and computational advance beyond the prevailing paradigm of fixed planetary or regional boundaries.",
+      "dimension": "Research Direction"
+    },
+    {
+      "id": "8f71f7cbcf3d936564c051b57051cdf05404b8d5_fw_005_prop",
+      "title": "A Sectoral Benchmarking Framework for Water and Land Productivity: Integrating Physical and Economic Efficiency Metrics",
+      "motivation": "Current resource footprint assessments, such as water and land footprints, often operate in sectoral silos, making it difficult to compare efficiency across different economic activities like crop production, livestock, and industrial manufacturing. This hinders the identification of strategic priorities for sustainable resource allocation at national and global scales. A standardized, cross-sectoral benchmarking system is urgently needed to inform coherent policies for the Sustainable Development Goals (SDGs), particularly those related to water (SDG 6), responsible consumption (SDG 12), and life on land (SDG 15).",
+      "hypothesis": "We hypothesize that integrating physical resource productivity (e.g., m³ water per ton of product) with economic resource productivity (e.g., m³ water per unit of economic value added) will reveal distinct and actionable efficiency benchmarks for different sectors and nations, challenging assumptions based on single-metric analyses.",
+      "method": "The research will employ a multi-metric life cycle assessment framework, building upon the Water Footprint Network methodology. For key sectors (e.g., staple crops, dairy/beef livestock, textiles, thermal power), we will calculate standardized physical water and land productivity ratios (output/input). These will be integrated with economic value-added data from global trade databases (e.g., GTAP) to compute economic productivity ratios. A novel composite benchmarking index will be developed using Data Envelopment Analysis (DEA) to rank sector-nation combinations, controlling for climatic and developmental factors. Scenario analysis will project efficiency gains under different technological and dietary change pathways.",
+      "contribution": "This work will provide the first globally applicable, sector-transcendent benchmarking protocol for resource use efficiency, moving beyond descriptive footprint accounting. It will deliver a publicly accessible database of sectoral benchmarks, offering policymakers and investors a tool to identify 'hotspots' for improvement and trade-offs between physical yield optimization and economic resource valorization.",
+      "novelty": "While sector-specific footprint studies exist, the systematic integration of physical and economic productivity into a single benchmarking index for cross-sector comparison is novel. The application of DEA to harmonize these dual efficiency perspectives across diverse industries—from agriculture to manufacturing—represents a significant methodological advance in resource footprint science.",
+      "dimension": "Future Work"
+    },
+    {
+      "id": "8f71f7cbcf3d936564c051b57051cdf05404b8d5_mt_002_prop",
+      "title": "Integrating Economic Input-Output Analysis with Physical Accounting to Quantify Sectoral Water and Land Footprints in Kenya",
+      "motivation": "Current water and land footprint assessments, such as those for livestock in Kenya, often rely on process-based life cycle assessment (LCA) or bottom-up sectoral analyses, which can miss complex inter-sectoral dependencies and economic drivers of resource use. Pre-2026, there is a recognized need to link physical resource productivity metrics (e.g., m³ water/kg milk) with the economic structure of a national economy to better inform integrated resource policy and scenario planning.",
+      "hypothesis": "By adapting national economic input-output (IO) tables to incorporate sector-specific water and land use coefficients, we can more accurately and comprehensively trace the virtual water and land embodied in final consumption and trade, revealing critical, economically-driven resource hotspots that are obscured in conventional footprint analyses.",
+      "method": "We will construct a hybrid environmentally extended input-output (EEIO) model for Kenya, integrating physical data on livestock and crop water/land productivity from Hoekstra's prior work with the latest available national IO table (e.g., from KNBS). The core algorithm will involve the Leontief inverse matrix to calculate total (direct and indirect) resource requirements per monetary unit of sectoral output. Sectoral footprints will be allocated to final demand categories, enabling analysis of trade-offs between 'volume versus value' for different agricultural and industrial commodities.",
+      "contribution": "This research will provide a novel, economy-wide mapping of water and land footprints across Kenyan sectors, quantifying the indirect resource use triggered by inter-industry transactions. It will offer a robust analytical framework for developing future resource-use scenarios that are consistent with both biophysical constraints and economic development pathways, directly extending the livestock-focused productivity studies.",
+      "novelty": "While EEIO is established in carbon footprinting, its application to spatially explicit water and land footprints in a data-scarce, agriculturally-driven African economy like Kenya is novel. It moves beyond analyzing individual livestock or crop systems to model the entire resource network shaped by economic interdependence.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "8f71f7cbcf3d936564c051b57051cdf05404b8d5_mt_004_prop",
+      "title": "From Individual Choices to National Footprints: An Agent-Based Model of Consumer Behavior for Water and Land Resource Accounting",
+      "motivation": "Current water and land footprint assessments, including our own work on livestock and crops, rely on top-down, aggregate data and static scenarios. This masks the critical role of heterogeneous consumer behavior, socioeconomic trends, and feedback loops in shaping resource demand. Understanding the micro-foundations of consumption is essential for designing effective and equitable policies to reduce future resource pressure, particularly in rapidly developing regions.",
+      "hypothesis": "We hypothesize that the aggregation of heterogeneous, socially influenced consumer choices leads to national water and land footprints that are non-linear and systematically different from projections based on average per capita consumption or homogeneous population groups.",
+      "method": "We will develop an agent-based model (ABM) using a framework like NetLogo or Mesa. Agents (consumers/households) will be parameterized with attributes (income, location, cultural preferences) derived from pre-2026 household survey data (e.g., for Kenya). Decision rules for food and goods consumption will incorporate theory from behavioral economics (bounded rationality, social norms). The model will simulate interactions and choices over time, scaling agent decisions to national footprints using detailed product-specific water and land footprint databases from the Water Footprint Network. Calibration and validation will use historical footprint data.",
+      "contribution": "This research will provide a novel, bottom-up methodology for footprint analysis, moving beyond static averages to capture behavioral dynamics. It will generate new insights into how inequality, social diffusion, and policy interventions (e.g., information campaigns, pricing) propagate through a population to affect aggregate resource use, thereby offering a more robust tool for scenario development.",
+      "novelty": "While ABMs are used in other fields, their application to integrate detailed, spatially explicit water and land footprint accounting with empirically grounded models of consumer choice represents a significant methodological advance for the footprint community, bridging the gap between micro-scale behavior and macro-scale resource metrics.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "cad78ab631fd528b730f0436d0854dc3b61e90a8_mt_003_prop",
+      "title": "Ecological Network Analysis of Virtual Water Flows: Identifying Critical Nodes and Resilience in Agricultural Production Systems",
+      "motivation": "Current water footprint and virtual water flow assessments, such as those for crop and livestock systems, quantify volumes but lack a systemic understanding of the network's structure and vulnerabilities. This limits the ability to predict how shocks in one part of a water system (e.g., a drought in a key crop-producing region) cascade through trade networks, impacting food and water security. A network-based resilience analysis is urgently needed to inform sustainable resource allocation and trade policies.",
+      "hypothesis": "Applying ecological network analysis (ENA) to virtual water flow networks will reveal non-obvious critical nodes (sectors or regions) whose disruption disproportionately reduces system-wide efficiency and resilience. We hypothesize that the land and water productivity of these nodes, as studied in Hoekstra's prior work, is a key but insufficient predictor of their systemic criticality.",
+      "method": "We will adapt established ENA metrics (e.g., ascendency, redundancy, node centrality) to model virtual water flow networks. Using multi-regional input-output data and water footprint accounts (e.g., for crops, milk, and livestock), we will construct directed, weighted networks of water embodied in trade. The analysis will employ algorithms for calculating network flow-based centrality (e.g., eigenvector centrality) and will conduct scenario-based node removal simulations to test resilience and identify bottlenecks. The framework will be applied to a case study, such as the Yellow River Basin or Kenya, integrating local productivity data.",
+      "contribution": "This research will provide a novel, systems-level diagnostic tool for water management, moving beyond volumetric accounting to functional network analysis. It will generate maps of critical dependencies and resilience hotspots within agricultural water systems, offering concrete insights for prioritizing interventions to secure water and food supply chains under global change.",
+      "novelty": "While ENA is established in ecology, its application to engineered-human-hydrological systems like virtual water networks is nascent. This work innovatively merges Hoekstra's water footprint and productivity assessment framework with rigorous network ecology methods to uncover systemic properties not visible through footprint volumes alone.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "cad78ab631fd528b730f0436d0854dc3b61e90a8_sd_003_prop",
+      "title": "Designing for Zero: A Scenario-Based Inverse Modeling Framework for Net-Zero Blue and Grey Water Footprints in Mixed Crop-Livestock Systems",
+      "motivation": "Current water footprint assessments are largely descriptive, quantifying impacts but not prescribing solutions. Given increasing water scarcity and pollution, there is an urgent need to shift from impact accounting to sustainable system design. This research addresses the critical gap in methods to proactively engineer agricultural systems that achieve net-zero blue water consumption and grey water pollution, aligning with pre-2026 calls for transformative water stewardship.",
+      "hypothesis": "By inverting the standard water footprint calculation, it is possible to identify feasible combinations of crop patterns, livestock productivity, and management practices that achieve a net-zero blue and grey water footprint at a system scale, without compromising economic output.",
+      "method": "We will develop an inverse modeling framework building on Hoekstra's Water Footprint Assessment methodology. For a case study region (e.g., a Kenyan catchment), we will first establish a baseline using local data on crop and livestock water productivity (m³/ton, m³/kg protein). The core algorithm will treat target water footprints (zero blue/grey) as constraints and solve for optimal system configurations. This involves linear programming to explore scenarios varying: (1) crop mix and yields, (2) livestock feed sourcing and milk/meat productivity, and (3) irrigation technology and nitrogen application rates. Sensitivity analysis will identify key leverage points (e.g., feed conversion efficiency, fertilizer use efficiency) for achieving the zero-footprint target.",
+      "contribution": "This work will provide a novel, actionable planning tool for policymakers and agricultural planners to design water-sustainable food systems. It will advance water footprint science from accounting to prescriptive analytics. The scenario outputs will quantify the necessary trade-offs and synergies between land use, livestock management, and water resources to meet stringent water sustainability goals.",
+      "novelty": "While forward calculations of water footprints are common, the explicit inversion of the model to design for a zero target is a novel, solution-oriented approach. It uniquely integrates crop and livestock systems within a single optimization framework to solve for a combined water quality and quantity objective, moving beyond incremental efficiency gains.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "cf68fd0c252ae75cfbec0f1f4e162e8b743a159f_ac_001_adversarial_prop",
+      "title": "Assimilating heterogeneous data into a parsimonious process model to quantify dynamic nitrogen leaching and its uncertainty for agricultural systems",
+      "motivation": "Nitrogen leaching from agriculture is a primary cause of water pollution and eutrophication, yet its quantification remains highly uncertain due to spatial heterogeneity and data scarcity. Existing models are either overly simplistic (e.g., fixed leaching fractions) or too complex and data-hungry for operational use, limiting reliable scenario analysis for sustainable intensification. A robust, data-informed model is needed to provide actionable, confidence-bounded estimates of nitrogen losses under different land and water management strategies.",
+      "hypothesis": "A hybrid model, combining a parsimonious process-based core with a flexible data assimilation framework, can dynamically integrate disparate real-world data streams to significantly reduce parametric uncertainty and produce more reliable, confidence-interval-bounded estimates of nitrogen leaching than static or complex unconstrained models.",
+      "method": "We will develop a core nitrogen mass balance model, parameterized for key crops and livestock systems, informed by Hoekstra's work on water and land productivity. This will be coupled with an Ensemble Kalman Filter (EnKF) to assimilate time-series data from satellite-derived vegetation indices, soil moisture, and sporadic farm-level nitrogen application and yield records. The EnKF will continuously update model states and parameters, with ensemble spread providing quantitative prediction intervals for leaching fluxes under different management scenarios.",
+      "contribution": "This research will deliver an operational, testable model framework that explicitly quantifies uncertainty in nitrogen leaching, moving beyond point estimates. It will provide a methodological advance in fusing process understanding with heterogeneous data, offering a practical tool for assessing the water quality implications of future agricultural resource use and productivity pathways.",
+      "novelty": "The novelty lies in the specific fusion of a parsimonious, scalable process model designed for agricultural systems with a robust data assimilation scheme tailored for sparse, multi-source data, directly producing operational confidence intervals for dynamic leaching—a gap between simplistic and overly complex modeling approaches.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "cf68fd0c252ae75cfbec0f1f4e162e8b743a159f_ac_001_analogy_prop",
+      "title": "A Dynamic Reservoir Network Model for Nitrogen Leaching: Moving Beyond Constant Leaching Fractions in Agricultural Water Footprint and Land Productivity Assessments",
+      "motivation": "Current water footprint and land productivity assessments, including those for livestock and crop systems, often rely on static nitrogen leaching fractions, a major source of uncertainty. This oversimplification fails to capture the dynamic response of leaching to climate variability and management practices, undermining the accuracy of resource use projections and scenario analyses. A more process-based approach is needed to robustly link agricultural production to its environmental impacts on water quality.",
+      "hypothesis": "We hypothesize that conceptualizing the soil nitrogen cycle as a network of interconnected, state-dependent reservoirs will yield a more accurate and spatially/temporally explicit simulation of nitrogen leaching than models using constant leaching fractions. This dynamic representation will better explain observed variations in leaching across different climates, soils, and management regimes.",
+      "method": "We will adapt the reservoir network concept from rainfall-runoff hydrology (e.g., HBV model concepts) to nitrogen cycling. The soil profile will be discretized into linked reservoirs representing mineral N (ammonium, nitrate), immobilized N, and subsoil N. Fluxes between reservoirs (mineralization, nitrification, plant uptake, leaching) will be governed by transfer functions parameterized by soil properties (texture, organic matter), driven by daily climate data (precipitation, temperature, evapotranspiration), and forced by management inputs (fertilizer type, timing, irrigation). The model will be implemented in Python, calibrated and validated using existing field-scale leaching datasets from contrasting agricultural systems.",
+      "contribution": "This work will provide a novel, transferable modeling framework to dynamically quantify nitrogen leaching as a function of system state, directly improving the assessment of agricultural water pollution in water footprint studies. It will enable more reliable scenario analyses for future resource use, particularly in evaluating trade-offs between livestock/crop productivity and water quality under changing management and climate.",
+      "novelty": "The novelty lies in the direct conceptual analogy from dynamic watershed hydrology to the soil nitrogen cycle, replacing a static environmental impact coefficient with a process-based, state-variable model. This integrates biogeochemical cycling with hydrological drivers in a way not commonly applied in water footprint and resource productivity accounting pre-2026.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "cf68fd0c252ae75cfbec0f1f4e162e8b743a159f_ac_002_fusion_prop",
+      "title": "Co-evolutionary Pathways: An Agent-Based Model of Adaptive Crop-Livestock Systems and Water Resource Dynamics in Data-Scarce Basins",
+      "motivation": "Current water footprint and land productivity assessments, while foundational, often treat water availability as a static boundary condition. In reality, agricultural water use (blue and green) and land use decisions are dynamically coupled, especially under climate variability. This gap limits the ability to project how farmer adaptations and policy interventions might reshape both agricultural landscapes and long-term water resource sustainability, a critical issue for food security.",
+      "hypothesis": "Simulating heterogeneous farmer agents who adaptively co-evolve their crop-livestock choices and irrigation strategies with dynamically updated water constraints will reveal emergent, sustainable system equilibria that are not identifiable through top-down, static water allocation models.",
+      "method": "We will develop an agent-based model (ABM) where farmer agents, characterized by resource endowments (land, capital), make annual decisions on crop mix (including fodder for livestock), irrigation technology, and water use based on spatio-temporal profiles of green/blue water, market signals, and observed neighbor success. The core innovation is a bidirectional feedback loop: agent decisions alter blue water demand and groundwater recharge, which dynamically updates the water constraint module for the next season using a simplified soil-water balance. The model will be parameterized and tested for a Kenyan case study, leveraging Hoekstra's prior work on livestock water and land productivity in Kenya.",
+      "contribution": "This work will advance the water footprint methodology by integrating it into a dynamic, behavioral simulation framework. It will provide a new tool for exploring how bottom-up adaptations influence the long-term viability of water resources and agricultural productivity, offering insights for policies on water allocation, agricultural extension, and climate adaptation in coupled human-water systems.",
+      "novelty": "It inverts the traditional water planning paradigm by starting from dynamic water constraints to simulate emergent land use, rather than allocating water to predefined demands, and explicitly models the closed feedback loop between agricultural decisions and the renewability of the water resource base.",
+      "dimension": "Fusion"
+    },
+    {
+      "id": "cf68fd0c252ae75cfbec0f1f4e162e8b743a159f_ac_003_analogy_prop",
+      "title": "Disaggregating Agricultural Footprints: A Sub-Grid Unmixing Framework for Water and Land Productivity Assessment",
+      "motivation": "Global water and land footprint assessments, such as those in the Water Footprint Network framework, often rely on coarse (e.g., 5-arc-minute) spatial data, assuming homogeneous conditions within grid cells. This obscures critical sub-grid heterogeneity in soil type, topography, and farm management, leading to significant uncertainty in productivity estimates and resource use scenarios, particularly for mixed crop-livestock systems as studied in Kenya. Refining these estimates is essential for targeting sustainable intensification and equitable resource policies.",
+      "hypothesis": "We hypothesize that adapting spectral mixture analysis (SMA) principles to decompose coarse agricultural grid cells into functional endmembers (e.g., distinct soil-slope-farm size classes) will yield more accurate and spatially explicit estimates of water consumption and land productivity than standard homogeneous-cell models.",
+      "method": "We will define a set of discrete agricultural endmembers (e.g., 'clay soil, gentle slope, large farm') using pre-2026 global datasets (SoilGrids, SRTM topography, and field size data from the Global Field Size map). For each 5-arc-minute cell, we will calculate the fractional area of each endmember via a linear unmixing algorithm, constraining fractions to sum to one. Water balances and footprint intensities (m³/ton, kg/ha) will be computed per endmember using localized crop/livestock parameters and climate data, then aggregated area-weighted to the grid cell level, creating a new high-resolution footprint product.",
+      "contribution": "This work will provide a novel methodological framework to quantify and map the sub-grid variability of water and land footprints, directly enhancing the spatial accuracy of large-scale agricultural models. It will yield improved scenario analyses for future resource use, offering policymakers insights into the localized drivers of productivity gaps and resource efficiency in systems like those in Kenya and the Yellow River Basin.",
+      "novelty": "The novelty lies in the conceptual translation of a remote sensing solution (spectral unmixing) to a distinct environmental modeling problem (agricultural footprint heterogeneity), creating a 'grid cell unmixing' paradigm that explicitly accounts for internal variability ignored by standard aggregated approaches.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "cf68fd0c252ae75cfbec0f1f4e162e8b743a159f_ac_005_analogy_prop",
+      "title": "Mapping the Grey Water Footprint to Ecological Carrying Capacity: A Spatially Explicit Model for Pollution Assimilation in River Basins",
+      "motivation": "Current water footprint assessments, including the grey water footprint, rely on fixed ambient water quality standards, which ignore the natural spatial variability in a water body's capacity to assimilate pollutants. This leads to inefficient water resource management and can either over-protect or under-protect aquatic ecosystems. Adapting the ecological carrying capacity concept from wildlife and livestock management offers a pathway to more scientifically grounded, spatially differentiated water pollution regulation.",
+      "hypothesis": "The natural pollution assimilation capacity of a river segment can be quantified as a dynamic function of local hydrological, biological, and geochemical conditions. Spatially explicit modeling of this capacity will reveal significant heterogeneity within basins, enabling more accurate and protective grey water footprint allocations than current standard-based methods.",
+      "method": "The research will develop a process-based, spatially distributed model building on pre-2026 hydrological and water quality modeling frameworks (e.g., SWAT, QUAL2K). For key pollutants (e.g., nitrogen, phosphorus), the model will integrate gridded data on flow velocity, temperature, dissolved oxygen, sediment load, and microbial activity to calculate local decay rates. Using river network routing algorithms, these local capacities will be aggregated to determine sustainable pollutant load thresholds for each catchment, creating a 'carrying capacity map' analogous to spatial habitat models in ecology.",
+      "contribution": "This work will provide a novel methodology to calculate a spatially differentiated grey water footprint, moving beyond static dilution assumptions. It will deliver a practical modeling framework for regulatory agencies to set discharge permits based on local ecosystem resilience, directly linking the water footprint concept to physical environmental limits.",
+      "novelty": "The approach is novel in explicitly translating the 'carrying capacity' framework from terrestrial ecology and livestock productivity studies to the domain of water pollution regulation. It replaces a universal concentration standard with a spatially variable, process-driven capacity model, a significant shift in both footprint accounting and water quality management philosophy.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "cf68fd0c252ae75cfbec0f1f4e162e8b743a159f_mt_003_analogy_prop",
+      "title": "Modeling Cascading Farmer Decisions in Water Use: An Agent-Based Network Approach for the Yellow River Basin",
+      "motivation": "Understanding the dynamics of agricultural water use is critical for sustainable resource management, especially in water-scarce basins like the Yellow River. Current water footprint and productivity assessments often rely on aggregate or equilibrium models, which fail to capture the non-linear, cascading effects of individual farmer decisions driven by social influence and physical constraints. This gap limits the ability to predict how shocks or policies propagate through a farming community, potentially leading to tipping points in regional blue water depletion.",
+      "hypothesis": "We hypothesize that the adoption of irrigation strategies among farmers follows a complex contagion process within dual social-physical networks, and that this process creates identifiable, non-linear thresholds in regional water use that are missed by conventional models.",
+      "method": "We will develop an agent-based model (ABM) where farmers are nodes in two overlapping networks: a social network for information exchange and a physical network of shared water infrastructure. Farmer states (e.g., water-intensive, water-saving, fallow) will transition based on rules adapted from epidemiological SIR models, incorporating local water availability (from hydrological data), perceived economic risk, and the observed states of network neighbors. The model will be parameterized and validated using pre-2026 data on crop patterns, livestock water use, and land productivity from Kenya and the Yellow River Basin studies, running scenarios to test policy and drought shocks.",
+      "contribution": "This research will provide a novel, mechanistic framework to simulate the spatiotemporal propagation of water-use decisions, directly linking micro-level behaviors to macro-level resource outcomes. It will advance the field of water footprint analysis by moving from static accounting to dynamic, agent-driven scenario modeling, offering policymakers insights into leverage points and resilience in agricultural water systems.",
+      "novelty": "The explicit adaptation of epidemiological network models to farmer decision cascades in water use is a novel interdisciplinary synthesis. It integrates the physical metrics of water productivity with the social dynamics of behavioral contagion, a combination not yet explored in Hoekstra's pre-2026 work on footprints and productivity.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "cf68fd0c252ae75cfbec0f1f4e162e8b743a159f_mt_004_adversarial_prop",
+      "title": "Quantifying uncertainty in green and blue water partitioning for evapotranspiration: A high-frequency sensor and Bayesian mixing model approach",
+      "motivation": "Accurate partitioning of evapotranspiration (ET) into green (rainwater) and blue (surface/groundwater) sources is critical for sustainable water resource management, especially in agricultural and livestock systems under increasing water scarcity. Current methods, including stable isotope mixing models, often treat source signatures as fixed values, ignoring their spatiotemporal variability and leading to unquantified uncertainty in water productivity assessments and future scenario projections.",
+      "hypothesis": "We hypothesize that explicitly modeling the isotopic and chemical signatures of all potential ET source waters as probability distributions within a hierarchical Bayesian framework will robustly quantify the uncertainty in green versus blue water partitioning and reveal the hydroclimatic conditions under which source discrimination is most reliable.",
+      "method": "We will deploy a dense network of in-situ sensors in a representative agricultural catchment to collect high-frequency data on the isotopic (δ²H, δ¹⁸O) and chemical composition of precipitation, soil water at multiple depths, groundwater, and atmospheric vapor. These data will serve as dynamic end-members for a hierarchical Bayesian mixing model, implemented using Markov Chain Monte Carlo (MCMC) methods (e.g., via the 'MixSIAR' package in R). The model will probabilistically partition ET sources, treating end-member values as distributions that vary in space and time, thereby directly propagating measurement and natural variability into the final uncertainty estimates.",
+      "contribution": "This work will provide a novel, uncertainty-quantified metric for green and blue water use in agro-ecosystems, directly enhancing the accuracy of water footprint and land productivity assessments for crops and livestock. It will deliver a transferable methodological framework that identifies when and where source partitioning is inherently ambiguous, thereby improving the reliability of water use scenarios and policy recommendations.",
+      "novelty": "The novelty lies in the integration of high-frequency, multi-source sensor data with a hierarchical Bayesian model that explicitly quantifies uncertainty, moving beyond deterministic single-value mixing models. This directly addresses a key methodological gap in water footprint and productivity studies led by Hoekstra's group, which have historically relied on more aggregated data and assumptions.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "cf68fd0c252ae75cfbec0f1f4e162e8b743a159f_sd_001_prop",
+      "title": "Field-scale validation and downscaling of grid-based water footprints: An IoT-sensor approach for precision in crop and livestock productivity assessment",
+      "motivation": "Current water footprint (WF) and land productivity assessments, as applied in national and basin-scale studies, rely on aggregated, grid-based models (e.g., WaterGAP, CROPWAT) and statistical data. These models contain significant uncertainty at the field level, limiting their utility for informing precise on-farm water management and productivity improvements. Validating and refining these estimates with direct, high-resolution data is a critical step towards actionable sustainability metrics for farmers and policymakers.",
+      "hypothesis": "That IoT sensor networks measuring soil moisture, microclimate, and crop growth at field scale will reveal systematic biases in grid-based WF estimates, enabling the development of robust downscaling algorithms that significantly improve the spatial accuracy of water productivity assessments for specific crops and livestock feed.",
+      "method": "We will deploy a network of IoT sensor nodes (e.g., using LoRaWAN for connectivity) in selected crop and pasture fields in Kenya, measuring soil moisture (capacitive sensors), local precipitation, temperature, and NDVI (via simple spectral sensors). These high-frequency, geotagged data streams will be integrated into a cloud-based platform. We will use a data assimilation framework, specifically a modified Ensemble Kalman Filter (EnKF), to fuse the IoT sensor data with the outputs of a field-level soil-water balance model, forcing it to converge on observed conditions. This calibrated model will then be used to generate true field-scale green and blue WFs, which will be statistically compared to downscaled outputs from the global grid-based WaterFootprint Assessment framework.",
+      "contribution": "This work will produce the first empirically validated protocol for downscaling continental water footprint models to the farm level, directly addressing the gap between macro-scale resource use indicators and local management. It will yield concrete correction factors and uncertainty ranges for WF estimates in key Kenyan agro-ecosystems, enhancing the credibility of virtual water flow and land productivity analyses for policy.",
+      "novelty": "While IoT is used in precision agriculture, its systematic application to empirically ground-truth and correct the foundational datasets of water footprint science—a core tool in Hoekstra's research—is novel. The integration of real-time sensor data with a data assimilation framework specifically for WF downscaling moves beyond simple comparison to enable dynamic model correction.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "edb77e03a1179a3aa91933f3b9d6108a1bbaf740_fw_001_prop",
+      "title": "Dynamic Water Footprints: A Decadal, High-Resolution Analysis of Crop and Livestock Production in the Yellow River Basin (1995-2025)",
+      "motivation": "Water footprint assessments have predominantly relied on static, long-term averages (e.g., 1996-2005), masking critical temporal dynamics in water productivity and scarcity. In rapidly developing and climate-sensitive regions like the Yellow River Basin, understanding these year-to-year and decadal shifts is essential for robust scenario planning and sustainable resource allocation between agricultural sectors.",
+      "hypothesis": "We hypothesize that water footprints for key crops and livestock in the Yellow River Basin have exhibited significant non-linear trends and increased interannual variability over the last three decades, driven more by changes in agricultural productivity and management than by climate variability alone.",
+      "method": "We will apply the Water Footprint Assessment framework at an annual time-step from 1995-2025. For crops, we will calculate annual blue and green water footprints using high-resolution climate data (CHIRPS, ERA5) and dynamic yield statistics, implementing the FAO-56 Penman-Monteith algorithm within a spatially explicit model. For livestock, we will trace annual footprints via dynamic feed baskets, linking crop footprint results to livestock production data. Statistical trend analysis (Mann-Kendall, Theil-Sen estimator) and decomposition analysis will isolate drivers of change.",
+      "contribution": "This research will provide the first detailed, temporally explicit account of water footprint evolution for a major basin, directly extending Hoekstra's foundational static studies. It will generate novel insights into the volatility and trends of agricultural water use, offering a critical evidence base for evaluating the water implications of past policies and for designing resilient future scenarios.",
+      "novelty": "The novelty lies in shifting the paradigm from static to dynamic water footprint accounting at high temporal resolution, and in explicitly analyzing the temporal decoupling between the physical volume and economic value of water use in agricultural trade, a dimension highlighted in prior work but not yet studied over time.",
+      "dimension": "Future Work"
+    },
+    {
+      "id": "efba1d7dce91f33103b50e729bc269224767e1af_ac_001_prop",
+      "title": "Trade-offs between agricultural water-land productivity and conservation: A scenario-based analysis for sustainable livelihood transitions in East Africa",
+      "motivation": "Conservation policies in water-scarce regions often target agricultural land, potentially threatening the livelihoods of farmers and pastoralists. In the pre-2026 context of intensifying climate pressures and food security concerns, it is critical to quantitatively assess whether short-term economic losses from such policies can be offset by long-term gains in resource sustainability and productivity. This directly addresses the tension between Sustainable Development Goals for life on land (SDG 15) and zero hunger (SDG 2).",
+      "hypothesis": "Strategic, spatially-targeted conservation interventions, which account for livestock and crop water-land productivity differentials, can lead to scenarios where initial livelihood impacts are minimized or become net-positive within a 20-year timeframe through enhanced ecosystem services and resource efficiency.",
+      "method": "We will develop a spatially-explicit scenario analysis framework for a case study region in East Africa (e.g., the Tana River Basin). Using pre-2026 data, we will calculate water and land productivity metrics (m³/kg, m²/kg) for key crop and livestock systems. Scenarios will be constructed using GIS-based land-use change algorithms, simulating conservation set-asides under different rules (e.g., protecting low-productivity/high-erosion land first). A trade-off analysis will then model short-term livelihood impacts (value of production foregone) versus long-term gains from simulated improvements in water regulation and soil retention, using discounted economic valuation.",
+      "contribution": "This research will provide a quantitative, scenario-based tool for policymakers to evaluate the livelihood consequences of conservation. It will advance the field of water footprint assessment by integrating dynamic land-use scenarios and economic trade-off analysis, moving beyond static footprint accounting. The results will offer evidence-based pathways for sustainable resource use that explicitly balance ecological and human well-being objectives.",
+      "novelty": "While Hoekstra's prior work has quantified water and land productivity, this proposal innovatively integrates these metrics into forward-looking conservation trade-off scenarios. It explicitly models the temporal dimension of livelihood impact versus ecological gain, a non-obvious synthesis of water footprint analysis, livelihood economics, and conservation planning.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "efba1f7d1f7dce91f33103b50e729bc269224767e1af_sd_002_prop",
+      "title": "Quantifying the annual economic losses from global forest and wetland degradation using an extended 'Sunken Billions' framework",
+      "motivation": "The 'Sunken Billions' concept, developed by the World Bank to value losses from inefficient fisheries, provides a powerful lens to assess the economic cost of mismanaging global commons. Pre-2026, while water footprint and land productivity studies (like Hoekstra's work) quantify resource use, a systematic valuation of the annual economic losses from the degradation of other critical ecosystems like forests and wetlands is lacking. This gap hinders the formulation of compelling economic arguments for policy intervention to preserve these vital, non-market systems.",
+      "hypothesis": "The annual economic losses from the unsustainable exploitation and degradation of global forests and wetlands are substantial, likely amounting to hundreds of billions of US dollars, and can be robustly quantified by adapting the 'Sunken Billions' methodology to account for their unique ecosystem service flows.",
+      "method": "We will adapt the core 'Sunken Billions' algorithm, which compares current economic returns from a resource to an optimal, sustainable baseline. For forests and wetlands, we will define optimal baselines using pre-2026 scenarios of sustainable management (e.g., reduced deforestation rates, maintained hydrological function). The method will integrate spatially explicit data on ecosystem extent and degradation (e.g., from FAO and remote sensing) with economic valuation of key services (carbon sequestration, water regulation, biodiversity) from existing meta-analyses. Losses will be calculated as the difference between the net present value of ecosystem service flows under current degradation trajectories versus the optimal sustainable scenario, aggregated to a global annual figure.",
+      "contribution": "This research will produce the first global, annualized estimate of economic losses from forest and wetland degradation, framing ecosystem decline as a critical macroeconomic inefficiency. It will extend the analytical framework of water and land productivity studies into the domain of explicit economic valuation, providing a unified metric (USD/year) to compare the cost of inaction across different ecosystems. The results will offer a tangible economic rationale for scaling up investments in natural capital restoration and sustainable management.",
+      "novelty": "While ecosystem service valuations exist, applying the dynamic, counterfactual-based 'Sunken Billions' framework—originally for fisheries—to global forests and wetlands to calculate annual *losses* (not just static stocks) is novel. It moves beyond footprint accounting to quantify the ongoing economic waste of degradation, directly linking Hoekstra's resource productivity themes to macro-scale financial loss.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "f15667d4b8ed09755fec8a2d500ecc792ca9c72c_mt_002_prop",
+      "title": "Assessing the full supply chain water footprint of bioenergy pathways in Kenya using Environmentally Extended Input-Output Analysis",
+      "motivation": "Bioenergy is promoted for energy security and climate mitigation, but its water sustainability is contested. Existing water footprint assessments for crops like sugarcane or feedstocks for biogas often focus on direct irrigation, omitting significant indirect water use embedded in agricultural inputs (fertilizers, pesticides, machinery) and processing. A comprehensive, economy-wide assessment is needed to inform sustainable bioenergy policy and avoid shifting water scarcity burdens within supply chains.",
+      "hypothesis": "The indirect water footprint of bioenergy production in Kenya, captured via upstream supply chains, constitutes a significant and previously under-quantified portion of its total water appropriation, varying substantially between different feedstock types and production systems.",
+      "method": "We will apply Environmentally Extended Input-Output Analysis (EEIOA) using a pre-2026 Kenyan input-output table, extended with sectoral water withdrawal and consumption data from national statistics and literature. The analysis will quantify the total (direct and indirect) water footprint per monetary unit of output for key bioenergy-relevant sectors (e.g., sugarcane, maize, livestock for biogas). Specific bioenergy pathways will be modeled by linking these sectoral footprints to physical production data from recent livestock and crop productivity studies, following the structural path analysis method to trace key contributing supply chains.",
+      "contribution": "This research will provide the first EEIOA-based, national-scale assessment of indirect water use for bioenergy in Kenya, moving beyond farm-gate analysis. It will yield a transparent mapping of water use hotspots in the bioenergy supply chain, offering policymakers a systemic tool to compare the water productivity of different energy crops and to evaluate trade-offs with food production and other land uses.",
+      "novelty": "While EEIOA has been used for water footprints at national and sectoral levels, its explicit application to deconstruct and compare the full supply chain water footprints of specific bioenergy pathways within an African agro-economic context, integrating insights from recent livestock and crop water productivity studies, is novel.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "f15667d4b8ed09755fec8a2d500ecc792ca9c72c_mt_004_prop",
+      "title": "A Multi-Criteria Decision Analysis for Ranking Bioenergy Feedstock Systems Based on Water, Energy, and Economic Productivity",
+      "motivation": "The expansion of bioenergy is critical for climate mitigation but poses significant risks to water and land resources, especially in water-scarce regions. Existing assessments, like water footprinting, often evaluate single criteria (e.g., water use per unit energy) in isolation, failing to capture the complex trade-offs between resource efficiency, energy output, and economic viability that are essential for sustainable policy and investment decisions.",
+      "hypothesis": "Applying a structured Multi-Criteria Decision Analysis (MCDA) framework will reveal a significantly different ranking of bioenergy options (e.g., sugarcane, maize, jatropha, crop residues) compared to single-criterion assessments, by explicitly quantifying and weighting the trade-offs between water productivity, net energy yield, and economic cost.",
+      "method": "The study will first define a set of relevant bioenergy feedstock systems and scenarios for a case study region (e.g., a water-stressed basin). For each system, we will calculate key performance indicators: water footprint (m3/GJ), net energy yield (GJ/ha), and levelized cost of energy ($/GJ). These will serve as criteria in an MCDA model, specifically using the Technique for Order Preference by Similarity to Ideal Solution (TOPSIS) algorithm. Stakeholder surveys will inform the weighting of criteria (e.g., water scarcity may increase the weight for water productivity). Sensitivity analysis will test the robustness of rankings to different weighting schemes.",
+      "contribution": "This work will provide a transparent, integrated assessment tool for policymakers and investors to compare bioenergy pathways. It will advance the water footprint community's methodology by moving from single-metric accounting to multi-criteria evaluation, directly linking Hoekstra's water productivity concepts to energy and economic decision-making.",
+      "novelty": "While MCDA is established in resource management, its application to rank bioenergy systems specifically by synthesizing water footprint, energy balance, and cost data into a single, weighted framework is novel. It transfers and adapts a decision-support methodology into the core domain of quantitative water and land productivity analysis pioneered by Hoekstra.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "f15667d4b8ed09755fec8a2d500ecc792ca9c72c_sd_003_prop",
+      "title": "Spatial assessment of water-energy productivity for bioenergy crops: A dual footprint analysis for integrated resource policy",
+      "motivation": "Water and energy are fundamentally linked, yet resource management often treats them in isolation. With growing pressure on freshwater resources and the need for sustainable bioenergy to meet climate targets, understanding the bioenergy output (GJ) per unit of water consumed (m³) is critical for efficient allocation. This dual productivity metric, building on the water footprint concept, is essential for identifying regions and crop systems where water use for energy production is most efficient, informing policies that avoid trade-offs between water security and renewable energy goals.",
+      "hypothesis": "We hypothesize that the water-energy productivity (GJ/m³) of bioenergy systems varies significantly by crop type, climatic region, and agricultural management, and that mapping this productivity reveals opportunities for optimizing virtual water and embodied energy flows in the global bioeconomy.",
+      "method": "The research will apply and extend the water footprint assessment framework to calculate the green and blue water consumption of major bioenergy crops (e.g., maize, sugarcane, oil palm, short-rotation coppice) in key production regions. For each crop and region, the bioenergy output (GJ/ha) will be calculated based on established crop yield data and calorific conversion values. The core algorithm will compute the ratio of energy output to water input (WEP = GJ_yield / m³_WF). This will be integrated into a spatial scenario analysis, comparing current practices with improved water productivity scenarios, akin to methods used in recent livestock productivity studies.",
+      "contribution": "This work will produce the first spatially explicit, crop-specific database of water-energy productivity, providing a tangible metric to assess the 'water cost of bioenergy.' It will contribute to the water footprint family of indicators by formulating its energy-centric dual, directly linking the fields of virtual water and embodied energy analysis. The results will offer a science-based tool for prioritizing bioenergy investments and policies that minimize water resource competition.",
+      "novelty": "While water footprints of crops and energy footprints of production are well-studied, explicitly inverting the ratio to measure energy output per unit of water consumed represents a novel, integrative perspective on resource use efficiency. This dual problem formulation shifts the focus from minimizing water use per unit of biomass to maximizing useful energy output from a given volume of water, a non-obvious but critical optimization for the water-energy-food nexus.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "f7b45e8817a5a82ec429c0088c88e1976ebbf077_ac_001_adversarial_prop",
+      "title": "A Bayesian Hierarchical Model for Spatiotemporally Explicit Crop Water Use Efficiency: Integrating Process-Guided Causality and Remote Sensing for Robust Water Footprint Assessment",
+      "motivation": "Current water footprint and productivity assessments, including our own work on livestock and crops in Kenya and the Yellow River Basin, often rely on static or regionally averaged water use efficiency (WUE) coefficients. This obscures critical spatiotemporal variability driven by environmental stressors (e.g., VPD, soil moisture), leading to high uncertainty in water use and virtual water flow estimates under changing climatic and management conditions. A causal, dynamic WUE framework is essential for targeting water productivity improvements and sustainable allocation in water-scarce regions.",
+      "hypothesis": "We hypothesize that a Bayesian hierarchical model, which explicitly encodes causal physiological and hydrological drivers of WUE (e.g., the stomatal response to vapor pressure deficit and soil moisture) as priors, will yield more accurate and uncertaintly-quantified estimates of dynamic crop WUE from satellite data than current correlative or fixed-coefficient approaches.",
+      "method": "We will develop a process-guided Bayesian hierarchical model. The core will be a hierarchical representation of the underlying WUE process, linking satellite-derived GPP (e.g., from MODIS or Sentinel-2) and ET (e.g., from SSEBop or PML models) through a likelihood informed by the Penman-Monteith and light-use efficiency frameworks. Key drivers (VPD, soil moisture from SMAP, phenology) will be incorporated as covariates with structured priors derived from plant ecophysiology. The model will be implemented in Stan, enabling full uncertainty propagation from input errors through to posterior distributions of pixel-level WUE and aggregated water footprints.",
+      "contribution": "This work will provide a novel, generalizable method for estimating spatially and temporally variable crop WUE with quantified uncertainty, directly improving the robustness of water footprint accounting. It will advance the field of sustainable resource use by moving from descriptive footprinting to a diagnostic, causal framework that identifies the key levers (e.g., soil moisture deficits, atmospheric demand) influencing water productivity in different agro-ecological zones.",
+      "novelty": "The novelty lies in the explicit fusion of causal, process-based ecophysiological constraints with a flexible Bayesian hierarchical model for remote sensing data, moving beyond statistical correlation to a mechanistic, uncertainty-aware estimation of WUE. This represents a significant departure from the constant WUE or purely empirical regression models dominant in pre-2026 water footprint literature.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "f7b45e8817a5a82ec429c0088c88e1976ebbf077_ac_003_analogy_prop",
+      "title": "A Dynamic Resilience Framework for Global Virtual Water Trade: An Analogy to Smart Power Grids",
+      "motivation": "Global virtual water trade networks are crucial for mitigating regional water scarcity, but existing models treat them as static or slowly adjusting. In a pre-2026 context of increasing hydrological variability and extreme events, understanding the dynamic resilience of these networks to sudden shocks is critical. This research addresses the risk of cascading water scarcity failures triggered by localized droughts or trade disruptions, analogous to power grid blackouts.",
+      "hypothesis": "Modeling virtual water trade as a dynamic, self-adjusting network—akin to a smart power grid—will reveal a higher intrinsic resilience to shocks than static models suggest, but will also identify critical, non-redundant trade links whose failure could propagate scarcity through the global system.",
+      "method": "We will develop an agent-based model (ABM) coupled with a network optimization layer. The ABM represents major trading nations as agents responding to local water scarcity (modeled as reduced 'generation capacity') and global price signals. The optimization framework, adapting the Direct Current Optimal Power Flow (DCOPF) algorithm, will dynamically re-route virtual water flows to minimize 'scarcity cost' subject to network constraints (e.g., trade agreements, infrastructure limits). Scenarios will test the system's response to simulated hydrological shocks in key export regions for water-intensive commodities like crops and livestock.",
+      "contribution": "This work will provide a novel, dynamic assessment of global water trade resilience, moving beyond footprint accounting and static trade analysis. It will produce a policy-testing tool to identify leverage points for enhancing network robustness and preventing scarcity cascades, contributing directly to the discourse on sustainable global resource use under uncertainty.",
+      "novelty": "The explicit, operational analogy to smart power grid engineering—applying concepts like dynamic rerouting, capacity constraints, and cascading failure—to virtual water trade modeling is a significant conceptual and methodological leap beyond existing economic or hydrological network studies pre-2026.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "f7b45e8817a5a82ec429c0088c88e1976ebbf077_fw_003_adversarial_prop",
+      "title": "A Harmonized Multi-Decadal Reconstruction of National Water Footprints: Attributing Trends to Technological, Climatic, and Economic Drivers",
+      "motivation": "Long-term analyses of water footprints (WFs) are essential for understanding historical pressures on freshwater resources and informing sustainable policies. However, existing time series are often inconsistent due to evolving methodologies, creating artifacts that obscure true trends. A harmonized reconstruction is needed to separate methodological noise from real drivers like efficiency gains, climate change, and shifting trade patterns, as highlighted in recent work on livestock and crop productivity in Kenya and the Yellow River Basin.",
+      "hypothesis": "Applying a single, consistent WF assessment framework to historical data will reveal that long-term trends in national water footprints are primarily driven by technological improvements in water productivity and changes in final consumption, with climate variability and international trade playing significant but secondary roles.",
+      "method": "We will apply the Water Footprint Assessment framework consistently to historical (e.g., 1990-2020) data on crop/livestock production, climate, and trade for selected nations. Missing data will be addressed using validated multiple imputation techniques. A structural decomposition analysis (SDA) will be employed to attribute changes in the total WF to drivers: technological efficiency (water use per unit output), production structure, and final consumption. Counterfactual scenarios will isolate the impact of climatic shifts (using historical climate data) and trade pattern evolution.",
+      "contribution": "This research will produce the first consistent, multi-decadal WF time series with quantified uncertainty, enabling robust trend analysis. It will provide a causal, quantitative attribution of historical WF changes to specific drivers, moving beyond descriptive accounting. This directly supports more targeted water policy and resource planning by identifying the key levers that have historically altered water demand.",
+      "novelty": "The novelty lies in the harmonized reconstruction that corrects for methodological inconsistencies across time, combined with the explicit driver attribution using decomposition analysis and counterfactual scenarios. This moves WF research from static accounting or simple trend description to a causal, historical driver analysis.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "f7b45e8817a5a82ec429c0088c88e1976ebbf077_mt_003_analogy_prop",
+      "title": "Structural Resilience and Keystone Nations in the Global Virtual Water Trade Network: An Ecological Network Analysis",
+      "motivation": "Global virtual water trade networks are critical for food and water security but are vulnerable to shocks from climate extremes, geopolitical conflicts, and trade disruptions. Pre-2026 research has quantified flows and footprints but lacks a systematic framework to assess the network's structural stability and identify systemically important nodes. Understanding this resilience is essential for developing robust resource management and trade policies.",
+      "hypothesis": "The global virtual water trade network possesses structural properties analogous to ecological food webs, and applying stability analysis from theoretical ecology will reveal non-obvious, critical 'keystone' nations whose water resource stress or trade policy changes could disproportionately destabilize global water-for-food security.",
+      "method": "We will construct a directed, weighted network for agricultural and livestock virtual water trade using FAO COMTRADE and Water Footprint Network data (circa 2010-2020). Adapting ecological network analysis, we will calculate structural metrics including connectance, modularity, and node centrality (e.g., weighted degree, betweenness). We will simulate cascading failure scenarios by sequentially removing or stressing high-centrality nodes (nations) and key trade links, modeling the propagation of water scarcity 'shocks' through the network to quantify systemic vulnerability.",
+      "contribution": "This research will provide the first application of ecological stability theory to virtual water trade, offering a novel diagnostic framework to assess global water resource resilience. It will produce a prioritized list of critical nations and trade dependencies, informing risk assessments and policy debates on water security, trade diversification, and strategic reserves.",
+      "novelty": "While network analysis has been applied to trade, explicitly adapting food web stability concepts and cascading failure simulations to virtual water networks is a novel interdisciplinary synthesis. This moves beyond descriptive footprint accounting to a dynamic, systemic vulnerability analysis.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "f7b45e8817a5a82ec429c0088c88e1976ebbf077_sd_003_analogy_prop",
+      "title": "Minimizing Global Water Use Through Trade: An Inverse Water Footprint Optimization Using Electrical Circuit Flow Analogy",
+      "motivation": "Current water footprint and virtual water flow studies, such as those for the Yellow River Basin or Kenyan livestock, quantify water use under existing, often inefficient, production and trade patterns. To move from accounting to strategic resource management, we need to identify the globally optimal allocation of production that minimizes water use for a given consumption bundle. This inverse problem is critical for informing policies on sustainable trade and water security, especially under growing resource constraints.",
+      "hypothesis": "By modeling the global trade network as an electrical circuit where resistance represents water productivity, the production and trade flows that satisfy final demand can be optimized to minimize total system-wide water use, revealing significant potential savings compared to current patterns.",
+      "method": "We will construct a multi-commodity network model with nodes as economic regions and edges as trade pathways. Edge 'resistance' will be defined as the inverse of water productivity (m³/unit) for specific goods (e.g., crops, livestock products), incorporating regional data. Fixed net inflows at demand nodes will represent the consumption bundle. Using convex optimization techniques from network theory, specifically a linear programming formulation of the minimum-cost flow problem, we will solve for the flow distribution that minimizes aggregate water use (sum of flow² * resistance). The model will be applied to key agricultural and livestock commodities.",
+      "contribution": "This research will provide a novel normative framework for assessing the water-saving potential of global trade reorganization. It will yield quantitative benchmarks for 'best-possible' water use, against which current footprints can be evaluated, offering concrete targets for international water policy and sustainable supply chain design.",
+      "novelty": "While water footprint networks are analyzed descriptively, applying the electrical circuit analogy and its associated optimization formalism to solve the inverse footprint problem is a novel methodological advance. It shifts the focus from 'what is' to 'what could be' in global water resource efficiency.",
+      "dimension": "Analogy"
+    }
+  ],
+  "ideas": [
+    {
+      "id": "64cd2d63ec9363e4fbf6c0c8b3ca37fbe47d882a_sd_002",
+      "title": "Scale up to a global multi-regional input-output model",
+      "description": "Develop a global MRIO model integrating green, blue, and grey water footprints for all countries and sectors.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "The water footprint of cotton consumption: An assessment of the impact of worldwide consumption of cotton products on the water resources in the cotton producing countries",
+      "sourceYear": 2006
+    },
+    {
+      "id": "cad78ab631fd528b730f0436d0854dc3b61e90a8_sd_003",
+      "title": "Inverse problem: Design for zero water footprint",
+      "description": "Develop engineering and agricultural systems targeting net-zero blue/grey water footprints.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "The Water Footprint Assessment Manual: Setting the Global Standard",
+      "sourceYear": 2011
+    },
+    {
+      "id": "cf68fd0c252ae75cfbec0f1f4e162e8b743a159f_ac_002_fusion",
+      "title": "Agent-based co-evolution of crop patterns and irrigation decisions under dynamic water constraints",
+      "description": "This research develops an integrated agent-based modeling framework that inverts traditional water planning. Starting from spatio-temporal profiles of available green and blue water, the model simulates a landscape of heterogeneous farmer agents who make adaptive crop choice and irrigation decisions based on these constraints, their own resources, and observed outcomes. The key innovation is the closed feedback loop: initial crop patterns emerge from water availability, but subsequent agent behaviors (e.g., deficit irrigation, technology adoption, water trading) modify blue water demand and recharge, dynamically updating the water constraints for the next season. This allows for simulating the co-evolution of agricultural systems and water resources under climate variability, identifying policies that guide the system toward sustainable equilibria.",
+      "dimension": "Fusion",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "10c89457f1374175dc888a690d2a3f6b567da7c3_ac_001",
+      "title": "Gray water footprint assumes uniform pollutant assimilation",
+      "description": "Model gray water footprint with spatially variable water quality standards and dilution capacity.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "The water footprint of humanity",
+      "sourceYear": 2011
+    },
+    {
+      "id": "10c89457f1374175dc888a690d2a3f6b567da7c3_mt_004",
+      "title": "Use agent-based modeling for water footprint decisions",
+      "description": "Model farmer and consumer decisions affecting water footprints using agent-based simulation.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "The water footprint of humanity",
+      "sourceYear": 2011
+    },
+    {
+      "id": "4668755db6b75a7c2e907bf11c01e1217373bde5_mt_004",
+      "title": "Use hydrological models for grey water dilution",
+      "description": "Employ river basin models to dynamically calculate pollutant dilution capacities for grey water.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "The green, blue and grey water footprint of crops and derived crops products",
+      "sourceYear": 2011
+    },
+    {
+      "id": "f15667d4b8ed09755fec8a2d500ecc792ca9c72c_mt_002",
+      "title": "Use economic input-output analysis for supply chain water use",
+      "description": "Apply EEIOA to capture indirect water footprints of inputs like fertilizers and machinery in bioenergy.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "The water footprint of bioenergy",
+      "sourceYear": 2009
+    },
+    {
+      "id": "f15667d4b8ed09755fec8a2d500ecc792ca9c72c_sd_003",
+      "title": "Formulate the dual problem: energy per unit water",
+      "description": "Calculate the bioenergy output (GJ) achievable per cubic meter of water consumed in different regions.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "The water footprint of bioenergy",
+      "sourceYear": 2009
+    },
+    {
+      "id": "2481e9cfbc1211c831d0c18751753142ccddc35f_mt_004",
+      "title": "Use remote sensing for direct availability estimation",
+      "description": "Incorporate satellite-based soil moisture and groundwater storage data into the monthly availability term.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Global Monthly Water Scarcity: Blue Water Footprints versus Blue Water Availability",
+      "sourceYear": 2012
+    },
+    {
+      "id": "6bd4b2e41ba9076ec23de02b0f1d88593d78e1d4_sd_003",
+      "title": "Inverse problem: diet optimization for water security",
+      "description": "Calculate optimal human diets that meet nutrition within a constrained global blue and grey water budget.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "A Global Assessment of the Water Footprint of Farm Animal Products",
+      "sourceYear": 2012
+    },
+    {
+      "id": "33328f85fa67deb4718acc0615e2a2508ab5c3bc_sd_004",
+      "title": "Dual problem: virtual land or nutrient flows",
+      "description": "Study the trade of embedded land or fertilizer nutrients alongside or instead of virtual water.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Globalisation of water resources: Global virtual water flows in relation to international crop trade",
+      "sourceYear": 2005
+    },
+    {
+      "id": "6bd4b2e41ba9076ec23de02b0f1d88593d78e1d4_sd_004",
+      "title": "Dual: Water footprint of protein transition pathways",
+      "description": "Model the water resource implications of shifting from animal to plant-based or alternative protein sources.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "A Global Assessment of the Water Footprint of Farm Animal Products",
+      "sourceYear": 2012
+    },
+    {
+      "id": "1956d8f3f6d08c0054a3b3c8dc44e390e93944d2_sd_001",
+      "title": "Downscale to urban water scarcity assessment",
+      "description": "Apply the monthly scarcity framework at city scale to identify intra-urban water stress hotspots and inequities.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Four billion people facing severe water scarcity",
+      "sourceYear": 2016
+    },
+    {
+      "id": "f7b45e8817a5a82ec429c0088c88e1976ebbf077_ac_001_adversarial",
+      "title": "A Causal, Process-Guided Bayesian Framework for Estimating Spatiotemporally Variable Crop Water Use Efficiency",
+      "description": "This research develops a robust modeling system to estimate dynamic crop water use efficiency (WUE) by moving beyond simple correlation and embracing a causal, process-informed structure. It integrates satellite-derived physiological signals with principles from plant ecophysiology and soil hydrology within a Bayesian hierarchical model, explicitly representing the drivers of WUE variability (e.g., vapor pressure deficit, soil moisture stress, phenology). The framework systematically quantifies and propagates uncertainty from inputs through to final water footprint estimates, enabling reliable application across scales, even where direct ground observations are limited, by leveraging mechanistic constraints and spatial-temporal dependencies.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "1956d8f3f6d08c0054a3b3c8dc44e390e93944d2_sd_002",
+      "title": "Invert problem: map water abundance and surplus",
+      "description": "Map global regions with persistent water surplus to identify potential water export or transfer source basins.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Four billion people facing severe water scarcity",
+      "sourceYear": 2016
+    },
+    {
+      "id": "2481e9cfbc1211c831d0c18751753142ccddc35f_sd_003",
+      "title": "Solve the inverse problem: footprint allocation",
+      "description": "Given a scarcity constraint, optimize the spatial allocation of water footprints across sectors.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Global Monthly Water Scarcity: Blue Water Footprints versus Blue Water Availability",
+      "sourceYear": 2012
+    },
+    {
+      "id": "edb77e03a1179a3aa91933f3b9d6108a1bbaf740_fw_001",
+      "title": "High-resolution temporal analysis of water footprints",
+      "description": "Analyze how water footprints change over time, not just as a static average for 1996-2005.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Water footprints of nations: Water use by people as a function of their consumption pattern",
+      "sourceYear": 2006
+    },
+    {
+      "id": "2481e9cfbc1211c831d0c18751753142ccddc35f_fw_005",
+      "title": "Integrate groundwater depletion and recharge dynamics",
+      "description": "Enhance the scarcity indicator with temporally explicit groundwater storage and use data.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Global Monthly Water Scarcity: Blue Water Footprints versus Blue Water Availability",
+      "sourceYear": 2012
+    },
+    {
+      "id": "f15667d4b8ed09755fec8a2d500ecc792ca9c72c_mt_004",
+      "title": "Transfer multi-criteria decision analysis from resource management",
+      "description": "Use MCDA to rank bioenergy options by water, energy, and economic criteria simultaneously.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "The water footprint of bioenergy",
+      "sourceYear": 2009
+    },
+    {
+      "id": "456b43b895c97fa4d5f5c4af8e1731c26ef04d65_mt_004",
+      "title": "Transfer hydrological model calibration techniques",
+      "description": "Apply parameter calibration and uncertainty analysis techniques from complex hydrological models to the water balance model.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "National water footprint accounts: the green, blue and grey water footprint of production and consumption",
+      "sourceYear": 2011
+    },
+    {
+      "id": "64cd2d63ec9363e4fbf6c0c8b3ca37fbe47d882a_mt_004",
+      "title": "Use agent-based modeling for trade decisions",
+      "description": "Simulate farmer and trader decisions to understand emergent virtual water flow patterns under policy and climate scenarios.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "The water footprint of cotton consumption: An assessment of the impact of worldwide consumption of cotton products on the water resources in the cotton producing countries",
+      "sourceYear": 2006
+    },
+    {
+      "id": "cad78ab631fd528b730f0436d0854dc3b61e90a8_mt_003",
+      "title": "Adapt ecological network analysis for water systems",
+      "description": "Model water flow networks to identify critical nodes and resilience.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "The Water Footprint Assessment Manual: Setting the Global Standard",
+      "sourceYear": 2011
+    },
+    {
+      "id": "8f71f7cbcf3d936564c051b57051cdf05404b8d5_fw_005",
+      "title": "Benchmark resource use efficiency across sectors",
+      "description": "Develop standardized metrics to compare the footprint efficiency of different industries and nations.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Humanity’s unsustainable environmental footprint",
+      "sourceYear": 2014
+    },
+    {
+      "id": "2481e9cfbc1211c831d0c18751753142ccddc35f_ac_002",
+      "title": "Invert the scarcity indicator for surplus management",
+      "description": "Define and map basins with chronic water surplus as a flood risk or storage opportunity.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Global Monthly Water Scarcity: Blue Water Footprints versus Blue Water Availability",
+      "sourceYear": 2012
+    },
+    {
+      "id": "cf68fd0c252ae75cfbec0f1f4e162e8b743a159f_ac_003_analogy",
+      "title": "Adapting Sub-Pixel Unmixing from Remote Sensing to Model Sub-Grid Heterogeneity in Agricultural Footprints",
+      "description": "This idea challenges the homogeneity assumption within coarse (5-arc-minute) agricultural grid cells by adapting the solution of sub-pixel unmixing from remote sensing. In satellite analysis, spectral mixture analysis quantifies the fractional cover of different land components within a single pixel. Adapted here, we propose a 'grid cell unmixing' framework where each grid cell's internal variability in soil, slope, and farm size is represented by a set of discrete, functional 'endmembers'. By leveraging higher-resolution global datasets to define the fractional area of these endmembers within each coarse cell, water balance and environmental footprint estimates can be refined as the area-weighted aggregate of the distinct processes occurring in each sub-grid land class, significantly improving the accuracy of large-scale agricultural models.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "2481e9cfbc1211c831d0c18751753142ccddc35f_ac_005",
+      "title": "Assume non-stationarity in the baseline period",
+      "description": "Use a moving baseline for 'natural' runoff to account for long-term climate shifts.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Global Monthly Water Scarcity: Blue Water Footprints versus Blue Water Availability",
+      "sourceYear": 2012
+    },
+    {
+      "id": "cf68fd0c252ae75cfbec0f1f4e162e8b743a159f_mt_004_adversarial",
+      "title": "Uncertainty-quantified, sensor-integrated Bayesian framework for partitioning green and blue water sources in evapotranspiration",
+      "description": "This approach deploys a dense network of in-situ sensors to continuously monitor the isotopic and chemical composition of potential water sources (precipitation, soil water at multiple depths, groundwater, surface water) and atmospheric water vapor. These high-frequency data feed into a hierarchical Bayesian mixing model that probabilistically partitions evapotranspiration (ET) sources. The framework explicitly models the spatial and temporal variability of end-member signatures as probability distributions rather than fixed values, directly quantifying the uncertainty in the green versus blue water contributions to ET and identifying conditions where source discrimination is robust versus inherently ambiguous.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "f7b45e8817a5a82ec429c0088c88e1976ebbf077_fw_003_adversarial",
+      "title": "Harmonized Multi-Decadal Water Footprint Reconstruction with Driver Attribution",
+      "description": "This research reconstructs consistent water footprints over multiple decades by applying a unified computational model to historical raw input data, creating a harmonized time series. It explicitly quantifies uncertainty and corrects for gaps using validated imputation techniques to ensure comparability. The analysis then employs decomposition and counterfactual scenarios to attribute trends to specific drivers like technological efficiency, climatic shifts, trade patterns, and consumption changes. This approach isolates true historical drivers from methodological artifacts, producing a robust, causal understanding of long-term water resource impacts.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "8f71f7cbcf3d936564c051b57051cdf05404b8d5_mt_002",
+      "title": "Use input-output analysis from economics for footprints",
+      "description": "Adapt economic input-output tables to trace environmental externalities across industrial sectors.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Humanity’s unsustainable environmental footprint",
+      "sourceYear": 2014
+    },
+    {
+      "id": "cf68fd0c252ae75cfbec0f1f4e162e8b743a159f_ac_005_analogy",
+      "title": "Spatial modeling of water pollution assimilation using ecological carrying capacity frameworks",
+      "description": "This research adapts the 'carrying capacity' framework from wildlife ecology to water pollution regulation. In wildlife management, fixed population targets were replaced with spatially explicit models accounting for habitat heterogeneity to determine sustainable population levels. Similarly, this project proposes replacing global ambient water quality standards with locally variable natural assimilation capacities for grey water. By developing dynamic spatial models that incorporate local hydrological flow rates, microbial communities, temperature, oxygen levels, and geochemical conditions, we can map the actual pollution processing capacity of each water body segment. This would enable regulatory agencies to issue pollution discharge permits tailored to the specific resilience of each receiving ecosystem, creating a more scientifically grounded and environmentally protective regulatory system that acknowledges natural spatial variability in pollution assimilation.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "cf68fd0c252ae75cfbec0f1f4e162e8b743a159f_ac_001_analogy",
+      "title": "Model nitrogen leaching as a dynamic state variable using a reservoir network approach",
+      "description": "This idea challenges the constant nitrogen leaching fraction assumption by drawing an analogy from hydrology, where the constant runoff coefficient was successfully replaced by dynamic watershed models. The analogous solution conceptualizes a watershed as a network of interconnected reservoirs with state-dependent fluxes. Adapted to nitrogen cycling, the research would develop a model where the soil is represented as a set of linked nitrogen reservoirs (e.g., mineral, immobilized, subsoil). Nitrogen leaching is no longer a fixed fraction of inputs but a dynamic flux calculated by transfer functions that depend on the real-time state of these reservoirs, which are in turn governed by soil properties, climate drivers (precipitation, temperature), and management practices (irrigation, fertilizer timing). This allows leaching to emerge dynamically from the simulated interactions within the soil-plant-climate system.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "cf68fd0c252ae75cfbec0f1f4e162e8b743a159f_sd_001",
+      "title": "Downscale to field-level footprints using IoT",
+      "description": "Use IoT sensor networks at field scale to validate and downscale grid-based water footprint estimates.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "The blue, green and grey water footprint of rice from production and consumption perspectives",
+      "sourceYear": 2011
+    },
+    {
+      "id": "1956d8f3f6d08c0054a3b3c8dc44e390e93944d2_ac_001",
+      "title": "Challenge fixed environmental flow requirement thresholds",
+      "description": "Replace static environmental flow requirements with dynamic ecosystem-demand models that vary by season and ecological context.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Four billion people facing severe water scarcity",
+      "sourceYear": 2016
+    },
+    {
+      "id": "4668755db6b75a7c2e907bf11c01e1217373bde5_mt_001",
+      "title": "Apply life cycle assessment allocation methods",
+      "description": "Use LCA co-product allocation procedures for derived crop products instead of mass/economic allocation.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "The green, blue and grey water footprint of crops and derived crops products",
+      "sourceYear": 2011
+    },
+    {
+      "id": "efba1f7dce91f33103b50e729bc269224767e1af_sd_002",
+      "title": "Scale up economic loss analysis to global ecosystems",
+      "description": "Apply the 'Sunken Billions' methodology to quantify losses in other global commons like forests or wetlands.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Living planet report 2008",
+      "sourceYear": 2004
+    },
+    {
+      "id": "f7b45e8817a5a82ec429c0088c88e1976ebbf077_sd_003_analogy",
+      "title": "Solve the inverse footprint optimization problem via electrical circuit flow analogy",
+      "description": "This research adapts the solution to the electrical circuit power loss minimization problem to solve the inverse footprint optimization problem. In the analogous problem, engineers determine current flows in a resistive network to deliver required power with minimal total I²R heat loss. Here, the global trade network is recast as a circuit: nodes are economic regions, edges are trade pathways with a 'resistance' parameter representing the direct and indirect water use per unit of good produced and transported. The given consumption bundle defines fixed net inflows at demand nodes. Using linear or convex optimization techniques from network theory (e.g., minimum-cost flow algorithms), the research will identify the specific pattern of production and trade flows that satisfies the consumption bundle while minimizing aggregate global water use, effectively finding the most water-efficient allocation of production tasks worldwide.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "456b43b895c97fa4d5f5c4af8e1731c26ef04d65_sd_005",
+      "title": "Temporal scaling: real-time water footprint dashboard",
+      "description": "Develop a near-real-time monitoring dashboard using the model with updated meteorological data streams.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "National water footprint accounts: the green, blue and grey water footprint of production and consumption",
+      "sourceYear": 2011
+    },
+    {
+      "id": "2481e9cfbc1211c831d0c18751753142ccddc35f_mt_001",
+      "title": "Apply drought index methodologies to scarcity",
+      "description": "Use Standardized Precipitation Index (SPI) logic to create a Standardized Water Scarcity Index.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Global Monthly Water Scarcity: Blue Water Footprints versus Blue Water Availability",
+      "sourceYear": 2012
+    },
+    {
+      "id": "cf68fd0c252ae75cfbec0f1f4e162e8b743a159f_ac_001_adversarial",
+      "title": "Data-assimilative hybrid model for dynamic nitrogen leaching with uncertainty quantification",
+      "description": "This research develops a robust, operational model for dynamic nitrogen leaching by fusing a parsimonious process core with a flexible data assimilation system. The framework is designed to ingest and harmonize disparate, real-world data streams—from remote sensing to farm records—to continuously update model states and reduce parametric uncertainty. It explicitly quantifies and outputs prediction confidence intervals for leaching fluxes, providing actionable insights despite inherent data gaps. This approach ensures the model remains practical, testable, and more reliable than either a fixed fraction or a complex, unconstrained dynamic model.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "cf68fd0c252ae75cfbec0f1f4e162e8b743a159f_mt_003_analogy",
+      "title": "Adapting Epidemiological Network Models for Farmer Decision Cascades in Water Use",
+      "description": "This idea adapts agent-based modeling solutions from epidemiology, where network models simulate disease spread via individual states and contact-based transmission rules. The analogous solution involves agents (individuals) in a social network changing states (e.g., SIR model) based on local interactions and adaptive behaviors. Adapted to farmer irrigation decisions, agents (farmers) are embedded in a dual network of physical water infrastructure and social information exchange. Their irrigation strategy 'state' changes in response to water availability signals, perceived economic risk, and, crucially, the observed behaviors of neighboring farmers, mimicking complex contagion. This model simulates how technological adoption, policy interventions, or drought shocks propagate, capturing non-linear tipping points and feedbacks in regional blue water use that simpler aggregate models miss.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "1956d8f3f6d08c0054a3b3c8dc44e390e93944d2_mt_003",
+      "title": "Transfer network flow optimization from logistics",
+      "description": "Apply operations research network optimization to model optimal water allocation across interconnected river basin systems.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Four billion people facing severe water scarcity",
+      "sourceYear": 2016
+    },
+    {
+      "id": "f7b45e8817a5a82ec429c0088c88e1976ebbf077_mt_003_analogy",
+      "title": "Applying Ecological Food Web Stability Analysis to the Virtual Water Trade Network",
+      "description": "This research seed expands the original idea by drawing an analogy from theoretical ecology. The analogous problem is understanding the stability and resilience of complex ecological food webs, which are solved by modeling them as interaction networks and applying stability analysis metrics and simulations. This solution is adapted by conceptualizing the global virtual water trade network as an ecological network, where countries are nodes and trade flows are directed links. The adapted research will apply ecological stability analysis techniques—such as measuring modularity, connectance, and simulating the cascading effects of node or link failure—to quantify the structural resilience of the virtual water trade system and identify critical, vulnerable, or 'keystone' nations whose disruption could destabilize the global network.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "1956d8f3f6d08c0054a3b3c8dc44e390e93944d2_mt_004",
+      "title": "Apply financial portfolio risk theory to water",
+      "description": "Use portfolio diversification theory to evaluate how water source diversity reduces basin-level scarcity risk exposure.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Four billion people facing severe water scarcity",
+      "sourceYear": 2016
+    },
+    {
+      "id": "4668755db6b75a7c2e907bf11c01e1217373bde5_ac_003",
+      "title": "Challenge uniform nitrogen leaching fraction",
+      "description": "Use spatially variable nitrogen leaching fractions based on soil type and management practices.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "The green, blue and grey water footprint of crops and derived crops products",
+      "sourceYear": 2011
+    },
+    {
+      "id": "f7b45e8817a5a82ec429c0088c88e1976ebbf077_ac_003_analogy",
+      "title": "Model Virtual Water Trade as a Resilient Power Grid",
+      "description": "This idea challenges the assumption that virtual water trade networks are static or slowly changing by treating them as dynamic, resilient systems analogous to modern smart power grids. Drawing from electrical power systems engineering, where grids dynamically reroute electricity in response to faults and demand signals, we adapt these principles to model global virtual water trade. The research would develop an agent-based or network optimization framework where trade flows are continuously re-calculated in response to hydrological scarcity shocks (modeled as loss of generation capacity) and economic price signals. This allows for simulating the network's capacity to prevent cascading water scarcity, identify critical, failure-prone trade links, and test policies that enhance the system's resilience, much like grid operators manage power flow to prevent blackouts.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "1956d8f3f6d08c0054a3b3c8dc44e390e93944d2_ac_003",
+      "title": "Question basin-level aggregation hiding local hotspots",
+      "description": "Assess whether river-basin averaging masks critical sub-basin scarcity hotspots in large heterogeneous watersheds.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Four billion people facing severe water scarcity",
+      "sourceYear": 2016
+    },
+    {
+      "id": "1956d8f3f6d08c0054a3b3c8dc44e390e93944d2_ac_002",
+      "title": "Relax assumption of static population distribution",
+      "description": "Account for seasonal migration, urbanization trends, and transient populations when mapping people to water-scarce basins.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Four billion people facing severe water scarcity",
+      "sourceYear": 2016
+    },
+    {
+      "id": "8f71f7cbcf3d936564c051b57051cdf05404b8d5_mt_004",
+      "title": "Use agent-based modeling for consumption behavior",
+      "description": "Model how individual consumer choices aggregate to form national and global footprints.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Humanity’s unsustainable environmental footprint",
+      "sourceYear": 2014
+    },
+    {
+      "id": "efba1f7dce91f33103b50e729bc269224767e1af_ac_001",
+      "title": "Challenge that conservation must not impact livelihoods",
+      "description": "Explore if short-term livelihood impacts from conservation are acceptable for long-term ecological and economic gain.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Living planet report 2008",
+      "sourceYear": 2004
+    },
+    {
+      "id": "8f71f7cbcf3d936564c051b57051cdf05404b8d5_ac_001",
+      "title": "Challenge maximum sustainable levels as static thresholds",
+      "description": "Model sustainability limits as dynamic, adapting to technological innovation and ecosystem recovery.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Humanity’s unsustainable environmental footprint",
+      "sourceYear": 2014
+    },
+    {
+      "id": "8f71f7cbcf3d936564c051b57051cdf05404b8d5_mt_001",
+      "title": "Apply network theory to footprint supply chains",
+      "description": "Use network analysis to identify critical nodes and cascading risks in resource flow networks.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Humanity’s unsustainable environmental footprint",
+      "sourceYear": 2014
+    },
+    {
+      "id": "efba1f7dce91f33103b50e729bc269224767e1af_fw_002",
+      "title": "Quantify social impacts of conservation financing",
+      "description": "Develop metrics to measure how conservation investments like FIRME affect local livelihoods and social equity.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Living planet report 2008",
+      "sourceYear": 2004
+    },
+    {
+      "id": "8f71f7cbcf3d936564c051b57051cdf05404b8d5_mt_003",
+      "title": "Apply life cycle assessment (LCA) to geopolitical units",
+      "description": "Scale LCA methodology from products to assess the full footprint of nations or trade blocs.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Humanity’s unsustainable environmental footprint",
+      "sourceYear": 2014
+    },
+    {
+      "id": "8f71f7cbcf3d936564c051b57051cdf05404b8d5_sd_002",
+      "title": "Inverse problem: Design economies for given footprints",
+      "description": "Invert the analysis to design economic systems that operate within predefined footprint envelopes.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Humanity’s unsustainable environmental footprint",
+      "sourceYear": 2014
+    },
+    {
+      "id": "efba1f7dce91f33103b50e729bc269224767e1af_sd_004",
+      "title": "Inverse problem: define viable path from current state",
+      "description": "Start from current political and economic constraints and work backwards to design feasible sustainability interventions.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Living planet report 2008",
+      "sourceYear": 2004
+    },
+    {
+      "id": "efba1f7dce91f33103b50e729bc269224767e1af_ac_003",
+      "title": "Relax assumption that better management increases profit",
+      "description": "Investigate cases where optimal ecological management reduces short-term financial returns for some actors.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Living planet report 2008",
+      "sourceYear": 2004
+    },
+    {
+      "id": "6bd4b2e41ba9076ec23de02b0f1d88593d78e1d4_ac_003",
+      "title": "Relax static feed conversion efficiency assumption",
+      "description": "Model dynamic feed efficiencies based on breeding, health, and precision feeding advancements.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "A Global Assessment of the Water Footprint of Farm Animal Products",
+      "sourceYear": 2012
+    },
+    {
+      "id": "efba1f7dce91f33103b50e729bc269224767e1af_sd_003",
+      "title": "Study the dual: maximizing profit given ecological collapse",
+      "description": "Model the business strategies that maximize short-term profit under conditions of severe fishery degradation.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Living planet report 2008",
+      "sourceYear": 2004
+    },
+    {
+      "id": "8f71f7cbcf3d936564c051b57051cdf05404b8d5_ac_004",
+      "title": "Challenge the primacy of supply chain analysis",
+      "description": "Investigate if circular economy models make linear supply chain footprints less relevant.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Humanity’s unsustainable environmental footprint",
+      "sourceYear": 2014
+    },
+    {
+      "id": "2481e9cfbc1211c831d0c18751753142ccddc35f_sd_005",
+      "title": "Temporal scaling: sub-monthly or decadal analysis",
+      "description": "Apply the scarcity framework at daily or weekly, or multi-decadal time scales.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Global Monthly Water Scarcity: Blue Water Footprints versus Blue Water Availability",
+      "sourceYear": 2012
+    },
+    {
+      "id": "efba1f7dce91f33103b50e729bc269224767e1af_sd_001",
+      "title": "Scale down FIRME to small-scale community fisheries",
+      "description": "Adapt the FIRME investment model for small, community-managed fisheries with limited capital access.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Living planet report 2008",
+      "sourceYear": 2004
+    },
+    {
+      "id": "efba1f7dce91f33103b50e729bc269224767e1af_mt_002",
+      "title": "Use development impact bonds for fishery recovery",
+      "description": "Apply development impact bond structures from social policy to finance outcomes in marine conservation.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Living planet report 2008",
+      "sourceYear": 2004
+    },
+    {
+      "id": "efba1f7dce91f33103b50e729bc269224767e1af_fw_001",
+      "title": "Test FIRME investment model in diverse fisheries",
+      "description": "Pilot the FIRME initiative's investment model in various real-world fisheries to assess its viability and refine its structure.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Living planet report 2008",
+      "sourceYear": 2004
+    },
+    {
+      "id": "efba1f7dce91f33103b50e729bc269224767e1af_ac_002",
+      "title": "Invert the 'two planets' business-as-usual projection",
+      "description": "Assume resource constraints will force change before 2030, studying adaptive collapse instead of linear demand.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Living planet report 2008",
+      "sourceYear": 2004
+    },
+    {
+      "id": "efba1f7dce91f33103b50e729bc269224767e1af_mt_003",
+      "title": "Adapt cooperative management from forestry",
+      "description": "Transfer community-based cooperative management models from forestry to improve stakeholder engagement in fisheries.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Living planet report 2008",
+      "sourceYear": 2004
+    },
+    {
+      "id": "efba1f7dce91f33103b50e729bc269224767e1af_fw_004",
+      "title": "Design political pathways for fishery reform",
+      "description": "Research governance and policy mechanisms to make sustainable fishery management politically feasible.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Living planet report 2008",
+      "sourceYear": 2004
+    },
+    {
+      "id": "efba1f7dce91f33103b50e729bc269224767e1af_mt_004",
+      "title": "Apply portfolio theory to fishery investments",
+      "description": "Use financial portfolio risk diversification methods to design resilient portfolios of conservation investments.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Living planet report 2008",
+      "sourceYear": 2004
+    }
+  ],
+  "papers": [
+    {
+      "title": "Four billion people facing severe water scarcity",
+      "year": 2016,
+      "venue": "Science Advances",
+      "citations": 4322,
+      "abstract": "Global water scarcity assessment at a high spatial and temporal resolution, accounting for environmental flow requirements. Freshwater scarcity is increasingly perceived as a global systemic risk. Previous global water scarcity assessments, measuring water scarcity annually, have underestimated expe"
+    },
+    {
+      "title": "The green, blue and grey water footprint of crops and derived crops products",
+      "year": 2011,
+      "venue": "",
+      "citations": 2288,
+      "abstract": "This study quantifies the green, blue and grey water footprint of global crop production in a spatially-explicit way for the period 1996–2005. The assessment improves upon earlier research by taking a high-resolution approach, estimating the water footprint of 126 crops at a 5 by 5 arc minute grid. "
+    },
+    {
+      "title": "The water footprint of humanity",
+      "year": 2011,
+      "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+      "citations": 2008,
+      "abstract": "This study quantifies and maps the water footprint (WF) of humanity at a high spatial resolution. It reports on consumptive use of rainwater (green WF) and ground and surface water (blue WF) and volumes of water polluted (gray WF). Water footprints are estimated per nation from both a production and"
+    },
+    {
+      "title": "The Water Footprint Assessment Manual: Setting the Global Standard",
+      "year": 2011,
+      "venue": "",
+      "citations": 1969,
+      "abstract": "\"The Water Footprint Assessment Manual. Setting the Global Standard.\" Social and Environmental Accountability Journal, 31(2), pp. 181–182"
+    },
+    {
+      "title": "Water footprints of nations: Water use by people as a function of their consumption pattern",
+      "year": 2006,
+      "venue": "",
+      "citations": 1532,
+      "abstract": "This study quantifies and maps the water footprint (WF) of humanity at a high spatial resolution. It reports on consumptive use of rainwater (green WF) and ground and surface water (blue WF) and volumes of water polluted (gray WF). Water footprints are estimated per nation from both a production and"
+    },
+    {
+      "title": "A Global Assessment of the Water Footprint of Farm Animal Products",
+      "year": 2012,
+      "venue": "Ecosystems",
+      "citations": 1183,
+      "abstract": "The increase in the consumption of animal products is likely to put further pressure on the world’s freshwater resources. This paper provides a comprehensive account of the water footprint of animal products, considering different production systems and feed composition per animal type and country. "
+    },
+    {
+      "title": "Humanity’s unsustainable environmental footprint",
+      "year": 2014,
+      "venue": "Science",
+      "citations": 931,
+      "abstract": "Within the context of Earth’s limited natural resources and assimilation capacity, the current environmental footprint of humankind is not sustainable. Assessing land, water, energy, material, and other footprints along supply chains is paramount in understanding the sustainability, efficiency, and "
+    },
+    {
+      "title": "Global Monthly Water Scarcity: Blue Water Footprints versus Blue Water Availability",
+      "year": 2012,
+      "venue": "PLoS ONE",
+      "citations": 924,
+      "abstract": "Freshwater scarcity is a growing concern, placing considerable importance on the accuracy of indicators used to characterize and map water scarcity worldwide. We improve upon past efforts by using estimates of blue water footprints (consumptive use of ground- and surface water flows) rather than wat"
+    },
+    {
+      "title": "The water footprint of cotton consumption: An assessment of the impact of worldwide consumption of cotton products on the water resources in the cotton producing countries",
+      "year": 2006,
+      "venue": "",
+      "citations": 782,
+      "abstract": "Abstract. National water use accounts are generally limited to statistics on water withdrawals in the different sectors of economy. They are restricted to \"blue water accounts\" related to production, thus excluding (a) \"green\" and \"grey water accounts\", (b) accounts of internal and international vir"
+    },
+    {
+      "title": "The water footprint of bioenergy",
+      "year": 2009,
+      "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+      "citations": 757,
+      "abstract": "All energy scenarios show a shift toward an increased percentage of renewable energy sources, including biomass. This study gives an overview of water footprints (WFs) of bioenergy from 12 crops that currently contribute the most to global agricultural production: barley, cassava, maize, potato, rap"
+    },
+    {
+      "title": "Living planet report 2008",
+      "year": 2004,
+      "venue": "",
+      "citations": 681,
+      "abstract": "The cost of doing nothing is, quite clearly, bad business. The Sunken Billions, published in 2008 and written by the United Nations Food and Agriculture Organization and the World Bank, demonstrated the difference between what is made and what could be made if fisheries were better managed is conser"
+    },
+    {
+      "title": "Globalisation of water resources: Global virtual water flows in relation to international crop trade",
+      "year": 2005,
+      "venue": "",
+      "citations": 569,
+      "abstract": "Given that food production requires a lot of water, more than any other economic sector, one would expect that the world’s food production concentrates in places where water is relatively abundant. This chapter, however, highlights the paradox that various water-poor countries produce food for expor"
+    },
+    {
+      "title": "National water footprint accounts: the green, blue and grey water footprint of production and consumption",
+      "year": 2011,
+      "venue": "",
+      "citations": 551,
+      "abstract": "Abstract. This study quantifies the green, blue and grey water footprint of global crop production in a spatially-explicit way for the period 1996–2005. The assessment is global and improves upon earlier research by taking a high-resolution approach, estimating the water footprint of 126 crops at a "
+    },
+    {
+      "title": "Water footprints of nations",
+      "year": 2004,
+      "venue": "",
+      "citations": 537,
+      "abstract": "The water footprint concept has been developed in order to have an indicator of water use in relation to consumption of people. The water footprint of a country is defined as the volume of water needed for the production of the goods and services consumed by the inhabitants of the country. Closely l"
+    },
+    {
+      "title": "The blue, green and grey water footprint of rice from production and consumption perspectives",
+      "year": 2011,
+      "venue": "",
+      "citations": 487,
+      "abstract": "Abstract. This study quantifies the green, blue and grey water footprint of global crop production in a spatially-explicit way for the period 1996–2005. The assessment is global and improves upon earlier research by taking a high-resolution approach, estimating the water footprint of 126 crops at a "
+    },
+    {
+      "title": "The green, blue and grey water footprint of farm animals and animal products",
+      "year": 2010,
+      "venue": "",
+      "citations": 468,
+      "abstract": "Abstract. This study quantifies the green, blue and grey water footprint of global crop production in a spatially-explicit way for the period 1996–2005. The assessment is global and improves upon earlier research by taking a high-resolution approach, estimating the water footprint of 126 crops at a "
+    },
+    {
+      "title": "The global component of freshwater demand and supply: an assessment of virtual water flows between nations as a result of trade in agricultural and industrial products",
+      "year": 2008,
+      "venue": "",
+      "citations": 461,
+      "abstract": "Abstract. This study quantifies the green, blue and grey water footprint of global crop production in a spatially-explicit way for the period 1996–2005. The assessment improves upon earlier research by taking a high-resolution approach, estimating the water footprint of 126 crops at a 5 by 5 arc min"
+    },
+    {
+      "title": "Globalization of Water: Sharing the Planet's Freshwater Resources",
+      "year": 2008,
+      "venue": "",
+      "citations": 454,
+      "abstract": "Abstract \n           People in Japan can affect the hydrological system in the United States. People in Europe can affect regional water systems in Thailand or Brazil. There are basically two mechanisms that make global connections between seemingly local water systems. First, the climate system con"
+    },
+    {
+      "title": "The water footprint of energy from biomass: A quantitative assessment and consequences of an increasing share of bio-energy in energy supply",
+      "year": 2009,
+      "venue": "",
+      "citations": 443,
+      "abstract": "Abstract Dihydrogen (H 2 ), commonly named ‘hydrogen’, is increasingly recognised as a clean and reliable energy vector for decarbonisation and defossilisation by various sectors. The global hydrogen demand is projected to increase from 70 million tonnes in 2019 to 120 million tonnes by 2024. Hydrog"
+    },
+    {
+      "title": "Water footprint scenarios for 2050: a global analysis.",
+      "year": 2014,
+      "venue": "Environment International",
+      "citations": 433,
+      "abstract": "This study develops water footprint scenarios for 2050 based on a number of drivers of change: population growth, economic growth, production/trade pattern, consumption pattern (dietary change, bioenergy use) and technological development. The objective the study is to understand the changes in the "
+    },
+    {
+      "title": "Water saving through international trade of agricultural products",
+      "year": 2005,
+      "venue": "",
+      "citations": 411,
+      "abstract": "Many nations save domestic water resources by importing water-intensive products and exporting commodities that are less water intensive. National water saving through the import of a product can imply saving water at a global level if the flow is from sites with high to sites with low water product"
+    },
+    {
+      "title": "A global and high-resolution assessment of the green, blue and grey water footprint of wheat",
+      "year": 2010,
+      "venue": "",
+      "citations": 403,
+      "abstract": "The aim of this study is to estimate the green, blue and grey water footprint of wheat in a spatially-explicit way, both from a production and consumption perspective. The assessment is global and improves upon earlier research by taking a high-resolution approach, estimating the water footprint of "
+    },
+    {
+      "title": "Water Footprint Manual : State of the Art 2009",
+      "year": 2009,
+      "venue": "",
+      "citations": 395,
+      "abstract": null
+    },
+    {
+      "title": "water footprint assessment manual",
+      "year": 2011,
+      "venue": "",
+      "citations": 393,
+      "abstract": "This book contains the global standard for \\u27water footprint assessment\\u27 as developed and maintained by the Water Footprint Network (WFN). It covers a comprehensive set of definitions and methods for water footprint accounting. It shows how water footprints are calculated for individual process"
+    },
+    {
+      "title": "Globalization of Water: Sharing the Planet's Freshwater Resources",
+      "year": 2008,
+      "venue": "",
+      "citations": 379,
+      "abstract": "Abstract \n           People in Japan can affect the hydrological system in the United States. People in Europe can affect regional water systems in Thailand or Brazil. There are basically two mechanisms that make global connections between seemingly local water systems. First, the climate system con"
+    },
+    {
+      "title": "Human appropriation of natural capital: A comparison of ecological footprint and water footprint analysis",
+      "year": 2009,
+      "venue": "",
+      "citations": 376,
+      "abstract": "This is an advance summary of a forthcoming article in the Oxford Research Encyclopedia of Environmental Science. Please check back later for the full article. \n                \n                The water footprint concept broadens the scope of traditional national and corporate water accounting as i"
+    },
+    {
+      "title": "Globalisation of water resources : international virtual water flows in relation to crop trade",
+      "year": 2005,
+      "venue": "",
+      "citations": 376,
+      "abstract": "This study quantifies and maps the water footprint (WF) of humanity at a high spatial resolution. It reports on consumptive use of rainwater (green WF) and ground and surface water (blue WF) and volumes of water polluted (gray WF). Water footprints are estimated per nation from both a production and"
+    },
+    {
+      "title": "Water footprint benchmarks for crop production: A first global assessment",
+      "year": 2014,
+      "venue": "",
+      "citations": 359,
+      "abstract": "In the coming few decades, global freshwater demand will increase to meet the growing demand for food, fibre and biofuel crops. Raising water productivity in agriculture, that is reducing the water footprint (WF) per unit of production, will contribute to reducing the pressure on the limited global "
+    },
+    {
+      "title": "Global Gray Water Footprint and Water Pollution Levels Related to Anthropogenic Nitrogen Loads to Fresh Water.",
+      "year": 2015,
+      "venue": "Environmental Science and Technology",
+      "citations": 353,
+      "abstract": "Abstract  We estimate the global anthropogenic phosphorus (P) loads to freshwater and the associated grey water footprints (GWFs) for the period 2002–2010, at a spatial resolution of 5 × 5 arc min, and compare the GWF per river basin to runoff to assess the P‐related water pollution level (WPL). The"
+    },
+    {
+      "title": "The water footprint of poultry, pork and beef: A comparative study in different countries and production systems",
+      "year": 2013,
+      "venue": "",
+      "citations": 342,
+      "abstract": "Agriculture accounts for 92% of the freshwater footprint of humanity; almost one third relates to animal products. In a recent global study, Mekonnen and Hoekstra (2012) [31] show that animal products have a large water footprint (WF) relative to crop products. We use the outcomes of that study to s"
+    }
+  ]
+}

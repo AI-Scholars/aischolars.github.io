@@ -1,0 +1,832 @@
+{
+  "slug": "2247165248_michael-g-kenward",
+  "displaySlug": "michael-g-kenward",
+  "name": "Michael G. Kenward",
+  "authorId": "2247165248",
+  "affiliations": [],
+  "hIndex": 0,
+  "citationCount": 0,
+  "paperCount": 0,
+  "proposalCount": 39,
+  "ideaCount": 39,
+  "proposals": [
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_ac_001_adversarial_prop",
+      "title": "Structured, Penalized Nonparametric Random Effects for Modeling Heterogeneity in Longitudinal Allergy and Diabetes Outcomes",
+      "motivation": "In studies of complex outcomes like type 1 diabetes risk or cow's milk allergy development, unmeasured heterogeneity across clusters or individuals can bias inference. Standard mixed models assume normally distributed random effects, which may mask critical subpopulations or skews. Fully nonparametric alternatives, while flexible, are prone to overfitting and yield results that are difficult to interpret scientifically, especially with moderate sample sizes or many random effects, as seen in cluster randomised trials and longitudinal birth cohort analyses.",
+      "hypothesis": "We hypothesize that decomposing the random effects distribution into an interpretable multivariate normal base plus a sparse, nonparametric perturbation, regularized via a penalized likelihood, will robustly identify and quantify scientifically meaningful deviations from normality, such as latent subpopulations or skewed effects, without sacrificing model stability or interpretability.",
+      "method": "We will extend the Multiple Imputation framework for bivariate/multivariate outcomes to handle our structured random effects. The model will be specified as a finite mixture with a large number of components, where one component is a multivariate normal 'base' and others represent perturbations. A Dirichlet prior or a fused lasso-type penalty on the mixture weights will enforce sparsity. Estimation will use a computationally tractable EM algorithm, incorporating Monte Carlo integration for the E-step and coordinate descent for the M-step's penalized update, ensuring scalability for the cluster and longitudinal data structures common in the researcher's prior work.",
+      "contribution": "This work will provide a robust, interpretable tool for exploring heterogeneity in clustered and longitudinal health data, directly applicable to ongoing research on maternal diet, allergy, and diabetes. It will advance methodological practice by moving beyond simple normality checks to structured testing for specific deviations, yielding clearer, actionable insights into risk factor distributions.",
+      "novelty": "The key novelty is the imposition of a scientifically structured decomposition (normal base + sparse perturbation) within a regularization framework, which directly targets interpretable deviations and controls overfitting—a significant advance over both rigid parametric assumptions and unstructured fully nonparametric approaches.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_ac_001_analogy_prop",
+      "title": "A Dirichlet Process Mixture Model for Non-Normal Random Effects in Cluster Randomised Trials with Missing Bivariate Outcomes",
+      "motivation": "In cluster randomised trials (CRTs) and longitudinal studies of health outcomes like type 1 diabetes risk or cow's milk allergy, standard generalized linear mixed models (GLMMs) assume normally distributed random effects. This assumption is often violated by skewed or multi-modal heterogeneity across clusters or individuals, which can bias risk estimates and compromise inference, especially when handling missing data via methods like multiple imputation. Flexible, data-driven modelling of this heterogeneity is crucial for valid analysis in pre-2026 epidemiological research.",
+      "hypothesis": "Placing a Dirichlet Process mixture (DPM) prior on the random effects distribution in GLMMs will provide a superior fit to data from CRTs and cohort studies compared to standard normal random effects, leading to more accurate estimation of intervention effects and individual-level risks when the underlying heterogeneity is complex.",
+      "method": "We will develop a Bayesian hierarchical model where the random effects in a GLMM for a bivariate outcome (e.g., related allergy measures) follow a distribution G, with G assigned a Dirichlet Process mixture of normals prior: G ~ DP(α, G0). This model will be implemented using a Markov Chain Monte Carlo (MCMC) algorithm, specifically a truncated stick-breaking representation or Chinese Restaurant Process sampler, within a Gibbs sampling framework. The approach will be integrated with a missing data model, extending the researcher's prior work on multiple imputation for bivariate outcomes to a fully Bayesian, nonparametric setting where missingness can depend on the flexibly modelled random effects.",
+      "contribution": "This work will provide a robust statistical framework for analysing CRT and longitudinal data with complex random effects structures, directly applicable to studies of dietary exposure and disease risk. It will yield practical software code and guidelines for when and how to move beyond normality assumptions, improving the validity of inferences in the presence of skewness, outliers, or latent sub-populations.",
+      "novelty": "While DPMs are established in population genetics, their application to relax normality in the random effects of GLMMs for CRTs with missing bivariate outcomes is novel. This synthesis directly addresses a key limitation in the researcher's existing multiple imputation work by modelling the source of heterogeneity nonparametrically within the estimation procedure itself.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_ac_001_prop",
+      "title": "Flexible Random Effects Modelling for Bivariate Outcomes in Cluster Randomised Trials with Non-Normal Heterogeneity",
+      "motivation": "In cluster randomised trials (CRTs) with bivariate outcomes, such as those analyzing longitudinal risk factors for conditions like type 1 diabetes or allergy development, standard linear mixed models assume multivariate normality for random effects. This assumption is often violated in practice, where latent cluster-level effects may be skewed or multi-modal, leading to biased variance estimates and incorrect inferences about intervention effects. Pre-2026 methodological work, including Dr. Kenward's on multiple imputation for bivariate outcomes in CRTs, highlights the need for robust methods that handle complex data structures without restrictive parametric assumptions.",
+      "hypothesis": "Replacing the multivariate normal assumption for random effects with flexible, nonparametric or finite mixture distributions will provide less biased and more efficient estimates of intervention effects and variance components in CRTs with bivariate outcomes, particularly when the underlying heterogeneity is skewed or exhibits sub-population structure.",
+      "method": "We will extend the framework for bivariate outcomes in CRTs by implementing a Dirichlet Process Mixture (DPM) model as a Bayesian nonparametric prior for the random effects distribution, allowing it to adapt to skewness and multimodality. For comparison, a parametric finite mixture of multivariate normals will also be developed. The methods will be integrated with multiple imputation procedures (e.g., chained equations) to handle missing data, a recurring theme in the researcher's recent work. Simulation studies will evaluate performance against standard normal models under various degrees of non-normality and missingness mechanisms.",
+      "contribution": "This work will provide applied researchers in fields like paediatric epidemiology (e.g., studying diet, milk allergy, diabetes risk) with a validated, practical toolkit for more reliable analysis of CRTs with complex outcome correlations and non-standard heterogeneity. It will advance methodological literature by formally integrating flexible random effects modelling with robust missing data handling for bivariate endpoints.",
+      "novelty": "While nonparametric random effects have been explored in simpler settings, their application and rigorous evaluation specifically for bivariate outcomes in the CRT context, coupled with a principled approach to missing data, represents a novel synthesis of Dr. Kenward's expertise areas not yet fully addressed in pre-2026 literature.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "66aacd71acce1089597ff1ac0aae3e4065455_ac_002_adversarial_prop",
+      "title": "A Bias-Diagnostic and Covariance-Recovery Framework for Robust Meta-Analysis of Multi-Parameter Estimates in Nutritional Epidemiology",
+      "motivation": "In nutritional epidemiology, meta-analyses of complex exposures (e.g., maternal diet during pregnancy) on multi-dimensional outcomes (e.g., allergy risk, metabolic markers) are hindered by two critical issues. First, primary studies often report correlated effect estimates (e.g., for different allergy subtypes or time points) without their covariance, necessitating imputation. Second, and more fundamentally, these primary estimates may contain systematic biases (e.g., from residual confounding or measurement error), which standard meta-analysis and covariance imputation methods propagate uncritically, leading to invalid pooled inferences.",
+      "hypothesis": "We hypothesize that a two-stage framework, which first applies diagnostic checks and bias-correction models to individual study estimates before recovering their missing covariance structure, will yield meta-analytic results with superior validity and robustness compared to methods that address only missing covariance.",
+      "method": "Building on Dr. Kenward's expertise in multiple imputation for bivariate outcomes, we will develop a suite of diagnostic tools (e.g., internal consistency checks, plausibility bounds based on biological constraints, sensitivity to unmeasured confounding using pre-2026 methods like E-values) to flag potentially biased multi-parameter estimates. For flagged studies, we will apply pre-specified bias-correction models. Subsequently, we will extend Rubin's rules and Kenward's methods to recover the covariance matrix of the *corrected* estimates. Finally, we will implement a Bayesian meta-analysis model that incorporates prior distributions on the potential residual bias, explicitly modeling this as an additional source of uncertainty alongside sampling error and between-study heterogeneity.",
+      "contribution": "This work will provide a practical, statistically rigorous toolkit for evidence synthesis when primary data are imperfect. It will advance the field beyond handling only missing data to proactively diagnosing and mitigating within-study bias. The result will be more reliable pooled estimates for complex research questions, such as the link between early-life nutrition and long-term health risks.",
+      "novelty": "While multiple imputation for missing covariance is established, the integration of formal, pre-synthesis bias diagnostics and correction within this framework is novel. It moves the focus from merely recovering missing information to critically appraising and improving the input data before synthesis.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_ac_002_analogy_prop",
+      "title": "A Model-Based Multiple Imputation Framework for Missing Within-Study Covariance Matrices in Multivariate Meta-Analysis with Sensitivity Analysis",
+      "motivation": "Multivariate meta-analysis, crucial for synthesizing correlated outcomes (e.g., systolic and diastolic blood pressure in hypertension trials), is often hampered by missing within-study covariance matrices. This missing data introduces bias and uncertainty into pooled estimates and their standard errors. Existing ad-hoc solutions, like assuming zero correlation or borrowing values from other studies, lack a principled statistical foundation and obscure the impact of these assumptions on conclusions.",
+      "hypothesis": "A model-based imputation method, drawing on the structural equation modeling (SEM) paradigm for handling incomplete correlation matrices, can generate plausible missing covariance structures. Furthermore, integrating this with a formal sensitivity analysis will make the uncertainty from the missing data quantitatively transparent and robustly influence final inferences.",
+      "method": "We will develop a two-stage Bayesian framework. First, a hierarchical multivariate model will be fitted to studies reporting complete variance-covariance matrices, estimating hyperparameters for the distribution of correlations across studies, potentially stratified by study-level covariates. Second, for studies with missing covariances, multiple imputation will be performed by drawing from the posterior predictive distribution of the correlation matrix, conditional on the reported variances and the estimated hyperparameters. This will be embedded within a Rubin's rules pooling workflow. Crucially, we will pre-specify a sensitivity analysis varying key hyperparameters (e.g., the prior mean correlation) to map how conclusions depend on assumptions.",
+      "contribution": "This work will provide a statistically rigorous, readily implementable method for handling a pervasive data problem in evidence synthesis. It will extend the toolkit for missing data in meta-analysis beyond the outcome-level focus of researcher Kenward's previous work on multiple imputation for bivariate outcomes in trials. The integrated sensitivity framework will set a new standard for transparent reporting of assumptions in multivariate meta-analysis.",
+      "novelty": "The key innovation is the formal adaptation of the SEM philosophy for incomplete matrices to the meta-analytic context, combined with a pre-specified, probabilistic sensitivity analysis. This moves beyond simple single-value imputation or correlation borrowing, explicitly modeling and propagating the uncertainty from the missing covariance structure.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_ac_002_prop",
+      "title": "Robust Multiple Imputation for Missing Within-Study Covariance Matrices in Multivariate Meta-Analysis of Clinical Outcomes",
+      "motivation": "Multivariate meta-analysis of correlated outcomes, such as bivariate endpoints in cluster randomised trials or longitudinal measures, requires within-study covariance matrices for valid inference. These matrices are frequently unreported in published studies, leading to ad-hoc assumptions (e.g., zero correlation) that bias pooled estimates and standard errors. This problem is acute in fields like diabetes research, where correlated risk factors or progression metrics are common, and in allergy studies analyzing multiple antibody outcomes over time.",
+      "hypothesis": "A principled multiple imputation framework, which leverages external information on covariance structures and accounts for the uncertainty in the missing data mechanism, will produce less biased and more efficient pooled estimates in multivariate meta-analysis compared to existing complete-case or single-imputation methods.",
+      "method": "We will develop a Bayesian multiple imputation approach. The method will treat the missing covariance elements as parameters to be imputed, using informative priors derived from: 1) empirical distributions of reported correlations in similar studies (e.g., from systematic review registries), 2) expert elicitation on plausible correlation ranges for specific outcome pairs (e.g., HbA1c and fasting glucose), and 3) hierarchical models to borrow strength across studies. The imputation model will be integrated into a Markov Chain Monte Carlo (MCMC) algorithm for the full meta-analysis, propagating the uncertainty from the imputation steps. Performance will be evaluated via simulation studies mimicking common missingness patterns in clinical research.",
+      "contribution": "This work will provide a practical, statistically rigorous tool for synthesizing evidence from studies with incomplete reporting of dependence structures. It will directly enhance the validity of meta-analyses in areas like perinatal epidemiology and chronic disease risk, where multivariate outcomes are standard. The method will be disseminated as open-source software, likely an extension to existing `R` packages for multiple imputation or meta-analysis.",
+      "novelty": "While multiple imputation is established for missing outcome data (as in Kenward's prior work), its application to missing *covariance matrices* in meta-analysis is novel. The approach moves beyond simple correlation imputation by formally incorporating prior knowledge and uncertainty, creating a bridge between missing data methodology and evidence synthesis.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_ac_003_analogy_prop",
+      "title": "A Hierarchical Bayesian Meta-Analysis with Study-Adaptive Spline Knots for Multi-Study Risk Factor Modelling in Type 1 Diabetes",
+      "motivation": "Multi-study meta-analyses of non-linear relationships, such as the association between early-life dietary exposures (e.g., milk introduction) and later disease risk (e.g., type 1 diabetes or allergy), often use splines with knots fixed across studies. This is suboptimal when studies have differing data ranges and densities, leading to poor local fit or overfitting. Pre-2026, methods for handling missing data in complex trials (e.g., multiple imputation for bivariate outcomes) are advanced, but flexible, study-specific functional form adaptation within a meta-analytic framework is lacking.",
+      "hypothesis": "Treating spline knot locations as random parameters drawn from a common hierarchical prior will improve the estimation of non-linear exposure-risk relationships across multiple studies, providing better study-specific fit while allowing for stable pooled inference, compared to models with fixed, identical knots.",
+      "method": "We will develop a hierarchical Bayesian meta-analysis model where each study's spline (e.g., for age at milk introduction) has its own knot vector. The prior for each study's knot locations will be a multivariate distribution (e.g., ordered Dirichlet) with hyperparameters (mean location and precision) estimated from the data. Computation will use Hamiltonian Monte Carlo via Stan, integrating over missing data mechanisms informed by Kenward's prior work on multiple imputation. Model performance will be evaluated on simulated data and applied to a consortium dataset on early diet and islet autoimmunity.",
+      "contribution": "This work will provide a statistically rigorous framework for multi-study spline modelling that respects heterogeneity in study design while improving pooled curve estimation. It will directly advance the analysis of complex, non-linear risk factors in epidemiology, such as in type 1 diabetes research. The method will be disseminated as open-source R/Stan code.",
+      "novelty": "The approach is novel in transferring the phylogenetic concept of branch-specific parameters under a shared prior to the spline meta-analysis problem, moving beyond fixed-knot or entirely independent models. It formally models the variability in functional form requirements across studies as a parameter of interest.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_ac_003_prop",
+      "title": "A Study-Specific Knot Placement Framework for Individual Participant Data Meta-Analysis of Non-Linear Trajectories",
+      "motivation": "Individual participant data (IPD) meta-analysis of longitudinal studies, such as those investigating type 2 diabetes risk or antibody development in early life, often uses splines to model non-linear trajectories. Standard fixed-knot splines impose identical basis functions across all studies, which can be a poor fit when studies have different follow-up schedules, measurement densities, or underlying population risk profiles. This misspecification can bias pooled estimates of key parameters like peak risk or growth velocity.",
+      "hypothesis": "Allowing study-specific knot placement in a hierarchical spline model for IPD meta-analysis will improve model fit and reduce bias in the estimation of pooled non-linear trajectories compared to models with fixed, common knot locations, without sacrificing the ability to synthesize results across studies.",
+      "method": "We will develop a Bayesian hierarchical model where the spline basis for each study is constructed using knots placed at study-specific quantiles (e.g., tertiles) of the observed time points. The study-level spline coefficients will be drawn from a common multivariate normal distribution, enabling borrowing of strength. Model estimation will use Markov Chain Monte Carlo (MCMC) methods, implemented in Stan, to handle the complex parameter space. We will extend our multiple imputation expertise to handle missing longitudinal data within this framework. Performance will be evaluated via simulation against fixed-knot models and validated on existing IPD from studies on maternal diet and offspring cow's milk allergy.",
+      "contribution": "This work will provide a practical, statistically rigorous method for synthesizing non-linear longitudinal data from heterogeneous studies, directly applicable to fields like epidemiology and life-course modeling. It will improve the validity of meta-analytic conclusions about time-varying risk factors. The accompanying software will make the method accessible to applied researchers.",
+      "novelty": "While hierarchical models for IPD meta-analysis exist, and study-specific modeling is known, the explicit formalization of a hierarchical model with study-specific spline *basis construction* is a novel synthesis. It moves beyond simply allowing study-specific coefficients on a common basis to adapting the basis itself, better respecting study design heterogeneity.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_ac_004_adversarial_prop",
+      "title": "Penalized Non-Linear Meta-Regression with Predictive Cross-Validation for Investigating Effect Modification in Nutritional and Clinical Meta-Analyses",
+      "motivation": "In meta-analysis, understanding how study-level moderators (e.g., population characteristics, intervention intensity) modify treatment effects is crucial for personalized medicine and public health. Traditional linear meta-regression is often inadequate for capturing complex dose-response or time-dependent relationships, especially with a small number of studies (k), where non-parametric approaches risk severe overfitting. This problem is acute in fields like nutritional epidemiology (e.g., studying maternal diet during pregnancy and offspring allergy risk) and cluster-randomized trials, where missing data and complex outcomes are common, and reliable inference on effect modifiers is needed.",
+      "hypothesis": "A penalized non-linear meta-regression framework, with its complexity controlled via predictive cross-validation routines adapted for dependent meta-analytic data, can robustly identify and characterize non-linear effect modification, providing more accurate and generalizable inferences than standard linear models or unpenalized non-linear fits in small-k settings.",
+      "method": "We will extend the multivariate meta-regression model by replacing linear terms for continuous moderators with penalized splines (P-splines) using a mixed-model representation, with smoothing parameters estimated via restricted maximum likelihood. As an alternative, we will implement Gaussian process priors with a Matérn covariance, regularized via hyperparameter tuning. To prevent overfitting, we will develop a leave-one-study-out predictive cross-validation routine that accounts for within-study correlation and potential missing data patterns, drawing on the researcher's expertise in multiple imputation for bivariate outcomes. Model selection will be based on minimizing the cross-validated posterior predictive deviance.",
+      "contribution": "This work will provide a practical, statistically rigorous tool for exploring non-linear moderation in meta-analysis, directly addressing the small-k problem. It will yield a stable estimate of the moderator relationship alongside a measure of its predictive uncertainty, enhancing the reliability of conclusions in systematic reviews. The methods will be disseminated through an R package and applied to re-analyze existing datasets, such as those concerning dietary exposures and allergy outcomes.",
+      "novelty": "The integration of penalized non-linear functions with a cross-validation scheme specifically designed for the dependent, often sparse data structure of meta-analysis is novel. While penalization methods exist, their application and evaluation in the meta-regression context, particularly with a focus on predictive performance rather than just within-sample fit, represents a significant methodological advance over pre-2026 standard practice.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_ac_004_prop",
+      "title": "Incorporating Flexible Spline-Based Moderators in Multivariate Meta-Regression: A Framework for Non-Linear Effect Modification",
+      "motivation": "Meta-regression is a key tool for exploring heterogeneity in systematic reviews, but standard models assume linear relationships between study-level moderators (e.g., mean age, intervention intensity) and effect sizes. This linearity constraint is often implausible and can mask important non-linear dose-response patterns, such as threshold or diminishing return effects, particularly in fields like nutrition and chronic disease (e.g., diabetes). Current pre-2026 multivariate meta-regression frameworks lack integrated, accessible methods for flexibly modeling these non-linear relationships while correctly handling the inherent correlation structure of multivariate outcomes.",
+      "hypothesis": "Extending the multivariate meta-regression model by incorporating penalized spline (P-spline) smoothers for continuous moderators will provide a more accurate and nuanced characterization of effect modification, leading to improved model fit and more valid inferences about how study-level factors modify treatment effects.",
+      "method": "We will extend the established multivariate random-effects meta-regression model. The linear predictor for each outcome dimension will be augmented with a non-parametric term using low-rank thin-plate or cubic regression P-splines, with smoothing parameters estimated via restricted maximum likelihood (REML). The framework will be implemented in R, building upon the `mgcv` package for smoothing and existing multivariate meta-analysis code. Model performance will be evaluated via simulation studies comparing bias and coverage to linear models and using information criteria (AIC, BIC). We will apply the method to a pre-2026 meta-analysis dataset, potentially related to dietary exposures (e.g., milk introduction) and health outcomes, where non-linear trends are suspected.",
+      "contribution": "This work will provide a statistically rigorous and practical framework for investigating non-linear moderator effects within multivariate meta-analysis, a significant methodological advancement. It will yield open-source software and guidelines, empowering applied researchers in fields like epidemiology and clinical trials to move beyond simplistic linear assumptions and uncover more complex patterns of heterogeneity.",
+      "novelty": "While spline models exist for univariate meta-regression, their integration into the *multivariate* framework, which accounts for correlated outcomes and missing data patterns—a core interest of Dr. Kenward—is novel. This directly addresses a gap where complex, correlated outcomes (e.g., bivariate endpoints in cluster trials) have only been analyzed with linear moderator assumptions.",
+      "dimension": "Research Direction"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_fw_001_prop",
+      "title": "Bayesian Multivariate Meta-Analysis with Informative Priors for Sparse Bivariate Outcomes in Nutritional Epidemiology",
+      "motivation": "Multivariate meta-analysis (MMA) of correlated outcomes, such as the co-occurrence of type 1 diabetes risk and specific antibody profiles in studies of early-life nutrition, is crucial for synthesizing complex evidence. Frequentist MMA methods often fail with sparse data, a common issue in specialized fields like cow's milk allergy research, leading to unstable or non-convergent estimates of between-study correlation structures. Pre-2026, there is a recognized need for more robust estimation frameworks that can incorporate prior knowledge to improve inference where data are limited.",
+      "hypothesis": "Implementing a Bayesian MMA framework with carefully specified, weakly informative, and informative priors for the covariance matrices will yield more stable and clinically plausible pooled estimates for bivariate outcomes in sparse-data settings compared to standard frequentist or Bayesian approaches with non-informative priors.",
+      "method": "We will extend established multivariate random-effects models, implementing them in a Bayesian framework using Hamiltonian Monte Carlo via Stan. The core innovation is the specification and comparison of priors for the correlation parameter: 1) a non-informative prior (e.g., uniform over [-1,1]), 2) a weakly informative prior (e.g., LKJ prior with shape parameter >1), and 3) an informative prior derived from expert elicitation or historical data on outcome correlations (e.g., from Kenward's previous work on maternal diet and allergy). Model performance will be evaluated using simulation studies mimicking sparse bivariate data and applied to a meta-analysis of studies on early milk exposure and related immune outcomes.",
+      "contribution": "This work will provide a practical, accessible Bayesian extension to MMA for applied researchers in epidemiology and nutrition, directly addressing data sparsity. It will offer guidance on prior specification for covariance structures, a significant methodological gap pre-2026. The application will demonstrate improved inference for correlated risks, enhancing evidence synthesis in areas like developmental origins of allergy and autoimmunity.",
+      "novelty": "While Bayesian MMA exists, the targeted development and validation of *informative* prior strategies for the between-study correlation in sparse bivariate settings, grounded in real nutritional epidemiology problems, is novel. It directly builds on and extends Kenward's expertise in multiple imputation for missing bivariate data and allergy research, translating those concepts into the meta-analysis domain.",
+      "dimension": "Future Work"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_fw_003_adversarial_prop",
+      "title": "Diagnosing the Geometry of Inconsistency: A Spectral Decomposition Framework for Multivariate Meta-Analysis of Paediatric Allergy and Diabetes Risk Factors",
+      "motivation": "Multivariate meta-analysis, crucial for synthesizing evidence on correlated outcomes like type 1 diabetes risk factors or co-occurring allergy phenotypes, typically summarizes between-study heterogeneity with a single covariance matrix (T). This scalar approach obscures the geometric structure of inconsistency, making it difficult to determine if disagreement is diffuse or follows a systematic pattern, such as a consistent bias in the trade-off between two parameters. Pre-2026, methods for diagnosing the dimensionality and direction of multivariate heterogeneity are underdeveloped, limiting model criticism and the design of future studies.",
+      "hypothesis": "The spectral decomposition of the estimated between-study covariance matrix will reveal interpretable principal directions of heterogeneity, where the leading eigenvectors correspond to specific, systematic patterns of parameter co-variation (e.g., a consistent bias in the association between maternal diet during pregnancy and antibody levels) that account for the majority of meta-analytic inconsistency.",
+      "method": "We will extend multivariate random-effects meta-analysis models, building on Kenward's work with bivariate outcomes and multiple imputation for missing data. The core technical approach involves performing an eigenvalue decomposition (T = VΛVᵀ) on the estimated between-study covariance matrix. Each eigenvector defines a 'heterogeneity mode', a linear combination of parameters. We will develop directional prediction regions (ellipsoids) for each significant mode and rank them by their proportion of total heterogeneity (λᵢ/Σλ). The framework will be validated using simulation studies and applied to existing datasets, such as those concerning maternal diet during pregnancy/lactation and cow's milk allergy or diabetes risk, where outcomes are measured over months and may involve missing data handled via multiple imputation.",
+      "contribution": "This work will provide a novel diagnostic toolkit that moves beyond reporting a heterogeneity matrix to visualizing and interpreting its geometric structure. It will directly inform sensitivity analyses by identifying which parameter combinations drive model uncertainty and guide future research by highlighting specific, consistent patterns of disagreement across studies. The output will enhance the critical appraisal of multivariate syntheses in areas like paediatric epidemiology.",
+      "novelty": "While spectral decomposition is a standard technique, its application as a diagnostic for the geometric structure of meta-analytic heterogeneity is novel. It transforms an opaque covariance matrix into a ranked set of interpretable, directional inconsistency patterns, moving the field from scalar summary to structured geometric diagnosis.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_fw_003_analogy_prop",
+      "title": "A Multiblock Data Analysis Framework for Quantifying Heterogeneity in Multivariate Meta-Analysis",
+      "motivation": "Multivariate meta-analysis, common in fields like diabetes research where multiple correlated outcomes (e.g., HbA1c, fasting glucose) are reported, lacks robust, structured methods for quantifying heterogeneity across studies. Existing univariate I² statistics and Q-tests fail to capture the joint variability of correlated parameters, leading to incomplete assessments of between-study inconsistency. This gap limits the reliability of pooled estimates and prediction intervals for the true multivariate association.",
+      "hypothesis": "We hypothesize that multiblock data analysis methods, specifically Consensus PCA and related techniques from chemometrics, can be formally adapted to decompose the total multivariate variation in a meta-analysis, providing interpretable, multidimensional heterogeneity metrics and improved prediction regions.",
+      "method": "We will treat each study's vector of estimated parameters (e.g., regression coefficients) and its covariance matrix as a data block. Adapting Consensus PCA, we will construct a global covariance matrix (the multivariate Q-statistic matrix) and decompose it into within-study and between-study (consensus) components. This decomposition will yield a multivariate I² index, defined as the proportion of between-study variation in the total multivariate variation. Multivariate prediction intervals will be derived as prediction ellipsoids based on the consensus component and its associated eigenvalues.",
+      "contribution": "This work will provide the first coherent framework for quantifying and visualizing heterogeneity in multivariate meta-analysis, moving beyond univariate measures. It will deliver a suite of practical metrics, including a multivariate I² and prediction ellipsoids, directly applicable to complex evidence synthesis in areas like nutritional epidemiology and trial meta-analysis.",
+      "novelty": "The novelty lies in the direct methodological analogy from chemometrics process monitoring to meta-analysis, a previously unexplored cross-disciplinary transfer. This approach structurally partitions multivariate heterogeneity in a way that standard multivariate random-effects models do not explicitly visualize or summarize.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_fw_003_prop",
+      "title": "Multivariate Generalizations of I² and Prediction Intervals for Quantifying Heterogeneity in Meta-Analysis of Correlated Outcomes",
+      "motivation": "Meta-analyses increasingly synthesize studies reporting multiple, correlated outcomes (e.g., bivariate endpoints in cluster trials, or multiple biomarkers in disease progression). Pre-2026, standard univariate heterogeneity measures like I² and prediction intervals fail to capture the joint uncertainty and correlation structure across parameter vectors, leading to incomplete inferences about between-study variability and the generalizability of pooled estimates.",
+      "hypothesis": "We hypothesize that by deriving multivariate extensions of I² and prediction intervals based on the covariance structure of random effects, we can provide a more accurate and interpretable quantification of heterogeneity for correlated parameters, which will outperform applying univariate measures separately.",
+      "method": "We will extend the multivariate random-effects meta-analysis model. For heterogeneity, we will generalize the I² statistic by considering the ratio of the generalized variance (determinant) of the between-study covariance matrix to the total generalized variance. For prediction, we will develop elliptical prediction regions for a future study's vector of effects, derived from the multivariate t-distribution, providing a region analogous to a univariate prediction interval. Methods will be validated using simulation studies across different correlation and covariance structures, and applied to a pre-2026 dataset on maternal diet, lactation, and offspring cow's milk allergy antibody outcomes.",
+      "contribution": "This work will provide the first directly interpretable, multivariate heterogeneity statistic and prediction region for use in applied meta-analysis. It will enhance the assessment of consistency and generalizability in evidence synthesis of complex, multi-outcome studies, directly supporting fields like trial methodology and nutritional epidemiology.",
+      "novelty": "While multivariate meta-analysis models exist, pre-2026 work lacks standard, intuitive heterogeneity measures analogous to I² and prediction intervals for the multivariate case. This proposal bridges that gap by developing these directly applicable tools, moving beyond separate univariate assessments.",
+      "dimension": "Future Work"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_fw_004_analogy_prop",
+      "title": "Stress-Testing for Multivariate Publication Bias: A Diagnostic Framework for Meta-Analyses with Correlated Outcomes",
+      "motivation": "Multivariate meta-analysis, increasingly used in fields like medicine (e.g., studies with multiple correlated endpoints in diabetes or allergy research), is vulnerable to publication bias, but existing univariate methods (e.g., funnel plots) fail to capture bias arising from selective reporting on *multiple* outcomes. Pre-2026, methods for detecting and correcting multivariate publication bias are underdeveloped, risking distorted conclusions about treatment effects and their interdependencies.",
+      "hypothesis": "By adapting financial portfolio stress-testing principles, we hypothesize that simulating plausible selection mechanisms (e.g., p-hacking on primary and secondary outcomes) will reveal a diagnostic 'bias vulnerability surface,' identifying which dimensions of a multivariate effect size estimate are most sensitive to publication bias.",
+      "method": "We will extend multivariate selection models (e.g., Copas-like models) by defining a suite of adverse publication scenarios as stress functions. These functions will apply varying selection pressures (e.g., conditional on a vector of p-values) to the observed multivariate data. Using multiple imputation techniques (leveraging Kenward's expertise) to handle the 'missing' studies under each scenario, we will repeatedly re-estimate the multivariate effect size vector and its covariance matrix. The resulting distribution of estimates across scenarios will be summarized to create the vulnerability surface.",
+      "contribution": "This work will provide the first diagnostic tool to visualize and quantify the sensitivity of multivariate meta-analytic findings to different forms of publication bias. It will directly inform the application and development of more robust multivariate correction methods, improving the validity of evidence synthesis in complex, multi-outcome research domains.",
+      "novelty": "The novelty lies in the conceptual translation of financial stress-testing to meta-analysis, moving beyond point-correction to scenario-based sensitivity analysis for multivariate bias, a non-obvious adaptation given the current focus on univariate diagnostics or fully parametric multivariate selection models.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_fw_004_prop",
+      "title": "Detecting and Adjusting for Publication Bias in Multivariate Meta-Analyses: Extensions of Funnel Plots and Selection Models",
+      "motivation": "Multivariate meta-analysis, which synthesizes multiple correlated outcomes (e.g., HbA1c and BMI in diabetes trials), is increasingly common but remains vulnerable to publication bias. Pre-2026 methods for detecting bias, like univariate funnel plots and selection models, are ill-suited for these complex, multi-parameter settings, risking biased pooled estimates and misleading clinical conclusions. This gap is critical in fields like diabetes research, where treatment effects on multiple endpoints must be accurately assessed.",
+      "hypothesis": "We hypothesize that publication bias in multivariate meta-analyses operates on a composite function of the study's outcomes and precision, and that extending selection models and graphical methods to this setting will provide valid detection and correction.",
+      "method": "We will extend the multivariate selection model framework, building on work by Copas and colleagues, to model the probability of publication as a function of a linear combination of the study's estimated treatment effects and their covariance matrix. For graphical exploration, we will develop multivariate extensions of funnel plots, such as plotting a study's Mahalanobis distance from the pooled estimate against its precision. Simulation studies, informed by parameters from real datasets (e.g., diabetes trials with bivariate outcomes), will evaluate performance. Multiple imputation techniques, aligning with the researcher's expertise, will be adapted to handle bias-adjusted estimates under missing data mechanisms.",
+      "contribution": "This work will provide the first dedicated suite of methods for assessing publication bias in multivariate meta-analysis, offering applied researchers practical tools for sensitivity analysis. It will enhance the validity of evidence synthesis in complex, multi-outcome domains like diabetes, allergy (e.g., cow's milk antibody outcomes), and cluster-randomized trials.",
+      "novelty": "While univariate methods are well-established, the explicit modeling of selection mechanisms for correlated, multi-parameter estimates is a novel and non-trivial extension. The integration of multivariate missing data concepts with selection models represents a significant methodological advance beyond current pre-2026 literature.",
+      "dimension": "Future Work"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_001_adversarial_prop",
+      "title": "Robust Synthesis of Exposure-Response Relationships in Nutritional Epidemiology via Domain Warping and Functional Mixed Models",
+      "motivation": "Synthesizing exposure-response curves from multiple studies, such as the relationship between maternal diet during pregnancy and offspring allergy risk, is critically hampered by domain heterogeneity. Different studies measure exposures (e.g., milk intake) over different ranges, durations (e.g., months), and scales, making direct meta-analysis of functional data invalid. Existing methods for handling missing data or bivariate outcomes in trials do not address this fundamental incompatibility in the functional domain, leading to biased pooled estimates.",
+      "hypothesis": "We hypothesize that applying monotonic domain warping to align exposure scales, followed by a functional mixed-effects model, will yield a robust, statistically principled synthesized curve that explicitly accounts for and quantifies between-study heterogeneity in exposure measurement.",
+      "method": "First, for each study's exposure-response curve, we will estimate a monotonic registration function (e.g., using a parametric or shape-constrained spline) to warp its unique exposure domain onto a common, standardized range. Second, we will fit a functional mixed-effects model to the aligned curves, with a fixed-effect population mean function (modeled via B-splines or functional principal components) and random functional deviations for each study. Inference will use a Bayesian framework or likelihood-based methods, with uncertainty propagated from both the warping and synthesis stages, potentially leveraging multiple imputation techniques to handle missing functional data points.",
+      "contribution": "This work will provide the first formal methodology for synthesizing functional data across heterogeneously measured exposures, directly applicable to problems like diet-disease risk synthesis. It will deliver a tool for producing pooled exposure-response curves with valid confidence bands that reflect both within- and between-study variation, advancing evidence-based dietary guideline development.",
+      "novelty": "The novel integration of functional data registration (warping) with functional mixed modeling for meta-analysis addresses a key methodological gap. While domain warping is known in functional data analysis and mixed models are used for multivariate meta-analysis, their combined application to robustly synthesize exposure-response curves from disparate studies is novel.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_001_analogy_prop",
+      "title": "Functional Kriging for Population-Tailored Synthesis of Exposure-Response Curves in Type 2 Diabetes Risk",
+      "motivation": "Systematic reviews of diet-disease relationships, such as sugar-sweetened beverage intake and type 2 diabetes risk, often produce a single pooled curve, obscuring heterogeneity across studies with different population characteristics. This limits applicability to specific target populations. A method is needed to formally model how the functional shape of the exposure-response relationship varies with study-level covariates and to predict a tailored curve for a population of interest.",
+      "hypothesis": "The spatial correlation structure modeled by geostatistical kriging can be adapted to the functional domain, enabling the prediction of a population-specific exposure-response curve by optimally weighting curves from existing studies based on their covariate similarity to the target population.",
+      "method": "We will treat each study's estimated dose-response curve, derived via restricted cubic splines or similar, as a functional observation. A multi-dimensional covariate space (e.g., mean age, BMI, % female) defines each study's 'location'. We will develop a functional variogram to model how the L2 distance between curve pairs increases with covariate distance. Using this model, functional universal kriging will be performed to obtain the Best Linear Unbiased Predictor (BLUP) for a curve at a new covariate location. We will adapt multiple imputation techniques, akin to Kenward's work on bivariate outcomes, to handle missing covariate data across studies.",
+      "contribution": "This will provide a novel framework for evidence synthesis that moves beyond a single pooled estimate to deliver context-specific functional predictions. It will directly enhance the translation of epidemiological evidence into personalized public health guidance and risk prediction tools for type 2 diabetes.",
+      "novelty": "While kriging is standard in spatial statistics and functional data analysis is established, their fusion for meta-analytic curve pooling, using study covariates as 'spatial' coordinates, is a novel methodological advance. It formally models between-study functional heterogeneity in a geometrically intuitive way.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_001_fusion_prop",
+      "title": "Scalable Functional Meta-Analysis of Exposure-Response Relationships via Sparse Spectral Projection and Multiple Imputation",
+      "motivation": "Meta-analysis of exposure-response curves, such as the relationship between maternal diet during pregnancy and offspring allergy risk, is crucial for evidence-based public health. Standard multivariate meta-analysis becomes computationally intractable when synthesizing hundreds of studies with high-dimensional functional outcomes. This limits the scale and precision of pooled inferences across the full exposure domain, hindering the identification of non-linear risk patterns.",
+      "hypothesis": "Projecting study-specific functional outcomes onto a data-adaptive, sparse spectral basis derived via functional principal component analysis (FPCA) will enable computationally feasible and statistically rigorous pooling of hundreds of studies, while accurately reconstructing the pooled functional relationship and its uncertainty.",
+      "method": "We will develop a two-stage framework. First, for each study, we will represent the exposure-response curve (potentially with missing segments) using a sparse FPCA basis, estimated via the PACE algorithm, creating low-dimensional score vectors. Second, we will perform multivariate meta-analysis on these scores using a random-effects model. To handle missing functional segments or incomplete reporting, we will integrate multiple imputation methods, extending Kenward's work on bivariate outcomes to the functional domain. Covariance estimation and pooling will operate on the low-dimensional score space.",
+      "contribution": "This work will provide the first computationally scalable method for functional meta-analysis of hundreds of studies, making large-scale synthesis of exposure-response relationships feasible. It will directly advance nutritional epidemiology, for example, by enabling a definitive synthesis of how maternal diet during pregnancy and lactation influences cow's milk allergy risk. The integrated multiple imputation framework will robustly handle the incomplete data common in published studies.",
+      "novelty": "The fusion of sparse spectral representation (FPCA) with multivariate meta-analysis and multiple imputation for functional data is novel. This approach bypasses the 'curse of dimensionality' that plagues standard methods, enabling synthesis at an unprecedented scale while preserving the ability to visualize full pooled curves.",
+      "dimension": "Fusion"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_001_prop",
+      "title": "Synthesizing Exposure-Response Curves for Type 2 Diabetes Risk Using Functional Data Analysis and Multiple Imputation",
+      "motivation": "Epidemiological studies often model non-linear exposure-response relationships, such as between dietary components and type 2 diabetes risk, resulting in study-specific curves. Traditional meta-analysis of scalar summary measures loses the shape information of these curves. A method to pool entire functional curves is needed to synthesize evidence more comprehensively and identify nuanced dose-response patterns across populations.",
+      "hypothesis": "Treating study-specific exposure-response curves as functional observations enables their valid synthesis into a population-level curve, and functional data methods can appropriately handle between-study heterogeneity and missing data patterns inherent in nutritional epidemiology.",
+      "method": "We will apply Functional Data Analysis (FDA) to treat each study's estimated exposure-response curve, derived via spline-based regression, as a single functional observation. A functional linear model or functional meta-analysis framework will be used to pool curves, accounting for within-study covariance. To handle missing exposure ranges or incomplete curve data across studies, we will extend principles of multiple imputation (a core method in the researcher's recent work) into the functional domain, using techniques like the functional principal component basis to impute missing curve segments.",
+      "contribution": "This work will provide a novel methodological framework for the meta-analysis of non-linear relationships, moving beyond scalar summaries. It will directly contribute to more precise evidence synthesis in nutritional epidemiology, exemplified by refining pooled risk curves for type 2 diabetes. The developed software will make functional synthesis accessible to applied researchers.",
+      "novelty": "While FDA and meta-analysis exist separately, their integration for curve synthesis is nascent. The novel integration of functional imputation techniques to handle incomplete curves addresses a key practical barrier not fully solved in pre-2026 literature, building directly on the researcher's expertise in multiple imputation for complex trial data.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_002_analogy_prop",
+      "title": "Constrained Gaussian Process Meta-Analysis for Dose-Response Relationships: A Kriging-Inspired Approach",
+      "motivation": "Meta-analysis of non-linear dose-response relationships, such as those between dietary exposures and health outcomes, is crucial for evidence synthesis but challenging. Standard parametric models may be misspecified, while flexible models like Gaussian processes can produce biologically implausible curves (e.g., non-monotonic where monotonic is expected). This reduces interpretability and clinical utility of pooled estimates.",
+      "hypothesis": "Incorporating inequality constraints, inspired by constrained kriging in geostatistics, into a Gaussian process meta-analysis framework will yield pooled dose-response curves that are both data-adaptive and scientifically plausible, improving estimation accuracy and interpretability.",
+      "method": "We will develop a Bayesian hierarchical model where study-specific curves share a Gaussian process (GP) prior for the mean function. Following pre-2026 work on inequality-constrained kriging (e.g., via linear inequality constraints on GP predictions at a finite set of points), we will impose constraints (e.g., monotonicity, non-negativity) on the pooled GP. Inference will use Hamiltonian Monte Carlo within Stan, handling missing data via multiple imputation methods aligned with the researcher's expertise. The model will be validated using simulation studies and applied to re-analyze data on maternal diet during pregnancy/lactation and offspring allergy risk.",
+      "contribution": "This work will provide a novel, flexible tool for synthesizing non-linear evidence while enforcing domain knowledge, directly applicable to nutritional epidemiology and risk analysis. It will extend the methodological toolkit for handling complex, constrained relationships in meta-analysis, bridging spatial statistics and evidence synthesis.",
+      "novelty": "The key innovation is the adaptation of inequality-constrained kriging, a spatial prediction technique, to the meta-analysis context to enforce plausibility constraints on a non-parametric pooled relationship, a synthesis not previously explored.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_002_fusion_prop",
+      "title": "A Hierarchical Gaussian Process Model for Meta-Analysis of Heterogeneous Non-Linear Dose-Response Relationships in Nutritional Epidemiology",
+      "motivation": "Meta-analysis of non-linear relationships, such as the dose-response between maternal diet during pregnancy and offspring allergy risk, is challenging due to heterogeneity in study design, measurement timing, and underlying biological patterns. Pre-2026 methods, like fixed spline bases or single parametric forms, are often too rigid to capture meaningful between-study variation in functional features like change-points or curvature, potentially biasing the pooled estimate. This is a critical gap in nutritional epidemiology, where understanding the consensus shape and heterogeneity of such relationships is key for public health guidance.",
+      "hypothesis": "A hierarchical Gaussian process model, where each study's curve is a draw from a study-specific Gaussian process with hyperparameters drawn from population-level distributions, will provide a more flexible and accurate pooled estimate of non-linear dose-response relationships and a principled quantification of functional heterogeneity compared to existing meta-analytic spline methods.",
+      "method": "We will develop a Bayesian hierarchical model where the observed data from each study are modeled as noisy realizations of a latent study-specific function, f_i(t), drawn from a Gaussian process with covariance kernel parameters (e.g., length-scale, amplitude). These study-specific hyperparameters are themselves drawn from population-level distributions (e.g., log-normal). Inference will be performed using Hamiltonian Monte Carlo (HMC) via Stan or a similar probabilistic programming language, leveraging recent advances in scalable GP approximations. The model will incorporate strategies for handling missing data and varying measurement schedules, drawing on the researcher's expertise in multiple imputation for complex trial data.",
+      "contribution": "This work will provide a novel, flexible statistical framework for synthesizing non-linear evidence across heterogeneous studies, directly quantifying where and how dose-response curves differ. It will advance methodological practice in evidence synthesis beyond rigid spline models. The application to nutritional epidemiology, such as synthesizing studies on maternal diet and offspring cow's milk allergy risk, will yield more reliable pooled estimates to inform dietary recommendations.",
+      "novelty": "The approach moves beyond placing a common GP prior on all study curves or using fixed, shared basis functions; instead, it models the distribution of the functions' *characteristics* (via hyperparameters), allowing the pooled estimate to adaptively learn a consensus from heterogeneously shaped study-specific curves. This provides a direct, interpretable measure of functional heterogeneity not captured by standard random-effects models on scalar parameters.",
+      "dimension": "Fusion"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_002_prop",
+      "title": "Flexible Meta-Analysis of Non-Linear Dose-Response Relationships in Nutritional Epidemiology using Gaussian Process Priors",
+      "motivation": "Meta-analyses of nutritional exposures, such as maternal diet during pregnancy and offspring allergy risk, often assume linear dose-response relationships, which may mask true non-linear effects. Current methods for non-linear pooling require pre-specifying parametric basis functions (e.g., splines), which can introduce bias if the functional form is misspecified. A flexible, data-driven approach is needed to robustly synthesize evidence on complex relationships, such as those between nutrient intake and disease risk, from aggregated study-level data.",
+      "hypothesis": "Gaussian process (GP) priors can provide a robust, flexible framework for meta-analyzing non-linear relationships across studies without strong parametric assumptions, leading to more accurate pooled dose-response curves. This approach will outperform standard parametric models when the underlying functional form is complex or unknown.",
+      "method": "We will develop a Bayesian hierarchical meta-analysis model where the underlying dose-response function for each study is drawn from a study-specific GP prior. A shared hyperparameter (e.g., length-scale) will be learned across studies to allow borrowing of strength on the function's smoothness. The model will handle aggregated data (e.g., log odds ratios across exposure quantiles) and incorporate uncertainty from within-study covariance matrices. Inference will be performed using Hamiltonian Monte Carlo (e.g., Stan) to sample from the posterior distribution of the pooled mean function and prediction intervals.",
+      "contribution": "This work will provide a novel, statistically rigorous tool for synthesizing non-linear epidemiological evidence, directly applicable to fields like nutritional epidemiology and diabetes risk research. It will advance methodological practice by moving beyond restrictive parametric assumptions in meta-analysis, offering a principled alternative to existing spline-based methods.",
+      "novelty": "While GPs are established for single-study curve fitting, their application as a prior for the mean function in a hierarchical meta-analysis model for aggregated data is novel. This approach uniquely avoids committing to a specific basis function expansion, letting the data inform the shape of the pooled relationship across studies.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_003_adversarial_prop",
+      "title": "Heterogeneity-Aware Transfer Learning for Multi-Study Analysis of Early-Life Dietary Exposures and Allergic Outcomes",
+      "motivation": "Pooling data from multiple cohort studies can increase power to detect associations between early-life exposures, like maternal diet during pregnancy/lactation, and complex outcomes like childhood allergies. However, substantial heterogeneity in study design, population, and measurement (e.g., antibody assays, missing data patterns) risks negative transfer, where a pooled model performs worse than a study-specific one. Current meta-analysis and simple pooling methods inadequately manage this heterogeneity, limiting robust knowledge transfer.",
+      "hypothesis": "A neural architecture that explicitly factorizes latent representations into gated shared and private components, regularized by contrastive and adversarial objectives, will dynamically adapt to inter-study heterogeneity, enabling robust transfer learning that improves prediction in target studies without degrading performance in source studies.",
+      "method": "We will develop a gated shared-private factorization model. Study-specific metadata and features will pass through a gating network to weight contributions from shared expert modules (for common patterns) and private modules (for study-specific mechanisms). We will employ contrastive learning (e.g., SimCLR) on the shared latent space to align features only from studies with reliable similarity. An adversarial component will attempt to predict study identity from the shared representation, with the main model trained to maximize this adversary's loss, purging confounding study artifacts. Model training will use multiple imputation techniques (aligned with Kenward's expertise) to handle missing exposure and outcome data.",
+      "contribution": "This work will provide a principled, flexible framework for multi-study analysis that safeguards against negative transfer. It will yield a methodological advance in transfer learning for biomedical data and offer new insights into the generalizability of associations between early-life dietary exposures and allergic disease risk across diverse populations.",
+      "novelty": "The integration of a gating mechanism with adversarial purification of the shared latent space for multi-study biomedical data is novel. This moves beyond static assumptions of study similarity, allowing the model to dynamically learn and leverage the true degree of shared signal.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_003_analogy_prop",
+      "title": "A Latent Trait Framework for Multi-Study Exposure-Response Meta-Analysis: Borrowing Strength from Item Response Theory",
+      "motivation": "Meta-analysis of exposure-response relationships, such as the link between maternal diet during pregnancy and offspring allergy risk, is complicated by heterogeneity across studies in design, measurement, and missing data patterns. Traditional fixed- or random-effects models often struggle to robustly synthesize these diverse data sources to estimate a common underlying biological relationship, limiting the ability to inform risk assessment in new populations.",
+      "hypothesis": "Modeling the shared exposure-response relationship across multiple epidemiological studies as a latent trait, analogous to ability in Item Response Theory (IRT), will yield more robust and transferable parameter estimates than standard meta-regression, effectively borrowing strength across heterogeneous 'tasks' (studies).",
+      "method": "We will develop a hierarchical Bayesian model where each study contributes to the estimation of a shared latent exposure-response function. Study-specific 'item parameters' (like discrimination and difficulty in IRT) will account for between-study heterogeneity in design and measurement scale. The core model will be extended to handle bivariate outcomes and missing data, leveraging and extending Dr. Kenward's expertise in multiple imputation for clustered trials. Inference will be performed using Hamiltonian Monte Carlo (e.g., Stan) to estimate posterior distributions for the global latent trait and study-specific parameters.",
+      "contribution": "This work will provide a novel, principled statistical framework for multi-study synthesis that improves the precision and generalizability of exposure-response estimates. It will deliver a practical software tool for epidemiologists and contribute methodology for handling complex, heterogeneous data structures common in nutritional and perinatal epidemiology.",
+      "novelty": "While IRT is well-established in psychometrics, its formal adaptation to model a shared biological response trait across heterogeneous epidemiological studies, explicitly accounting for study-level 'measurement' characteristics, is a novel cross-disciplinary methodological advance.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_003_fusion_prop",
+      "title": "A Bayesian Multi-Task Learning Framework for Evidence Synthesis with Imputed Within-Study Covariance",
+      "motivation": "In meta-analysis of complex outcomes, such as bivariate endpoints in trials of type 2 diabetes interventions or longitudinal measures of antibody levels, within-study correlation is often unreported. This missing covariance matrix prevents fully efficient multivariate synthesis, forcing analysts to use suboptimal methods like separate univariate meta-analyses or simplistic imputation, which can bias pooled estimates and their uncertainty. This is a critical barrier to robust evidence synthesis across diverse fields, including the researcher's prior work on diet, allergy, and cluster trials.",
+      "hypothesis": "A multi-task meta-learning model, which treats each study as a task and learns a shared low-dimensional latent structure from studies with complete data, can provide a principled probabilistic framework for imputing missing within-study covariances, leading to more accurate and precise pooled estimates in multivariate meta-analysis.",
+      "method": "We will develop a unified Bayesian hierarchical model. Each study's reported outcome vector (e.g., treatment effects on two endpoints) is modeled as drawn from a multivariate normal distribution. The model's core is a latent Gaussian process or factor model that captures the shared exposure-response structure across studies. For studies with missing covariance, this shared latent structure, informed by studies with complete reporting, provides the prior for the covariance matrix within a multiple imputation framework. Estimation will be performed using Hamiltonian Monte Carlo via Stan or similar, allowing full propagation of imputation uncertainty into the final meta-analytic estimates.",
+      "contribution": "This work will provide a statistically rigorous method for conducting full multivariate meta-analysis when key correlation data is missing, increasing the usability of existing evidence. It will directly extend the researcher's expertise in multiple imputation for clinical trials to the meta-analytic setting, offering a tool with applications in nutritional epidemiology, diabetes research, and beyond.",
+      "novelty": "The approach uniquely integrates multi-task learning concepts from machine learning with Bayesian multiple imputation to solve the missing covariance problem, moving beyond ad-hoc single-value imputation or ignoring the problem altogether. It frames the shared structure across studies as the imputation engine, which is a novel perspective in evidence synthesis methodology.",
+      "dimension": "Fusion"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_003_prop",
+      "title": "A Multi-Task Learning Framework for Transferring Latent Exposure-Response Structures Across Pregnancy and Early-Life Cohort Studies",
+      "motivation": "Epidemiological studies on maternal diet, environmental exposures, and child health outcomes (e.g., type 1 diabetes risk, cow's milk allergy) are often limited by sample size, missing data, and heterogeneity across cohorts. Pre-2026, meta-analysis and pooled analysis are standard but struggle to leverage complex, non-linear shared structures across studies, especially with different measured variables and missingness patterns. This limits the power to identify robust, generalizable risk factors.",
+      "hypothesis": "We hypothesize that a multi-task learning (MTL) architecture, where each cohort study is treated as a distinct but related task, can effectively learn and transfer a latent exposure-response structure, leading to improved prediction and inference for bivariate health outcomes (e.g., allergy and autoantibody status) compared to analyzing studies in isolation or via simple pooling.",
+      "method": "We will adapt neural network-based MTL architectures (e.g., hard parameter sharing with study-specific heads) to model bivariate outcomes. The model's shared layers will learn a latent representation of exposure-response relationships common across pregnancy and lactation diet studies. We will integrate this with pre-2026 multiple imputation techniques (e.g., chained equations) to handle missing exposure data during pregnancy and antibody measurements, treating imputed datasets as inputs for the MTL model to account for imputation uncertainty.",
+      "contribution": "This work will provide a novel methodological framework for integrative analysis of heterogeneous cohort data, improving statistical power and robustness for risk factor discovery. It will deliver a software tool for applied researchers in perinatal epidemiology and demonstrate its value in re-analyzing existing data on maternal diet and offspring allergy/diabetes risk.",
+      "novelty": "The novelty lies in the fusion of established multiple imputation methods for missing data with modern MTL architectures for transfer learning across studies, moving beyond simple pooling to explicitly model shared latent structures in epidemiological contexts with bivariate outcomes.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_004_adversarial_prop",
+      "title": "Adversarially Regularized Manifold Learning for Confounder-Robust Archetypes of Glycemic Exposure-Response Curves",
+      "motivation": "Meta-analysis of exposure-response relationships, such as those between maternal diet and offspring allergy risk or glycemic markers and diabetes progression, is hampered by heterogeneity across studies due to confounding by cohort demographics, assay platforms, or missing data patterns. Existing manifold learning methods can identify curve shape clusters but risk capturing these spurious, study-specific variations as primary signal, reducing the generalizability of identified archetypes. A method to disentangle fundamental biological response patterns from study-level confounders is critically needed for reliable cross-study inference.",
+      "hypothesis": "Applying an adversarial regularization objective to a manifold learning model will force the learned latent representation of exposure-response curves to be statistically independent of known study-level confounders, thereby yielding curve archetypes that are more consistent and generalizable across heterogeneous studies.",
+      "method": "We will extend a variational autoencoder (VAE) framework for learning a low-dimensional manifold of continuous exposure-response curves. An adversarial network, trained to predict known confounders (e.g., cohort, assay type) from the VAE's latent codes, will be pitted against the encoder, which will be trained to minimize reconstruction error while maximizing the adversary's prediction loss. This minimax game will regularize the latent space to be invariant to the specified confounders. We will adapt multiple imputation techniques (e.g., chained equations) to handle missing exposure or response data during pregnancy or follow-up periods, as seen in longitudinal cohort studies.",
+      "contribution": "This work will provide a novel computational tool for distilling robust, confounder-invariant response archetypes from heterogeneous biomedical data, directly addressing a key challenge in evidence synthesis. It will advance methodological integration of causal regularization with unsupervised learning for biomedical applications. The resulting framework will be demonstrated on pooled data from studies of dietary exposures and metabolic or allergic outcomes, areas of direct relevance to the researcher's prior work.",
+      "novelty": "While adversarial training is established for domain adaptation in computer vision, its integration with manifold learning specifically to purge known confounders from continuous functional data archetypes in epidemiology is novel. This moves beyond standard confounder adjustment in regression to a representation learning approach aimed at discovery.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_004_analogy_prop",
+      "title": "Mapping the Latent Structure of Heterogeneous Dose-Response Relationships: A Manifold Learning Approach for Epidemiological Synthesis",
+      "motivation": "In epidemiology and pharmacology, meta-analyses of exposure-response relationships (e.g., diet during pregnancy and offspring allergy risk) often reveal substantial heterogeneity. Current methods treat this heterogeneity as noise or stratify by known covariates, potentially missing latent, shape-based clusters that reflect distinct biological mechanisms or shared methodological biases. A principled, data-driven framework to uncover this latent structure is needed to improve synthesis and interpretation.",
+      "hypothesis": "We hypothesize that heterogeneous dose-response curves from multiple studies reside on a low-dimensional, non-linear manifold, where proximity reflects intrinsic shape similarity, revealing latent classes of response patterns independent of study labels.",
+      "method": "We will treat each published dose-response curve as a high-dimensional shape vector (e.g., spline coefficients). Applying Isomap or diffusion maps (pre-2026 manifold learning techniques) to a curated dataset (e.g., studies on maternal diet and allergy, or pharmacological dose-response) will embed curves into a 2-3D space. Cluster analysis (e.g., DBSCAN) on this manifold will identify shape-based groups. We will handle missing or sparsely reported curves using multiple imputation methods for functional data, extending Kenward's expertise in imputation for bivariate outcomes.",
+      "contribution": "This will provide a novel visualization and clustering tool for heterogeneous exposure-response data, moving beyond simple meta-regression. It will generate testable hypotheses about latent response mechanisms and methodological 'lineages' influencing curve shape. The framework directly extends statistical ecology's phylogenetic comparative methods to public health.",
+      "novelty": "The approach is novel in applying phylogenetic manifold learning, typically used for trait evolution, to the synthesis of epidemiological dose-response curves. It moves beyond modeling heterogeneity as a nuisance parameter to treating curve shapes as primary data for discovery.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_004_fusion_prop",
+      "title": "Harmonizing Heterogeneous Exposure-Response Curves via Manifold Learning of Study-Specific Spline Representations: A Novel Framework for Meta-Analysis",
+      "motivation": "Meta-analysis of non-linear exposure-response relationships, such as those for dietary factors and disease risk (e.g., maternal diet and offspring allergy), is challenged by profound study heterogeneity. This includes not just differences in effect size but in the functional representation of the curve itself, as studies use different spline knot placements and bases. Current methods either ignore this representational heterogeneity, forcing curves into a common basis, or treat it as a nuisance, potentially biasing pooled estimates.",
+      "hypothesis": "The intrinsic heterogeneity in study-specific spline representations (knots and coefficients) lies on a low-dimensional, interpretable manifold, and leveraging this structure provides a more valid and powerful framework for curve comparison and meta-analysis than existing fixed-basis approaches.",
+      "method": "We will treat each study's fitted spline (its knot vector and coefficient vector) as a point in a high-dimensional product space. Using manifold learning techniques (e.g., Isomap, t-SNE, or UMAP, pre-2026), we will embed these points to discover a low-dimensional latent structure. This manifold will then inform a hierarchical Bayesian meta-analysis model where study-specific curves are regularized towards a pooled mean curve defined on this latent space, directly incorporating representational uncertainty. The approach will be validated using simulation studies and applied to re-analyze data on maternal diet during pregnancy/lactation and offspring cow's milk allergy risk, where exposure measurement and modeling vary widely.",
+      "contribution": "This work will provide a new, principled statistical methodology for meta-analyzing non-linear relationships from highly heterogeneous studies, moving beyond simple coefficient pooling. It will produce software for the research community and offer fresh insights into the dose-response relationship between maternal diet and allergic outcomes by explicitly modeling and leveraging study design differences.",
+      "novelty": "This is the first proposal to apply manifold learning to the *functional representations* of curves (spline spaces) rather than to raw data or curve outputs, creating a synergy between flexible regression and meta-analysis that directly addresses representational heterogeneity.",
+      "dimension": "Fusion"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_004_prop",
+      "title": "Manifold Learning to Characterize Heterogeneity in Exposure-Response Curve Shapes: An Application to Maternal Diet and Offspring Allergy Risk",
+      "motivation": "In epidemiological studies, such as those on maternal diet during pregnancy and offspring outcomes like cow's milk allergy, exposure-response relationships often vary significantly across subpopulations or study sites, leading to heterogeneous curve shapes. Traditional meta-analysis struggles to synthesize this complex, high-dimensional functional data. A method is needed to discover the intrinsic low-dimensional structure among these diverse curves to better understand sources of heterogeneity and identify distinct response patterns.",
+      "hypothesis": "The manifold of study-specific exposure-response curves lies on a low-dimensional, non-linear subspace, and manifold learning can uncover interpretable dimensions (e.g., sensitivity, threshold) that explain heterogeneity more effectively than linear methods.",
+      "method": "We will apply established manifold learning algorithms, specifically Isomap and Diffusion Maps (pre-2026), to a dataset of study-specific curves (e.g., log-odds vs. exposure). Each curve, discretized into a high-dimensional vector, is a point on the manifold. We will use geodesic distance (Isomap) or diffusion distance to embed these points into 2-3 dimensions. The analysis will be integrated with multiple imputation techniques (aligned with Kenward's expertise) to handle missing data in the underlying studies, ensuring robust curve estimation prior to manifold construction.",
+      "contribution": "This work will provide a novel framework for the synthesis and interpretation of heterogeneous functional data in epidemiology. It will offer a more nuanced understanding of risk factor relationships than pooled estimates, potentially identifying subgroups with distinct response profiles. The method will be implemented in open-source software, extending tools for complex evidence synthesis.",
+      "novelty": "While manifold learning is established in image and signal processing, its application to synthesize heterogeneous exposure-response curves from multiple epidemiological studies is novel. The integration with principled missing data methods for curve estimation addresses a key practical challenge not typically considered in standard manifold learning applications.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_sd_001_analogy_prop",
+      "title": "An Adaptive Sampling and Gaussian Process Surrogate Framework for Efficient Large-Scale Multivariate Meta-Analysis of Non-Linear Associations",
+      "motivation": "The proliferation of large-scale epidemiological studies, such as those investigating the complex, non-linear relationships between maternal diet, lactation, and offspring outcomes like type 1 diabetes risk or cow's milk allergy, creates a pressing need for scalable evidence synthesis. Conventional multivariate meta-analysis becomes computationally prohibitive when synthesizing hundreds of studies with non-linear dose-response data. This bottleneck limits the timely and comprehensive evaluation of critical public health risks.",
+      "hypothesis": "We hypothesize that an adaptive sampling and surrogate modeling framework, analogous to methods used in computational engineering for design optimization, can accurately approximate a full-scale multivariate meta-analysis while requiring the full statistical computation on only a strategically selected subset of available studies.",
+      "method": "We will develop a computational framework where a Gaussian Process (GP) surrogate model is iteratively trained to approximate the target multivariate synthesis function (e.g., a non-linear dose-response curve). Starting with an initial subset of studies selected via space-filling design, the algorithm will use an acquisition function (e.g., Expected Improvement or predictive uncertainty) to identify the most informative subsequent study for full, costly integration. This process will leverage and extend pre-2026 multiple imputation methods for handling missing data within selected studies. The iterative loop continues until the GP model's prediction stabilizes across the covariate space.",
+      "contribution": "This work will provide a principled, computationally efficient method for large-scale evidence synthesis, enabling researchers to conduct robust meta-analyses on previously intractable scales. It will directly contribute to fields like nutritional epidemiology by offering a practical tool for synthesizing complex, non-linear associations across vast numbers of studies, improving risk assessment and guideline development.",
+      "novelty": "The novelty lies in the cross-disciplinary adaptation of adaptive sampling and surrogate modeling from computational physics to statistical evidence synthesis, creating a 'meta-model' for meta-analysis. This approach is distinct from existing meta-analysis methods which typically process all available data or use simple random sampling.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_sd_002_adversarial_prop",
+      "title": "A Probabilistic Sensitivity Framework for Meta-Analysis: Quantifying Uncertainty in Study-Level Influence from Aggregate Data",
+      "motivation": "Meta-analyses, crucial for evidence synthesis in fields like diabetes and allergy research, report only pooled estimates and heterogeneity statistics. This aggregate data obscures the underlying study-level contributions, making it difficult to robustly assess the influence of individual studies or the impact of assumptions about missing data structures. Pre-2026 sensitivity analyses for influential studies remain largely deterministic and do not quantify the full space of mathematically consistent underlying datasets.",
+      "hypothesis": "By algorithmically generating the complete family of study-level datasets consistent with a reported meta-analysis, and applying a principled sensitivity framework, we can produce probabilistic assessments of study influence that more accurately reflect the inherent uncertainty in the inverse problem.",
+      "method": "We will develop an algorithm based on Monte Carlo sampling and constrained optimization to generate the manifold of plausible study-level effect sizes and variances that exactly reproduce a given pooled fixed/random-effects estimate, its confidence/credible interval, and the I² or τ² statistic. This builds upon and extends principles from Kenward's work on multiple imputation for bivariate outcomes. We will then apply a sensitivity framework where different weighting distributions (e.g., mimicking publication bias or variable missingness) are imposed on this family of datasets to compute the distribution of influence metrics (e.g., leave-one-out estimates, Cook's distance analogs) for each constituent study.",
+      "contribution": "This work will provide meta-analysts with a tool to move beyond point estimates of study influence to a quantified uncertainty range, offering a more nuanced interpretation of robustness. It directly addresses the 'file drawer problem' and missing data concerns by visualizing how different assumptions alter the perceived landscape of influential studies, enhancing the credibility of evidence synthesis.",
+      "novelty": "Unlike existing methods that seek a single reconstructed dataset or use deterministic rules, this approach formally characterizes the entire solution space of the ill-posed inverse problem, reframing sensitivity analysis as a probabilistic exploration of this space.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_sd_002_analogy_prop",
+      "title": "Decomposing Pooled Estimates: A Blind Source Separation Approach for Identifying Outliers in Multivariate Meta-Analysis",
+      "motivation": "Multivariate meta-analysis provides pooled estimates but obscures the contribution of individual studies, making it difficult to identify outliers or studies with divergent temporal or dose-response patterns. This is a critical inverse problem in evidence synthesis, particularly for fields like diabetes research where treatment effects may evolve over time or vary by subpopulation. Existing influence diagnostics rely on sequential omission, which is computationally intensive and does not directly decompose the aggregate signal.",
+      "hypothesis": "The pooled summary estimate from a multivariate meta-analysis can be treated as a linear mixture of independent underlying study-level effect trajectories. By adapting Blind Source Separation (BSS) principles, we can recover estimates of these individual trajectories from the aggregate data alone.",
+      "method": "We will frame the meta-analytic inverse problem as a BSS task, where the observed multivariate pooled estimate is the mixture and the target study-level curves are the sources. We will adapt the FastICA algorithm, a standard Independent Component Analysis method, to operate on the covariance structure of the meta-analytic data, incorporating study weights. The algorithm's assumptions of independence and non-Gaussianity will be evaluated against simulated meta-analyses of longitudinal outcomes, building on the researcher's expertise in handling missing data and bivariate outcomes in trials.",
+      "contribution": "This work will provide a novel diagnostic tool for meta-analysis, enabling the direct identification of studies with atypical effect patterns without iterative re-analysis. It will advance methodological research on influence analysis and offer a new perspective on visualizing heterogeneity in evidence synthesis.",
+      "novelty": "This is the first application of Blind Source Separation, a signal processing technique, to the problem of decomposing meta-analytic estimates. It proposes a simultaneous, model-based decomposition instead of the conventional sequential, leave-one-out approach to identifying influential studies.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_sd_002_prop",
+      "title": "Decomposing Pooled Meta-Analytic Estimates: An Inverse Problem Approach for Identifying Outlier and Influential Studies in Bivariate Outcome Research",
+      "motivation": "Multivariate meta-analysis is crucial for synthesizing complex outcomes, such as those in trials of type 2 diabetes interventions or allergy development, where bivariate endpoints (e.g., efficacy and safety) are common. The pooled estimate, however, obscures the contribution of individual studies, making it difficult to identify outliers or influential studies that may bias the conclusion. Pre-2026, methods for sensitivity analysis in multivariate meta-analysis, particularly for identifying which study-level data shapes the pooled curve, are underdeveloped.",
+      "hypothesis": "The contribution of individual studies to a pooled multivariate meta-analytic estimate can be quantitatively recovered using an inverse problem framework, allowing for the statistically principled identification of outliers and influential studies that existing global influence measures fail to pinpoint.",
+      "method": "We will frame the meta-analysis model (e.g., a bivariate random-effects model) as a forward problem and develop an inverse solution using constrained optimization. The algorithm will minimize the difference between the observed pooled estimate and a reconstructed estimate from weighted study contributions, subject to constraints ensuring the contributions sum to the original data. We will adapt and extend multiple imputation techniques, akin to Kenward's previous work, to handle missing within-study correlations robustly. Influence will be quantified via the deviation of recovered study weights from a uniform distribution.",
+      "contribution": "This work will provide a novel diagnostic tool for meta-analysts working with complex, multivariate outcomes, enhancing the reliability of pooled evidence in fields like diabetology and immunology. It will extend the methodological toolkit for sensitivity analysis beyond leave-one-out methods, offering a more granular understanding of how each study shapes the final result.",
+      "novelty": "While influence diagnostics exist, applying a formal inverse problem framework to 'decompose' a meta-analytic estimate into study-level contributions is a novel conceptual and technical approach. It moves beyond assessing the impact of removing a study to actively recovering its inherent influence within the pooled result.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_sd_003_adversarial_prop",
+      "title": "Anchor-calibrated Bayesian synthesis of high-dimensional exposure mixtures for transportable type 2 diabetes risk estimation",
+      "motivation": "Studies linking air pollution mixtures to type 2 diabetes risk are often limited to single cities, raising concerns about unmeasured city-specific confounding and poor transportability to other populations. This limits the utility of exposure-response surfaces for public health decision-making across diverse settings, a critical gap given the global burden of diabetes. Robust methods are needed to synthesize high-dimensional exposure data while explicitly ensuring cross-population validity.",
+      "hypothesis": "That a Bayesian synthesis model for high-dimensional pollutant mixtures, externally calibrated against sparse 'anchor' data from populations with contrasting pollution profiles, will produce a type 2 diabetes risk surface with significantly improved transportability and reduced bias from local confounding compared to models derived from a single target population alone.",
+      "method": "We will extend multiple imputation frameworks for bivariate outcomes to handle missing exposure and confounder data in the primary target city. A high-dimensional exposure-response surface will be estimated using Bayesian kernel machine regression (BKMR). Crucially, this surface will be iteratively validated and recalibrated against minimal health outcome data (e.g., HbA1c) from external 'anchor' cities. A penalized Bayesian updating step will shrink non-transportable features of the mixture-response function, using the mismatch between predicted and observed anchor outcomes to inform the penalty.",
+      "contribution": "This work will provide a novel methodological framework for creating transportable exposure-response estimates for complex mixtures, directly addressing a key limitation in environmental epidemiology. It will yield a more generalizable risk model for air pollution and type 2 diabetes. The anchor-calibration approach offers a pragmatic strategy for leveraging limited external data to improve model validity.",
+      "novelty": "The integration of external 'anchor' validation as a mandatory, model-calibrating step within a high-dimensional mixture analysis is novel. Unlike prior sensitivity analyses, this method actively uses minimal external data to penalize and remove locality-specific confounding structures, forcing the final model to satisfy transportability constraints.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_sd_003_analogy_prop",
+      "title": "Reconstructing Multi-Pollutant Exposure-Response Manifolds in a Single Population Using Local Kernel Smoothing: An Application to Type 2 Diabetes Risk",
+      "motivation": "Environmental health studies often assess single pollutants, yet real-world exposures are complex mixtures. Synthesizing evidence across cities (meta-analysis) is common but may obscure local exposure-response structures. There is a critical need for methods to estimate the joint, potentially non-linear, effects of multiple concurrent exposures within a single population, where data points in the high-dimensional exposure space are sparse and irregularly distributed.",
+      "hypothesis": "That a local kernel smoothing approach, analogous to 3D surface reconstruction from point clouds, can successfully estimate a continuous, high-dimensional exposure-response manifold for type 2 diabetes risk from observational data, capturing complex interactions and non-linearities that global parametric models miss.",
+      "method": "We will adapt the Moving Least Squares (MLS) framework from computer graphics. For each query point in the multi-pollutant exposure space (e.g., PM2.5, NO2, O3), a local polynomial 'patch' (e.g., quadratic) will be fitted using a Gaussian kernel to weight neighboring observed health outcomes. The bandwidth will be determined via cross-validation. To handle missing exposure data—a common issue in cohort studies—we will integrate a multiple imputation stage, building on Kenward's expertise, to create complete datasets before manifold learning. The final response surface will be the ensemble of these local fits.",
+      "contribution": "This will provide a novel, flexible tool for estimating complex multi-pollutant health effects within a single study population, moving beyond simplistic models. It will directly contribute to understanding the mixture effects of air pollutants on type 2 diabetes risk. The method will be disseminated as open-source software for environmental epidemiologists.",
+      "novelty": "It transplants a core technique from 3D graphics (surface reconstruction from sparse points) to solve a high-dimensional smoothing problem in epidemiology, focusing on intrinsic local structure within a single population rather than synthesis across heterogeneous populations.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_sd_003_prop",
+      "title": "Synthesising High-Dimensional Multi-Pollutant Exposure-Response Surfaces for Type 2 Diabetes Risk in a Single Urban Population: A Multiple Imputation and Bayesian Kernel Machine Regression Approach",
+      "motivation": "Environmental health research has advanced from single-pollutant to multi-pollutant models, yet synthesising complex, high-dimensional exposure mixtures within a single population remains a major challenge. This is critical for understanding the combined effects of urban air pollution, metals, and organic compounds on chronic diseases like type 2 diabetes, where exposures are correlated and data may be missing due to complex monitoring schedules. Pre-2026 methods for multi-city synthesis lack granularity for localised public health interventions.",
+      "hypothesis": "We hypothesise that a synthesis framework combining Bayesian kernel machine regression (BKMR) with multiple imputation for missing exposure data can robustly estimate the joint exposure-response surface of a high-dimensional mixture (e.g., PM2.5 components, NO2, metals) on diabetes risk within a single urban population, revealing non-linear and interactive effects missed by traditional methods.",
+      "method": "We will leverage existing longitudinal cohort data with health outcomes and repeated exposure measures. For missing exposure data, we will implement and extend multiple imputation methods for multivariate continuous outcomes, as developed by Kenward et al., using chained equations (MICE) with predictive mean matching. The imputed datasets will be analysed using Bayesian Kernel Machine Regression (BKMR) with a hierarchical variable selection prior to estimate the joint exposure-response function, identify critical mixture components, and model potential interactions. Sensitivity analyses will assess the impact of missing data mechanisms.",
+      "contribution": "This work will provide a novel methodological pipeline for high-dimensional exposure mixture analysis in single populations, directly addressing missing data challenges. It will yield a detailed, interpretable exposure-response surface for type 2 diabetes risk specific to a defined urban environment, offering actionable insights for targeted local environmental policy and clarifying the role of specific pollutant combinations.",
+      "novelty": "The novelty lies in the tailored integration of robust multiple imputation for multivariate exposure data with state-of-the-art BKMR mixture modelling, scaling down synthesis techniques to create a high-resolution risk map for a single city, which moves beyond regional averaging to inform precise local health interventions.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_sd_004_prop",
+      "title": "A Bayesian Multivariate Network Meta-Analysis Model for Synthesizing Non-Linear Dose-Response Relationships Across Multiple Interventions",
+      "motivation": "Network meta-analysis (NMA) is a key tool for comparative effectiveness research, but standard methods treat interventions as discrete nodes, failing to model dose-response relationships within treatments. This is a critical limitation for chronic disease management (e.g., type 2 diabetes), where treatment efficacy and risk profiles change non-linearly with dose. Pre-2026, methods for synthesizing dose-response curves exist but are limited to single-agent comparisons, creating an evidence synthesis gap for multi-treatment clinical guidelines.",
+      "hypothesis": "We hypothesize that a multivariate meta-analysis framework, extended to network settings, can successfully synthesize correlated dose-response parameters (e.g., from fractional polynomial or spline models) across multiple treatments, providing coherent estimates of relative effectiveness at any dose.",
+      "method": "We will extend the multivariate NMA model for correlated treatment effects to handle correlated dose-response parameters. For each study arm, a non-linear model (e.g., a 2nd-order fractional polynomial) will be fitted to obtain study-specific parameter vectors. These vectors will be synthesized within a Bayesian hierarchical model using Markov Chain Monte Carlo (MCMC) via software like WinBUGS/OpenBUGS or Stan. To address missing dose-level data, a core challenge in this synthesis, we will adapt and integrate multiple imputation techniques informed by Kenward's prior work on imputation for bivariate outcomes and missing data during follow-up.",
+      "contribution": "This work will provide the first unified framework for comparing the full dose-response profiles of multiple interventions, enabling more nuanced clinical decision-making. It will also advance methodological practice by integrating robust handling of missing data within complex evidence networks, directly addressing a common issue in trial-based dose-finding studies.",
+      "novelty": "While multivariate NMA and dose-response meta-analysis exist separately, their integration for non-linear curves is novel. The explicit modeling of covariance between non-linear parameters across a treatment network, coupled with principled handling of missing data, moves beyond simple node-splitting approaches.",
+      "dimension": "Scaling & Dual"
+    }
+  ],
+  "ideas": [
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_ac_002_adversarial",
+      "title": "Bias-Immune Synthesis with Diagnostic Covariance Recovery for Multi-Parameter Evidence",
+      "description": "This framework advances beyond simple covariance imputation by first screening and, where necessary, correcting for systematic biases within the primary study estimates themselves. It employs a suite of diagnostic tools to assess the internal validity and plausibility of reported multi-parameter estimates before attempting to recover their covariance structure. The system then integrates a bias-aware meta-analysis model that explicitly accounts for uncertainty stemming from potential residual within-study bias, alongside the uncertainty from missing covariance information. This results in a more robust evidence synthesis that is resistant to the propagation of primary study errors, providing valid inferences even when some input data are flawed.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_ac_002_analogy",
+      "title": "Imputing Missing Covariance Matrices via Structural Equation Modeling and Sensitivity Analysis",
+      "description": "This research idea addresses the challenge of missing within-study covariance matrices in multivariate meta-analysis by drawing an analogy from Structural Equation Modeling (SEM). In SEM, analogous problems of incomplete correlation matrices are solved using model-based imputation (e.g., maximum likelihood) informed by available data and theoretical structure, followed by sensitivity analysis. Adapted to this context, the idea is to develop a robust method that imputes the missing covariance matrices by leveraging the hierarchical structure of the meta-analytic data—using reported variances and patterns from studies with complete information. The core innovation is the integration of this imputation with a formal, pre-specified sensitivity analysis framework that explicitly maps how conclusions vary with different plausible assumptions about the missing covariances, thereby making the uncertainty from this missing data quantitatively transparent.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_003_fusion",
+      "title": "Multi-Task Meta-Learning with Latent Covariance Imputation",
+      "description": "This research direction develops a unified Bayesian hierarchical model that frames multiple studies as tasks in a multi-task learning architecture. The model shares a latent, low-dimensional structure representing the core exposure-response relationship across all studies. Crucially, this shared latent structure, informed by data from studies with complete covariance reporting, provides a principled prior for imputing the missing within-study covariance matrices in studies with incomplete reporting. This allows for full probabilistic meta-analysis using all available data while quantifying the uncertainty introduced by the imputation, overcoming a major limitation in evidence synthesis.",
+      "dimension": "Fusion",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_fw_003_analogy",
+      "title": "Multivariate Heterogeneity Metrics via Multiblock Data Analysis",
+      "description": "This research adapts solutions from chemometrics, specifically multiblock data analysis methods used for process monitoring, to the problem of quantifying heterogeneity in multivariate meta-analysis. In chemometrics, techniques like Consensus PCA analyze multiple correlated data blocks by decomposing total variation into within-block and consensus components, providing structured metrics for system variability. By treating each study's vector of estimated parameters as a block, we can develop a multivariate generalization of heterogeneity measures. This involves constructing a multivariate Q-statistic matrix, decomposing it to partition heterogeneity, and deriving a multivariate I² index (representing the proportion of residual heterogeneity in the total multivariate variation) and multivariate prediction intervals (as prediction ellipsoids) for the true, underlying multiparameter association. This provides a coherent framework for assessing and visualizing inconsistency across studies when outcomes are multidimensional and correlated.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_003_analogy",
+      "title": "Multi-study exposure-response modeling using a shared latent factor architecture inspired by psychometric test theory",
+      "description": "This idea adapts a solution from psychometrics—specifically Item Response Theory (IRT)—to the problem of transfer learning in multi-study exposure-response modeling. In IRT, a person's performance on many test items is modeled by a single latent ability trait, with item parameters (difficulty, discrimination) estimated across populations and then transferred for use with new individuals. Analogously, we propose treating each distinct study in a meta-analysis as a 'task' with its own observed data and noise characteristics. The core exposure-response relationship is modeled as a shared latent structure—a kind of 'latent health response trait'—that is informed by all available studies. This architecture allows the global estimation of robust exposure-response parameters (like shape, thresholds, effect sizes) which can then be transferred to inform the analysis of new, smaller, or noisier studies, improving their statistical power and reliability by borrowing strength from the multi-task, latent-factor framework.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_fw_004",
+      "title": "Publication bias in multivariate meta-analysis",
+      "description": "Extending funnel plots and selection models to detect and correct publication bias in multivariate multi-parameter meta-analyses.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Multivariate meta-analysis for non-linear and other multi-parameter associations",
+      "sourceYear": 2012
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_ac_002",
+      "title": "Handling missing within-study covariance matrices",
+      "description": "Developing robust methods when studies do not report full covariance matrices among their multi-parameter estimates.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Multivariate meta-analysis for non-linear and other multi-parameter associations",
+      "sourceYear": 2012
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_sd_002_adversarial",
+      "title": "Uncertainty-Quantified Inverse Meta-Analysis: Mapping the Plausible Study Space from Aggregate Data",
+      "description": "This method addresses the ill-posed nature of recovering individual study data from a pooled estimate by not seeking a single solution. Instead, it algorithmically generates the complete family of study-level data sets (effect sizes, variances) that are mathematically consistent with the reported meta-analytic summary and its heterogeneity statistics. It then applies a sensitivity framework to evaluate how different assumptions (e.g., about the distribution of study weights) affect the identification of influential or outlying studies, outputting probabilistic assessments of study influence rather than deterministic labels.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_fw_001",
+      "title": "Bayesian extensions for multivariate meta-analysis",
+      "description": "Implementing Bayesian estimation for multivariate meta-analysis to better handle sparse data and informative priors on correlation structures.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Multivariate meta-analysis for non-linear and other multi-parameter associations",
+      "sourceYear": 2012
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_fw_003",
+      "title": "Heterogeneity measures for multiparameter associations",
+      "description": "Developing multivariate generalizations of I-squared and prediction intervals to quantify heterogeneity across correlated parameter vectors.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Multivariate meta-analysis for non-linear and other multi-parameter associations",
+      "sourceYear": 2012
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_fw_004_analogy",
+      "title": "Adapting Portfolio Stress-Testing to Detect Multivariate Publication Bias",
+      "description": "This idea extends funnel plots and selection models for multivariate meta-analysis by drawing an analogy from financial portfolio stress-testing. In finance, stress-tests apply adverse scenarios to a multivariate portfolio to reveal hidden risk correlations. The analogous solution is adapted by defining publication bias scenarios as the 'adverse conditions' for a meta-analysis. The adapted research idea involves developing 'meta-analytic stress-tests' that simulate how different selection mechanisms (e.g., p-value-based publication on multiple outcomes) distort the estimated multivariate effect size vector and its covariance structure. This generates a diagnostic 'bias vulnerability surface' showing which dimensions of the multivariate analysis are most sensitive to bias, informing both detection and more robust correction methods in multivariate selection models.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_ac_001_analogy",
+      "title": "Relaxing Normality via Bayesian Nonparametric Priors",
+      "description": "This idea challenges the standard normality assumption for random effects by drawing an analogy from population genetics, where the Dirichlet Process is used to model complex, unknown population structures without parametric constraints. The analogous solution is to employ Bayesian nonparametric priors, like the Dirichlet Process, to flexibly infer clustering and distributional shapes from data. Adapted to this context, the research idea is to place a Dirichlet Process mixture prior on the random effects distribution in generalized linear mixed models (GLMMs) and related frameworks. This allows the heterogeneity across groups or individuals to be captured in a fully data-driven way, automatically identifying sub-populations, skewness, and outliers that a normal distribution would miss, thereby improving model fit and inference for skewed or multi-modal random effects.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_001_fusion",
+      "title": "Scalable Functional Meta-Analysis via Sparse Spectral Representations",
+      "description": "This research direction develops a novel multivariate meta-analysis framework that treats each study's exposure-response curve as a functional observation but projects it onto a data-adaptive, sparse spectral basis (e.g., via functional principal component analysis). This low-dimensional representation drastically reduces the computational burden of covariance estimation and pooling, enabling the synthesis of hundreds of studies. The method simultaneously preserves the ability to reconstruct and visualize the pooled functional relationship and its uncertainty across the entire exposure domain, a task intractable for standard high-dimensional multivariate approaches at this scale.",
+      "dimension": "Fusion",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_ac_004",
+      "title": "Relaxing linearity in meta-regression moderators",
+      "description": "Allowing non-linear effects of study-level moderators within the multivariate meta-regression framework for richer effect modification.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Multivariate meta-analysis for non-linear and other multi-parameter associations",
+      "sourceYear": 2012
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_sd_004",
+      "title": "Network meta-analysis for non-linear dose-response",
+      "description": "Extending multivariate meta-analysis to network settings synthesizing non-linear dose-response curves across multiple treatments simultaneously.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Multivariate meta-analysis for non-linear and other multi-parameter associations",
+      "sourceYear": 2012
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_ac_004_adversarial",
+      "title": "Penalized Non-Linear Meta-Regression with Predictive Cross-Validation for Robust Effect Modification",
+      "description": "This framework extends multivariate meta-regression by formally integrating non-linear functions for study-level moderators but directly confronts the small-k overfitting problem. It employs penalized estimation, such as P-splines or Gaussian process priors with regularization hyperparameters, to prevent excessive model flexibility. The optimal model structure and degree of non-linearity are determined via predictive cross-validation routines designed for dependent meta-analytic data, ensuring the identified moderator effects are generalizable rather than artifacts of a specific sample. The output includes a robust estimate of the non-linear relationship alongside a measure of its predictive uncertainty and stability.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_sd_002_analogy",
+      "title": "Blind Source Separation for Meta-Analytic Pooled Estimates",
+      "description": "This idea applies the principle of Blind Source Separation from signal processing to the multivariate meta-analysis inverse problem. In audio engineering, methods like Independent Component Analysis can isolate individual speakers' voices from a single composite recording. Analogously, the pooled, multivariate summary estimate from a meta-analysis is treated as the observed mixture. By adapting BSS/ICA algorithms and assuming the underlying study-level effect curves (over time, dose, etc.) are independent components, the method attempts to recover estimates of these individual curves from the aggregate data alone. The output is a set of decomposed curves, one per study, enabling the identification of outliers or influential studies whose recovered trajectory significantly diverges from the central pooled pattern, thus solving the inverse problem of contribution decomposition.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_fw_003_adversarial",
+      "title": "Spectral Decomposition and Directional Diagnostics for Multivariate Meta-Analytic Heterogeneity",
+      "description": "This framework moves beyond scalar summaries to diagnose the geometric structure of heterogeneity in multiparameter meta-analysis. It decomposes the between-study covariance matrix to identify principal directions of inconsistency, each with an associated proportion of total heterogeneity and a directional prediction region. The output includes a ranked set of these heterogeneity modes, enabling researchers to distinguish between systematic patterns of disagreement (e.g., a consistent bias in one parameter trade-off) and unstructured dispersion. This directly informs model criticism, sensitivity analysis, and the design of future studies by pinpointing the specific parameter combinations responsible for meta-analytic uncertainty.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_ac_001_adversarial",
+      "title": "Structured, Penalized Nonparametric Random Effects for Interpretable Heterogeneity Modeling",
+      "description": "This approach moves beyond simply replacing the normal distribution with a flexible alternative by imposing a scientifically motivated structure. The random effects distribution is decomposed into an interpretable multivariate normal base and a sparse, nonparametric perturbation, allowing researchers to quantify and test specific deviations like subpopulation skews. A regularization framework prevents the overfitting common in fully nonparametric models, ensuring stable estimates even with many random effects or moderate sample sizes. The result is a robust, computationally tractable model that provides clear, actionable insights into the nature of heterogeneity.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_004_fusion",
+      "title": "Manifold Learning of Study-Specific Spline Spaces for Meta-Analysis",
+      "description": "This research direction proposes to treat each study's exposure-response curve not as a fixed function but as a point in a high-dimensional space parameterized by its study-specific spline knot locations and coefficients. Manifold learning techniques are applied to this collection of study-specific spline spaces to uncover a low-dimensional, interpretable structure that captures the intrinsic heterogeneity in how studies represent the dose-response relationship. This discovered manifold then provides a principled, data-driven framework for meta-analysis, allowing curves to be compared, integrated, or summarized according to their proximity on this shared latent structure, rather than forcing them into a common, inflexible basis. The synergy creates a novel paradigm where both the shape *and* the functional representation of curves are harmonized, improving the validity of pooled estimates from highly heterogeneous studies.",
+      "dimension": "Fusion",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_001_adversarial",
+      "title": "Heterogeneity-Robust Functional Synthesis via Domain Warping and Functional Mixed Models",
+      "description": "This method addresses the critical flaw of domain heterogeneity in exposure-response curve synthesis by introducing a two-stage robust functional framework. First, it applies monotonic registration functions to warp each study's exposure domain onto a standardized range, ensuring curves are comparable. Second, it fits a functional mixed-effects model that decomposes variation into a fixed population-average function and random functional deviations for each study, explicitly accounting for between-study heterogeneity. This allows for statistically principled pooling and uncertainty quantification, producing a robust synthesized curve that acknowledges and adjusts for the fundamental differences in how individual studies measured exposure.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_001",
+      "title": "Functional data analysis for curve synthesis",
+      "description": "Applying functional data analysis methods to treat each study's exposure-response curve as a functional observation for pooling.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Multivariate meta-analysis for non-linear and other multi-parameter associations",
+      "sourceYear": 2012
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_004_adversarial",
+      "title": "Causally Regularized Manifold Learning for Confounder-Robust Exposure-Response Curve Archetypes",
+      "description": "This approach applies manifold learning to heterogeneous exposure-response curves while explicitly guarding against the capture of spurious, study-specific variation. It incorporates an adversarial regularization objective that forces the low-dimensional latent representation to be statistically independent of known study-level confounders (e.g., cohort demographics, assay platform). The resulting manifold reveals fundamental curve shape archetypes that are more likely to represent consistent biological or pharmacological phenomena, enabling more reliable meta-analysis and cross-study generalization of response patterns.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_002_fusion",
+      "title": "Study-Specific Functional Priors for Non-Linear Meta-Analysis",
+      "description": "This research direction proposes a novel hierarchical Gaussian process model for the meta-analysis of non-linear dose-response or longitudinal relationships. Instead of imposing a common set of spline knots or a single parametric form, each study's underlying function is modeled as a realization from a study-specific Gaussian process, whose hyperparameters (like length-scale and amplitude) are themselves drawn from population-level distributions. This allows the pooled estimate to adaptively learn a consensus functional shape from data where the relevant features (e.g., change-point locations, curvature) may vary meaningfully between studies, overcoming the rigidity of fixed basis functions. Inference focuses on both the population-average function and the distribution of functional heterogeneity, providing a principled measure of when and how study-specific curves diverge.",
+      "dimension": "Fusion",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_004_analogy",
+      "title": "Phylogenetic Manifold Learning for Heterogeneous Dose-Response Curves",
+      "description": "This idea adapts a solution from evolutionary biology and phylogenetics to the problem of heterogeneous exposure-response curves. In phylogenetics, manifold learning is used to map high-dimensional trait data from diverse species onto low-dimensional spaces that reveal evolutionary relationships and adaptive landscapes. Here, we treat each empirical dose-response or exposure-response curve from different studies as a distinct entity characterized by a high-dimensional shape descriptor. By applying non-linear manifold learning techniques (such as diffusion maps or Isomap) to this collection of curves, we aim to discover a low-dimensional 'phylogenetic' structure. This manifold will cluster curves not by study label, but by intrinsic shape similarity, potentially uncovering latent classes of response mechanisms, convergent toxicological pathways, or the influence of shared methodological 'lineages,' thereby providing a powerful framework for organizing and interpreting heterogeneous pharmacological or epidemiological data.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_002",
+      "title": "Gaussian processes for non-linear meta-analysis",
+      "description": "Using Gaussian process priors to flexibly model pooled non-linear relationships without pre-specifying parametric basis functions.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Multivariate meta-analysis for non-linear and other multi-parameter associations",
+      "sourceYear": 2012
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_sd_003_adversarial",
+      "title": "Anchor-calibrated high-dimensional exposure mixture synthesis with external transportability gates",
+      "description": "This approach synthesizes high-dimensional multi-pollutant exposure-response surfaces from a primary target city but introduces a mandatory external validation and calibration step. Candidate surfaces are stress-tested against minimal, strategically collected exposure-health data from external 'anchor' populations in cities with contrasting pollution profiles and demographics. The system uses the mismatch between predicted and observed health effects in these anchors to identify and remove city-specific confounding structures, then recalibrates the final surface using a Bayesian framework that penalizes non-transportable features. This produces a mixture-response surface that maintains high-resolution local estimation while being explicitly constrained for cross-population validity.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_ac_001",
+      "title": "Relaxing normality of random effects distribution",
+      "description": "Replacing the multivariate normal random effects assumption with flexible nonparametric or mixture distributions to capture skewed heterogeneity.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Multivariate meta-analysis for non-linear and other multi-parameter associations",
+      "sourceYear": 2012
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_sd_001_analogy",
+      "title": "Adaptive Sampling and Surrogate Modeling for Large-Scale Meta-Analysis",
+      "description": "This research adapts solutions from Computational Fluid Dynamics and design optimization to the problem of scaling multivariate meta-analysis of non-linear associations across hundreds of studies. The analogous problem—mapping a complex input-output space with prohibitively expensive high-fidelity evaluations—is solved there using adaptive sampling and surrogate modeling (e.g., Gaussian Processes). We adapt this by developing a computational framework where a fast statistical surrogate model (a meta-model) is iteratively built to approximate the target multivariate non-linear synthesis. Starting with a strategically chosen subset of studies, the algorithm uses criteria like predictive uncertainty or coverage of the covariate space to selectively incorporate additional studies, efficiently converging on a robust synthesis estimate while performing the full, costly computation on only a fraction of the available datasets. This provides a principled shortcut for large-scale evidence synthesis.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_003_adversarial",
+      "title": "Heterogeneity-Aware Transfer Learning with Gated Shared-Private Factorization",
+      "description": "This approach reframes multi-study learning by explicitly modeling and managing heterogeneity to prevent negative transfer. A gated architecture dynamically routes information through shared expert modules for common patterns and private modules for study-specific mechanisms, guided by study metadata. The model uses contrastive learning to align only reliably shared features across studies and adversarial training to purge confounding study identifiers from the shared latent space. This results in robust transfer that improves target task performance without degrading source task fidelity, effectively adapting to the true degree of similarity between studies.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_ac_003_analogy",
+      "title": "Study-Adaptive Spline Knots via Hierarchical Bayesian Meta-Analysis",
+      "description": "This idea challenges the fixed-knot assumption in multi-study spline modeling by drawing an analogy from phylogenetics, where models allow site- or branch-specific evolutionary rates under a hierarchical prior. The analogous solution uses shared prior distributions to enable local parameter variation while maintaining global structure. Adapted to the research context, the solution is to implement a hierarchical Bayesian meta-analysis model where knot locations for each study's spline are not fixed identically but are treated as random parameters drawn from a common, estimable prior distribution. This allows the functional form to adapt to study-specific data densities and ranges, improving local fit, while the hierarchical prior borrows strength across studies, regularizes extreme placements, and enables inference on the central tendency and variability of knot locations across the research landscape.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_sd_003_analogy",
+      "title": "Single-population exposure manifold learning via local kernel smoothing",
+      "description": "This idea adapts a solution from computer graphics—specifically, local kernel methods for 3D surface reconstruction from sparse point clouds—to the challenge of synthesizing high-dimensional multi-pollutant exposure-response surfaces within a single population. The analogous problem involves reconstructing a smooth, continuous 3D surface from a limited set of scanned data points, solved using techniques like moving least squares that fit simple local polynomial models to neighborhoods of points. Adapted to environmental epidemiology, the research would develop methods to estimate a complex exposure-response manifold by applying localized kernel smoothing within the high-dimensional space of multiple concurrent exposures (e.g., PM2.5, NO2, O3, noise). For each local region of this exposure space, a low-dimensional polynomial 'patch' would be fitted to the observed health responses, with kernels determining neighborhood influence. This scales down multi-city synthesis by focusing on the intrinsic dimensionality and local structure within a single population's exposure mixture, building a global response surface from an ensemble of these localized fits, thereby capturing complex interactions and non-linearities without imposing a restrictive global parametric form.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_001_analogy",
+      "title": "Functional Curve Pooling via Geostatistical Kriging",
+      "description": "This idea adapts the core geostatistical solution of kriging to the problem of synthesizing exposure-response curves from multiple studies. In geostatistics, kriging solves the problem of predicting values at unobserved spatial locations by leveraging a model of spatial correlation (the variogram). Analogously, here we treat each study's exposure-response curve, derived via functional data analysis, as a functional observation situated at a point in a multi-dimensional space defined by study-level covariates (e.g., mean age, proportion female, study design). A functional variogram is developed to quantify how the similarity between any two curves decreases as the 'distance' between their study characteristics increases. This model then enables a functional kriging procedure to pool the curves, providing an optimally weighted, unbiased consensus functional estimate that can be tailored to a specific target population defined by a point in the covariate space, effectively interpolating or extrapolating the functional evidence base.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_002_analogy",
+      "title": "Gaussian Process Meta-Analysis with Geostatistical Kriging Constraints",
+      "description": "This idea expands on using Gaussian process priors for non-linear meta-analysis by drawing an analogy from geostatistics. In spatial analysis, kriging with inequality constraints is used to ensure Gaussian process predictions respect physical realities (like non-negative concentrations). We adapt this solution to the meta-analysis context. The core method uses a Gaussian process prior to flexibly pool non-linear relationships (e.g., dose-response curves) from multiple studies without pre-specified parametric forms. Crucially, it incorporates a constraint-handling mechanism inspired by inequality-constrained kriging, allowing the model to enforce domain-specific plausibility constraints (monotonicity, sign constraints, bounds) on the pooled curve. This results in a meta-analytic model that is both highly flexible and inherently interpretable, as the final estimated relationship adheres to known scientific principles.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_sd_002",
+      "title": "Inverse problem: recovering study-level curves",
+      "description": "Given a pooled multivariate meta-analytic estimate, decomposing contributions to identify outlier or influential individual studies.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Multivariate meta-analysis for non-linear and other multi-parameter associations",
+      "sourceYear": 2012
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_ac_003",
+      "title": "Challenging fixed knot placement across studies",
+      "description": "Allowing study-specific spline knot locations instead of requiring identical basis functions across all contributing studies.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Multivariate meta-analysis for non-linear and other multi-parameter associations",
+      "sourceYear": 2012
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_003",
+      "title": "Transfer learning from multi-task machine learning",
+      "description": "Borrowing multi-task learning architectures where each study is a task sharing latent exposure-response structure.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Multivariate meta-analysis for non-linear and other multi-parameter associations",
+      "sourceYear": 2012
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_mt_004",
+      "title": "Manifold learning for heterogeneous curve shapes",
+      "description": "Applying manifold learning to discover low-dimensional structure among diverse study-specific exposure-response curve shapes.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Multivariate meta-analysis for non-linear and other multi-parameter associations",
+      "sourceYear": 2012
+    },
+    {
+      "id": "66aacd6fd71acce1089597ff1ac0aae3e4065455_sd_003",
+      "title": "Single-city high-dimensional exposure mixtures synthesis",
+      "description": "Scaling down from multi-city synthesis to synthesizing high-dimensional multi-pollutant exposure-response surfaces within single populations.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Multivariate meta-analysis for non-linear and other multi-parameter associations",
+      "sourceYear": 2012
+    }
+  ],
+  "papers": [
+    {
+      "title": "Multivariate meta-analysis for non-linear and other multi-parameter associations",
+      "year": 2012,
+      "venue": "Statistics in Medicine",
+      "citations": 587,
+      "abstract": "In this paper, we formalize the application of multivariate meta‐analysis and meta‐regression to synthesize estimates of multi‐parameter associations obtained from different studies. This modelling approach extends the standard two‐stage analysis used to combine results across different sub‐groups o"
+    },
+    {
+      "title": "Age at introduction of new foods and advanced beta cell autoimmunity in young children with HLA-conferred susceptibility to type 1 diabetes",
+      "year": 2006,
+      "venue": "Diabetologia",
+      "citations": 170,
+      "abstract": "Type 1 diabetes is caused by immune destruction of pancreatic β cells. There is\r\nincreasing evidence that genes outside the MHC region contribute to the pathogenesis of\r\ntype 1 diabetes. Cytokines due to their role in immune regulation seem to play a crucial\r\nrole in the pathogenesis of the disease."
+    },
+    {
+      "title": "Control of malaria in Pakistan by applying deltamethrin insecticide to cattle: a community-randomised trial.",
+      "year": 2001,
+      "venue": "The Lancet",
+      "citations": 117,
+      "abstract": "The mixed methods research study Understanding College Community: Fostering Female Student Success at the Canadian Technical College in Qatar applied the critical feminist paradigm to investigate whether female students who were engaged in the college community, through participation in co-curricula"
+    },
+    {
+      "title": "Introduction of complementary foods in infancy and atopic sensitization at the age of 5 years: timing and food diversity in a Finnish birth cohort",
+      "year": 2013,
+      "venue": "Allergy. European Journal of Allergy and Clinical Immunology",
+      "citations": 90,
+      "abstract": "Abstract \n                   \n                     Objective \n                     To study the associations between timing and diversity of introduction of complementary foods during infancy and atopic sensitization in 5‐year‐old children. \n                   \n                   \n                  "
+    },
+    {
+      "title": "Use of antimicrobials and risk of type 1 diabetes in a population-based mother–child cohort",
+      "year": 2005,
+      "venue": "Diabetologia",
+      "citations": 68,
+      "abstract": "International audienceBackground: Treatment with antibiotics in early childhood is effective for bacterial infections but may have long-term side effects. We evaluated the effect of broad-spectrum antibiotics treatment during the first two years of life in association with mode of delivery on subseq"
+    },
+    {
+      "title": "Prenatal growth and risk of occlusive and haemorrhagic stroke in Swedish men and women born 1915-29: historical cohort study",
+      "year": 2001,
+      "venue": "British medical journal",
+      "citations": 61,
+      "abstract": "AIMS: To investigate if early life characteristics and social mobility during childhood are associated with incident thrombotic stroke (TS), haemorrhagic stroke (HS) and other stroke (OS). METHODS: Our study population consists of all live births at Uppsala University Hospital in 1915-1929 (Uppsala "
+    },
+    {
+      "title": "Early introduction of root vegetables in infancy associated with advanced ß‐cell autoimmunity in young children with human leukocyte antigen‐conferred susceptibility to Type 1 diabetes",
+      "year": 2011,
+      "venue": "Diabetic Medicine",
+      "citations": 59,
+      "abstract": "Diabet. Med. 28, 965–971 (2011)    Abstract   Aims   Early introduction of supplementary foods has been implicated to play a role in the development of ß‐cell autoimmunity. We set out to study the effects of breastfeeding and age at introduction of supplementary foods on the development of ß‐cell au"
+    },
+    {
+      "title": "Serum fatty acids and risk of advanced β-cell autoimmunity: a nested case–control study among children with HLA-conferred susceptibility to type I diabetes",
+      "year": 2010,
+      "venue": "European Journal of Clinical Nutrition",
+      "citations": 46,
+      "abstract": null
+    },
+    {
+      "title": "Maternal diet during pregnancy and lactation and cow’s milk allergy in offspring",
+      "year": 2016,
+      "venue": "European Journal of Clinical Nutrition",
+      "citations": 46,
+      "abstract": "Abstract \n                   \n                     Objective: \n                    To assess whether the maternal consumption of milk and milk products affects development of cow's milk (CM) antibodies in infants.\n                     Design: \n                    A randomized pilot trial using food "
+    },
+    {
+      "title": "Childhood leukaemia: long-term excess mortality and the proportion ‘cured’",
+      "year": 2008,
+      "venue": "British Journal of Cancer",
+      "citations": 35,
+      "abstract": "Survival from childhood leukaemia has increased, but the proportion of children cured is unknown. The proportion ‘cured’ is defined as the proportion of survivors for whom, as a group, there is no longer excess mortality compared to the general population. Average time to cure is defined as the time"
+    },
+    {
+      "title": "Handling missing values in cost effectiveness analyses that use data from cluster randomized trials",
+      "year": 2012,
+      "venue": "",
+      "citations": 30,
+      "abstract": "Public policy makers use cost effectiveness analyses (CEAs) to decide which health and social care interventions to provide. Missing data are common in CEAs, but most studies use complete‐case analysis. Appropriate methods have not been developed for handling missing data in complex settings, exempl"
+    },
+    {
+      "title": "Multiple imputation methods for bivariate outcomes in cluster randomised trials",
+      "year": 2016,
+      "venue": "Statistics in Medicine",
+      "citations": 23,
+      "abstract": "Missing observations are common in cluster randomised trials. The problem is exacerbated when modelling bivariate outcomes jointly, as the proportion of complete cases is often considerably smaller than the proportion having either of the outcomes fully observed. Approaches taken to handling such mi"
+    },
+    {
+      "title": "Maternal intake of fatty acids and their food sources during lactation and the risk of preclinical and clinical type 1 diabetes in the offspring",
+      "year": 2015,
+      "venue": "Acta Diabetologica",
+      "citations": 17,
+      "abstract": "The aim of the present study was to examine the associations between the maternal intake of fatty acids during pregnancy and the risk of preclinical and clinical type 1 diabetes in the offspring. The study included 4887 children with human leucocyte antigen (HLA)-conferred type 1 diabetes susceptibi"
+    },
+    {
+      "title": "A comparison of multiple imputation methods for bivariate hierarchical data: an application to cost-effectiveness analyse",
+      "year": 2013,
+      "venue": "Trials",
+      "citations": 2,
+      "abstract": "Methods We begin by illustrating the MI approaches with an example, a cost-effectiveness analysis of a CRT evaluating an intervention for postnatal depression (2659 participants, 100 clusters ICC for cost 0.17, ICC for QALYs 0.04). We conducted a simulation study to assess the performance of the alt"
+    },
+    {
+      "title": "Missing data: a sensitivity analysis",
+      "year": 2005,
+      "venue": "",
+      "citations": 0,
+      "abstract": "Abstract  Statistical analyses of recurrent event data have typically been based on the missing at random assumption. One implication of this is that, if data are collected only when patients are on their randomized treatment, the resulting  de jure  estimator of treatment effect corresponds to the "
+    },
+    {
+      "title": "Multiple imputation methods for bivariate outcomes in cluster randomised trials: Supporting Information",
+      "year": 2016,
+      "venue": "",
+      "citations": 0,
+      "abstract": "Missing observations are common in cluster randomised trials. The problem is exacerbated when modelling bivariate outcomes jointly, as the proportion of complete cases is often considerably smaller than the proportion having either of the outcomes fully observed. Approaches taken to handling such mi"
+    }
+  ]
+}

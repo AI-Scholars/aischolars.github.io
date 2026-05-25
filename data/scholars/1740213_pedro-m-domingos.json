@@ -1,0 +1,1092 @@
+{
+  "slug": "1740213_pedro-m-domingos",
+  "displaySlug": "pedro-m-domingos",
+  "name": "Pedro M. Domingos",
+  "authorId": "1740213",
+  "affiliations": [],
+  "hIndex": 83,
+  "citationCount": 40252,
+  "paperCount": 230,
+  "proposalCount": 48,
+  "ideaCount": 48,
+  "proposals": [
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_001_adversarial_prop",
+      "title": "Amortized Meta-Reasoning for Dynamically Constrained Inference in Sum-Product Networks",
+      "motivation": "Sum-Product Networks (SPNs) provide tractable inference through structural constraints like completeness and decomposability, but these constraints can be overly restrictive, limiting model expressiveness and scalability. Relaxing these constraints for more powerful models makes exact inference intractable, while naive approximations can violate critical dependencies, leading to inaccurate or unreliable predictions. An adaptive method is needed to manage this trade-off intelligently.",
+      "hypothesis": "A meta-reasoning module, trained via amortized inference, can dynamically predict where structural constraints in an SPN can be safely approximated and where they must be enforced, enabling more scalable and expressive models while preserving accuracy on critical queries.",
+      "method": "We will develop a recurrent meta-reasoner network that takes as input the current state of the SPN (e.g., node activations, query) and outputs a gating policy over the graph structure. This policy will decide, for each region of the SPN, whether to enforce exact constraints or allow a controlled, learned relaxation. The meta-reasoner will be trained end-to-end using a reinforcement learning objective that balances inference speed against a reward based on fidelity to a validation set of exact inference results, drawing on techniques from relevance-guided modeling and optimization over deep networks.",
+      "contribution": "This work will yield a new framework for scalable, approximate inference in deep probabilistic models that maintains theoretical guarantees where necessary. It will extend the practical applicability of SPNs to larger, more complex domains like the amodal 3D reconstruction tasks referenced in recent work. The meta-reasoning paradigm could influence how structural constraints are managed in other graphical models.",
+      "novelty": "While amortized inference and learned approximations exist, dynamically and adaptively managing the enforcement of core model constraints (completeness/decomposability) via a dedicated meta-reasoner is a novel synthesis. It moves beyond static relaxation or uniform approximation schemes.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_001_analogy_prop",
+      "title": "Stable, Decentralized Inference via Overlapping Decompositions in Loosely-Coupled Probabilistic Graphical Models",
+      "motivation": "Exact inference in large probabilistic graphical models (PGMs) is computationally intractable, while standard variational or loopy belief propagation approximations often fail to scale or guarantee stability for complex, interconnected systems. Many real-world domains, such as multi-agent robotics or large-scale sensor networks, exhibit weak, intermittent interactions that are poorly served by tightly-coupled global inference, creating a need for principled, approximate decentralized algorithms.",
+      "hypothesis": "By adapting concepts from decentralized control—specifically overlapping decompositions and stability under approximate coupling—we can develop a new class of approximate inference algorithms that maintain provably bounded error while achieving substantial computational gains in loosely-coupled PGMs.",
+      "method": "We will formalize metrics for inter-cluster coupling strength in PGMs, drawing on information-theoretic measures like conditional mutual information. Building on this, we will design a hybrid message-passing framework where clusters perform local, exact inference (e.g., using Sum-Product Networks for efficiency) and exchange beliefs only when local changes exceed a threshold derived from the coupling metric. The algorithm's stability and error bounds will be analyzed using perturbation theory adapted from control systems.",
+      "contribution": "This work will provide a theoretically grounded framework for scalable, decentralized probabilistic inference with bounded approximation guarantees. It will yield practical algorithms applicable to large-scale, weakly-interacting systems in robotics and sensor networks, advancing beyond current variational and sampling-based methods.",
+      "novelty": "The core novelty is the direct translation of stability and overlapping decomposition principles from decentralized control theory to probabilistic inference, a cross-disciplinary analogy not previously explored to develop *provably stable* approximate inference schemes.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_001_prop",
+      "title": "Approximate Inference in Relaxed Sum-Product Networks: A Stability and Optimization Framework",
+      "motivation": "Sum-Product Networks (SPNs) guarantee efficient exact inference through strict completeness and decomposability constraints, but these limit their representational flexibility and ability to model complex, overlapping feature interactions common in real-world data like robotic scenes. Pre-2026, there is a gap in principled methods for learning and performing inference in SPNs where these structural constraints are intentionally relaxed to capture richer dependencies, trading theoretical guarantees for practical modeling power.",
+      "hypothesis": "By formally relaxing the completeness and decomposability constraints in SPNs and employing a stability-driven optimization framework, we can develop models that maintain tractable approximate inference while significantly improving their capacity to learn complex, amodal representations for tasks like 3D reconstruction and dynamics prediction.",
+      "method": "We will develop a novel SPN architecture where sub-SPNs at sum nodes are allowed to have overlapping scopes (relaxed decomposability) and children of sum nodes can have unaligned distributions (relaxed completeness). Inference will be formulated as an optimization problem, using gradient descent to find approximate marginals, inspired by the 'kernel machine' view of deep networks. We will incorporate a relevance-guided mechanism, similar to Domingos's prior work, to dynamically prune or adjust connections during learning to maintain stability and control the approximation error.",
+      "contribution": "This work will provide a new class of probabilistic deep models that bridge the gap between the tractability of SPNs and the flexibility of general graphical models. It will deliver new algorithms for approximate inference and learning in these relaxed SPNs, with empirical validation on robotic manipulation benchmarks requiring robust 3D scene understanding.",
+      "novelty": "While prior work focuses on maintaining exact inference, we explicitly break the core constraints of SPNs and develop a dedicated, stable optimization framework for the resulting intractable model, linking it to modern deep learning theory through the gradient descent-kernel perspective.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_002_analogy_prop",
+      "title": "Solution-Adaptive Hybrid SPNs: Integrating Intractable Modules via Variational Interface Learning",
+      "motivation": "Sum-Product Networks (SPNs) provide tractable inference but are limited by their requirement for all components to be tractable, restricting their expressive power. Conversely, deep probabilistic models offer high expressivity but often have intractable partition functions, making exact inference and structural learning difficult. A principled method to combine these paradigms would enable models that are both highly expressive and retain tractable inference where it is most critical, addressing a core limitation in probabilistic deep learning.",
+      "hypothesis": "A hybrid SPN architecture, with a variational embedding layer acting as a learned interface between a tractable SPN backbone and embedded intractable modules, can be trained effectively to expand representational power while preserving the global benefits of tractable learning and inference.",
+      "method": "We will design a hybrid SPN where the network graph is partitioned into a tractable domain (standard SPN) and intractable domains (e.g., deep energy-based modules). Inspired by RANS-LES coupling in CFD, we replace a fixed boundary with a solution-adaptive variational interface. This interface, parameterized as an inference network, will learn an approximate posterior to pass sufficient statistics (e.g., means, variances) and error gradients between domains. The intractable modules will be trained using variational inference or contrastive divergence, with their objectives regularized by the likelihood of the global tractable SPN, enabling end-to-end optimization via backpropagation.",
+      "contribution": "This work will deliver a novel hybrid probabilistic architecture that breaks the tractability-efficiency trade-off of pure SPNs. It will provide a formal framework and training algorithm for integrating black-box, expressive modules into tractable graphical models, expanding their applicability to complex, high-dimensional domains like robotics and vision where partial guarantees are essential.",
+      "novelty": "The key novelty is the adaptation of solution-adaptive interface concepts from computational physics to probabilistic deep learning, creating a dynamic, learned variational bridge between tractable and intractable probabilistic components, which is a departure from rigid, pre-defined model structures.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_002_prop",
+      "title": "Expressive Hybrid Sum-Product Networks: Integrating Intractable Sub-Models via Variational Inference and Annealed Importance Sampling",
+      "motivation": "Sum-Product Networks (SPNs) are tractable probabilistic models, but their expressiveness is limited by the requirement that all sub-networks have tractable partition functions. This prevents SPNs from incorporating powerful, modern deep generative components like energy-based models or certain neural likelihoods, restricting their application in complex domains like robotics and scene understanding where such representations are valuable.",
+      "hypothesis": "By using a variational inference framework to bound the log-partition functions of intractable sub-networks, and employing Annealed Importance Sampling (AIS) for accurate gradient estimation, we can stably train hybrid SPNs that maintain overall tractability for queries while significantly expanding their representational power.",
+      "method": "We will architect a hybrid SPN where leaf distributions can be intractable energy-based models (EBMs) or implicit models. For each such leaf, we introduce a variational approximator (e.g., a Gaussian or a small tractable SPN) to provide a lower bound on its log-partition function via the Gibbs variational principle. The overall SPN likelihood and the variational bounds will be optimized jointly using stochastic gradient descent. Gradients for the intractable leaves will be estimated using AIS within the REINFORCE framework, with control variates to reduce variance. The network structure learning will leverage pre-2026 relevance-guided methods to decide where to place intractable modules.",
+      "contribution": "This work will deliver a new class of probabilistic deep models that combine the query efficiency of SPNs with the expressiveness of intractable sub-models, a theoretical framework for their stable training, and empirical validation on challenging 3D object and robotic manipulation datasets, demonstrating improved density estimation and sample quality.",
+      "novelty": "While variational methods and SPNs exist separately, their integration to systematically 'black-box' intractable components into an SPN's tractable inference flow is novel, moving beyond the strict tractability dogma without abandoning its computational benefits for marginal and conditional queries.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_003_analogy_prop",
+      "title": "Kernel-Smoothed Sum-Product Networks: A Particle-Based Framework for Continuous Density Estimation",
+      "motivation": "Sum-Product Networks (SPNs) are a promising tractable probabilistic architecture, but their application to continuous data has been hampered by the need for variable discretization, which introduces information loss, artifacts, and complicates gradient-based learning. This limitation restricts SPNs in modern machine learning contexts where continuous, high-dimensional data is prevalent, such as in robotics and reinforcement learning, as seen in Domingos's recent work on object dynamics. A direct, native method for continuous density estimation within the SPN framework is a critical open problem.",
+      "hypothesis": "By replacing discrete leaf distributions with non-parametric kernel density estimators or parametric Gaussian mixture models, an SPN can directly and tractably model continuous variables, leading to more accurate density estimates and enabling efficient end-to-end gradient-based optimization of the full network.",
+      "method": "We will develop a novel SPN architecture where leaf nodes are continuous density estimators (KDEs/GMMs). Inspired by Smoothed Particle Hydrodynamics, we will formulate the sum and product operations to act on these smoothed densities, ensuring tractability by maintaining the SPN's decomposability and completeness properties. We will derive parameter learning algorithms using Expectation-Maximization and gradient descent, leveraging the kernel viewpoint of learning, and implement inference via efficient message passing over continuous leaves.",
+      "contribution": "This work will provide the first fully continuous SPN formulation, eliminating the need for discretization. It will extend the applicability of tractable probabilistic models to continuous domains like robotics and control, and offer a new theoretical connection between kernel methods and probabilistic deep learning architectures.",
+      "novelty": "The core novelty is the conceptual transfer of particle-based smoothing from computational physics to the structure of probabilistic networks, creating a 'field-based' SPN. This moves beyond simple replacement of discrete nodes with Gaussians by providing a unified framework for non-parametric and mixture-based leaves within the tractable inference paradigm.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_003_fusion_prop",
+      "title": "Tractable Generative Modeling of Continuous Data via Sum-Product Networks with Exact Ancestral Sampling",
+      "motivation": "Deep generative models like VAEs and GANs lack exact, tractable likelihoods, complicating tasks like anomaly detection and controllable generation. While Sum-Product Networks (SPNs) provide exact inference, their application has been largely limited to discrete or pre-discretized data, introducing artifacts and information loss for continuous domains like audio, sensor streams, and financial time-series. A model that natively handles continuous data with tractable densities and exact sampling would bridge a critical gap in probabilistic deep learning.",
+      "hypothesis": "We hypothesize that SPNs can be constructed with continuous leaf distributions (e.g., Gaussian, Gamma, or mixture distributions) to form a deep, tractable probabilistic model for raw continuous data, and that this representation enables an exact and efficient ancestral sampling algorithm for generating high-fidelity, realistic samples.",
+      "method": "We will develop a continuous SPN architecture where leaf nodes are tractable continuous distributions, and internal nodes are weighted sums and products. Structure learning will leverage pre-2026 methods like LearnSPN but with a relevance-guided clustering of continuous variables. For parameter learning, we will derive and implement Expectation-Maximization (EM) updates or direct gradient-based optimization of the log-likelihood. Crucially, we will design an ancestral sampling algorithm that exploits the network's probabilistic circuit semantics to perform exact sampling by recursively choosing children at sum nodes proportional to their weights and drawing samples from product and leaf nodes.",
+      "contribution": "This work will deliver a novel deep generative model that provides exact density estimation and exact, efficient sampling for high-dimensional continuous data. It will establish a new benchmark for likelihood-based generative modeling on continuous domains, with direct applications in generating realistic synthetic waveforms and time-series for data augmentation and simulation.",
+      "novelty": "While SPNs for hybrid domains exist, a deep SPN designed specifically for native, high-dimensional continuous data with a derived exact ancestral sampling procedure is novel. This contrasts with prior work that often required discretization or focused solely on density estimation, not high-quality generation.",
+      "dimension": "Fusion"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_003_prop",
+      "title": "Sum-Product Networks with Continuous Leaves: A Non-Parametric Framework for Exact Inference on Raw Data",
+      "motivation": "Sum-Product Networks (SPNs) offer tractable exact inference but have traditionally required discrete variables or parametric assumptions (e.g., Gaussians) for continuous data, limiting their expressiveness and forcing potentially lossy discretization. A direct, non-parametric formulation for continuous variables would enable SPNs to be applied natively to high-dimensional real-world sensor data (e.g., robotics, vision), preserving information and integrating seamlessly with deep feature learning. This addresses a core limitation in scaling tractable probabilistic models to modern AI problems.",
+      "hypothesis": "We hypothesize that by replacing discrete leaf distributions with non-parametric density estimators based on kernel methods or normalizing flows, and by ensuring the resulting SPN's structure permits closed-form integration, we can construct a model that performs exact inference directly on continuous variables without information loss from discretization.",
+      "method": "We will develop a novel SPN architecture where leaf nodes are continuous density estimators, such as Kernel Density Estimators (KDEs) or simple normalizing flows. The key technical challenge is maintaining tractability of the partition function; we will enforce a structure where the product of univariate KDEs at a product node remains analytically integrable. We will derive learning rules using backpropagation and gradient descent, optimizing the SPN parameters and the bandwidth parameters of the KDEs simultaneously, ensuring the model scales to high-dimensional data via deep stacking of sum and product layers.",
+      "contribution": "This work will provide the first fully non-parametric SPN framework for raw continuous data, eliminating the discretization bottleneck. It will expand the applicability of tractable probabilistic models to domains like robotic perception and control, where Domingos's prior work on object dynamics operates. The resulting model will serve as a new baseline for density estimation and structured prediction with exact inference guarantees.",
+      "novelty": "While prior work uses Gaussian leaves or discretization, our approach is novel in its direct use of adaptive, non-parametric leaves within the SPN framework to model arbitrary continuous densities, maintaining exact inference—a combination not achieved in pre-2026 literature. It bridges Domingos's insights on kernel machines with the structural efficiency of SPNs.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_004_adversarial_prop",
+      "title": "Robust Causal and Graphical Structure Discovery via Multi-Hypothesis Testing with Adaptive Regularization",
+      "motivation": "Learning the structure of networks (e.g., causal graphs, neural architectures, relational models) from data is fundamental to AI, but standard methods are prone to discovering spurious, dataset-specific dependencies. This fragility undermines interpretability and generalization, especially in high-dimensional settings or when data comes from multiple, potentially biased, environments. A principled framework to distinguish stable structural relationships from noise is critically needed for reliable inference in fields like robotics and reinforcement learning.",
+      "hypothesis": "By framing structure discovery as a constrained, multi-hypothesis testing problem with adaptive regularization, we can systematically identify a set of plausible network structures where the most robust and simple graphs correspond to stable, generalizable relationships invariant across environments.",
+      "method": "We will develop an algorithm that iteratively proposes candidate graph structures (hypotheses) using a base learner (e.g., a gradient-based structure search or a constraint-based method). For each candidate, we will apply environment-specific adaptive regularization, inspired by techniques from invariant risk minimization, to penalize edges that vary across data partitions. The core innovation is a testing procedure that evaluates the stability and likelihood of each graph under resampling and adversarial environment splits, outputting a ranked Pareto frontier of structures trading off fit, simplicity, and robustness.",
+      "contribution": "This work will provide a new methodology for robust structure discovery that moves beyond single-point estimates to quantified uncertainty over graphical models. It will yield practical algorithms for learning more reliable causal models and neural architectures, directly applicable to problems like robust world modeling in reinforcement learning and interpretable feature learning.",
+      "novelty": "While hypothesis testing and regularization are known, their integration into a constrained multi-hypothesis framework for structure discovery, with explicit environment-based validation to rank graphs by robustness, is a novel synthesis. This approach directly addresses the 'spurious discovery' problem in a way that prior constraint-based or score-based methods do not.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_004_analogy_prop",
+      "title": "Phase Retrieval for Graph Discovery: Inferring Network Topology from Dynamical Outputs via Crystallographic Principles",
+      "motivation": "A fundamental challenge in network science and machine learning is the inference of latent structure from observed data, especially when the connectivity is unknown. Current methods often rely on strong architectural priors or are limited to specific model classes. This work addresses the core problem of learning the graph adjacency matrix directly from time-series or relational outcome patterns, a task critical for understanding complex systems in neuroscience, social networks, and biological interaction maps where the true topology is hidden.",
+      "hypothesis": "The inverse problem of network topology discovery can be effectively solved by adapting iterative phase retrieval algorithms from X-ray crystallography, treating the network's dynamical outputs as a diffraction pattern and the adjacency matrix as the unknown crystal lattice to be reconstructed.",
+      "method": "We will formulate network inference as a constrained optimization problem, drawing direct analogy to the crystallographic phase problem. The 'intensity data' will be derived from statistical properties of observed node dynamics (e.g., covariance, spectral features). We will adapt the Hybrid Input-Output (HIO) and Error Reduction algorithms, enforcing physical network constraints (sparsity, non-negativity, degree distributions) in the Fourier domain analog. The optimization will be performed using gradient-based methods, potentially integrated with deep learning frameworks to learn a mapping from pattern features to topology initialization, improving convergence.",
+      "contribution": "This research will provide a novel, principled computational framework for blind network discovery, moving beyond template-based architectures. It will yield a new class of algorithms applicable to domains where only system outputs are observable, advancing fields like causal structure learning and dynamical system identification. The work will also create a formal bridge between crystallographic reconstruction techniques and inverse problems in network science.",
+      "novelty": "The non-obvious core is the direct conceptual and algorithmic mapping from crystallographic diffraction to network inference, a cross-disciplinary analogy not previously explored. Unlike typical graph learning methods, this approach does not start from a predefined graph model or likelihood but from an abstract 'pattern fitting' paradigm with iterative Fourier constraints.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_004_prop",
+      "title": "Structure Learning for Sum-Product Networks via Differentiable Architecture Search and Stability Optimization",
+      "motivation": "Sum-Product Networks (SPNs) offer tractable, deep probabilistic modeling, but their performance is critically dependent on a manually designed or data-agnostic network structure. This limits their applicability to complex domains like the amodal 3D scene understanding and object dynamics modeling referenced in recent work, where the latent relational structure is unknown. Automating structure discovery is essential for SPNs to become a truly general-purpose, scalable learning framework.",
+      "hypothesis": "The structure of an SPN can be effectively learned from data by formulating it as a differentiable architecture search problem, where the learned connectivity directly optimizes a combination of data likelihood and a stability-based structural prior, leading to more accurate and data-efficient models than fixed-structure SPNs.",
+      "method": "We will develop a continuous relaxation of the SPN's graph structure, parameterizing the existence and strength of edges between sum and product nodes. A bi-level optimization will be performed: an inner loop learns node weights via standard gradient descent, while an outer loop uses gradient-based architecture search (e.g., DARTS) to learn the connectivity parameters. The search will be guided by a novel loss term enforcing structural stability—inspired by recent work on stability in 3D reconstruction—which penalizes architectures sensitive to small data perturbations, promoting robust connectivity patterns.",
+      "contribution": "This work will produce the first method for fully differentiable structure learning in SPNs, moving beyond heuristic or greedy pre-training methods. It will provide a principled, scalable tool for discovering latent variable interactions in probabilistic data, directly advancing themes of learning network structure and modeling object dynamics. The resulting models are expected to show superior performance on high-dimensional, structured data tasks where the graphical model is unknown.",
+      "novelty": "While neural architecture search exists for discriminative deep networks, its application to the directed acyclic graph structure of probabilistic SPNs is novel. The integration of a stability-based structural prior, connecting to insights from robust 3D modeling, provides a new inductive bias for discovering physically plausible or causally relevant dependencies, going beyond mere likelihood maximization.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_005_analogy_prop",
+      "title": "Bayesian Inference-Time Data Augmentation for Robust Prediction with Missing Features",
+      "motivation": "Standard machine learning models fail at inference time when presented with partially observed inputs, a common scenario in robotics, healthcare, and sensor networks. Current solutions rely on separate, often deterministic, imputation methods that ignore the uncertainty inherent in the missing data, leading to overconfident and potentially erroneous predictions. A native, principled solution that integrates uncertainty quantification directly into the inference process is critically needed for robust real-world deployment.",
+      "hypothesis": "We hypothesize that by treating missing features at inference time as latent variables within a hierarchical Bayesian model, we can perform joint inference over predictions and plausible feature values, yielding a predictive distribution that correctly accounts for the uncertainty introduced by missingness, thereby improving robustness and calibration.",
+      "method": "We will adapt the Bayesian data augmentation framework from Ecology to deep learning. The core architecture will be a Sum-Product Network (SPN), chosen for its tractable probabilistic inference, acting as the core predictive process P(Y | X). We will couple this with an observation model P(X_obs | X) for the missingness mechanism. At inference for a partially observed sample, we will use variational inference to approximate the posterior over the latent missing features, conditioning on the observed features and the SPN's parameters. This will enable efficient sampling from the joint predictive distribution P(Y | X_obs).",
+      "contribution": "This work will provide a novel inference-time algorithm for handling missing data without pre-processing, directly outputting calibrated predictive distributions. It will advance the theory of robust inference under uncertainty and offer a practical tool for domains like robotics (e.g., for the amodal 3D reconstruction and object dynamics modeling problems Domingos has studied) where sensor data is often incomplete.",
+      "novelty": "The key novelty is the direct translation of a Bayesian data augmentation scheme from a non-standard field (Ecology) into a native inference-time procedure for deep/structured probabilistic models, moving beyond static imputation to dynamic, prediction-aware uncertainty quantification during inference.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_005_prop",
+      "title": "Stochastic Sum-Product Networks for Robust Inference with Arbitrary Missing Data Patterns",
+      "motivation": "Real-world systems, from robotics to healthcare, must perform inference with partially observed inputs. Pre-2026 deep models often fail or require ad-hoc imputation, which introduces bias and computational overhead. A principled, native solution for handling missing data during inference is critical for deploying robust AI in uncontrolled environments.",
+      "hypothesis": "By integrating a latent variable model directly into the structure of a Sum-Product Network (SPN), we can create a probabilistic graphical model that natively supports exact, efficient marginalization over any subset of missing input features during inference, without retraining or imputation.",
+      "method": "We will develop Stochastic SPNs (S-SPNs), extending Domingos's SPN framework by treating input units as stochastic leaf distributions (e.g., Gaussian or Categorical) rather than deterministic indicators. During inference, missing variables are treated as latent and marginalized out via the SPN's inherent bottom-up sum-product pass. We will derive a variational EM learning algorithm that optimizes network parameters and the distributions over missing inputs, ensuring stability. The approach will be evaluated on robotics manipulation datasets (with occluded object properties) and standard UCI datasets with artificially masked features.",
+      "contribution": "This work will provide a theoretically grounded, tractable model for robust inference under missing data, advancing beyond simple imputation. It will extend the utility of SPNs to real-time applications like robotics where perception is incomplete. The method will also offer new insights into the relationship between deep network architectures and kernel methods under data uncertainty.",
+      "novelty": "While SPNs efficiently handle missing data by design, prior work assumes missingness is known at training time. Our method uniquely models inputs as latent variables, enabling the network to infer and marginalize over data missing arbitrarily *only* at test time, a capability not native to standard or deep SPNs.",
+      "dimension": "Assumption Challenge"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_fw_001_analogy_prop",
+      "title": "PhyloSPN: Joint Structure and Parameter Learning for Sum-Product Networks via EM and Greedy Search",
+      "motivation": "Sum-Product Networks (SPNs) offer a deep, tractable probabilistic architecture, but their adoption is hindered by the lack of robust, automated learning algorithms for both structure and parameters. Current methods often rely on pre-defined structures or simple clustering, limiting their expressiveness and applicability to complex, high-dimensional data. This project addresses this core bottleneck in probabilistic deep learning.",
+      "hypothesis": "The joint learning problem for SPNs can be effectively solved by an iterative algorithm that alternates between Expectation-Maximization for parameter optimization and a likelihood-based greedy search for structure refinement, analogous to successful strategies in phylogenetic tree reconstruction.",
+      "method": "We will develop an algorithm that initializes a dense, complete SPN structure over a variable set. The E-step will compute sufficient statistics for all nodes; the M-step will update leaf distribution parameters and sum node weights. A structure search step will then greedily prune or merge sum nodes with low weight variance and recursively partition variables and data where likelihood gain is highest, guided by pairwise mutual information matrices—mirroring distance matrices in phylogenetics. This EM-search loop iterates until convergence.",
+      "contribution": "This work will provide the first unified algorithm for joint SPN learning directly from data, eliminating the need for hand-crafted structures. It will advance the field of tractable probabilistic models by enabling automated discovery of deep, interpretable hierarchies, with applications in density estimation and missing data imputation.",
+      "novelty": "The key novelty is the formal adaptation of the proven phylogenetic learning paradigm—integrating continuous parameter optimization with discrete topology search—to the domain of deep probabilistic networks, a connection not previously explored for SPNs.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_fw_001_prop",
+      "title": "Structure-Aware, Gradient-Based Optimization for Deep Sum-Product Networks",
+      "motivation": "Sum-Product Networks (SPNs) offer tractable, deep probabilistic models with clear semantics, but their development has been hindered by a lack of robust, scalable learning algorithms. Existing methods often rely on hard clustering for structure learning or use expectation-maximization, which can be brittle and scale poorly with model depth and data dimensionality, limiting SPNs' application to complex real-world domains like robotics and scene understanding where uncertainty is crucial.",
+      "hypothesis": "We hypothesize that by formulating SPN parameter learning as a constrained optimization problem directly amenable to gradient descent, and by integrating a data-driven, relevance-guided strategy for latent structure refinement, we can develop a more stable and scalable learning framework that unlocks the representational power of deep SPNs.",
+      "method": "We will develop a batch gradient descent algorithm for SPNs by applying automatic differentiation to the network polynomial, ensuring computational tractability via the existing SPN DAG structure. To stabilize learning and improve structure, we will incorporate a regularization term inspired by stability and connectivity principles from amodal 3D reconstruction, penalizing representations that are sensitive to small input variations. Furthermore, we will guide the iterative refinement of sum node scopes (latent variable structure) using a relevance metric derived from feature importance in predicting object dynamics, creating a feedback loop between parameter optimization and structure adaptation.",
+      "contribution": "This work will provide the first fully gradient-based, structure-aware learning algorithm for deep SPNs, enabling their training on high-dimensional data with modern optimizers. It will bridge the gap between SPNs' theoretical promise and their practical application, offering a new tool for probabilistic deep learning that is both interpretable and trainable at scale.",
+      "novelty": "The novelty lies in the seamless integration of gradient-based optimization with dynamic, relevance-guided structure learning within the SPN framework, moving beyond the traditional separation of these phases and leveraging insights from stability and predictive relevance in other domains.",
+      "dimension": "Future Work"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_fw_002_analogy_prop",
+      "title": "Hierarchical Sum-Product Networks for Scalable, Interpretable Visual Recognition",
+      "motivation": "Deep learning dominates large-scale vision but lacks the inherent uncertainty quantification and exact inference of probabilistic graphical models. Sum-Product Networks (SPNs) offer these advantages but have struggled to scale to billion-pixel datasets like ImageNet due to their monolithic structure and training complexity. This creates a critical gap between the scale of deep learning and the rigor of probabilistic models.",
+      "hypothesis": "A hierarchical SPN architecture, inspired by scalable hierarchical Bayesian models in computational ecology, can decompose large-scale vision tasks into coordinated, domain-specific sub-models, enabling tractable exact inference and effective learning on massive, heterogeneous image data.",
+      "method": "We will design a multi-level SPN where leaf distributions model local image patches (e.g., via pre-trained CNN features). Mid-level SPNs, structured according to visual domains or object parts, will combine these patches. A top-level SPN, governed by a shared hierarchical prior over its parameters, will coordinate the mid-level models. Training will use a block-coordinate variant of the Expectation-Maximization algorithm, allowing parallel optimization of sub-SPNs. Inference will remain exact via the SPN's tree structure, propagating probabilities bottom-up.",
+      "contribution": "This work will deliver a novel, scalable probabilistic architecture for vision that maintains exact inference. It will provide a principled framework for incorporating heterogeneous data sources and prior knowledge. The result bridges the scale of deep networks with the interpretability and uncertainty measures of SPNs.",
+      "novelty": "The key novelty is adapting the parameter hierarchy and spatial decomposition principles from large-scale ecological Bayesian networks to the structure and learning of SPNs, a previously unexplored cross-disciplinary analogy for achieving scalability.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_fw_002_fusion_prop",
+      "title": "AdaSPN: Adaptive, Boosting-Constructed Sum-Product Networks for Scalable and Calibrated Visual Recognition",
+      "motivation": "Deep neural networks dominate large-scale vision but are often data-hungry, poorly calibrated, and lack tractable probabilistic semantics. Conversely, Sum-Product Networks (SPNs) offer exact, efficient inference but struggle with scalability and adaptive capacity. A synthesis is needed to build deep, probabilistically rigorous models that are data-efficient and robust, particularly for complex tasks like fine-grained recognition and scene understanding where uncertainty matters.",
+      "hypothesis": "An SPN architecture constructed incrementally via a boosting paradigm will yield a model that combines the adaptive error-correction and robustness of boosting with the tractable probabilistic inference of SPNs, leading to superior data efficiency and calibration on large-scale vision tasks compared to monolithic SPNs or standard deep networks.",
+      "method": "We will develop a boosting algorithm where each weak learner is a shallow SPN 'stump' (e.g., a product of univariate distributions or a small mixture). Each boosting round will add a new layer or sub-network to a growing SPN structure, with the weights of training examples updated based on the current model's marginal likelihood or classification error. The algorithm will optimize a loss function (e.g., exponential loss) compatible with SPN likelihoods, ensuring the final deep SPN remains a valid, tractable probability model. We will integrate this with convolutional feature extractors for vision tasks.",
+      "contribution": "This work will deliver a novel, probabilistically sound architecture for vision that is built data-efficiently. It will provide a new theoretical link between ensemble methods and deep probabilistic networks. Empirically, we expect to demonstrate state-of-the-art calibration and robustness on datasets like ImageNet and ADE20K, while maintaining competitive accuracy.",
+      "novelty": "The core novelty is the formal integration of boosting as a *construction algorithm* for deep SPNs, moving beyond static architectures. This is distinct from simply ensembling pre-trained SPNs or using boosting for model selection.",
+      "dimension": "Fusion"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_fw_002_prop",
+      "title": "Deep Sum-Product Networks for Scalable and Interpretable Image Recognition",
+      "motivation": "Deep neural networks dominate large-scale vision tasks but are often opaque and data-hungry, requiring vast labeled datasets. Sum-Product Networks (SPNs) offer a compelling alternative with inherent interpretability, exact and efficient inference, and the ability to learn from less data, but they have not been successfully scaled to complex, high-dimensional image datasets like ImageNet.",
+      "hypothesis": "By integrating deep convolutional feature extractors with structured, high-capacity SPNs as probabilistic classifiers, we can achieve competitive accuracy on large-scale vision benchmarks while providing a tractable probabilistic model that quantifies uncertainty and offers insights into its decision-making process.",
+      "method": "We will develop a hybrid architecture where a standard convolutional neural network (e.g., ResNet) acts as a deep feature extractor. Its penultimate layer outputs will feed into a large, learnable SPN structured to reflect spatial and semantic hierarchies. We will employ online algorithms for SPN weight optimization, such as hard or soft gradient-based EM, and investigate parameter tying and region graph structures to manage the model's scale. The training will leverage standard backpropagation for the CNN component, coupled with specialized updates for the SPN to perform joint end-to-end learning.",
+      "contribution": "This work will demonstrate the first SPN-based model capable of competing with deep CNNs on datasets like ImageNet, establishing SPNs as a viable, scalable architecture for vision. It will provide a new class of vision models that natively output calibrated probabilities and whose internal structure can be inspected to understand feature combinations and failure modes.",
+      "novelty": "The key novelty is the seamless, end-to-end integration of deep representation learning with the probabilistic semantics and exact inference of SPNs at a scale previously unattempted, moving beyond small, synthetic datasets to real-world vision challenges.",
+      "dimension": "Future Work"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_fw_003_adversarial_prop",
+      "title": "Automated Complexity Frontier Mapping for Partition Functions via Interactive Theorem Proving and Algorithm Synthesis",
+      "motivation": "The partition function is a fundamental quantity in machine learning, underpinning probabilistic graphical models, Markov random fields, and Sum-Product Networks (SPNs). Pre-2026, its computational complexity is understood only through scattered, manually proven theorems for specific graph classes, creating a fragmented landscape. A systematic, automated map of the tractability frontier is needed to guide model design and algorithm selection in learning and inference.",
+      "hypothesis": "The boundary between tractable (#P-easy) and intractable (#P-hard) classes of partition functions can be formally and automatically delineated by encoding known complexity-theoretic proofs into an interactive theorem prover and using algorithm synthesis to generate constructive witnesses for polynomial-time computability.",
+      "method": "We will define a formal meta-language to specify partition function families via hypergraph structural parameters (e.g., treewidth, hypertree width) and function algebraic properties (e.g., type of potential, allowed operations). Using the Isabelle/HOL or Lean theorem prover, we will encode known reduction templates for #P-hardness and polynomial-time algorithms (e.g., variable elimination, junction tree). An automated reasoning engine will then analyze a given specification, attempt to construct a proof of tractability by synthesizing a concrete algorithm, or else fall back to constructing a gadget reduction to a known hard problem, verified by the prover.",
+      "contribution": "This work will produce the first dynamically generated, machine-verified complexity phase diagram for partition functions, providing a definitive reference for researchers. It will unify and extend pre-2026 complexity results, potentially discovering new tractable classes through automated exploration of the parameter space.",
+      "novelty": "While complexity classifications exist, automating the proof process for entire families of problems using interactive theorem provers and algorithm synthesis is a novel synthesis of formal methods and computational complexity theory, moving beyond cataloging results to creating a generative proof system.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_fw_003_analogy_prop",
+      "title": "Phase Diagrams for Inference: Mapping Complexity Boundaries in Sum-Product Networks via Statistical Physics Analogies",
+      "motivation": "The partition function is central to inference in probabilistic graphical models, but its exact computation is often intractable (#P-hard). While specific tractable families like Sum-Product Networks (SPNs) exist, a unified, predictive theory for when a model's partition function becomes tractable is lacking. Drawing an analogy from statistical physics, where phase diagrams predict macroscopic behavior from microscopic parameters, could provide a principled framework for understanding and engineering tractable models.",
+      "hypothesis": "We hypothesize that sharp boundaries in the parameter space of graphical models (e.g., interaction strength, graph treewidth, or SPN depth/connectivity) separate regimes of polynomial-time computability from #P-hardness, and that these boundaries can be characterized by complexity-theoretic order parameters analogous to those in physical phase transitions.",
+      "method": "We will formalize 'order parameters' such as the average interaction-to-treewidth ratio and spectral properties of weight matrices in deep SPNs. Using methods from parameterized complexity and average-case analysis, we will analytically derive phase boundaries for canonical models. We will then develop a diagnostic algorithm that, given a model specification, estimates its position relative to these boundaries using graph metrics and tensor network contractions, predicting its likely tractability.",
+      "contribution": "This work will produce a novel 'complexity phase diagram' framework for probabilistic inference, offering theoretical guarantees for new subclasses of tractable models. It will also yield practical diagnostic tools for model designers, allowing them to structure networks and choose parameters to avoid intractable regimes, thus advancing the design of scalable, interpretable probabilistic AI.",
+      "novelty": "While phase transitions in SAT and random graphs are studied, applying this lens to map the tractability of partition functions across a continuous model space is novel. It uniquely bridges statistical physics intuition with rigorous parameterized complexity to create a predictive, rather than merely descriptive, theory of inference.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_fw_003_prop",
+      "title": "Tractable Partition Functions via Stability and Composition in Deep Sum-Product Networks",
+      "motivation": "The partition function is central to probabilistic inference and learning in undirected graphical models and energy-based models, yet its exact computation is generally intractable. This intractability severely limits the application of rich probabilistic models in deep learning and robotics, where efficient marginalization is crucial for planning and uncertainty quantification. Recent work on Sum-Product Networks (SPNs) shows that specific structural decompositions guarantee tractability, but a general theory linking model architecture, parameterization, and optimization dynamics to partition function tractability is lacking.",
+      "hypothesis": "We hypothesize that the tractability of partition functions in deep, learned models is governed by a combination of architectural stability conditions (inspired by stability analysis in dynamical systems) and the compositional structure of the model's computational graph, which can be identified and enforced during optimization.",
+      "method": "We will analyze the conditions for tractable partition functions by extending the theoretical framework of SPNs to broader deep network architectures. The approach integrates concepts from Domingos's recent work on stability in 3D reconstruction and kernel analysis of gradient descent. Specifically, we will: 1) Formalize 'relevance-guided' connectivity constraints in the factor graph of a model to ensure decomposability; 2) Use optimization paths from gradient descent to characterize when learned weights approximately induce a kernel-like structure with a closed-form partition function; 3) Develop a practical algorithm that regularizes deep energy-based models or variational autoencoders toward these tractability conditions, using spectral constraints on weight matrices to ensure stability.",
+      "contribution": "This work will provide a novel set of sufficient architectural and optimization-based conditions for tractable partition functions in learned models. It will yield a practical methodology for designing deep probabilistic models that retain expressive power while enabling exact inference, directly benefiting applications in robotic manipulation and reinforcement learning that require robust probabilistic reasoning.",
+      "novelty": "The novelty lies in synthesizing insights from stability analysis, kernel theory of deep learning, and SPN tractability into a unified framework, moving beyond known, restrictive SPN structures to conditions applicable to general deep networks optimized via gradient descent.",
+      "dimension": "Future Work"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_fw_005_analogy_prop",
+      "title": "The SPN Benchmark Suite: A Rigorous Framework for Probabilistic Architecture Evaluation",
+      "motivation": "Sum-Product Networks (SPNs) offer tractable, deep probabilistic inference, but their empirical standing remains unclear due to ad-hoc, non-standardized comparisons with other deep models like Variational Autoencoders (VAEs) and Deep Belief Networks (DBNs). This lack of a systematic evaluation framework hinders progress in probabilistic deep learning by obscuring the true strengths, weaknesses, and appropriate application domains for each architecture. A principled benchmark, analogous to those in computational chemistry or computer vision, is urgently needed to guide both theoretical development and practical deployment.",
+      "hypothesis": "We hypothesize that a standardized, multi-dimensional benchmarking framework will reveal distinct, task-dependent performance profiles for SPNs compared to other deep probabilistic models, precisely delineating their niche in terms of inference speed, exact marginal computation, and data efficiency.",
+      "method": "We will adapt the methodology of force field comparison in computational chemistry to machine learning. First, we will define a canonical suite of core probabilistic tasks: (1) density estimation (log-likelihood), (2) marginal inference, (3) conditional query answering (MPE), and (4) missing data imputation. For each task, we will select standardized, pre-2026 datasets of varying complexity (e.g., MNIST, 20 Newsgroups, synthetic graphical model data). We will then implement controlled evaluation protocols, fixing computational budgets (FLOPs, memory) and hyperparameter tuning regimes, to fairly compare SPNs against benchmarked implementations of VAEs, DBNs, and standard deep neural networks with probabilistic outputs. Performance will be measured using a vector of metrics including accuracy, calibration, and inference latency.",
+      "contribution": "This work will provide the first comprehensive, reproducible benchmark suite for deep probabilistic architectures, enabling direct and fair comparison. It will yield a clear, empirical map of the trade-offs between different model families, guiding researchers in model selection and identifying critical frontiers for SPN improvement. The framework itself will become a community standard for evaluating new probabilistic models.",
+      "novelty": "The novelty lies in the systematic, chemistry-inspired benchmarking approach applied to probabilistic deep learning, moving beyond point comparisons to a holistic evaluation under controlled constraints. This formalizes architectural comparison into a rigorous scientific discipline for the field.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_fw_005_prop",
+      "title": "The Sum-Product Network as a Deep Learner: A Unified Framework for Comparing Tractability, Expressivity, and Optimization",
+      "motivation": "Sum-Product Networks (SPNs) offer a unique deep architecture with exact, tractable inference, a significant advantage over other deep models like Deep Belief Networks or Variational Autoencoders that require approximate inference. However, their empirical performance and theoretical properties relative to mainstream deep learning architectures remain underexplored, limiting their adoption. A systematic comparison is needed to clarify when SPNs' tractability trade-offs are beneficial.",
+      "hypothesis": "We hypothesize that SPNs, when optimized with modern gradient-based techniques, can achieve competitive performance on structured data tasks (e.g., image completion, density estimation) compared to deep generative models, while providing superior calibration and uncertainty quantification due to their exact probabilistic semantics.",
+      "method": "We will conduct a controlled empirical study comparing SPNs against benchmark architectures (VAEs, Normalizing Flows, and Deep Kernel Machines) on curated datasets (e.g., dynamically binarized MNIST, multi-object scenes). Theoretically, we will analyze the circuits using the framework of 'inductive biases' and 'computational graphs,' comparing the effective kernel of a gradient-trained SPN to that of a deep neural network as outlined in Domingos' recent kernel machine analysis. Optimization will use the standard backpropagation-through-SPN method.",
+      "contribution": "This work will provide the first comprehensive, direct performance benchmark of SPNs against contemporary deep models, establishing clear strengths and weaknesses. It will yield a novel theoretical lens connecting SPN circuit structure to the implicit regularization of gradient descent, bridging probabilistic graphical models and deep learning.",
+      "novelty": "The novelty lies in the dual empirical-theoretical approach, specifically applying the 'deep models as kernel machines' perspective to SPNs to explain their learning dynamics, and a rigorous evaluation focused on the interplay between tractable inference and representational power.",
+      "dimension": "Future Work"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_mt_001_analogy_prop",
+      "title": "Message-Passing Structure Learning for Sum-Product Networks via Analogies to LDPC Decoding",
+      "motivation": "Learning the structure of Sum-Product Networks (SPNs) remains a significant challenge, often requiring expensive search or restrictive assumptions. Current methods, like LearnSPN, use greedy, top-down recursive partitioning, which can lead to suboptimal structures and does not easily incorporate global consistency constraints. A principled, unified framework for joint structure and parameter learning is needed to improve the efficiency and accuracy of SPNs for high-dimensional, relational data.",
+      "hypothesis": "By framing SPN structure learning as a decoding problem on a factor graph of potential decompositions and subsets, a message-passing algorithm analogous to the Sum-Product Algorithm for LDPC codes can efficiently and jointly infer a globally consistent, near-optimal hierarchical model.",
+      "method": "We will construct a factor graph where variable nodes represent candidate subsets of random variables and factor nodes encode constraints (e.g., mutual exclusivity of partitions, completeness of covers) and local likelihoods from data. Inspired by LDPC decoding, we will derive message update rules that propagate beliefs about the validity of decompositions and variable clusterings. This iterative, belief-propagation-based procedure will replace greedy recursion, allowing soft decisions to be revised based on global information, ultimately converging on a structure and its parameters.",
+      "contribution": "This work will provide a novel, unified algorithm for SPN learning that breaks the local-optima limitations of greedy methods. It will advance the theory of probabilistic graphical model learning by establishing a formal bridge to error-correcting code theory. The resulting models are expected to show improved accuracy and data efficiency in density estimation tasks.",
+      "novelty": "The core novelty is the conceptual and technical transfer of iterative decoding from communications engineering to the open problem of probabilistic circuit structure learning, a connection not previously explored. This moves beyond standard gradient-based or combinatorial optimization to a constraint-satisfaction perspective.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_mt_001_prop",
+      "title": "Efficient Parameter Learning for Sum-Product Networks via Structured Belief Propagation",
+      "motivation": "Sum-Product Networks (SPNs) offer tractable inference but often rely on Expectation-Maximization (EM) or gradient descent for learning, which can be slow and prone to local optima. Belief propagation (BP) in graphical models provides a powerful, distributed framework for exact or approximate inference and parameter estimation. Applying BP to SPNs could address these optimization challenges, leading to faster, more stable learning, which is critical for scaling SPNs to complex, high-dimensional data in robotics and vision.",
+      "hypothesis": "We hypothesize that reformulating the SPN learning problem as a message-passing inference task on a suitably constructed factor graph will yield more efficient and globally consistent parameter estimates compared to standard gradient-based or EM approaches.",
+      "method": "We will construct a factor graph representation of the SPN where sum, product, and variable nodes correspond to factors. We will derive message-passing rules (sum-product and max-sum algorithms) for both upward and downward passes to compute marginals and perform Maximum Likelihood Estimation (MLE). This involves adapting BP to handle the hierarchical mixture structure of SPNs and integrating it with hard-EM for latent variable states. The algorithm will be implemented and tested on standard density estimation benchmarks and structured vision datasets.",
+      "contribution": "This work will provide a novel, principled algorithm for SPN parameter learning with potential convergence and efficiency benefits. It will deepen the theoretical connection between SPNs and probabilistic graphical models. Successful application would make SPNs more competitive for large-scale probabilistic modeling tasks in domains like the amodal 3D reconstruction and object dynamics modeling referenced in recent work.",
+      "novelty": "While BP is standard for inference in graphical models, its direct application to the *parameter learning* problem in SPNs, by treating parameters as random variables in a factor graph, is a novel and non-obvious synthesis. This differs from using BP merely for inference within an existing SPN.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_mt_002_analogy_prop",
+      "title": "Derivative-Free Optimization of Sum-Product Networks via Natural Evolution Strategies",
+      "motivation": "Sum-Product Networks (SPNs) offer a tractable deep probabilistic architecture, but their training often relies on Expectation-Maximization or gradient-based methods derived from the specific circuit structure. This can limit flexibility, complicate integration with non-differentiable components, and pose challenges for novel SPN architectures where deriving exact gradients is non-trivial. A robust, gradient-free optimization method would enhance the applicability of SPNs in hybrid systems and black-box learning scenarios.",
+      "hypothesis": "We hypothesize that Natural Evolution Strategies (NES), a black-box optimization technique, can effectively train SPNs by estimating gradients of the data log-likelihood through parameter sampling, achieving comparable or superior performance to standard methods, especially in settings with non-differentiable operations or complex parameter constraints.",
+      "method": "We will adapt the NES algorithm to optimize the weights (sum node parameters) and potentially the structure of an SPN. The core method treats the SPN's parameter vector θ as a search distribution, samples perturbations ε, and evaluates the log-likelihood on a batch of data for each perturbed model. The gradient of the expected log-likelihood with respect to θ is then estimated from these samples, enabling gradient ascent without backpropagation through the network's probabilistic graph. We will benchmark this against standard SPN training (e.g., hard/soft EM, SGD) on standard density estimation datasets, analyzing convergence and robustness.",
+      "contribution": "This work will provide a novel, flexible training paradigm for SPNs, decoupling their probabilistic representation from gradient-based learning constraints. It will expand the toolkit for probabilistic deep learning, enabling the use of SPNs in broader, potentially non-differentiable pipelines. The research will also yield empirical insights into the optimization landscapes of deep probabilistic models.",
+      "novelty": "While NES is established in reinforcement learning and evolutionary robotics, its application to training deep probabilistic graphical models like SPNs is unexplored. The novelty lies in bridging these fields to create a derivative-free, sampling-based optimizer specifically for SPNs, moving beyond their traditional training frameworks.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_mt_002_prop",
+      "title": "End-to-End Gradient-Based Learning for Deep Sum-Product Networks",
+      "motivation": "Sum-Product Networks (SPNs) offer tractable, interpretable probabilistic models, but their training has largely relied on hard EM algorithms or closed-form updates, limiting their integration into deep, end-to-end learning pipelines. This restricts their application in complex domains like robotics and reinforcement learning, where gradient-based optimization of deep networks has proven dominant. Bridging this methodological gap is crucial for unlocking the potential of SPNs as robust, probabilistic components within modern deep learning systems.",
+      "hypothesis": "That deep SPNs can be effectively trained via backpropagation and stochastic gradient descent (SGD), leading to competitive or superior performance on density estimation and structured prediction tasks compared to traditional SPN learning methods, while enabling seamless composition with deep neural network modules.",
+      "method": "We will design a library of differentiable, parameterized SPN layers (sum, product, leaf distributions) and stack them into deep architectures. The key technical challenge is ensuring numerical stability during gradient flow through the network's high-degree polynomials. We will adapt techniques from deep learning, such as gradient clipping, careful initialization, and the use of soft-plus activations for sum weights, and employ automatic differentiation (e.g., PyTorch/TensorFlow) for end-to-end training with SGD or Adam. We will benchmark against classical SPN learners on standard density estimation datasets (e.g., MNIST, BSDS300) and explore hybrid models where SPNs are trained jointly with neural feature extractors.",
+      "contribution": "This work will provide the first comprehensive framework for gradient-based optimization of deep SPNs, enabling their use as plug-and-play probabilistic layers. It will expand the applicability of SPNs to tasks requiring joint optimization with deep perception models, such as the amodal 3D reconstruction and object dynamics modeling relevant to Domingos's recent research themes. The resulting models will combine the representational power of deep learning with the exact probabilistic inference of SPNs.",
+      "novelty": "While prior work has explored gradient updates for SPN parameters, the end-to-end training of deep, structured SPNs using backpropagation—treating them analogously to deep neural networks—is a novel and non-obvious direction. It directly challenges the traditional algorithmic separation between probabilistic graphical models and deep learning optimization.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_mt_003_analogy_prop",
+      "title": "Structured Sparsity for Robust Sum-Product Networks: An Elastic Net and Group Lasso Regularization Framework",
+      "motivation": "Sum-Product Networks (SPNs) are tractable deep probabilistic models, but their structure learning and parameter estimation can overfit, especially with limited data. Overfitting leads to overly complex networks that generalize poorly, a problem analogous to high-dimensional regression in genomics where thousands of correlated predictors exist. Pre-2026, SPN regularization has largely relied on simple L1/L2 penalties, lacking mechanisms for structured sparsity that prune entire model components.",
+      "hypothesis": "We hypothesize that applying Elastic Net and Group Lasso regularization, adapted from genomics, to SPN learning will induce structured sparsity in sum node weights, effectively pruning branches and selecting simpler mixture components, thereby yielding sparser, more robust networks with better generalization.",
+      "method": "We will develop a new objective function for SPN parameter learning that combines: 1) a Group Lasso penalty on the weight vectors of each sum node, treating the weights to its children as a group to encourage pruning of entire branches, 2) a traditional L2 ridge penalty on all network parameters for magnitude control, and 3) the standard data log-likelihood. This hybrid 'SPN Elastic Net' objective will be optimized via stochastic gradient descent with proximal operators for the non-smooth Group Lasso term. We will integrate this into structure learning algorithms like LearnSPN, applying regularization during both the hierarchical clustering and parameter optimization phases.",
+      "contribution": "This work will provide a principled regularization framework for SPNs that directly controls graph complexity, mitigating overfitting. It will deliver new algorithms for learning more interpretable and data-efficient SPNs. The successful cross-pollination from genomics demonstrates a valuable methodology transfer between disparate fields of machine learning.",
+      "novelty": "While Elastic Net is known, its combination with Group Lasso for structured sparsity in SPNs is novel. Applying group-level penalties to sum nodes to perform implicit structure simplification during parameter learning is a non-obvious and previously unexplored approach for this model class.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_mt_003_prop",
+      "title": "Structured Regularization for Sum-Product Networks: Enhancing Generalization via Graph-Induced Priors",
+      "motivation": "Sum-Product Networks (SPNs) are tractable deep probabilistic models, but their structure learning and parameter estimation can overfit, especially with limited data. While standard L1/L2 regularization on weights is common in deep learning, its principled application to SPNs—which have a unique layered, probabilistic-graph structure—remains underexplored. Preventing overfitting is crucial for deploying robust SPNs in domains like the robotic manipulation and model-based RL highlighted in Domingos's recent work, where reliable uncertainty is key.",
+      "hypothesis": "We hypothesize that incorporating graph-aware structural regularization (e.g., Laplacian-based smoothness across similar sum nodes, or group sparsity on subtree weights) during SPN parameter learning will significantly improve generalization performance compared to standard weight decay, without compromising computational tractability.",
+      "method": "We will formulate a regularized maximum likelihood objective for SPNs, combining data likelihood with novel penalty terms. For L1, we will apply group lasso to entire sub-SPN weight vectors to induce subtree sparsity. For structural regularization, we will design a graph Laplacian regularizer based on the SPN's DAG to enforce smoothness of parameters across nodes with similar scope and children. We will develop efficient stochastic gradient descent optimizers for these objectives, leveraging the existing differentiable SPN frameworks, and test on benchmark density estimation and latent variable modeling tasks.",
+      "contribution": "This work will provide a rigorous framework for regularization in SPNs, delivering more data-efficient and generalizable models. It will extend the statistical learning theory of regularization to the unique algebraic and graphical properties of SPNs. The resulting techniques will be directly applicable to improving the robustness of SPNs used for state estimation and dynamics modeling in robotics and reinforcement learning.",
+      "novelty": "While regularization is standard in neural networks, its tailored application to SPNs must respect their probabilistic semantics and DAG structure, making direct translation non-trivial. The proposed graph-induced structural regularizers are novel for SPNs and move beyond simple weight decay to leverage the model's own architecture.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_mt_004_adversarial_prop",
+      "title": "A Complexity-Theoretic Foundation for Sum-Product Networks via Isomorphic Embeddings into Arithmetic Circuits",
+      "motivation": "Sum-Product Networks (SPNs) are a promising tractable probabilistic architecture, but their formal representational power and inherent limitations are poorly understood compared to other deep models. A long-standing analogy links SPNs to arithmetic circuits, yet this has remained a superficial metaphor without rigorous, structure-preserving translations that could import concrete lower-bound results from circuit complexity theory. Establishing such a formal bridge is critical for a principled theory of SPN efficiency, guiding architecture design and understanding fundamental trade-offs in probabilistic modeling.",
+      "hypothesis": "We hypothesize that specific, well-defined classes of SPNs (e.g., those with decomposable and complete scopes) are isomorphic to restricted classes of monotone, multilinear arithmetic circuits, and that known lower bounds on circuit size for explicit polynomial families directly translate into provable lower bounds on the size of SPNs required to represent corresponding families of probability distributions.",
+      "method": "We will first construct explicit, injective mappings from SPNs satisfying specific structural constraints (decomposability, completeness) to polynomial-sized monotone multilinear arithmetic circuits, preserving the computed function. We will then analyze the inverse mapping, identifying which circuit classes have SPN counterparts. Leveraging pre-2026 lower-bound results (e.g., for permanent, determinant, or specific multilinear polynomials), we will translate these into minimal size/depth requirements for SPNs. The analysis will employ tools from algebraic complexity and will be validated by constructing explicit distribution families that are provably hard for sub-critical SPN architectures.",
+      "contribution": "This work will provide the first rigorous complexity-theoretic foundation for SPNs, moving from analogy to formal proof. It will yield concrete, provable limitations on SPN efficiency for representing certain distributions, informing the design of learning algorithms and network architectures. The results will establish a new lens through which to analyze tractable probabilistic models, connecting them to the rich literature of circuit complexity.",
+      "novelty": "While the SPN-arithmetic circuit connection is often noted, constructing explicit isomorphisms and performing targeted complexity translation to derive concrete, non-asymptotic lower bounds for SPNs is a novel and non-trivial formalization. This moves beyond descriptive analogy to yield actionable, provable statements about representational capacity.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_mt_004_analogy_prop",
+      "title": "Computational Parsimony: A Phylogenetic Framework for Analyzing Complexity in Sum-Product Networks",
+      "motivation": "Sum-Product Networks (SPNs) are a tractable deep architecture for probabilistic modeling, but theoretical tools for analyzing their structural complexity and expressive efficiency remain underdeveloped. This limits our ability to compare architectures, prove lower bounds, and understand the trade-offs inherent in SPN design. Drawing an analogy from computational biology, where phylogenetic tree analysis rigorously scores evolutionary hypotheses, offers a novel lens for this analysis.",
+      "hypothesis": "We hypothesize that SPN structures can be scored by a 'computational parsimony' measure, analogous to phylogenetic parsimony, which quantifies the minimal essential computational operations required to represent a distribution. This measure will provide a formal basis for establishing lower bounds on SPN size and for comparing the representational efficiency of different SPN architectures.",
+      "method": "We will formalize the SPN as a directed acyclic computational phylogeny. We will define a set of elementary 'mutations' (e.g., insertion/deletion of sum nodes with specific weights, factorization via product nodes) and develop an algorithm, inspired by the Fitch-Hartigan algorithm for phylogenetic parsimony, to compute the minimal number of such operations required to transform a canonical, maximally expanded SPN into a given target SPN. This score will be computed for SPNs learned via standard methods (e.g., LearnSPN) and for families of known distributions to establish complexity bounds.",
+      "contribution": "This work will contribute a novel, theoretically grounded complexity measure for SPNs, enabling direct comparison of architectural efficiency. It will provide a framework for deriving lower bounds on SPN size for representing specific distributions, advancing the theoretical understanding of SPNs. The cross-disciplinary analogy will also open new methodological connections between machine learning and computational biology.",
+      "novelty": "The novelty lies in the direct conceptual and algorithmic transfer of phylogenetic tree scoring techniques (specifically maximum parsimony) to the analysis of probabilistic graphical models, a connection not previously explored in SPN literature. This provides a non-obvious, principled alternative to simple node-counting heuristics for complexity.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_mt_004_prop",
+      "title": "Circuit Complexity Bounds for Sum-Product Networks: A Formal Analysis of Expressive Efficiency",
+      "motivation": "Sum-Product Networks (SPNs), pioneered by Domingos and colleagues, offer a tractable deep probabilistic architecture, but a rigorous theoretical understanding of their expressive power and efficiency compared to other deep models remains incomplete. Pre-2026, the field lacks formal tools to characterize the function classes SPNs can compactly represent and the problems where they provably outperform standard deep networks, hindering principled architecture design.",
+      "hypothesis": "We hypothesize that tools from arithmetic circuit complexity—specifically, analysis of polynomial representation size, depth reduction, and separation results—can formally establish the families of functions that SPNs can represent efficiently (with polynomial size) and those for which they require exponential size, thereby delineating their fundamental capabilities and limitations.",
+      "method": "We will map SPN structures onto arithmetic circuits over the reals, treating sum nodes as linear combinations and product nodes as multiplications. Using this formalization, we will apply lower-bound techniques (e.g., partial derivatives, rank arguments) to prove minimum circuit size for specific function families relevant to machine learning (e.g., symmetric functions, certain piecewise polynomials). Concurrently, we will construct explicit polynomial-size SPNs for other families and analyze the complexity of transforming trained deep networks into approximately equivalent SPNs, leveraging insights from the 'kernel machine' view of gradient descent.",
+      "contribution": "This work will provide the first systematic circuit-complexity framework for SPNs, yielding concrete separation theorems that explain when SPNs are a compact representation. It will offer theoretical guidance for applying SPNs to problems like robust 3D reconstruction and object dynamics modeling, where their inherent probabilistic structure is advantageous, and suggest new, provably efficient SPN architectures.",
+      "novelty": "While SPNs have been analyzed for tractability of inference, applying arithmetic circuit complexity tools to deeply analyze their representational *efficiency* and prove formal separations from other deep models is a novel theoretical direction not yet explored in the pre-2026 literature.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_mt_005_prop",
+      "title": "BoostSPN: Incremental Structure Learning for Sum-Product Networks via Functional Gradient Boosting",
+      "motivation": "Sum-Product Networks (SPNs) offer tractable, deep probabilistic models, but their structure is typically learned in a single batch, which can be suboptimal and computationally intensive. This limits their scalability and adaptability to streaming data or complex, high-dimensional domains like the robotic manipulation and object dynamics modeling central to Domingos's recent work. A principled, incremental learning method for SPNs is needed to overcome these limitations.",
+      "hypothesis": "We hypothesize that applying functional gradient boosting—a powerful ensemble technique—to incrementally construct the layers of an SPN will yield a model that is more accurate, data-efficient, and robust than SPNs learned via standard batch structure learning algorithms.",
+      "method": "We will adapt the AnyBoost framework to SPNs, treating each new sum or product node as a weak learner that minimizes a probabilistic loss function (e.g., negative log-likelihood). The algorithm will start with a simple base SPN (e.g., a single leaf layer) and iteratively add layers by fitting weak learners to the functional gradient of the loss. We will specifically explore gradient-based strategies for selecting the scope and type (sum vs. product) of new nodes, ensuring the decomposability and completeness properties of SPNs are maintained throughout the boosting process.",
+      "contribution": "This work will provide the first boosting-based algorithm for incremental SPN structure learning, directly addressing scalability and optimization challenges. It will deliver a new class of probabilistic models that combine the representational power of deep SPNs with the adaptive, ensemble strengths of boosting, validated on benchmark density estimation and relevant robotic perception tasks.",
+      "novelty": "While boosting is well-established for discriminative models and has been applied to simple probabilistic circuits, its use for incrementally constructing the deep, layered structure of a full SPN is a novel and non-trivial synthesis of ensemble learning and tractable probabilistic inference.",
+      "dimension": "Method Transfer"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_001_adversarial_prop",
+      "title": "Adversarially Robust and Compact Sum-Product Networks for Secure Embedded Inference",
+      "motivation": "The deployment of machine learning models on resource-constrained embedded devices for critical applications (e.g., autonomous systems, IoT) is growing, but these models are vulnerable to adversarial attacks and must operate under strict power and memory budgets. Current robust deep learning models are computationally expensive and ill-suited for embedded platforms, while existing compact models like SPNs lack explicit defenses against adversarial perturbations. This creates a critical gap for secure, reliable, and efficient edge intelligence.",
+      "hypothesis": "We hypothesize that by integrating adversarial robustness directly into the structure learning and parameter optimization of Sum-Product Networks, we can produce models that are simultaneously compact, energy-efficient, and certifiably robust to norm-bounded input perturbations.",
+      "method": "We will develop a novel learning algorithm for SPNs that incorporates a tailored adversarial training procedure, using Projected Gradient Descent to generate perturbations during optimization to minimize a robust loss function. We will co-optimize for model size via structure sparsification and leaf distribution simplification. Furthermore, we will design lightweight runtime monitors based on the SPN's internal probability and node activation statistics to flag distributional shifts indicative of adversarial inputs.",
+      "contribution": "This work will deliver the first framework for constructing adversarially robust SPNs with guaranteed compactness, enabling secure inference on embedded hardware. It will contribute new algorithms for robust probabilistic model learning and provide a benchmark for evaluating the robustness-efficiency trade-off in non-deep learning models for embedded systems.",
+      "novelty": "The joint optimization of adversarial robustness and model compactness within the SPN framework is novel, as prior robustness research focuses almost exclusively on deep neural networks, and SPN research has prioritized scalability and interpretability over security.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_001_analogy_prop",
+      "title": "Organelle Networks: Power-Aware, Modular Sum-Product Networks via Specialized Subnet Inference",
+      "motivation": "Deploying probabilistic models like Sum-Product Networks (SPNs) on embedded and IoT devices is hindered by their computational and memory footprint, which conflicts with strict power and latency constraints. Current model compression and pruning techniques often degrade the model's expressive power or require costly retraining. A new architectural paradigm is needed to enable efficient, on-device probabilistic inference without sacrificing core functionality.",
+      "hypothesis": "By decomposing a monolithic SPN into a collection of minimal, specialized, and hard-optimized 'subnet organelle' modules—each responsible for a frequent, distinct inference pattern—and employing a dynamic, query-aware scheduler, we can achieve drastic reductions in active power and memory use during inference while preserving model accuracy.",
+      "method": "We will develop an algorithm to automatically decompose a trained SPN into a set of minimal, frequently-used subnetworks, treating each as a hardened, fixed-function computational module. Inspired by Domingos's 'Every Model... a Kernel Machine' framework, we will formalize these subnets as specialized kernels for core inference operations. A lightweight, power-aware runtime scheduler, informed by query structure, will activate only the necessary module(s), keeping others in a low-power dormant state. We will employ combinatorial optimization and sparsity-inducing techniques from 'Relevance-Guided Modeling' to identify the optimal set of organelle modules and their activation policy.",
+      "contribution": "This work will introduce a novel, biologically-inspired architecture for ultra-efficient SPNs, enabling their deployment in resource-constrained environments. It will provide a new methodology for creating modular, event-driven probabilistic models and a theoretical analysis linking modular SPN structure to kernel-based efficiency gains.",
+      "novelty": "The approach is novel in its direct architectural analogy to cellular compartmentalization for probabilistic networks and its focus on dynamic, query-driven subnetwork activation—a departure from static model compression or monolithic accelerator designs prevalent in pre-2026 embedded deep learning.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_001_fusion_prop",
+      "title": "Decentralized Probabilistic Inference via Federated Sum-Product Networks on Embedded Swarms",
+      "motivation": "Emerging applications in pervasive sensing and robotic swarms require complex probabilistic reasoning in environments with severe energy, bandwidth, and latency constraints, where centralized cloud computation is infeasible. Current distributed machine learning paradigms, like federated learning, focus on training and require significant coordination, failing to provide lightweight, real-time collaborative inference for structured probabilistic models.",
+      "hypothesis": "That a large Sum-Product Network (SPN) can be decomposed into specialized, miniaturized fragments distributed across a swarm of embedded devices, and that a decentralized message-passing protocol can orchestrate these fragments to perform globally consistent, approximate inference without a central coordinator.",
+      "method": "We will develop a method to factor a pre-trained, large SPN into minimal, coherent sub-SPNs, each hosted on a separate device. A novel swarm inference protocol will be designed, extending the sum-product algorithm to operate over a peer-to-peer network. Devices will dynamically form transient clusters based on query relevance and network proximity, passing and aggregating partial marginals using a gossip-like communication scheme with confidence weights to ensure convergence.",
+      "contribution": "This work will introduce a new systems-algorithms paradigm for federated inference, enabling complex probabilistic reasoning in decentralized, resource-constrained networks. It will provide a formal framework for the compositional distributed execution of SPNs and demonstrate its efficacy on a swarm robotics testbed for collaborative environment mapping.",
+      "novelty": "While SPNs have been studied for efficient centralized inference and some distributed training exists, the fusion of model miniaturization, ad-hoc cluster formation, and a fully decentralized sum-product protocol for federated inference is a novel direction, moving beyond parameter averaging to the distribution of model structure and computation.",
+      "dimension": "Fusion"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_001_prop",
+      "title": "Structured Sparsity and Relevance-Guided Pruning for Ultra-Compact Sum-Product Networks on Microcontrollers",
+      "motivation": "The deployment of probabilistic machine learning models on resource-constrained embedded devices (e.g., IoT sensors, wearables) is limited by the computational and memory footprint of existing models. While Sum-Product Networks (SPNs) offer tractable inference, their standard implementations are too large for low-power microcontrollers with severe SRAM and flash memory constraints, hindering real-time, on-device probabilistic reasoning.",
+      "hypothesis": "By applying a novel, multi-stage compression pipeline combining relevance-guided structural sparsification—inspired by object-dynamics modeling—and aggressive parameter quantization, we can create ultra-compact SPNs that retain high probabilistic fidelity for key inference tasks on embedded targets.",
+      "method": "We will develop a compression framework starting with pre-trained, task-specific SPNs. First, we will apply structured pruning guided by an edge-relevance metric derived from the network's weight sensitivity and functional impact on output distributions, akin to techniques in model-based RL. Second, we will employ a hardware-aware quantization scheme, mapping sum weights and leaf parameters to low-bit integer representations. Finally, we will co-optimize the pruned architecture and quantization levels using a straight-through estimator during fine-tuning to recover accuracy, targeting deployment via TensorFlow Lite for Microcontrollers.",
+      "contribution": "This work will deliver: 1) a novel methodology for creating miniaturized SPNs with sub-100KB memory footprints, 2) an open-source toolchain for SPN compression and deployment on ARM Cortex-M series MCUs, and 3) empirical benchmarks on embedded perception tasks demonstrating viable accuracy-power trade-offs previously unattainable with probabilistic models.",
+      "novelty": "Unlike generic neural network pruning, our approach explicitly leverages the unique probabilistic semantics and tree-like structure of SPNs for sparsification, and integrates relevance guidance from dynamic modeling to preserve critical probabilistic dependencies, a direction unexplored in pre-2026 SPN compression literature.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_002_analogy_prop",
+      "title": "Scalable, Distributed Inference for Sum-Product Networks via Tensor Network Decomposition and MapReduce",
+      "motivation": "Sum-Product Networks (SPNs) offer tractable inference for high-treewidth models but scaling them to massive datasets and complex structures is limited by memory and compute on single machines. Pre-2026, large-scale probabilistic inference remains a core challenge in machine learning. Distributed computing paradigms like MapReduce have revolutionized other fields (e.g., computational chemistry for tensor contractions) but have not been systematically applied to the specific computational graph of SPNs.",
+      "hypothesis": "The inference computation of an SPN can be formally decomposed into a tensor network, enabling its efficient parallelization across a distributed cluster using a MapReduce-style execution model without sacrificing exactness, thereby overcoming single-node memory and computational bottlenecks.",
+      "method": "We will develop a compiler that takes a compiled SPN graph and partitions it into independent sub-networks (tensor slices) based on scope analysis. Using a MapReduce framework (e.g., Apache Spark), we will map the evaluation of each partition, along with its slice of input data, to worker nodes. A hierarchical reduction tree, inspired by communication-optimal tensor contraction algorithms, will aggregate partial sums and products, minimizing data shuffling. The core algorithm will extend the classic bottom-up SPN inference pass into a distributed schedule of tensor operations.",
+      "contribution": "This work will provide the first distributed inference algorithm for SPNs that is exact and communication-aware, enabling the application of very large SPNs to big data problems. It will also contribute a novel formal connection between probabilistic inference in SPNs and tensor network contraction, opening avenues for cross-disciplinary optimization techniques.",
+      "novelty": "While SPN structure learning has been parallelized, the novel insight is treating exact SPN *inference* as a distributed tensor contraction problem, applying HPC techniques from computational chemistry to machine learning in a way not explored in pre-2026 SPN literature.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_002_prop",
+      "title": "Cluster-Parallel Inference for Large-Scale Sum-Product Networks via Structure-Aware Partitioning",
+      "motivation": "Sum-Product Networks (SPNs) offer tractable, deep probabilistic models, but their inference on massive datasets or high-treewidth models remains computationally prohibitive on single machines. As pre-2026 trends push towards larger models and data, the sequential nature of SPN sum and product operations becomes a critical bottleneck, limiting their application in real-time systems and large-scale probabilistic reasoning.",
+      "hypothesis": "We hypothesize that by developing a structure-aware partitioning algorithm and a communication-efficient message-passing protocol, the exact inference computations of a large SPN can be distributed across a compute cluster, achieving near-linear speedup without approximation error for a broad class of network structures.",
+      "method": "We will develop a graph partitioning algorithm that minimizes inter-cluster communication by analyzing the SPN's DAG structure, weighting edges by the expected message size. Inference will be parallelized using a Bulk Synchronous Parallel (BSP) model, where each cluster node performs local sum-product operations, followed by synchronized message passing across the network cut. We will implement this within the 'SPFlow' framework, optimizing for data locality and leveraging MPI for inter-node communication, with dynamic load balancing to handle skewed distributions.",
+      "contribution": "This work will deliver the first open-source, cluster-parallel exact inference engine for SPNs, enabling their use on previously intractable problem scales. It will provide a systematic analysis of the parallelism inherent in probabilistic graphical model inference, contributing new benchmarks and scaling laws for distributed probabilistic learning.",
+      "novelty": "While distributed deep learning is common, distributed *exact* inference for deep probabilistic models like SPNs is largely unexplored. The novelty lies in the structure-aware decomposition that preserves exactness, moving beyond model parallelism for neural networks to a new formalism for probabilistic circuit parallelism.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_003_analogy_prop",
+      "title": "Full-Distribution Inversion: Targeted Data Generation via Gradient Optimization on Sum-Product Networks",
+      "motivation": "Current generative models, including deep generative networks, often lack the tractable likelihoods needed for precise, constrained data generation. Sum-Product Networks (SPNs) offer exact and efficient inference, making them powerful discriminative and density estimation models, but their generative use has been largely limited to ancestral sampling, which provides little control. Borrowing from geophysics, where Full Waveform Inversion uses a tractable forward model to solve an ill-posed inverse problem, we propose a novel generation paradigm that leverages the SPN's tractability for targeted synthesis.",
+      "hypothesis": "That the tractable likelihood and marginals of a learned SPN can serve as the forward model in an iterative inversion loop, enabling gradient-based optimization in the input space to generate data points that maximize probability under arbitrary, user-specified evidence constraints.",
+      "method": "We will formalize the inverse generation task as an optimization problem: minimize a loss combining negative log-likelihood (computed efficiently via the SPN forward pass) and a constraint term (e.g., squared error on specified feature values). Using automatic differentiation through the SPN's computational graph—enabled by frameworks like PyTorch—we will perform gradient descent on a randomly initialized data vector to iteratively 'invert' the network toward high-probability regions. We will extend this core with variational formulations for latent variable conditioning and investigate second-order optimization methods for improved convergence.",
+      "contribution": "This work will establish a new, precise method for constrained data generation from probabilistic models with tractable inference. It will expand the utility of SPNs beyond density estimation into controllable synthesis for data augmentation and counterfactual analysis. The geophysical analogy provides a principled optimization framework that could influence generative modeling in other tractable model families.",
+      "novelty": "The key novelty is treating an SPN not merely as a sampler but as a differentiable forward model for solving inverse problems, a concept directly inspired by seismic inversion techniques not previously applied to generative machine learning. This moves beyond standard sampling and Markov Chain Monte Carlo methods for SPNs.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_003_fusion_prop",
+      "title": "Streaming Bayesian Sum-Product Networks for Online Generative Modeling and Data Synthesis",
+      "motivation": "Modern machine learning systems increasingly operate on non-stationary data streams, where concept drift renders static models obsolete. While Sum-Product Networks (SPNs) offer tractable inference and exact likelihood evaluation, their application has been largely limited to batch learning. An online, adaptive SPN that can continuously update its generative model from a data stream would enable real-time synthetic data generation for dynamic environments, a critical need in areas like robotics and reinforcement learning where data is scarce and expensive.",
+      "hypothesis": "We hypothesize that by formulating SPN learning as a process of incremental Bayesian parameter updating, we can maintain a generative model that adapts to concept drift in a data stream while retaining the tractability needed for efficient, exact sampling from the evolving posterior predictive distribution.",
+      "method": "We will develop a streaming SPN framework where leaf distributions are conjugate-exponential models (e.g., Gaussians, categoricals) enabling closed-form Bayesian parameter updates upon observing new data. The network structure, learned initially via pre-2026 algorithms like LearnSPN, will be fixed, but we will derive and implement recursive Bayesian updates for all sum and product node parameters. This updated model will then be used for online ancestral sampling, generating synthetic data points that reflect the current estimated data distribution. We will integrate this into a reinforcement learning pipeline for dynamic data augmentation.",
+      "contribution": "This work will contribute the first fully online, Bayesian SPN capable of adaptive generative modeling from data streams. It will provide a theoretically grounded method for real-time synthetic data generation that respects concept drift, directly applicable to streaming data augmentation and anomaly detection. The project will also demonstrate its utility in a reinforcement learning context, improving sample efficiency in non-stationary environments.",
+      "novelty": "The novelty lies in the fusion of SPNs' tractable exact inference with recursive Bayesian updating for all network parameters in an online setting, creating a closed-loop system for adaptive data synthesis, which is not addressed by prior batch SPN learning or approximate online deep generative models.",
+      "dimension": "Fusion"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_003_prop",
+      "title": "Efficient and Controllable Data Generation via Inverse Sum-Product Networks",
+      "motivation": "Deep generative models like GANs and VAEs are powerful but often lack the tractable inference and explicit probability semantics needed for controllable, interpretable generation. Sum-Product Networks (SPNs), as developed by Domingos and others, provide a tractable representation of complex distributions via efficient marginal and conditional inference. However, their primary use has been for discriminative tasks and density estimation, leaving their potential as structured, efficient generative samplers largely unexplored.",
+      "hypothesis": "The tractable, hierarchical probability distribution encoded by a learned SPN can be leveraged to perform efficient, high-quality sampling and controllable data generation by inverting its inference passes, outperforming standard deep generative models in terms of inference-time control and semantic editing.",
+      "method": "We will develop algorithms for ancestral sampling from SPNs by exploiting their tree-structured, decomposable architecture. The core method involves a top-down pass where a root value is sampled and then conditionally propagated down the network, using the SPN's weights as conditional probabilities. We will extend this to conditional generation by clamping observed variable states and performing efficient marginal inference on the remaining sub-SPN. For high-dimensional data like images, we will integrate deep SPN architectures, potentially using convolutional and region-graph structures, and explore hybrid models where a deep neural network maps SPN-generated latent codes to the final output space.",
+      "contribution": "This work will establish SPNs as a new class of tractable generative models, providing a formal framework for controllable sampling with guaranteed efficiency. It will contribute algorithms for conditional and intervened sampling, enabling applications in data augmentation, causal scenario generation, and structured reinforcement learning environments where model interpretability is critical.",
+      "novelty": "While SPNs are known for tractable inference, systematically exploiting them for high-quality, controllable *generation* is a novel inverse problem. The approach is distinct from black-box deep generative models by offering exact likelihoods and closed-form conditioning within the sampling process itself.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_004_fusion_prop",
+      "title": "Architectural Pruning for Robustness: Learning Compact Sum-Product Networks via Missing-Data-Aware Marginal Utility",
+      "motivation": "Sum-Product Networks (SPNs) offer tractable inference, but their size can hinder deployment, and their performance degrades with missing inputs—a common scenario in real-world data. Existing pruning methods focus on size or accuracy on complete data, creating models fragile to missingness. A unified approach that learns compactness and robustness jointly is needed for reliable, efficient probabilistic models.",
+      "hypothesis": "Pruning an SPN based on the marginal utility of its components during inference with missing data will yield a network that is simultaneously more compact and inherently more robust to missing inputs than one pruned for size or accuracy alone.",
+      "method": "We will develop a pruning criterion that quantifies a component's (sum node, product node, leaf) contribution to inference accuracy across a Monte Carlo-sampled distribution of missing data patterns. This 'missing-data-aware utility' score will guide iterative, greedy pruning or a structured sparsity-inducing optimization (e.g., group Lasso) over network parameters and structure. The framework will integrate with existing SPN learners (LearnSPN, GD-based) to allow for pruning during or after learning, ensuring the final architecture is optimized for the dual objective.",
+      "contribution": "This work will provide a principled method for learning SPNs that are both small and robust, directly addressing a key deployment bottleneck. It will advance the theory of model compression for probabilistic graphical models by introducing a missing-data-centric objective. The resulting models will be more practical for applications like robotics and healthcare where data is often incomplete.",
+      "novelty": "Unlike standard pruning or robust training techniques, this method unifies architectural compression and robustness by defining utility directly in the context of missing-data inference, making robustness a core architectural feature rather than a learned parameterization.",
+      "dimension": "Fusion"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_004_prop",
+      "title": "Relevance-Guided Pruning and Structured Compression for Efficient Sum-Product Networks",
+      "motivation": "Sum-Product Networks (SPNs) offer tractable inference but can become large and computationally expensive after learning, especially when applied to high-dimensional data like images or for relational reasoning. This limits their deployment in resource-constrained environments like robotics or embedded systems. Post-training model compression is a critical but under-explored avenue for making SPNs more practical and scalable.",
+      "hypothesis": "We hypothesize that a combination of relevance-based node pruning, leveraging ideas from model stability and connectivity, and structured tensor decomposition of weight matrices can significantly reduce SPN size while preserving, or even improving, generalization performance.",
+      "method": "We will first develop a pruning criterion based on the expected change in model output (relevance) upon node removal, inspired by Domingos's work on relevance-guided modeling. Second, we will apply low-rank tensor decomposition to the weight matrices of sum nodes, framing this as a constrained optimization problem to minimize reconstruction error. The methods will be evaluated on standard density estimation and relational datasets, measuring model size, inference speed, and log-likelihood.",
+      "contribution": "This work will provide the first systematic framework for post-learning compression of SPNs, delivering smaller, faster models without costly retraining. It will extend the toolkit for efficient probabilistic inference and connect SPN research to broader model compression literature in deep learning.",
+      "novelty": "Unlike prior SPN simplification work focused on learning structure, we target compression of already-trained networks. The integration of relevance metrics from reinforcement learning with tensor decomposition from deep learning optimization is a novel synthesis for this model class.",
+      "dimension": "Scaling & Dual"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_005_adversarial_prop",
+      "title": "Stability-Plasticity Control in Sum-Product Networks for Online Learning Under Drift",
+      "motivation": "Real-world data streams, such as those from robotic sensors or financial markets, are non-stationary, exhibiting concept drift that degrades the performance of static models. While online learning algorithms exist, they often face a fundamental stability-plasticity dilemma: adapting to new data can catastrophically forget previously learned concepts. This is particularly critical for structured probabilistic models like Sum-Product Networks (SPNs), which are valued for tractable inference but lack robust mechanisms for continual adaptation.",
+      "hypothesis": "We hypothesize that an SPN equipped with a lightweight, relevance-guided drift detector and a structured adaptation policy can achieve effective online learning by dynamically allocating model capacity, thereby balancing stability and plasticity without catastrophic forgetting.",
+      "method": "We will develop a dual-component architecture. First, a statistical drift detector will monitor the sufficient statistics of the SPN's leaf distributions to signal significant shifts. Upon detection, a structured adaptation phase will be triggered, guided by principles from Domingos's 'Relevance-Guided Modeling' work. This phase will employ strategies such as (1) adding new sum nodes with children specialized for the new data regime, or (2) softly freezing a subset of stable parameters while re-optimizing others, using constrained gradient-based updates to minimize interference with previously learned stable concepts.",
+      "contribution": "This work will deliver a novel online learning algorithm for SPNs that explicitly manages concept drift, extending their applicability to lifelong learning scenarios. It will provide a formal framework for stability-plasticity control in tractable probabilistic networks, contributing a new benchmark for continual learning that emphasizes both adaptation and knowledge retention.",
+      "novelty": "The approach is novel in integrating explicit drift detection with structured, capacity-allocating adaptation mechanisms within the SPN framework, moving beyond simple online gradient descent or ensemble methods to address forgetting through model architecture intervention.",
+      "dimension": "Adversarial"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_005_analogy_prop",
+      "title": "Event-Driven Online Learning in Sum-Product Networks via Synaptic Plasticity Rules",
+      "motivation": "Modern machine learning struggles with non-stationary, high-volume streaming data, as standard batch and online gradient descent methods often require extensive retraining or suffer from catastrophic forgetting. Sum-Product Networks (SPNs), while tractable and expressive, are primarily trained offline, limiting their applicability to real-time, lifelong learning scenarios in robotics and sensor networks. Drawing a direct analogy to biological neural systems, which adapt continuously via local synaptic rules like Spike-Timing-Dependent Plasticity (STDP), offers a promising but underexplored path to scalable, stable online learning.",
+      "hypothesis": "That SPNs can be adapted for effective, stable online learning on non-stationary streams by implementing parameter update rules inspired by synaptic plasticity, where local, event-driven updates based on prediction error ('surprise') can balance plasticity and stability without full retraining.",
+      "method": "We will develop a novel online EM-inspired algorithm for SPNs where each sum node weight is updated incrementally. Upon receiving a new data point, the algorithm computes the posterior responsibility of each child node (a local signal). The weight update will be modulated by a surprise signal, defined as the Kullback-Leibler divergence between prior and posterior responsibilities, mimicking the role of neuromodulators in STDP. This results in a local, Hebbian-like rule: Δw_ij ∝ surprise * (posterior responsibility_i - w_ij). We will integrate this with a node-specific memory decay factor to mitigate forgetting, implementing a form of synaptic consolidation.",
+      "contribution": "This work will yield a new online learning algorithm for SPNs that enables lifelong adaptation to data streams, directly addressing the SCALING_DUAL challenge. It will provide a principled, neuroscience-inspired framework for balancing stability and plasticity in probabilistic graphical models. The resulting method will be empirically validated on robotic manipulation and video activity recognition streaming datasets.",
+      "novelty": "While online EM variants exist, the explicit formulation of a local, surprise-modulated plasticity rule for SPNs, drawing a formal analogy to computational models of STDP, is novel. This moves beyond standard gradient-based online learning by embedding neuro-inspired stability mechanisms directly into the SPN's parameter update scheme.",
+      "dimension": "Analogy"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_005_fusion_prop",
+      "title": "Online, Anytime Structure and Parameter Learning for Streaming Visual Data with Sum-Product Networks",
+      "motivation": "Current deep vision systems are predominantly trained offline on static datasets, making them brittle and inefficient for lifelong robotic agents or systems processing continuous video streams. While Sum-Product Networks (SPNs) offer tractable probabilistic modeling, their application to vision has been limited to batch learning settings. Bridging this gap is crucial for creating adaptive, efficient, and explainable perception systems that operate in non-stationary real-world environments.",
+      "hypothesis": "By developing novel online gradient-based and Bayesian moment-matching algorithms for SPN parameters, coupled with data-driven, incremental structure learning heuristics, we can create a vision-capable SPN that learns continually from a data stream without catastrophic forgetting, maintaining both high accuracy and tractable inference.",
+      "method": "We will develop a hybrid convolutional and region-based SPN architecture for visual input. For online parameter learning, we will derive stochastic natural gradient updates and Bayesian online moment matching for leaf distributions. For structure adaptation, we will employ streaming clustering on learned feature representations to trigger localized node splitting, guided by statistical independence tests (e.g., online G-tests) to identify new feature combinations. A replay buffer of compressed 'pseudo-data' summaries from the SPN's internal distributions will mitigate forgetting.",
+      "contribution": "This work will yield the first framework for continual, online structure and parameter learning in deep SPNs for vision. It will provide new algorithms for streaming probabilistic model adaptation and a benchmark for continual visual learning that evaluates both accuracy and inference-time tractability, advancing toward more autonomous and adaptive machine perception.",
+      "novelty": "The integration of *online structure learning* mechanisms into deep, vision-oriented SPNs is unexplored. Prior SPN online learning work focuses on shallow models or fixed structures; we propose a holistic, anytime adaptation of both parameters and architecture for high-dimensional, non-i.i.d. visual streams.",
+      "dimension": "Fusion"
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_005_prop",
+      "title": "Online Bayesian Moment Matching for Streaming Data with Sum-Product Networks",
+      "motivation": "Sum-Product Networks (SPNs) offer tractable, deep probabilistic models for complex data, but their standard batch learning algorithms are ill-suited for real-world streaming applications where data arrives continuously. Pre-2026, online learning for deep probabilistic models, especially SPNs, remains under-explored, limiting their use in robotics and reinforcement learning systems that must adapt incrementally. This gap hinders the deployment of SPNs in dynamic environments where models must update without costly retraining.",
+      "hypothesis": "We hypothesize that SPN parameters can be adapted online via a principled Bayesian moment matching framework, yielding a stable, efficient, and consistent learner for non-stationary data streams. This will preserve the representational power of SPNs while enabling lifelong learning.",
+      "method": "We will develop an online variational algorithm based on assumed density filtering. Upon receiving a new data mini-batch, we will perform a single forward-backward pass to compute sufficient statistics, then update the SPN's leaf and weight distributions via Bayesian moment matching to minimize KL divergence to the updated posterior. We will incorporate a change-point detection mechanism, inspired by relevance-guided modeling, to trigger selective network structure adjustments (e.g., splitting sum nodes) when data distribution shifts significantly. Optimization will use natural gradients for efficiency.",
+      "contribution": "This work will provide the first comprehensive online learning algorithm for SPNs capable of handling concept drift, directly enabling their use in streaming robotics and reinforcement learning scenarios. It will contribute a theoretical analysis of the online SPN's convergence properties and an empirical demonstration on benchmarks and a robotic manipulation task with streaming visual data.",
+      "novelty": "While online learning exists for simple models, applying a Bayesian moment matching paradigm to incrementally adapt the parameters and structure of a deep, tractable probabilistic circuit like an SPN is novel. The integration of stability-driven structural adaptation from Domingos's prior work into an online SPN context is a unique synthesis.",
+      "dimension": "Scaling & Dual"
+    }
+  ],
+  "ideas": [
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_002",
+      "title": "Distribute SPN inference across clusters",
+      "description": "Parallelize the sum and product operations for large-scale models.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Sum-product networks: A new deep architecture",
+      "sourceYear": 2011
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_004_fusion",
+      "title": "Missing-Data-Aware Pruning for Robust and Compact Sum-Product Networks",
+      "description": "This research develops a unified framework for learning compact and robust Sum-Product Networks (SPNs). Instead of pruning for size or accuracy alone on complete data, the core innovation is to prune or compress the network based on a component's marginal utility during inference with missing inputs. The method will identify and retain the network structures (sum nodes, product nodes, leaf distributions) that are most critical for maintaining performance across a distribution of possible missing data patterns, while aggressively removing parts that are redundant or fragile to missingness. This results in an SPN that is inherently smaller and natively more robust to missing data, as its very architecture is optimized for this dual objective from the ground up.",
+      "dimension": "Fusion",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_mt_001",
+      "title": "Apply belief propagation to SPN learning",
+      "description": "Use message-passing algorithms from graphical models for parameter learning.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Sum-product networks: A new deep architecture",
+      "sourceYear": 2011
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_fw_002_fusion",
+      "title": "Boosting-Constructed Sum-Product Networks for Efficient and Robust Large-Scale Vision",
+      "description": "This research proposes a novel framework for large-scale computer vision by constructing Sum-Product Networks (SPNs) using boosting algorithms. Instead of designing a fixed, monolithic SPN architecture, the network is built incrementally, where each boosting round adds a new layer or sub-network that focuses on correcting the errors or uncertainties of the current ensemble. This results in a deep, probabilistically sound model that is both data-efficient and highly scalable. The approach uniquely combines the tractable inference of SPNs with the adaptive capacity and robustness of boosting, making it particularly suited for complex vision tasks like scene understanding and fine-grained recognition where model calibration and handling of hard examples are critical.",
+      "dimension": "Fusion",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_002_analogy",
+      "title": "Hybrid SPNs with Variational Embeddings for Intractable Modules",
+      "description": "This idea challenges the core assumption that all components of a Sum-Product Network (SPN) must be tractable. Inspired by hybrid methods in Computational Fluid Dynamics (CFD) like RANS-LES coupling, we propose a hybrid SPN architecture. The network is decomposed into domains: a main tractable SPN backbone handles regions where exact inference is crucial, while specific, potentially more expressive sub-networks with intractable partition functions (e.g., certain deep neural modules) are embedded as specialized modules. The key innovation is adapting the CFD concept of a solution-adaptive interface. Instead of fixed boundary conditions, we design a variational embedding layer that acts as an interface between tractable and intractable modules. This interface uses a learned approximate posterior to pass sufficient statistics and error gradients, allowing the intractable modules to be trained via approximate methods (e.g., variational inference, Monte Carlo) while being seamlessly integrated into and regularized by the globally tractable SPN framework. This expands the representational power of SPNs without sacrificing overall structural learning and inference guarantees where they are most needed.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_fw_005_analogy",
+      "title": "Benchmarking SPNs: A Systematic Framework for Architectural Comparison",
+      "description": "This research seed proposes to address the need for empirical and theoretical comparison of Sum-Product Networks (SPNs) with other deep learning architectures by drawing an analogy from computational chemistry's approach to comparing molecular force fields. In that field, new models are evaluated using standardized benchmark suites with diverse, specific tasks and controlled protocols to ensure fair, multi-dimensional comparisons. Adapting this solution, the research will develop a systematic benchmarking framework for deep probabilistic architectures. This framework will define a canonical suite of probabilistic reasoning tasks—such as density estimation, marginal inference, and conditional query answering—using standardized datasets, evaluation metrics, and fixed computational constraints. The goal is to move beyond isolated comparisons and provide a rigorous, reproducible, and holistic analysis of where SPNs excel or fall short relative to architectures like Deep Belief Networks, Variational Autoencoders, and standard deep neural networks, thereby clarifying their theoretical and practical niche.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_fw_002_analogy",
+      "title": "Applying SPNs to Large-Scale Vision via Hierarchical Bayesian Network Scalability Principles",
+      "description": "The original idea proposes applying Sum-Product Networks (SPNs) to large-scale computer vision tasks, a challenge due to the typical scalability limits of monolithic probabilistic models. Drawing an analogy from computational ecology, where hierarchical Bayesian networks successfully model continent-scale species distributions by decomposing them into local, linked sub-models, we adapt this solution. The adapted research idea is to develop a hierarchical SPN architecture for vision. This framework would decompose a large-scale vision problem (e.g., ImageNet classification or scene understanding) into a collection of smaller, domain-specific SPNs, coordinated through a shared parameter hierarchy and prior structure. This approach aims to make SPNs scalable and practical for billion-pixel datasets by enabling parallel training, incorporating heterogeneous visual features, and maintaining tractable exact inference, thus bridging the gap between deep learning scale and probabilistic graphical model rigor.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_fw_001_analogy",
+      "title": "Develop Structure and Parameter Learning for SPNs via Expectation-Maximization and Greedy Search, Inspired by Phylogenetic Tree Construction",
+      "description": "The original idea identifies the need for learning algorithms for Sum-Product Networks (SPNs). Drawing an analogy from computational biology, specifically phylogenetic tree construction, which solves the analogous problem of learning a hierarchical probabilistic model (a tree) from sequence data. The field's solution combines Expectation-Maximization for parameter (branch length) optimization with heuristic search strategies for structure (topology) learning. Adapted to SPNs, this suggests a research direction to develop a learning algorithm that iteratively performs: 1) Expectation-Maximization to optimize the weights of sum nodes and the parameters of leaf distributions, and 2) a greedy search through the space of network structures, perhaps by recursively partitioning variables and data based on likelihood gains, to discover an effective hierarchical decomposition. This integrated approach aims to automate the construction of both the architecture and the parameters of an SPN.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_003_fusion",
+      "title": "Direct Continuous-Distribution SPNs for Controllable, High-Fidelity Data Generation",
+      "description": "This research direction develops Sum-Product Networks (SPNs) with native, tractable continuous leaf distributions (e.g., Gaussians, mixtures of exponentials) to model raw, high-dimensional continuous data directly. The tractable inference properties of these continuous SPNs are then leveraged to design exact and efficient ancestral sampling algorithms that operate directly on the continuous representation. This synergy enables the generation of high-fidelity, realistic synthetic samples—such as audio waveforms, sensor readings, or financial time-series—without the information loss or artifacts introduced by discretization. The result is a single, end-to-end probabilistic deep generative model that supports both exact density estimation and high-quality data generation from continuous domains.",
+      "dimension": "Fusion",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_005_fusion",
+      "title": "Continual Online Learning for Streaming Visual Worlds with Sum-Product Networks",
+      "description": "This research proposes a novel framework that fuses the architectural strengths of SPNs for tractable probabilistic reasoning in vision with online, incremental learning algorithms. The core innovation is a system capable of processing continuous, high-dimensional visual data streams—such as live video feeds or lifelong robot perception—and adapting its internal SPN parameters and structure in real-time. This allows the model to continually integrate new visual concepts, refine its understanding of existing ones, and model evolving scene distributions, all while maintaining computational efficiency and avoiding performance collapse on previously learned tasks. The result is a step toward vision systems that learn perpetually and autonomously from the dynamic visual world.",
+      "dimension": "Fusion",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_003_analogy",
+      "title": "Continuous SPNs via Kernel Density Leaves and Mixture Models",
+      "description": "The original idea challenges the common assumption in Sum-Product Networks (SPNs) that continuous variables must be discretized for tractability. Drawing an analogy from Computational Fluid Dynamics, specifically Smoothed Particle Hydrodynamics (SPH), which models continuous fields using particle-based kernel smoothing without a fixed grid. Adapting this solution, we propose to develop SPN formulations where leaf nodes are continuous probability density estimators (like kernel density estimates or Gaussian mixtures) instead of discrete distributions. This approach allows the SPN to model continuous variables directly, preserving information and gradient signals, enabling more accurate and efficient learning and inference on continuous data without the artifacts and information loss introduced by discretization.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_fw_001",
+      "title": "Develop learning algorithms for SPNs",
+      "description": "The paper states that learning algorithms for SPNs need to be developed.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Sum-product networks: A new deep architecture",
+      "sourceYear": 2011
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_001_adversarial",
+      "title": "Adversarially Robust and Compact SPNs for Secure Embedded Inference",
+      "description": "This research develops miniaturized Sum-Product Networks (SPNs) specifically designed to be robust against adversarial attacks for secure, low-power embedded inference. The approach jointly optimizes for model size, energy efficiency, and adversarial robustness by integrating tailored adversarial training procedures within the SPN learning algorithm. The resulting models are equipped with lightweight, runtime monitors that detect distributional shifts indicative of adversarial inputs. This creates a secure-by-design embedded intelligence system suitable for applications where data integrity and reliable operation are critical.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_mt_002_analogy",
+      "title": "Applying Evolutionary Strategy Gradient Estimation to SPN Training",
+      "description": "This idea proposes adapting a solution from evolutionary robotics and policy search to train Sum-Product Networks (SPNs). The analogous problem is training complex policies in non-differentiable or black-box environments, solved by algorithms like Natural Evolution Strategies (NES), which estimate gradients through parameter sampling rather than backpropagation. The adapted research idea applies this gradient estimation principle to SPNs: by treating SPN parameters as a distribution, sampling perturbations, and estimating the gradient of the log-likelihood objective, we can perform robust, derivative-free optimization. This bypasses potential difficulties in deriving and implementing exact backpropagation through the SPN's probabilistic graph, offering an alternative training paradigm inspired by evolutionary optimization techniques.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_004",
+      "title": "Infer structure instead of assuming it",
+      "description": "Learn the network structure automatically from data.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Sum-product networks: A new deep architecture",
+      "sourceYear": 2011
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_mt_001_analogy",
+      "title": "Apply Error-Correcting Code Decoding to SPN Structure Learning",
+      "description": "This idea expands the original seed by drawing an analogy from digital communications. The analogous problem is error-correction in low-density parity-check (LDPC) codes, solved using the sum-product algorithm (a belief propagation method) on a factor graph to iteratively pass messages and infer correct bits. We adapt this solution to SPN learning by framing the search for an optimal SPN structure as a decoding problem on a graph of potential components. Messages passed between nodes will encode constraints and likelihoods for region decompositions and variable subsets, enabling a unified, message-passing-based algorithm to jointly infer both the hierarchical structure (graph topology) and the parameters of the SPN, thereby enhancing both learning efficiency and model accuracy.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_fw_005",
+      "title": "Compare SPNs to other deep models",
+      "description": "Empirical and theoretical comparison with other deep learning architectures is needed.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Sum-product networks: A new deep architecture",
+      "sourceYear": 2011
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_003_analogy",
+      "title": "Inverse SPN Generation via Geophysical Seismic Inversion Techniques",
+      "description": "This idea explores the inverse problem of generating data from Sum-Product Networks (SPNs) by drawing an analogy from geophysical seismic inversion. In seismology, the inverse problem of inferring subsurface structure from surface measurements is solved using the tractable forward model of wave propagation in an iterative optimization loop (e.g., Full Waveform Inversion). Adapted to SPNs, we propose using the network's own tractable distribution—its ability to efficiently compute likelihoods and marginal probabilities—as the forward model within a similar iterative generation framework. Instead of merely sampling from the learned distribution, the system would perform gradient-based or variational optimization on a data point in the input space, using the SPN's computations to guide the point toward regions of high probability under desired constraints (e.g., specific feature values or latent interpretations), enabling efficient, targeted, and high-fidelity data generation.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_003_fusion",
+      "title": "Online, Adaptive Data Synthesis via Streaming SPN Generation",
+      "description": "This research develops a method for online, generative modeling with Sum-Product Networks (SPNs). The core innovation is to perform incremental Bayesian parameter updates on the SPN as new streaming data arrives, ensuring the model adapts to concept drift. Simultaneously, the tractable likelihood and partition function of the continually updated SPN are leveraged to perform efficient and exact sampling from the current posterior predictive distribution. This closed-loop system enables real-time generation of synthetic data that is statistically consistent with the most recent observations, providing a powerful tool for streaming data augmentation, anomaly detection, and dynamic simulation.",
+      "dimension": "Fusion",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_003",
+      "title": "Study the inverse problem: generating from SPNs",
+      "description": "Use the tractable distribution for efficient sampling and generation.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Sum-product networks: A new deep architecture",
+      "sourceYear": 2011
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_001_adversarial",
+      "title": "Dynamically Constrained Inference via Amortized Meta-Reasoning",
+      "description": "This approach overcomes the intractability of relaxed structural constraints by integrating a learned meta-reasoning module that dynamically manages the inference process. The meta-reasoner is trained to predict where completeness or decomposability can be safely approximated and where exact constraints must be enforced to preserve accuracy. This enables efficient, adaptive inference that maintains strong theoretical guarantees where needed while allowing controlled approximations elsewhere. The system thus provides a robust, scalable framework for complex models where full structural constraints are prohibitive.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_mt_003_analogy",
+      "title": "Incorporate Elastic Net and Group Lasso Regularization from Genomics into SPN Structure Learning",
+      "description": "This idea adapts regularization techniques from high-dimensional genomics to prevent overfitting in Sum-Product Networks (SPNs). In genomics, Elastic Net and Group Lasso are used for structured feature selection when predicting traits from thousands of correlated genes, applying penalties at both the individual and group level. The adapted solution applies this principle to SPNs by imposing Group Lasso-style regularization on the weights of sum nodes, treating the set of weights for a sum node's children as a group. This encourages the model to prune entire branches or select simpler mixture components, thereby learning a sparser, more robust network structure. Combining this with traditional L2 regularization on leaf parameters creates a hybrid 'SPN Elastic Net' that controls both parameter magnitude and graph complexity, directly addressing overfitting through structured sparsity induction.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_002_analogy",
+      "title": "Distributed SPN Inference via MapReduce-Style Tensor Contraction",
+      "description": "This idea expands the original seed by drawing an analogy from computational chemistry, specifically the parallelization of high-dimensional tensor contractions in electronic structure calculations. In that field, massive tensor networks are evaluated by partitioning them and distributing independent contraction operations across an HPC cluster using a MapReduce-style paradigm, followed by a hierarchical reduction of partial results. Adapted to SPN inference, the SPN's computational graph is viewed as a tensor network. The inference process is decomposed into a sequence of distributed sum and product operations. The SPN structure and input data are partitioned, and independent sub-network evaluations are mapped to different cluster nodes. A coordinated reduction phase then aggregates these partial results through a communication-efficient tree, enabling large-scale SPN inference on distributed clusters without requiring the entire model to fit in a single machine's memory.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_002",
+      "title": "Allow non-tractable sub-networks within SPNs",
+      "description": "Incorporate modules with intractable partition functions using approximate methods.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Sum-product networks: A new deep architecture",
+      "sourceYear": 2011
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_fw_003_analogy",
+      "title": "Identifying Phase-Transition-Like Boundaries for Tractable Partition Functions via Complexity Classes",
+      "description": "This research seed proposes to explore the general conditions for tractable partition functions by drawing an analogy from statistical physics. In that field, the behavior of complex systems is understood by identifying phase transitions—sharp boundaries in a control parameter space that separate regimes with qualitatively different, often analytically tractable, macroscopic properties. The analogous solution involves mapping these boundaries using order parameters and specialized approximation methods. Adapted to the context of partition functions in computer science and statistical inference, the research would seek to treat computational tractability itself as a 'phase.' The goal is to define relevant complexity-theoretic order parameters (e.g., based on interaction strength, graph topology, or presence of symmetry) and rigorously characterize the boundaries in the space of model parameters where the partition function transitions from being computable or approximable in polynomial time to becoming #P-hard. This would provide a principled, predictive framework for identifying broad subclasses of graphical models with guaranteed tractable inference, analogous to how phase diagrams guide physicists.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_001_analogy",
+      "title": "Approximate Inference via Loosely-Coupled Subsystems",
+      "description": "This idea explores inference under relaxed structural constraints by drawing an analogy from Control Systems Engineering. In that field, large-scale systems are managed not through perfect, centralized models but via decentralized architectures with overlapping decompositions and intermittent coordination, ensuring stability despite approximate coupling. Adapting this solution, we propose to develop probabilistic inference frameworks for 'loosely-coupled' graphical models. The research would define metrics for inter-cluster coupling strength and create approximate message-passing or variational algorithms that perform updates selectively—only when local belief changes are significant relative to the coupling. This relaxes the strict completeness and decomposability constraints of exact inference, trading off a provably bounded approximation error for substantial gains in computational scalability, particularly in large, weakly-interacting systems.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_001",
+      "title": "Relax the completeness and decomposability constraints",
+      "description": "Explore inference under relaxed or approximate structural constraints.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Sum-product networks: A new deep architecture",
+      "sourceYear": 2011
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_mt_004_adversarial",
+      "title": "Foundational Embedding and Complexity Translation for SPNs via Arithmetic Circuit Isomorphisms",
+      "description": "This research formally establishes a bridge between SPNs and arithmetic circuit complexity by constructing explicit, structure-preserving mappings from classes of SPNs to specific types of arithmetic circuits (e.g., monotone, multilinear). It then performs a targeted analysis to determine which arithmetic complexity results—such as lower bounds on circuit size for computing certain polynomial families—translate into meaningful statements about the representational capacity and minimal network structure required for SPNs to model target probability distributions. The outcome is a principled complexity theory for SPNs that moves beyond analogy to provide concrete, provable limitations and guarantees on their efficiency.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_005_analogy",
+      "title": "Online Learning for Streaming Data via Synaptic Plasticity Rules",
+      "description": "This research expands the original idea of creating online learning for streaming data by adapting SPN parameters incrementally. It draws an analogy from computational neuroscience, where the problem of continuous learning from an endless stream of input is solved by biological synapses through local plasticity rules like STDP. The analogous solution involves incremental, event-driven weight updates that balance stability and plasticity. Adapted to this context, the idea is to design a novel online learning algorithm for SPNs inspired by these rules. Each node in the SPN would have its parameters updated based on local computations triggered by incoming data, using a mechanism that incorporates a 'surprise' or prediction error signal to determine the magnitude and direction of updates. This approach aims to enable SPNs to scale effectively for non-stationary streaming data, maintaining accuracy over time without requiring retraining on the entire historical dataset, thus addressing the SCALING_DUAL dimension of managing both data volume and model complexity.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_001_fusion",
+      "title": "Federated, Swarm-like Inference via Miniaturized SPN Clusters",
+      "description": "This research fuses miniaturization and distribution to create a system where numerous ultra-low-power embedded devices, each hosting a tiny, specialized SPN fragment, collaboratively perform inference for a large-scale probabilistic model. The key innovation is a decentralized protocol that allows these devices to dynamically form ad-hoc clusters, parallelize the sum-product algorithm across the network, and pass partial computations peer-to-peer to converge on a global inference result. This enables complex probabilistic reasoning in environments like sensor networks or robotic swarms, where central compute is unavailable, transforming a collection of simple nodes into a cohesive, intelligent computational fabric.",
+      "dimension": "Fusion",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_005_adversarial",
+      "title": "Drift-Aware Online Learning for Streaming Data with Stability-Plasticity Control",
+      "description": "This system performs online learning for streaming data by adaptively updating Sum-Product Network (SPN) parameters. Its core innovation is a dual-component architecture: a lightweight drift detector continuously monitors the data stream for significant distributional shifts. When drift is confirmed, the system enters a structured adaptation phase, employing strategies like network expansion or parameter isolation to integrate new knowledge without catastrophically overwriting stable, previously learned concepts. This approach maintains a reliable model over time by explicitly balancing the plasticity needed for new data with the stability required to preserve past learning.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_mt_002",
+      "title": "Use deep network optimization techniques",
+      "description": "Apply backpropagation and SGD from neural networks to train SPNs.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Sum-product networks: A new deep architecture",
+      "sourceYear": 2011
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_005_analogy",
+      "title": "Impute Missing Inference Inputs via Bayesian Data Augmentation",
+      "description": "This idea challenges the assumption that models require complete, observed inputs at inference time. Drawing an analogy from Ecology, where species distribution models handle missing occurrence data via Bayesian data augmentation, we propose a native inference-time solution for missing features. The adapted method involves a hierarchical model with a core predictive process and an observation model for missingness. During inference for a partially observed sample, the model treats missing features as latent variables, using Bayesian (or variational) inference to jointly sample their plausible values conditioned on the observed features and the prediction task. This generates not just a single prediction but a predictive distribution that natively accounts for the uncertainty introduced by the missing data, enabling robust inference without requiring separate, pre-processing imputation steps that ignore this uncertainty.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_fw_002",
+      "title": "Apply SPNs to large-scale vision tasks",
+      "description": "The architecture should be applied to large-scale computer vision problems.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Sum-product networks: A new deep architecture",
+      "sourceYear": 2011
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_fw_003",
+      "title": "Explore conditions for tractable partition functions",
+      "description": "Further research into the general conditions for tractable partition functions is implied.",
+      "dimension": "FUTURE_WORK",
+      "sourceTitle": "Sum-product networks: A new deep architecture",
+      "sourceYear": 2011
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_mt_004_analogy",
+      "title": "Applying Phylogenetic Tree Analysis Tools to SPN Circuit Complexity",
+      "description": "This idea draws an analogy from computational biology, specifically phylogenetics, where tools analyze the complexity and relationships of evolutionary trees. Phylogenetic methods score trees based on the minimal number of evolutionary operations (like mutations) required to explain observed data, using concepts like parsimony. We adapt this to the analysis of Sum-Product Networks (SPNs) by viewing their directed acyclic graph structure as a computational 'phylogeny'. The adapted research idea is to develop SPN complexity measures inspired by phylogenetic scoring. Specifically, we define a 'computational parsimony score' for an SPN that counts the minimal essential sum and product operations (or unique node functions) required to represent its computed distribution. This provides a new theoretical tool from an analogous field to establish lower bounds, compare the expressive efficiency of different SPN architectures, and analyze the trade-offs between depth, width, and representational power, similar to how biologists compare the complexity of evolutionary hypotheses.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_004_analogy",
+      "title": "Inferring Network Topology via Crystallographic Diffraction Principles",
+      "description": "This idea challenges the assumption that a network's connectivity must be known or predefined. Drawing an analogy from X-ray crystallography, where a crystal's atomic structure is inferred from its diffraction pattern, we propose to infer network structure from the 'pattern' of its dynamical outputs. The analogous solution uses iterative phase retrieval algorithms to solve the inverse problem of reconstructing a lattice from intensity data. Adapted to network science, this means developing computational methods that take time-series or relational outcome data as input, treat the network adjacency matrix as the unknown 'crystal,' and use optimization techniques that incorporate constraints (like sparsity or degree distributions) to automatically learn the underlying graph structure that best explains the observed dynamical patterns, without assuming a prior architectural template.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_fw_003_adversarial",
+      "title": "Automated Complexity-Theoretic Delineation of the Partition Function Tractability Frontier",
+      "description": "This research program aims to systematically map the boundary between tractable and intractable classes of partition functions using a formal, automated framework. It defines a parameterized complexity space for partition function problems based on structural decompositions of their interaction hypergraphs and algebraic properties of their local functions. The core of the approach uses interactive theorem provers and algorithm synthesis tools to automatically generate and verify proofs of polynomial-time computability or #P-hardness for families of functions defined by these parameters. The outcome will be a dynamically generated, rigorously proven 'complexity phase diagram' that predicts the computational cost of a partition function from its specification, moving beyond ad-hoc sufficient conditions.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_004_adversarial",
+      "title": "Robust Structure Discovery with Constrained Hypothesis Testing",
+      "description": "This approach learns network structure from data but does so within a constrained, multi-hypothesis testing framework to avoid spurious discovery. It uses adaptive regularization and environment-based validation to distinguish stable, generalizable relationships from noise or dataset-specific artifacts. The system outputs not just a single graph, but a set of plausible structures ranked by their robustness and simplicity, enabling more reliable inference and clearer interpretation.",
+      "dimension": "Adversarial",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_005",
+      "title": "Create online learning for streaming data",
+      "description": "Adapt SPN parameters incrementally with new data.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Sum-product networks: A new deep architecture",
+      "sourceYear": 2011
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_005",
+      "title": "Handle missing data during inference natively",
+      "description": "Enable robust inference with partially observed inputs.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Sum-product networks: A new deep architecture",
+      "sourceYear": 2011
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_001",
+      "title": "Create miniaturized SPNs for embedded systems",
+      "description": "Develop very small, efficient SPNs for low-power device inference.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Sum-product networks: A new deep architecture",
+      "sourceYear": 2011
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_ac_003",
+      "title": "Model continuous variables without discretization",
+      "description": "Develop SPN formulations for continuous variables directly.",
+      "dimension": "ASSUMPTION_CHALLENGE",
+      "sourceTitle": "Sum-product networks: A new deep architecture",
+      "sourceYear": 2011
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_004",
+      "title": "Prune or compress trained SPNs",
+      "description": "Develop methods to reduce SPN size after learning.",
+      "dimension": "SCALING_DUAL",
+      "sourceTitle": "Sum-product networks: A new deep architecture",
+      "sourceYear": 2011
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_mt_003",
+      "title": "Incorporate regularization from statistical learning",
+      "description": "Apply L1/L2 or structural regularization to prevent overfitting in SPNs.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Sum-product networks: A new deep architecture",
+      "sourceYear": 2011
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_sd_001_analogy",
+      "title": "Cellular Organelle-Inspired Subnetworks for Embedded SPNs",
+      "description": "This research adapts the biological solution of cellular compartmentalization into organelles to the challenge of creating miniaturized, efficient SPNs for embedded systems. In cell biology, complex processes are made efficient by segregating them into specialized, optimized organelles within a confined cellular volume. The adapted idea is to design a modular SPN architecture consisting of multiple, very small, specialized 'subnet organelle' computational modules—each a minimal SPN hard-optimized for a distinct, frequent inference operation (e.g., a specific marginal probability calculation). A lightweight, power-aware scheduler would dynamically activate only the necessary module(s) for a given query, keeping the vast majority of the network dormant. This approach minimizes the active silicon area and memory footprint at any moment, directly translating to the low-power, high-efficiency inference required for embedded and IoT devices, effectively solving the scaling dual challenge of maintaining functionality while drastically reducing resource use.",
+      "dimension": "Analogy",
+      "sourceTitle": "",
+      "sourceYear": null
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_mt_005",
+      "title": "Apply boosting to construct SPNs incrementally",
+      "description": "Use boosting algorithms to build the network structure layer by layer.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Sum-product networks: A new deep architecture",
+      "sourceYear": 2011
+    },
+    {
+      "id": "d1b21442aa4a6af708d64082d61f6e63e1d4cdf1_mt_004",
+      "title": "Transfer circuit complexity analysis tools",
+      "description": "Use theoretical tools from arithmetic circuit complexity to analyze SPNs.",
+      "dimension": "METHOD_TRANSFER",
+      "sourceTitle": "Sum-product networks: A new deep architecture",
+      "sourceYear": 2011
+    }
+  ],
+  "papers": [
+    {
+      "title": "A few useful things to know about machine learning",
+      "year": 2012,
+      "venue": "Communications of the ACM",
+      "citations": 3177,
+      "abstract": "Tapping into the \"folk knowledge\" needed to advance machine learning applications."
+    },
+    {
+      "title": "Markov logic networks",
+      "year": 2006,
+      "venue": "Machine-mediated learning",
+      "citations": 3142,
+      "abstract": "Markov logic uses weighted formulas to compactly encode a probability\ndistribution over possible worlds. Despite the use of logical formulas, Markov\nlogic networks (MLNs) can be difficult to interpret, due to the often\ncounter-intuitive meaning of their weights. To address this issue, we propose a\nm"
+    },
+    {
+      "title": "Mining the network value of customers",
+      "year": 2001,
+      "venue": "Knowledge Discovery and Data Mining",
+      "citations": 3071,
+      "abstract": "This short paper argues that multi-relational data mining has a key role to play in the growth of KDD, and briefly surveys some of the main drivers, research problems, and opportunities in this emerging field."
+    },
+    {
+      "title": "Mining high-speed data streams",
+      "year": 2000,
+      "venue": "Knowledge Discovery and Data Mining",
+      "citations": 2412,
+      "abstract": "Inducing adaptive predictive models in real-time from high throughput data streams is one of the most challenging areas of Big Data Analytics. The fact that data streams may contain concept drifts (changes of the pattern encoded in the stream over time) and are unbounded, imposes unique challenges i"
+    },
+    {
+      "title": "Mining time-changing data streams",
+      "year": 2001,
+      "venue": "Knowledge Discovery and Data Mining",
+      "citations": 1926,
+      "abstract": "Predictive services nowadays play an important role across all business\nsectors. However, deployed machine learning models are challenged by changing\ndata streams over time which is described as concept drift. Prediction quality\nof models can be largely influenced by this phenomenon. Therefore, conc"
+    },
+    {
+      "title": "Mining knowledge-sharing sites for viral marketing",
+      "year": 2002,
+      "venue": "Knowledge Discovery and Data Mining",
+      "citations": 1836,
+      "abstract": "This short paper argues that multi-relational data mining has a key role to play in the growth of KDD, and briefly surveys some of the main drivers, research problems, and opportunities in this emerging field."
+    },
+    {
+      "title": "MetaCost: a general method for making classifiers cost-sensitive",
+      "year": 1999,
+      "venue": "Knowledge Discovery and Data Mining",
+      "citations": 1639,
+      "abstract": "Recently, the following Discrimination-Aware Classification Problem was introduced: Suppose we are given training data that exhibit unlawful discrimination; e.g., toward sensitive attributes such as gender or ethnicity. The task is to learn a classifier that optimizes accuracy, but does not have thi"
+    },
+    {
+      "title": "Learning to map between ontologies on the semantic web",
+      "year": 2002,
+      "venue": "The Web Conference",
+      "citations": 1085,
+      "abstract": "Ontologies play a prominent role on the Semantic Web. They make possible the widespread publication of machine understandable data, opening myriad opportunities for automated information processing. However, because of the Semantic Web's distributed nature, data on it will inevitably come from many "
+    },
+    {
+      "title": "Adversarial classification",
+      "year": 2004,
+      "venue": "Knowledge Discovery and Data Mining",
+      "citations": 1061,
+      "abstract": "Essentially all data mining algorithms assume that the data-generating process is independent of the data miner's activities. However, in many domains, including spam detection, intrusion detection, fraud detection, surveillance and counter-terrorism, this is far from the case: the data is actively "
+    },
+    {
+      "title": "Reconciling schemas of disparate data sources: a machine-learning approach",
+      "year": 2001,
+      "venue": "ACM SIGMOD Conference",
+      "citations": 918,
+      "abstract": "A data-integration system provides access to a multitude of data sources through a single mediated schema. A key bottleneck in building such systems has been the laborious manual construction of semantic mappings between the source schemas and the mediated schema. We describe LSD, a system that empl"
+    },
+    {
+      "title": "Beyond Independence: Conditions for the Optimality of the Simple Bayesian Classifier",
+      "year": 1996,
+      "venue": "International Conference on Machine Learning",
+      "citations": 906,
+      "abstract": "The simple Bayesian classifier (SBC) is commonly thought to assume that attributes are independent given the class, but this is apparently contradicted by the surprisingly good performance it exhibits in many domains that contain clear attribute dependences. No explanation for this has been proposed"
+    },
+    {
+      "title": "Sum-product networks: A new deep architecture",
+      "year": 2011,
+      "venue": "IEEE International Conference on Computer Vision",
+      "citations": 808,
+      "abstract": "The key limiting factor in graphical model inference and learning is the complexity of the partition function. We thus ask the question: what are the most general conditions under which the partition function is tractable? The answer leads to a new kind of deep architecture, which we call sum-produc"
+    },
+    {
+      "title": "Tree Induction for Probability-Based Ranking",
+      "year": 2003,
+      "venue": "Machine-mediated learning",
+      "citations": 606,
+      "abstract": "As a present to Mizar on its 50th anniversary, we develop an AI/TP system that automatically proves about 60% of the Mizar theorems in the hammer setting. We also automatically prove 75% of the Mizar theorems when the automated provers are helped by using only the premises used in the human-written "
+    },
+    {
+      "title": "Ontology Matching: A Machine Learning Approach",
+      "year": 2004,
+      "venue": "Handbook on Ontologies",
+      "citations": 584,
+      "abstract": "Ontologies play a prominent role on the Semantic Web. They make possible the widespread publication of machine understandable data, opening myriad opportunities for automated information processing. However, because of the Semantic Web's distributed nature, data on it will inevitably come from many "
+    },
+    {
+      "title": "Trust Management for the Semantic Web",
+      "year": 2003,
+      "venue": "International Workshop on the Semantic Web",
+      "citations": 513,
+      "abstract": "In the light of high profile governmental and international efforts to realise the knowledge society, I review the arguments made for and against it from a technology standpoint. I focus on advanced knowledge technologies with applications on a large scale and in open- ended environments like the Wo"
+    },
+    {
+      "title": "The Role of Occam's Razor in Knowledge Discovery",
+      "year": 1999,
+      "venue": "Data mining and knowledge discovery",
+      "citations": 488,
+      "abstract": "This paper describes an experimental comparison of seven different learning\nalgorithms on the problem of learning to disambiguate the meaning of a word\nfrom context. The algorithms tested include statistical, neural-network,\ndecision-tree, rule-based, and case-based classification techniques. The\nsp"
+    },
+    {
+      "title": "Markov Logic: An Interface Layer for Artificial Intelligence",
+      "year": 2009,
+      "venue": "Markov Logic",
+      "citations": 481,
+      "abstract": null
+    },
+    {
+      "title": "The Intelligent surfer: Probabilistic Combination of Link and Content Information in PageRank",
+      "year": 2001,
+      "venue": "Neural Information Processing Systems",
+      "citations": 443,
+      "abstract": "Many representation schemes combining first-order logic and probability have been proposed in recent years. Progress in unifying logical and probabilistic inference has been slower. Existing methods are mainly variants of lifted variable elimination and belief propagation, neither of which take logi"
+    },
+    {
+      "title": "iMAP: discovering complex semantic matches between database schemas",
+      "year": 2004,
+      "venue": "ACM SIGMOD Conference",
+      "citations": 439,
+      "abstract": "A data-integration system provides access to a multitude of data sources through a single mediated schema. A key bottleneck in building such systems has been the laborious manual construction of semantic mappings between the source schemas and the mediated schema. We describe LSD, a system that empl"
+    },
+    {
+      "title": "Entity Resolution with Markov Logic",
+      "year": 2006,
+      "venue": "Industrial Conference on Data Mining",
+      "citations": 433,
+      "abstract": "In this work we present Cutting Plane Inference (CPI), a Maximum A Posteriori\n(MAP) inference method for Statistical Relational Learning. Framed in terms of\nMarkov Logic and inspired by the Cutting Plane Method, it can be seen as a meta\nalgorithm that instantiates small parts of a large and complex "
+    },
+    {
+      "title": "Neural-Symbolic Learning and Reasoning: A Survey and Interpretation",
+      "year": 2017,
+      "venue": "Neuro-Symbolic Artificial Intelligence",
+      "citations": 430,
+      "abstract": "The study and understanding of human behaviour is relevant to computer science, artificial intelligence, neural computation, cognitive science, philosophy, psychology, and several other areas. Presupposing cognition as basis of behaviour, among the most prominent tools in the modelling of behaviour "
+    },
+    {
+      "title": "Learning the structure of Markov logic networks",
+      "year": 2005,
+      "venue": "International Conference on Machine Learning",
+      "citations": 356,
+      "abstract": "Learning probabilistic logic programming languages is receiving an increasing\nattention and systems are available for learning the parameters (PRISM,\nLeProbLog, LFI-ProbLog and EMBLEM) or both the structure and the parameters\n(SEM-CP-logic and SLIPCASE) of these languages. In this paper we present t"
+    },
+    {
+      "title": "Naive Bayes models for probability estimation",
+      "year": 2005,
+      "venue": "International Conference on Machine Learning",
+      "citations": 345,
+      "abstract": "Este estudo analisa a satisfação institucional no uso de sistemas de busca de patentes por meio do algoritmo de aprendizado de máquina Naive Bayes. O objetivo é compreender como instituições, especialmente universidades, avaliam a eficácia dessas ferramentas em suas rotinas de pesquisa e inovação. F"
+    },
+    {
+      "title": "Learning Bayesian network classifiers by maximizing conditional likelihood",
+      "year": 2004,
+      "venue": "International Conference on Machine Learning",
+      "citations": 339,
+      "abstract": "Stochastic processes that involve the creation of objects and relations over time are widespread, but relatively poorly studied. For example, accurate fault diagnosis in factory assembly processes requires inferring the probabilities of erroneous assembly operations, but doing this efficiently and a"
+    },
+    {
+      "title": "Social Networks Applied",
+      "year": 2005,
+      "venue": "IEEE Intelligent Systems",
+      "citations": 336,
+      "abstract": "Abordamos en este artículo la importancia que las redes sociales presentan para su uso como recurso educativo. Relevancia que radica en la posibilidad de implementar nuevos recursos de aprendizaje o aumentar el nivel de conectividad de los participantes, así como el fomento de comunidades de aprendi"
+    },
+    {
+      "title": "Statistical predicate invention",
+      "year": 2007,
+      "venue": "International Conference on Machine Learning",
+      "citations": 323,
+      "abstract": "During the 1980s Michie defined Machine Learning in terms of two orthogonal axes of performance: predictive accuracy and comprehensibility of generated hypotheses. Since predictive accuracy was readily measurable and comprehensibility not so, later definitions in the 1990s, such as that of Mitchell,"
+    },
+    {
+      "title": "The Alchemy System for Statistical Relational AI: User Manual",
+      "year": 2007,
+      "venue": "",
+      "citations": 321,
+      "abstract": "The Alchemy package provides a series of algorithms for statistical relational learning and probabilistic logic inference, based on the Markov logic representation. If you are not already familiar with Markov logic, we recommend that you read the papers Markov Logic Networks [7], Discriminative Trai"
+    },
+    {
+      "title": "Discriminative Training of Markov Logic Networks",
+      "year": 2005,
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citations": 310,
+      "abstract": "Recent research has shown that surprisingly rich models of human activity can\nbe learned from GPS (positional) data. However, most effort to date has\nconcentrated on modeling single individuals or statistical properties of groups\nof people. Moreover, prior work focused solely on modeling actual succ"
+    },
+    {
+      "title": "Sound and Efficient Inference with Probabilistic and Deterministic Dependencies",
+      "year": 2006,
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citations": 303,
+      "abstract": "Lifting can greatly reduce the cost of inference on first-order probabilistic graphical models, but constructing the lifted network can itself be quite costly. In online applications (e.g., video segmentation) repeatedly constructing the lifted network for each new inference can be extremely wastefu"
+    },
+    {
+      "title": "Learning the Structure of Sum-Product Networks",
+      "year": 2013,
+      "venue": "International Conference on Machine Learning",
+      "citations": 301,
+      "abstract": "Sum-product networks (SPNs) are a recently-proposed deep architecture that guarantees tractable inference, even on certain high-treewidth models. SPNs are a propositional architecture, treating the instances as independent and identically distributed. In this paper, we introduce Relational Sum-Produ"
+    }
+  ]
+}
